@@ -1,12 +1,17 @@
 site_name: My Docs
 
-strict: true
+repo_url: https://github.com/CreditMutuelArkea/tock
 
 theme:
+  icon:
+    edit: material/pencil
+    view: material/eye
+    repo: fontawesome/brands/github
   name: material
   palette:
     primary: blue
   features:
+    - content.action.edit
     - content.code.copy
     - navigation.expand
     - navigation.path
@@ -15,6 +20,11 @@ nav:
   # Ajoutez votre navigation ici
 
 plugins:
+  - git-authors
+  - git-committers:
+      repository: https://github.com/CreditMutuelArkea/tock
+      branch: main
+      
   - search
   - i18n:
       docs_structure: folder
@@ -34,6 +44,8 @@ plugins:
           theme:
             palette:
               primary: blue
+  - git-revision-date-localized:
+      enable_creation_date: true
 
 markdown_extensions:
   - pymdownx.superfences:

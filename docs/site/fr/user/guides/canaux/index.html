@@ -1,0 +1,3143 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../build-model/">
+      
+      
+        <link rel="next" href="../i18n/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Canaux - Tock Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#construire-un-bot-multicanal-avec-tock" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../../../" title="Tock Documentation" class="md-header__button md-logo" aria-label="Tock Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tock Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Canaux
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Sélectionner la langue">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../../user/guides/canaux/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="fr" class="md-select__link">
+              Français
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../" title="Tock Documentation" class="md-nav__button md-logo" aria-label="Tock Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Tock Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bienvenue !
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/awards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Récompenses
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/community/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Communauté
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/contribute/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contribuer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Emploi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/ressources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ressources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/showcase/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vitrine
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/why/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pourquoi Tock
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Admin
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Admin
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../admin/architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../admin/availability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Haute disponibilité
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../admin/cloud/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cloud
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../admin/installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../admin/security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sécurité
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../admin/supervision/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Supervision
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../admin/synchronization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation de la Fonctionnalité de Synchronisation Multilingue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dev
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Dev
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/bot-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bot API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/bot-integre/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bot intégré
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/connectors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connecteurs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/examples-code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exemples
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/i18n/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    i18n - développement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/modes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tester
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_9" id="__nav_4_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Advanced
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_9">
+            <span class="md-nav__icon md-icon"></span>
+            Advanced
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/advanced/bot-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BotApi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/advanced/collections/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Les collections Tock
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/advanced/main-classes-explanation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Main classes explanation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/advanced/packages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Explication des packages Tock
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_9_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_9_5" id="__nav_4_9_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Nlp
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_9_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_9_5">
+            <span class="md-nav__icon md-icon"></span>
+            Nlp
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/advanced/nlp/nlp-evaluation-with-duckling-and-dictionary%20%28%20end%20of%20file%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nlp evaluation with duckling and dictionary ( end of file)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/advanced/nlp/nlp-intents-and-entities-evaluation-simplifed-diagram/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nlp intents and entities evaluation simplifed diagram
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/advanced/nlp/nlp-models-and-entity-models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Les modèles NLP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Guide
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guide/api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guide/messenger/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Messenger
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guide/platform/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Plateforme
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guide/slack/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slack
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/studio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Studio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    User
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            User
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Concepts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Guides
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tock Studio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Guides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../build-model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modèles conversationnels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Canaux
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Canaux
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#notion-de-connecteur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notion de connecteur
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecteurs-fournis-avec-tock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connecteurs fournis avec Tock
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connecteurs fournis avec Tock">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#messenger" class="md-nav__link">
+    <span class="md-ellipsis">
+      Messenger
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Slack
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-assistant-home" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google Assistant / Home
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alexa-echo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alexa / Echo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rocketchat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rocket.Chat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whatsapp" class="md-nav__link">
+    <span class="md-ellipsis">
+      WhatsApp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      Teams
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#business-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Business Chat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#twitter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Twitter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allo-media" class="md-nav__link">
+    <span class="md-ellipsis">
+      Allo-Media
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google Chat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-generique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web (générique)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-generique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test (générique)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integrations-via-le-connecteur-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intégrations via le connecteur Web
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Intégrations via le connecteur Web">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#react" class="md-nav__link">
+    <span class="md-ellipsis">
+      React
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flutter-beta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flutter (beta)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sharepoint-beta" class="md-nav__link">
+    <span class="md-ellipsis">
+      SharePoint (beta)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technologies-vocales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technologies vocales
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Technologies vocales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#google-android" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google / Android
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apple-ios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apple / iOS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-alexa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon / Alexa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allo-media-voxygen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Allo-Media &amp; Voxygen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nuance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nuance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-de-connecteurs-gouvernance-des-donnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture de connecteurs &amp; gouvernance des données
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developper-son-propre-connecteur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Développer son propre connecteur
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../i18n/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    i18n - guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intents-restrictions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intents restrictions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Studio
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            Studio
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studio/analytics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Analytics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studio/configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studio/custom-metrics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom Metrics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studio/faq-management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studio/faq-training/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ Training
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studio/general/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L'interface Tock Studio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studio/nlu-qa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Model Quality
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studio/nlu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NLU
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studio/stories-and-answers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Stories and Answers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studio/test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_5_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5_11" id="__nav_6_5_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Gen ai
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_5_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5_11">
+            <span class="md-nav__icon md-icon"></span>
+            Gen ai
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studio/gen-ai/gen-ai/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gen AI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_5_11_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5_11_2" id="__nav_6_5_11_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Features
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_6_5_11_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5_11_2">
+            <span class="md-nav__icon md-icon"></span>
+            Features
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studio/gen-ai/features/gen-ai-feature-observability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gen AI - Observability Settings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studio/gen-ai/features/gen-ai-feature-rag-exclusion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gen AI / RAG Exclusions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studio/gen-ai/features/gen-ai-feature-rag/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gen AI / RAG Settings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studio/gen-ai/features/gen-ai-feature-sentence-generation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gen AI - Sentence generation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studio/gen-ai/features/gen-ai-feature-vector-store/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Le menu Gen AI - Vector Store Settings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_5_11_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5_11_3" id="__nav_6_5_11_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Providers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_6_5_11_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5_11_3">
+            <span class="md-nav__icon md-icon"></span>
+            Providers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studio/gen-ai/providers/gen-ai-provider-llm-and-embedding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fournisseurs des modèles LLM et d'Embedding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studio/gen-ai/providers/gen-ai-provider-observability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fournisseurs d'observabilité des LLMs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studio/gen-ai/providers/gen-ai-provider-vector-store/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fournisseurs de base vectorielle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#notion-de-connecteur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notion de connecteur
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecteurs-fournis-avec-tock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connecteurs fournis avec Tock
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connecteurs fournis avec Tock">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#messenger" class="md-nav__link">
+    <span class="md-ellipsis">
+      Messenger
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Slack
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-assistant-home" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google Assistant / Home
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alexa-echo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alexa / Echo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rocketchat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rocket.Chat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whatsapp" class="md-nav__link">
+    <span class="md-ellipsis">
+      WhatsApp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      Teams
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#business-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Business Chat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#twitter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Twitter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allo-media" class="md-nav__link">
+    <span class="md-ellipsis">
+      Allo-Media
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google Chat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-generique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web (générique)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-generique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test (générique)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integrations-via-le-connecteur-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intégrations via le connecteur Web
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Intégrations via le connecteur Web">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#react" class="md-nav__link">
+    <span class="md-ellipsis">
+      React
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flutter-beta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flutter (beta)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sharepoint-beta" class="md-nav__link">
+    <span class="md-ellipsis">
+      SharePoint (beta)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technologies-vocales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technologies vocales
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Technologies vocales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#google-android" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google / Android
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apple-ios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apple / iOS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-alexa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon / Alexa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allo-media-voxygen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Allo-Media &amp; Voxygen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nuance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nuance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-de-connecteurs-gouvernance-des-donnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture de connecteurs &amp; gouvernance des données
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developper-son-propre-connecteur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Développer son propre connecteur
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="construire-un-bot-multicanal-avec-tock">Construire un bot multicanal avec Tock</h1>
+<h2 id="notion-de-connecteur">Notion de <em>connecteur</em></h2>
+<p>Un <em>connecteur</em> Tock permet d'intégrer un bot à un canal de communication (textuel ou vocal) externe.
+Mis à part le type <em>connecteur de test</em> (utilisé en interne par l'interface <em>Tock Studio</em>), les connecteurs 
+sont associés à des canaux externes à la plateforme Tock.</p>
+<p>Tout l'intérêt des connecteurs Tock réside dans la possibilité de développer des assistants conversationnels 
+indépendamment du ou des canaux utilisés pour lui parler. Il est ainsi possible de créer un bot pour un canal,
+puis le rendre multicanal par la suite en ajoutant des connecteurs.</p>
+<p>Le <em>connecteur Web</em> a la particularité d'exposer une API générique pour interagir avec un bot Tock.
+En conséquence, il permet encore davantage d'intégrations côté "frontend", utilisant cette API comme passerelle.</p>
+<p>Cette page liste en fait :</p>
+<!-->To do bug img slack, ggassistant, whatsapp, teams, twitter.....<!-->
+<ul>
+<li>
+<p>Les <a href="../canaux#connecteurs-fournis-avec-tock"><em>connecteurs</em></a> fournis avec la distribution Tock :<br />
+<a href="../canaux#messenger"><img alt="Logo Messenger" title="Facebook Messenger"
+      src="https://cdn.iconscout.com/icon/free/png-256/facebook-messenger-2-569346.png" 
+      style="width: 50px;"></a>
+<a href="../canaux#slack"><img alt="Logo Slack" title="Slack"
+ src="https://www.macupdate.com/images/icons256/50617.png" 
+ style="width: 50px;"></a>
+<a href="../canaux#google-assistant-home"><img alt="Logo Google Assistant" title="Google Assistant"
+ src="https://res-5.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_120,w_120,f_auto,b_white,q_auto:eco/g0oshbe7blfnsrylchxd" 
+ style="width: 50px;"></a>
+<a href="../canaux#google-assistant-home"><img alt="Logo Google Home" title="Google Home"
+ src="https://phoneky.co.uk/thumbs/android/thumbs/ico/3/chromecast-android.jpg" 
+ style="width: 50px;"></a>
+<a href="../canaux#alexa-echo"><img alt="Logo Alexa" title="Amazon Alexa / Amazon Echo"
+ src="https://cognyapps.com/wp-content/uploads/2018/09/amazon-alexa-logo-e1538253665426.png" 
+ style="width: 50px;"></a>
+<a href="../canaux#rocketchat"><img alt="Logo RocketChat" title="Rocket.Chat"
+ src="https://dl2.macupdate.com/images/icons256/58493.png?d=1565347347" 
+ style="width: 50px;"></a>
+<a href="../canaux#whatsapp"><img alt="Logo WhatsApp" title="Facebook WhatsApp"
+ src="https://appradarcentral.com/wp-content/uploads/2017/07/WhatsApp-Messenger.png" 
+ style="width: 50px;"></a>
+<a href="../canaux#teams"><img alt="Logo Teams" title="Microsoft Teams"
+ src="https://cdn.worldvectorlogo.com/logos/microsoft-teams.svg" 
+ style="width: 50px;"></a>
+<a href="../canaux#business-chat"><img alt="Logo Business Chat" title="Apple Business Chat"
+ src="http://cdn.osxdaily.com/wp-content/uploads/2014/11/Messages-icon-300x300.png" 
+ style="width: 50px;"></a>
+<a href="../canaux#twitter"><img alt="Logo Twitter" title="Twitter"
+ src="https://d2v9ipibika81v.cloudfront.net/uploads/sites/112/2016/06/twitter-logo.jpg" 
+ style="width: 50px;"></a>
+<a href="../canaux#allo-media"><img alt="Logo Allo-Media" title="Allo-Media"
+  src="https://s3-eu-central-1.amazonaws.com/glassdollar/logos/GD_5bcf9307048f6.png" 
+  style="width: 50px;"></a>
+<a href="../canaux#google-chat"><img alt="Logo Google Chat" title="Google Chat"
+   src="https://cdn.zapier.com/storage/photos/bfbce5bee25b1b50d8a910c30588c61e.png" 
+   style="width: 50px;"></a><br />
+<a href="../canaux#web-générique"><img alt="Logo Web" title="Web (générique)"
+ src="https://static.vecteezy.com/system/resources/previews/000/425/842/non_2x/vector-web-search-icon.jpg" 
+ style="width: 50px;"></a>
+<a href="../canaux#test-generique"><img alt="Logo Test" title="Test (générique)"
+ src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR_8-ubeyOzkkKclCUX3V-LSJVik_u8wtbJs6FBGWp9P19kzAQH&usqp=CAU" 
+ style="width: 50px;"></a></p>
+</li>
+<li>
+<p>Les <a href="../canaux#integrations-via-le-connecteur-web">kits utilisant le <em>connecteur Web</em></a> pour intégrer d'autres canaux :<br />
+<a href="../canaux#react"><img alt="Logo React" title="React"
+      src="https://blog.octo.com/wp-content/uploads/2015/12/react-logo-1000-transparent.png" 
+      style="width: 50px;"></a>
+<a href="../canaux#flutter-beta"><img alt="Logo Flutter" title="Google Flutter"
+ src="https://plugins.jetbrains.com/files/9212/97400/icon/pluginIcon.png" 
+ style="width: 60px;"></a>
+<a href="../canaux#sharepoint-beta"><img alt="Logo SharePoint" title="Microsoft SharePoint"
+ src="https://expertime.com/wp-content/uploads/2019/12/Logo_SharePoint-expertime.png" 
+ style="width: 50px;"></a></p>
+</li>
+<li>
+<p>Les <a href="../canaux#technologies-vocales">intégrations possibles pour le traitement de la voix</a> :<br />
+<a href="../canaux#google-android"><img alt="Logo Android" title="Google Android"
+ src="https://www.wortis.fr/wp-content/uploads/2019/05/icon-wortis-android.png" 
+ style="width: 50px;"></a>
+<a href="../canaux#google-android"><img alt="Logo Google Assistant" title="Google Assistant"
+ src="https://res-5.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_120,w_120,f_auto,b_white,q_auto:eco/g0oshbe7blfnsrylchxd" 
+ style="width: 50px;"></a>
+<a href="../canaux#google-android"><img alt="Logo Google Home" title="Google Home"
+ src="https://phoneky.co.uk/thumbs/android/thumbs/ico/3/chromecast-android.jpg" 
+ style="width: 50px;"></a>
+<a href="../canaux#google-android"><img alt="Logo Teams" title="Microsoft Teams"
+ src="https://cdn.worldvectorlogo.com/logos/microsoft-teams.svg" 
+ style="width: 50px;"></a>
+<a href="../canaux#apple-ios"><img alt="Logo iOS" title="Apple iOS"
+ src="https://www.freeiconspng.com/uploads/app-ios-png-4.png" 
+ style="width: 50px;"></a>
+<a href="../canaux#apple-ios"><img alt="Logo BusinessChat" title="Apple Business Chat"
+ src="http://cdn.osxdaily.com/wp-content/uploads/2014/11/Messages-icon-300x300.png" 
+ style="width: 50px;"></a>
+<a href="../canaux#amazon-alexa"><img alt="Logo Alexa" title="Amazon Alexa"
+ src="https://cognyapps.com/wp-content/uploads/2018/09/amazon-alexa-logo-e1538253665426.png" 
+ style="width: 50px;"></a>
+<a href="../canaux#allo-media-voxygen"><img alt="Logo Allo-Media" title="Allo-Media"
+ src="https://s3-eu-central-1.amazonaws.com/glassdollar/logos/GD_5bcf9307048f6.png" 
+ style="width: 50px;"></a>
+<a href="../canaux#allo-media-voxygen"><img alt="Logo Voxygen" title="Voxygen" 
+ src="https://res-1.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco/v1502521579/dyuj1cgjsnzhpo6ojwq0.png" 
+ style="width: 50px;"></a>
+<a href="../canaux#nuance"><img alt="Logo Nuance" title="Nuance"
+ src="https://www.dicteedragon.fr/img/m/2.jpg" 
+ style="width: 50px;"></a></p>
+</li>
+</ul>
+<h2 id="connecteurs-fournis-avec-tock">Connecteurs fournis avec Tock</h2>
+<p>Tock fournit de nombreux connecteurs pour différents types de canaux (voir ci-dessous). De nouveaux connecteurs sont 
+régulièrement ajoutés à la plateforme, en fonction des besoins projets mais aussi du calendrier d'ouverture aux bots 
+des canaux grand public.</p>
+<blockquote>
+<p>Exemples : arrivée de Google Home en France en 2017, Alexa en 2018, ouverture des API WhatsApp puis Business Chat en 2019, etc. </p>
+</blockquote>
+<p>Pour en savoir plus sur les bots référencés utilisant tel ou tel connecteur en production, 
+n'hésitez pas à consulter la page <a href="../../about/showcase">vitrine Tock</a>.</p>
+<h3 id="messenger">Messenger</h3>
+<p><img alt="Logo Messenger" title="Facebook Messenger"
+src="https://cdn.iconscout.com/icon/free/png-256/facebook-messenger-2-569346.png" 
+style="width: 100px;"></p>
+<ul>
+<li><strong>Canal</strong> : <a href="https://www.messenger.com/">Facebook Messenger</a></li>
+<li><strong>Type</strong> : texte <em>(+ voix via l'upload de messages vocaux)</em></li>
+<li><strong>Status</strong> : connecteur Tock utilisé en production depuis 2016</li>
+</ul>
+<p>Le guide <a href="../../guide/messenger">Connecter son bot à Messenger</a> explique comment intégrer un bot 
+Tock avec une page Facebook / <a href="https://www.messenger.com/">Messenger</a>.</p>
+<p>Pour en savoir plus sur ce connecteur, vous pouvez aussi vous rendre dans le dossier 
+<a href="https://github.com/theopenconversationkit/tock/tree/master/bot/connector-messenger">connector-messenger</a> sur GitHub, 
+où vous retrouverez les sources et le <em>README</em> du connecteur.</p>
+<h3 id="slack">Slack</h3>
+<!-->To do bug img<!-->
+
+<p><img alt="Logo Slack" title="Slack"
+src="https://www.macupdate.com/images/icons256/50617.png" 
+style="width: 100px;"></p>
+<ul>
+<li><strong>Canal</strong> : <a href="https://slack.com/">Slack</a></li>
+<li><strong>Type</strong> : texte</li>
+<li><strong>Status</strong> : connecteur Tock utilisé hors production</li>
+</ul>
+<p>Le guide <a href="../../guide/slack">Connecter son bot à Slack</a> explique comment intégrer un bot 
+Tock avec une <em>chaîne</em> <a href="https://slack.com/">Slack</a>.</p>
+<p>Pour en savoir plus sur ce connecteur, vous pouvez aussi vous rendre dans le dossier 
+<a href="https://github.com/theopenconversationkit/tock/tree/master/bot/connector-slack">connector-slack</a> sur GitHub, 
+où vous retrouverez les sources et le <em>README</em> du connecteur.</p>
+<h3 id="google-assistant-home">Google Assistant / Home</h3>
+<p><img alt="Logo Google Assistant" title="Google Assistant"
+src="https://res-5.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_120,w_120,f_auto,b_white,q_auto:eco/g0oshbe7blfnsrylchxd" 
+style="width: 100px;">
+<img alt="Logo Google Home" title="Google Home"
+src="https://phoneky.co.uk/thumbs/android/thumbs/ico/3/chromecast-android.jpg" 
+style="width: 100px;"></p>
+<ul>
+<li><strong>Canal</strong> : <a href="https://assistant.google.com/">Google Assistant</a> / <a href="https://store.google.com/fr/product/google_home">Google Home</a></li>
+<li><strong>Type</strong> : texte + voix</li>
+<li><strong>Status</strong> : connecteur Tock utilisé en production depuis 2017</li>
+</ul>
+<p>Pour en savoir plus sur ce connecteur, voir ses sources et son <em>README</em> dans le dossier 
+<a href="https://github.com/theopenconversationkit/tock/tree/master/bot/connector-ga">connector-ga</a> sur GitHub.</p>
+<h3 id="alexa-echo">Alexa / Echo</h3>
+<p><img alt="Logo Alexa" title="Amazon Alexa / Amazon Echo"
+src="https://cognyapps.com/wp-content/uploads/2018/09/amazon-alexa-logo-e1538253665426.png" 
+style="width: 100px;"></p>
+<ul>
+<li><strong>Canal</strong> : <a href="https://alexa.amazon.com/">Amazon Alexa</a> / Amazon Echo</li>
+<li><strong>Type</strong> : voix</li>
+<li><strong>Status</strong> : connecteur Tock utilisé en production depuis 2018</li>
+</ul>
+<p>Remarque importante : dans le cas d'Alexa, le modèle NLP est forcément construit et hébergé chez Amazon. 
+Seul la partie framework conversationel de Tock peut être utilisée.</p>
+<p>Pour en savoir plus sur ce connecteur, voir ses sources et son <em>README</em> dans le dossier 
+<a href="https://github.com/theopenconversationkit/tock/tree/master/bot/connector-alexa">connector-alexa</a> sur GitHub.</p>
+<h3 id="rocketchat">Rocket.Chat</h3>
+<p><img alt="Logo RocketChat" title="Rocket.Chat"
+src="https://dl2.macupdate.com/images/icons256/58493.png?d=1565347347" 
+style="width: 100px;"></p>
+<ul>
+<li><strong>Canal</strong> : <a href="https://rocket.chat/">Rocket.Chat</a></li>
+<li><strong>Type</strong> : texte</li>
+<li><strong>Status</strong> : à préciser</li>
+</ul>
+<p>Pour en savoir plus sur ce connecteur, voir ses sources et son <em>README</em> dans le dossier 
+<a href="https://github.com/theopenconversationkit/tock/tree/master/bot/connector-rocketchat">connector-rocketchat</a> sur GitHub.</p>
+<h3 id="whatsapp">WhatsApp</h3>
+<p><img alt="Logo WhatsApp" title="Facebook WhatsApp"
+src="https://appradarcentral.com/wp-content/uploads/2017/07/WhatsApp-Messenger.png" 
+style="width: 100px;"></p>
+<ul>
+<li><strong>Canal</strong> : <a href="https://www.whatsapp.com/">WhatsApp from Facebook</a></li>
+<li><strong>Type</strong> : texte</li>
+<li><strong>Status</strong> : connecteur Tock utilisé en production depuis 2019</li>
+</ul>
+<p>Pour en savoir plus sur ce connecteur, voir ses sources et son <em>README</em> dans le dossier 
+<a href="https://github.com/theopenconversationkit/tock/tree/master/bot/connector-whatsapp">connector-whatsapp</a> sur GitHub.</p>
+<h3 id="teams">Teams</h3>
+<p><img alt="Logo Teams" title="Microsoft Teams"
+src="https://cdn.worldvectorlogo.com/logos/microsoft-teams.svg" 
+style="width: 100px;"></p>
+<ul>
+<li><strong>Canal</strong> : <a href="https://products.office.com/fr-fr/microsoft-teams/">Microsoft Teams</a></li>
+<li><strong>Type</strong> : texte + voix</li>
+<li><strong>Status</strong> : connecteur Tock utilisé en production depuis 2019</li>
+</ul>
+<p>Pour en savoir plus sur ce connecteur, voir ses sources et son <em>README</em> dans le dossier 
+<a href="https://github.com/theopenconversationkit/tock/tree/master/bot/connector-teams">connector-teams</a> sur GitHub.</p>
+<h3 id="business-chat">Business Chat</h3>
+<p><img alt="Logo BusinessChat" title="Apple Business Chat"
+src="http://cdn.osxdaily.com/wp-content/uploads/2014/11/Messages-icon-300x300.png" 
+style="width: 100px;"></p>
+<ul>
+<li><strong>Canal</strong> : <a href="https://www.apple.com/fr/ios/business-chat/">Apple Business Chat (Messages)</a></li>
+<li><strong>Type</strong> : texte</li>
+<li><strong>Status</strong> : connecteur Tock utilisé en production depuis 2019</li>
+</ul>
+<p>Pour en savoir plus sur ce connecteur, voir ses sources et son <em>README</em> dans le dossier 
+<a href="https://github.com/theopenconversationkit/tock/tree/master/bot/connector-businesschat">connector-businesschat</a> sur GitHub.</p>
+<h3 id="twitter">Twitter</h3>
+<p><img alt="Logo Twitter" title="Twitter"
+src="https://d2v9ipibika81v.cloudfront.net/uploads/sites/112/2016/06/twitter-logo.jpg" 
+style="width: 100px;"></p>
+<ul>
+<li><strong>Canal</strong> : <a href="https://twitter.com/">Twitter</a> (messages privés)</li>
+<li><strong>Type</strong> : texte</li>
+<li><strong>Status</strong> : connecteur Tock utilisé en production depuis 2019</li>
+</ul>
+<p>Pour en savoir plus sur ce connecteur, voir ses sources et son <em>README</em> dans le dossier 
+<a href="https://github.com/theopenconversationkit/tock/tree/master/bot/connector-twitter">connector-twitter</a> sur GitHub.</p>
+<h3 id="allo-media">Allo-Media</h3>
+<p><img alt="Logo Allo-Media" title="Allo-Media"
+src="https://s3-eu-central-1.amazonaws.com/glassdollar/logos/GD_5bcf9307048f6.png" 
+style="width: 100px;"></p>
+<ul>
+<li><strong>Canal</strong> : <a href="https://www.allo-media.net/">Allo-Media</a> (téléphonie)</li>
+<li><strong>Type</strong> : voix</li>
+<li><strong>Status</strong> : connecteur Tock utilisé en production depuis 2020</li>
+</ul>
+<p>Ce connecteur a été développé pour le bot <a href="https://www.allocovid.com/">AlloCovid</a>.
+Pour en savoir plus, voir la classe <a href="https://github.com/theopenconversationkit/allocovid/blob/master/src/main/kotlin/AlloMediaConnector.kt">AlloMediaConnector</a>
+avec les <a href="https://github.com/theopenconversationkit/allocovid">sources du bot</a> sur GitHub.</p>
+<h3 id="google-chat">Google Chat</h3>
+<p><img alt="Logo Google Chat" title="Google Chat"
+src="https://cdn.zapier.com/storage/photos/bfbce5bee25b1b50d8a910c30588c61e.png" 
+style="width: 100px;"></p>
+<ul>
+<li><strong>Canal</strong> : <a href="https://chat.google.com">Google Chat</a> (anciennement Google Hangouts)</li>
+<li><strong>Type</strong> : texte</li>
+<li><strong>Status</strong> : connecteur Tock utilisé hors production</li>
+</ul>
+<p>Pour en savoir plus sur ce connecteur, voir ses sources et son <em>README</em> dans le dossier 
+<a href="https://github.com/theopenconversationkit/tock/tree/master/bot/connector-google-chat">connector-google-chat</a> sur GitHub.</p>
+<h3 id="web-generique">Web (générique)</h3>
+<p><img alt="Logo Web" title="Web (générique)"
+ src="https://static.vecteezy.com/system/resources/previews/000/425/842/non_2x/vector-web-search-icon.jpg" 
+ style="width: 100px;"></p>
+<p>Ce connecteur générique permet d'intégrer un bot Tock à n'importe quel site Web ou application :
+portail, application Web ou mobile, client REST, etc.</p>
+<p>Le connecteur expose une API REST vers le bot, facilement intégrable depuis n'importe quelle application Web ou mobile, ou langage de programmation.</p>
+<p>Plusieurs kits et composants basés sur le connecteur Web sont déjà disponibles pour intégrer des bots Tock à 
+différents sites et applications, comme des sites Web avec <a href="../canaux#react">React</a>, 
+des applications mobiles natives avec <a href="../canaux#flutter-beta">Flutter</a> ou encore des 
+intranets <a href="../canaux#sharepoint-beta">SharePoint</a>.</p>
+<ul>
+<li><strong>Canal</strong> : Web (générique pour tous sites &amp; applications Web)</li>
+<li><strong>Type</strong> : texte</li>
+<li><strong>Status</strong> : connecteur Tock utilisé en production depuis 2020</li>
+</ul>
+<p>Pour en savoir plus sur ce connecteur, voir ses sources et son <em>README</em> dans le dossier
+<a href="https://github.com/theopenconversationkit/tock/tree/master/bot/connector-web">connector-web</a> sur GitHub.
+Il contient exemples et documentation format <em>Swagger</em> de l'API REST.</p>
+<h3 id="test-generique">Test (générique)</h3>
+<p><img alt="Logo Web" title="Test (générique)"
+ src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR_8-ubeyOzkkKclCUX3V-LSJVik_u8wtbJs6FBGWp9P19kzAQH&usqp=CAU" 
+ style="width: 100px;"></p>
+<p>Ce connecteur est interne à Tock, il sert à dialoguer avec un bot directement dans l'interface 
+<em>Tock Studio</em> (vue <em>Test</em> &gt; <em>Test the bot</em>) en émulant d'autres connecteurs.</p>
+<h2 id="integrations-via-le-connecteur-web">Intégrations via le connecteur Web</h2>
+<p>Le <em>connecteur Web</em> expose une API générique pour interagir avec un bot Tock.
+En conséquence, il permet encore davantage d'intégrations côté "frontend", utilisant cette API comme passerelle.</p>
+<h3 id="react">React</h3>
+<p><img alt="Logo React" title="React"
+src="https://blog.octo.com/wp-content/uploads/2015/12/react-logo-1000-transparent.png" 
+style="width: 100px;"></p>
+<p>Ce composant React intègre un bot Tock et en assure le rendu graphique dans une application Web.<br />
+L'application Web communique avec le bot via un <a href="../canaux#web-générique">connecteur Web</a>.</p>
+<ul>
+<li><strong>Intégration</strong> : <a href="https://fr.reactjs.org/">React</a> (JavaScript / JSX)</li>
+<li><strong>Type</strong> : applications Web</li>
+<li><strong>Status</strong> : utilisé en production depuis 2020</li>
+</ul>
+<p>Pour en savoir plus, voir les sources et le <em>README</em> dans le dépôt 
+<a href="https://github.com/theopenconversationkit/tock-react-kit"><code>tock-react-kit</code></a> sur GitHub.</p>
+<h3 id="flutter-beta">Flutter <em>(beta)</em></h3>
+<p><img alt="Logo Flutter" title="Google Flutter"
+src="https://plugins.jetbrains.com/files/9212/97400/icon/pluginIcon.png" 
+style="width: 100px;"></p>
+<p>Ce composant Flutter intègre un bot Tock et en assure le rendu graphique dans une application mobile ou Web.<br />
+L'application communique avec le bot via un <a href="../canaux#web-générique">connecteur Web</a>.</p>
+<ul>
+<li><strong>Intégration</strong> : <a href="https://flutter.dev/">Flutter</a> (Dart)</li>
+<li><strong>Type</strong> : applications mobiles natives et Web</li>
+<li><strong>Status</strong> : beta, en développement</li>
+</ul>
+<p>Pour en savoir plus, voir les sources et le <em>README</em> dans le dépôt 
+<a href="https://github.com/theopenconversationkit/tock-flutter-kit"><code>tock-flutter-kit</code></a> sur GitHub.</p>
+<h3 id="sharepoint-beta">SharePoint <em>(beta)</em></h3>
+<p><img alt="Logo SharePoint" title="Microsoft SharePoint"
+src="https://expertime.com/wp-content/uploads/2019/12/Logo_SharePoint-expertime.png" 
+style="width: 100px;"></p>
+<p>Ce composant <em>WebPart</em> permet d'intégrer un bot Tock dans un site SharePoint.<br />
+Il embarque le <a href="../canaux#react">tock-react-kit</a> pour communiquer avec le bot 
+via un <a href="../canaux#web-générique">connecteur Web</a> et gérer le rendu graphique du bot dans la page SharePoint.</p>
+<ul>
+<li><strong>Intégration</strong> : <a href="https://www.microsoft.com/fr-fr/microsoft-365/sharepoint/collaboration">Microsoft SharePoint</a></li>
+<li><strong>Type</strong> : sites Web &amp; intranets</li>
+<li><strong>Status</strong> : beta, en développement</li>
+</ul>
+<p>Pour en savoir plus, voir les sources et le <em>README</em> dans le dépôt 
+<a href="https://github.com/theopenconversationkit/tock-sharepoint"><code>tock-sharepoint</code></a> sur GitHub.</p>
+<h2 id="technologies-vocales">Technologies vocales</h2>
+<p>Les bots Tock traitent des phrases en format texte par défaut (<em>chatbots</em>). Néanmoins, on peut 
+intégrer des technologies vocales aux "bornes" du bot afin d'obtenir des conversations vocales (<em>voicebots</em> et <em>callbots</em>) :</p>
+<ul>
+<li>Traduction de la voix en texte (<em>Speech-To-Text</em>) en amont du traitement par le bot (ie. avant l'étape <em>NLU</em>)</li>
+<li>Traduction du texte en voix (<em>Text-To-Speech</em>) en aval du traitement par le bot (ie. synthèse vocale de la réponse du bot)</li>
+</ul>
+<p>Certains <em>connecteurs</em> fournis avec Tock permettent d'intégrer un bot à un canal externe 
+gérant les aspects vocaux STT et TTS.</p>
+<p>En outre, d'autres technologies vocales ont pu être intégrées à Tock ces dernières années.
+Elles sont mentionnées à titre indicatif, même quand il n'est pas fourni de <em>connecteur</em> prêt à l'emploi.</p>
+<h3 id="google-android">Google / Android</h3>
+<p>Les fonctions <em>Speech-To-Text</em> et <em>Text-To-Speech</em> de Google sont utilisées à travers le 
+<a href="../canaux#google-assistant-home">connecteur Google Assistant / Home</a>, également par les fonctions 
+vocales de l'<a href="https://play.google.com/store/apps/details?id=com.microsoft.teams">application Microsoft Teams pour Android</a>
+compatible avec le <a href="../canaux#teams">connecteur Teams</a>, ainsi qu'au sein de la plateforme Android 
+notamment pour des développements mobiles natifs.</p>
+<p><img alt="Logo Android" title="Google Android"
+src="https://www.wortis.fr/wp-content/uploads/2019/05/icon-wortis-android.png" 
+style="width: 100px;">
+<img alt="Logo Google Assistant" title="Google Assistant"
+src="https://res-5.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_120,w_120,f_auto,b_white,q_auto:eco/g0oshbe7blfnsrylchxd" 
+style="width: 50px;">
+<img alt="Logo Google Home" title="Google Home"
+src="https://phoneky.co.uk/thumbs/android/thumbs/ico/3/chromecast-android.jpg" 
+style="width: 50px;">
+<img alt="Logo Teams" title="Microsoft Teams"
+src="https://cdn.worldvectorlogo.com/logos/microsoft-teams.svg" 
+style="width: 50px;"></p>
+<ul>
+<li><strong>Technologie</strong> : STT &amp; TTS Google / Android</li>
+<li><strong>Status</strong> : utilisé avec Tock en production 
+(via connecteurs <a href="../canaux#google-assistant-home">Google Assistant / Home</a>, 
+<a href="../canaux#teams">Microsoft Teams</a> 
+et en natif Android pour les bots intégrés <em>on-app</em>)</li>
+</ul>
+<h3 id="apple-ios">Apple / iOS</h3>
+<p>Les fonctions <em>Speech-To-Text</em> et <em>Text-To-Speech</em> d'Apple sont utilisées à travers le 
+<a href="../canaux#business-chat">connecteur Business Chat</a>, ainsi qu'au sein d'iOS
+pour des développements mobiles natifs.</p>
+<p><img alt="Logo iOS" title="Apple iOS"
+src="https://www.freeiconspng.com/uploads/app-ios-png-4.png" 
+style="width: 100px;">
+<img alt="Logo BusinessChat" title="Apple Business Chat"
+src="http://cdn.osxdaily.com/wp-content/uploads/2014/11/Messages-icon-300x300.png" 
+style="width: 50px;"></p>
+<ul>
+<li><strong>Technologie</strong> : STT &amp; TTS Apple / iOS</li>
+<li><strong>Status</strong> : utilisé avec Tock en production (via connecteur Business Chat 
+et en natif iOS pour les bots intégrés <em>on-app</em>)</li>
+</ul>
+<h3 id="amazon-alexa">Amazon / Alexa</h3>
+<p>Les fonctions <em>Speech-To-Text</em> et <em>Text-To-Speech</em> d'Alexa (Amazon) sont utilisées à travers le 
+<a href="../canaux#alexa-echo">connecteur Alexa / Echo</a>.</p>
+<p><img alt="Logo Alexa" title="Amazon Alexa"
+src="https://cognyapps.com/wp-content/uploads/2018/09/amazon-alexa-logo-e1538253665426.png" 
+style="width: 100px;"></p>
+<ul>
+<li><strong>Technologie</strong> : STT &amp; TTS Amazon / Alexa</li>
+<li><strong>Status</strong> : utilisé avec Tock en production (via connecteur Alexa)</li>
+</ul>
+<h3 id="allo-media-voxygen">Allo-Media &amp; Voxygen</h3>
+<p>La société <a href="https://www.allo-media.net/">Allo-Media</a> propose une plateforme IA basée sur les appels téléphoniques.</p>
+<p><a href="https://www.voxygen.fr/">Voxygen</a> propose des services de synthèse vocale.</p>
+<p>A l'occasion du développement du bot <a href="https://www.allocovid.com/">AlloCovid</a>, un <a href="../canaux#allo-media">connecteur Allo-Media</a>
+a été développé pour intégrer le bot (Tock) aux services Allo-Media : 
+<em>Speech-To-Text</em> et <em>Text-To-Speech</em> avec Voxygen.</p>
+<p><img alt="Logo Allo-Media" title="Allo-Media"
+src="https://s3-eu-central-1.amazonaws.com/glassdollar/logos/GD_5bcf9307048f6.png" 
+style="width: 100px;"> <img alt="Logo Voxygen" title="Voxygen" 
+src="https://res-1.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco/v1502521579/dyuj1cgjsnzhpo6ojwq0.png" 
+style="width: 100px;"></p>
+<ul>
+<li><strong>Technologie</strong> : Allo-Media &amp; Voxygen</li>
+<li><strong>Status</strong> : utilisé avec Tock en production (via connecteur Allo-Media)</li>
+</ul>
+<h3 id="nuance">Nuance</h3>
+<p><a href="https://www.nuance.com">Nuance</a> propose des solutions de reconnaissance vocale &amp; IA.</p>
+<p>Pour des expérimentations de commande vocale en 2016, Nuance avait été
+intégré à Tock pour ses fonctions <em>Speech-To-Text</em>. 
+Même si cette intégration n'a pas été maintenue depuis, cela fonctionnait
+après quelques jours de mise en place.</p>
+<p><img alt="Logo Nuance" title="Nuance"
+src="https://www.dicteedragon.fr/img/m/2.jpg" 
+style="width: 100px;"></p>
+<ul>
+<li><strong>Technologie</strong> : Nuance</li>
+<li><strong>Status</strong> : utilisé avec Tock en 2016</li>
+</ul>
+<h2 id="architecture-de-connecteurs-gouvernance-des-donnees">Architecture de connecteurs &amp; gouvernance des données</h2>
+<p>Dans une optique de <em>gouvernance</em> des modèles et données conversationnelles, l'architecture en connecteurs 
+Tock présente plusieurs avantages :</p>
+<ul>
+<li>Le modèle est construit dans Tock, il n'est pas partagé via les connecteurs</li>
+<li>Le choix des connecteurs d'un bot permet de maitriser la propagation (ou non) des conversations</li>
+</ul>
+<blockquote>
+<p>Par exemple, pour un bot interne à une entreprise, on peut choisir de n'utiliser que des connecteurs 
+vers des canaux propres (site Web, etc.) ou internes à l'entreprise (applications d'entreprise, espace pro sur 
+un téléphone Android, etc.). </p>
+</blockquote>
+<ul>
+<li>Même si un bot est connecté à plusieurs canaux/partenaires externes, seule la plateforme Tock possède l'ensemble des
+conversations sur tous ces canaux.</li>
+</ul>
+<h2 id="developper-son-propre-connecteur">Développer son propre connecteur</h2>
+<p>Il est possible de créer son propre connecteur Tock, par exemple pour interfacer un bot Tock avec un canal propre à 
+l'organisation (souvent un site Web ou une application mobile spécifiques), ou bien quand un canal grand public 
+s'ouvre aux bots conversationnels et que le connecteur Tock n'existe pas encore.</p>
+<p>La section <a href="../../dev/bot-integre"><em>Bot Framework</em></a> du manuel développeur Tock donne des indications pour 
+implémenter son propre connecteur.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "navigation.expand", "navigation.path"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>

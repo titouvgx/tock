@@ -18,90 +18,72 @@ The _Web connector_ has the particularity of exposing a generic API to interact 
 As a result, it allows even more integrations on the "frontend" side, using this API as a gateway.
 
 This page actually lists:
-<!-->To do bug img slack, ggassistant, whatsapp, teams, twitter.....<!-->
+
 - The [_connectors_](../channels#connectors-provided-with-tock) provided with the Tock distribution:
-[<img alt="Logo Messenger" title="Facebook Messenger"
-src="https://cdn.iconscout.com/icon/free/png-256/facebook-messenger-2-569346.png"
-style="width: 50px;">](../channels#messenger)
-![Logo slack](../../img/slack.png "List of applications"){style="width: 75px;"}
 
-![Logo Google assistant](../../img/googelassist.png "List of applications"){style="width: 75px;"}
-[<img alt="Google Home logo" title="Google Home"
- src="https://phoneky.co.uk/thumbs/android/thumbs/ico/3/chromecast-android.jpg"
- style="width: 50px;">](../channels#google-assistant-home)
+![logo messenger](../../img/messenger.png "whatsapp"){style="width:50px;"}
 
-![Logo Alexa](../../img/alexa2.png "List of applications"){style="width: 75px;"}
+![Logo slack](../../img/slack.png "Slack"){style="width: 75px;"}
 
-[<img alt="RocketChat Logo" title="Rocket.Chat"
- src="https://dl2.macupdate.com/images/icons256/58493.png?d=1565347347"
- style="width: 50px;">](../channels#rocketchat)
-[<img alt="WhatsApp Logo" title="Facebook WhatsApp"
- src="https://appradarcentral.com/wp-content/uploads/2017/07/WhatsApp-Messenger.png"
- style="width: 50px;">](../channels#whatsapp)
-[<img alt="Teams Logo" title="Microsoft Teams"
- src="https://cdn.worldvectorlogo.com/logos/microsoft-teams.svg"
- style="width: 50px;">](../channels#teams)
+![Logo Google assistant](../../img/googelassist.png "google assisstant"){style="width: 70px;"}
+
+![logo google home](../../img/googlehome.png "google home "){style="width:50px;"}
+
+![Logo Alexa](../../img/alexa2.png "alexa"){style="width: 75px;"}
+
+![logo Rocket rachat](../../img/rocketrachat.png "rocket rachat"){style="width:50px;"}
+
+![logo whatsapp](../../img/whatsapp.png "whatsapp"){style="width:50px;"}
+
+![logo teams](../../img/teams.png "teams"){style="width:50px;"}
+
 [<img alt="Logo Business Chat" title="Apple Business Chat"
  src="http://cdn.osxdaily.com/wp-content/uploads/2014/11/Messages-icon-300x300.png"
  style="width: 50px;">](../channels#business-chat)
-[<img alt="Twitter Logo" title="Twitter"
- src="https://d2v9ipibika81v.cloudfront.net/uploads/sites/112/2016/06/twitter-logo.jpg"
- style="width: 50px;">](../channels#twitter)
-[<img alt="Allo-Media Logo" title="Allo-Media"
- src="https://s3-eu-central-1.amazonaws.com/glassdollar/logos/GD_5bcf9307048f6.png"
- style="width: 50px;">](../channels#allo-media)
-[<img alt="Google Chat logo" title="Google Chat"
- src="https://cdn.zapier.com/storage/photos/bfbce5bee25b1b50d8a910c30588c61e.png"
- style="width: 50px;">](../channels#google-chat)
-[<img alt="Logo Web" title="Web (generic)"
- src="https://static.vecteezy.com/system/resources/previews/000/425/842/non_2x/vector-web-search-icon.jpg"
- style="width: 50px;">](../canaux#web-generic)
+
+![logo twitter](../../img/twitter.png "twitter"){style="width:50px;"}
+
+ 
+![logo google chat ](../../img/ggchat.png "google chat"){style="width:50px;"}
+
+![logo web](../../img/web.png "web"){style="width:50px;"}
+
 [<img alt="Logo Test" title="Test (generic)"
  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR_8-ubeyOzkkKclCUX3V-LSJVik_u8wtbJs6FBGWp9P19kzAQH&usqp=CAU"
  style="width: 50px;">](../channels#generic-test)
 
 - The [kits using the _Web connector_](../channels#integrations-via-the-web-connector) to integrate other channels:
-[<img alt="React Logo" title="React"
-src="https://blog.octo.com/wp-content/uploads/2015/12/react-logo-1000-transparent.png"
-style="width: 50px;">](../channels#react)
-[<img alt="Flutter Logo" title="Google Flutter"
-src="https://plugins.jetbrains.com/files/9212/97400/icon/pluginIcon.png"
-style="width: 60px;">](../channels#flutter-beta)
+
+![logo React](../../img/React.png "React"){style="width:50px;"}
+
+![logo flutter](../../img/flutter.png "allo media"){style="width:50px;"}
+
+
 [<img alt="Logo SharePoint" title="Microsoft SharePoint"
 src="https://expertime.com/wp-content/uploads/2019/12/Logo_SharePoint-expertime.png"
 style="width: 50px;">](../channels#sharepoint-beta)
 
 - The [possible integrations for voice processing](../channels#voice-technologies):
-[<img alt="Logo Android" title="Google Android"
-src="https://www.wortis.fr/wp-content/uploads/2019/05/icon-wortis-android.png"
-style="width: 50px;">](../channels#google-android)
-[<img alt="Logo Google Assistant" title="Google Assistant" 
-src="https://res-5.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_120,w_120,f_auto,b_white,q_auto:eco/g0oshbe7blfnsrylchxd"
- style="width: 50px;">](../channels#google-android)
-[<img alt="Google Home logo" title="Google Home"
- src="https://phoneky.co.uk/thumbs/android/thumbs/ico/3/chromecast-android.jpg"
- style="width: 50px;">](../channels#google-android)
-[<img alt="Teams Logo" title="Microsoft Teams"
- src="https://cdn.worldvectorlogo.com/logos/microsoft-teams.svg"
- style="width: 50px;">](../channels#google-android)
-[<img alt="iOS Logo" title="Apple iOS"
- src="https://www.freeiconspng.com/uploads/app-ios-png-4.png"
- style="width: 50px;">](../channels#apple-ios)
+
+![logo android](../../img/android.png "allo media"){style="width:50px;"}
+
+![Logo Google assistant](../../img/googelassist.png "google assistant"){style="width: 70px;"}
+
+![logo google home](../../img/googlehome.png "google home "){style="width:50px;"}
+
+![logo teams](../../img/teams.png "teams"){style="width:50px;"}
+
+![logo ios](../../img/ios.png "ios"){style="width:50px;"}
+
 [<img alt="BusinessChat Logo" title="Apple Business Chat"
  src="http://cdn.osxdaily.com/wp-content/uploads/2014/11/Messages-icon-300x300.png"
  style="width: 50px;">](../channels#apple-ios)
-[<img alt="Alexa Logo" title="Amazon Alexa"
- src="https://cognyapps.com/wp-content/uploads/2018/09/amazon-alexa-logo-e1538253665426.png"
- style="width: 50px;">](../channels#amazon-alexa)
-[<img alt="Allo-Media Logo" title="Allo-Media"
- src="https://s3-eu-central-1.amazonaws.com/glassdollar/logos/GD_5bcf9307048f6.png"
- style="width: 50px;">](../channels#allo-media-voxygen)
-[<img alt="Voxygen Logo" title="Voxygen"
- src="https://res-1.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco/v1502521579/dyuj1cgjsnzhpo6ojwq0.png"
- style="width: 50px;">](../channels#allo-media-voxygen)
-[<img alt="Nuance Logo" title="Nuance"
-src="https://www.dicteedragon.fr/img/m/2.jpg"
-style="width: 50px;">](../canaux#nuance)
+
+![Logo Alexa](../../img/alexa2.png "Alexa"){style="width: 75px;"}
+
+ ![Logo voxygen](../../img/voxygen.png "Voxygen"){style="width: 100px;"}
+
+![Logo nuance](../../img/nuance.png "Nuance"){style="width: 75px;"}
 
 ## Connectors provided with Tock
 
@@ -132,11 +114,9 @@ To learn more about this connector, you can also go to the folder
 where you will find the sources and the _README_ of the connector.
 
 ### Slack
-<!-->To do bug img<!-->
 
-<img alt="Logo Slack" title="Slack"
-src="https://www.macupdate.com/images/icons256/50617. png"
-style="width: 100px;">
+
+![logo slack](../../img/slack.png "slack"){style="width:100px;"}
 
 * **Channel** : [Slack](https://slack.com/)
 * **Type** : text
@@ -151,12 +131,9 @@ where you will find the sources and the _README_ of the connector.
 
 ### Google Assistant / Home
 
-<img alt="Google Assistant logo" title="Google Assistant"
-src="https://res-5.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_120,w_120,f_auto,b_white,q_auto:eco/g0oshbe7blfnsrylchxd"
-style="width: 100px;">
-<img alt="Google Home logo" title="Google Home"
-src="https://phoneky.co.uk/thumbs/android/thumbs/ico/3/chromecast-android.jpg"
-style="width: 100px;">
+![Logo Google assistant](../../img/googelassist.png "google assistant"){style="width: 100px;"}
+
+![logo google home](../../img/googlehome.png "google home "){style="width:100px;"}
 
 * **Channel**: [Google Assistant](https://assistant.google.com/) / [Google Home](https://store.google.com/fr/product/google_home)
 * **Type**: text + voice
@@ -167,13 +144,11 @@ To learn more about this connector, see its sources and its _README_ in the fold
 
 ### Alexa / Echo
 
-<img alt="Alexa Logo" title="Amazon Alexa / Amazon Echo"
-src="https://cognyapps.com/wp-content/uploads/2018/09/amazon-alexa-logo- e1538253665426.png"
-style="width: 100px;">
+![Logo Alexa](../../img/alexa2.png "alexa"){style="width: 100px;"}
 
 * **Channel** : [Amazon Alexa](https://alexa.amazon.com/) / Amazon Echo
 * **Type** : voice
-* ** Status**: Tock connector used in production since 2018
+* **Status**: Tock connector used in production since 2018
 
 Important note: in the case of Alexa, the NLP model is necessarily built and hosted at Amazon.
 
@@ -197,9 +172,7 @@ To learn more about this connector, see its sources and its _README_ in the fold
 
 ### WhatsApp
 
-<img alt="Logo WhatsApp" title="Facebook WhatsApp"
-src="https://appradarcentral.com/wp-content/uploads/2017/07/WhatsApp-Messenger.png"
-style="width: 100px;">
+![logo whatsapp](../../img/whatsapp.png "whatsapp"){style="width:100px;"}
 
 * **Channel** : [WhatsApp from Facebook](https://www.whatsapp.com/)
 * **Type** : text
@@ -210,9 +183,8 @@ To learn more about this connector, see its sources and its _README_ in the fold
 
 ### Teams
 
-<img alt="Teams Logo" title="Microsoft Teams"
-src="https://cdn.worldvectorlogo.com/logos/microsoft-teams.svg"
-style="width: 100px;">
+
+![logo teams](../../img/teams.png "teams"){style="width:100px;"}
 
 * **Channel** : [Microsoft Teams](https://products.office.com/fr-fr/microsoft-teams/)
 * **Type** : text + voice
@@ -236,9 +208,7 @@ To learn more about this connector, see its sources and its _README_ in the fold
 
 ### Twitter
 
-<img alt="Twitter Logo" title="Twitter"
-src="https://d2v9ipibika81v.cloudfront.net/uploads/sites/112/2016/06/twitter-logo.jpg"
-style="width: 100px;">
+![logo twitter](../../img/twitter.png "twitter"){style="width:100px;"}
 
 * **Channel** : [Twitter](https://twitter.com/) (private messages)
 * **Type** : text
@@ -313,10 +283,7 @@ The _Web connector_ exposes a generic API to interact with a Tock bot.
 As a result, it allows even more integrations on the "frontend" side, using this API as a gateway.
 
 ### React
-<!-->To do bug img blog.octo.com<!-->
-<img alt="Logo React" title="React"
-src="https://blog.octo.com/wp-content/uploads/2015/12/react-logo-1000-transparent.png"
-style="width: 100px;">
+![logo React](../../img/React.png "React"){style="width:100px;"}
 
 This React component integrates a Tock bot and renders it graphically in a web application.
 The web application communicates with the bot via a [Web connector](../channels#generic-web).
@@ -380,19 +347,17 @@ Google's _Speech-To-Text_ and _Text-To-Speech_ functions are used through the
 [Google Assistant / Home connector](../channels#google-assistant-home), also by the voice
 functions of the [Microsoft Teams app for Android](https://play.google.com/store/apps/details?id=com.microsoft.teams)
 compatible with the [Teams connector](../channels#teams), as well as within the Android platform
-in particular for native mobile developments. <!--><To do bug img <!-->
-<img alt="Android Logo" title="Google Android"
-src="https://www.wortis.fr/wp-content/uploads/2019/05/icon-wortis-android.png"
-style="width: 100px;">
-<img alt="Google Assistant logo" title="Google Assistant"
-src="https://res-5.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_120,w_120,f_auto,b_white,q_auto:eco/g0oshbe7blfnsrylchxd"
-style="width: 50px;">
-<img alt="Google Home logo" title="Google Home"
-src="https://phoneky.co.uk/thumbs/android/thumbs/ico/3/chromecast-android.jpg"
-style="width: 50px;">
-<img alt="Teams Logo" title="Microsoft Teams"
-src="https://cdn.worldvectorlogo.com/logos/microsoft-teams.svg"
-style="width: 50px;">
+in particular for native mobile developments. 
+
+
+![logo android](../../img/android.png "allo media"){style="width:75px;"}
+
+![Logo Google assistant](../../img/googelassist.png "google assistant"){style="width: 75px;"}
+
+![logo google home](../../img/googlehome.png "google home "){style="width:75px;"}
+
+![logo teams](../../img/teams.png "teams"){style="width:75px;"}
+
 
 * **Technology** : STT & TTS Google / Android
 * **Status** : used with Tock in production
@@ -408,7 +373,8 @@ for native mobile developments.
 
 <img alt="Logo iOS" title="Apple iOS"
 src="https://www.freeiconspng.com/uploads/app-ios-png-4.png"
-style="width: 100px;">
+style="width: 50px;">
+
 <img alt="Logo BusinessChat" title="Apple Business Chat"
 src="http://cdn.osxdaily.com/wp-content/uploads/2014/11/Messages-icon-300x300.png"
 style="width: 50px;">
@@ -441,9 +407,10 @@ _Speech-To-Text_ and _Text-To-Speech_ with Voxygen.
 
 <img alt="Allo-Media Logo" title="Allo-Media"
 src="https://s3-eu-central-1.amazonaws.com/glassdollar/logos/GD_5bcf9307048f6.png"
-style="width: 100px;"> <img alt="Voxygen Logo" title="Voxygen"
-src="https://res-1.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco/v1502521579/dyuj1cgjsnzhpo6ojwq0.png"
-style="width: 100px;">
+style="width: 100px;"> 
+ ![Logo voxygen](../../img/voxygen.png "Voxygen"){style="width: 150px;"}
+
+
 
 * **Technology**: Allo-Media & Voxygen
 * **Status**: used with Tock in production (via Allo-Media connector)
@@ -458,9 +425,7 @@ integrated with Tock for its _Speech-To-Text_ functions.
 Although this integration has not been maintained since, it worked
 after a few days of implementation.
 
-<img alt="Logo Nuance" title="Nuance"
-src="https://www.dicteedragon.fr/img/m/2.jpg"
-style="width: 100px;">
+![Logo nuance](../../img/nuance.png "Nuance"){style="width: 100px;"}
 
 * **Technology**: Nuance
 * **Status**: used with Tock in 2016

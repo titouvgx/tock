@@ -5,7 +5,7 @@ title: Ressources
 # Ressources Tock
 
 Les différents supports et présentations ci-dessous donnent un aperçu de la solution Tock, 
-en complément des [guides](../../guide/studio)
+en complément des [guides](../../guides/studio)
  pour tester soi-même la plateforme.
 
 ## Conférences / Video
@@ -25,10 +25,7 @@ en complément des [guides](../../guide/studio)
 
 <a href="https://www.youtube.com/watch?v=UsKkpYL7Hto"
 target="tock_osxp">
-<img alt="Tock @ OSXP 2021"
-src="https://doc.tock.ai/fr/images/tock_osxp_2021.png"
-style="width: 400px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align: center;">
-</a>
+![logo tockosxp](../img/tockosxp2021.png )
 
 * _AlloCovid_ @ _Voice Tech Paris_
   **2020** (REX INSERM, Allo-Media & SNCF)

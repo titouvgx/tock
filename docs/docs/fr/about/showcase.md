@@ -263,10 +263,8 @@ Le service _LinTO NLU (Natural Language Understanding)_ est basé sur Tock et pe
 modèles IA dédiés à des cas d’utilisation spécifiques. Il apprend automatiquement
 selon les usages lors de l’ajout ou suppression de compétences (_Skills_) à la plateforme.
 
-<img alt="LinTO by Linagora"
-src="https://linto.ai/assets/img/schema-linto-deploy.png"
-style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align: center;">
-<!-- >To do bug img<!-->
+![logo LINTO](../img/linto.png "linto"){style="width:200px;"}
+
 * **Nom :** _[LinTO](https://linto.ai/fr/enterprises)_
 * **Date de naissance :** en production avec Tock depuis 2019
 * **Domaine :** assistant personnel pour les entreprises (agenda, emails, prise de notes, etc.)

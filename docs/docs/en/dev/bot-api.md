@@ -15,19 +15,15 @@ database would be an issue.
 This page presents Tock bot development in _Bot API_ mode in [Kotlin](bot-api#develop-in-kotlin).
 Clients are also available for [Javascript/Node](bot-api#develop-in-javascript) and [Python](bot-api#develop-in-python).
 It is possible to develop Tock courses in any language via the [_Bot API_](bot-api#developper-via-lapi).
- <!-- >To do bug img noejs and python<!-->
-[<img alt="Kotlin Logo" title="Kotlin"
- src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png"
- style="width: 50px;">](bot-api#developper-en-kotlin)
-[<img alt="Logo Nodejs" title="Nodejs"
- src="https://www.boostit.net/wp-content/uploads/2016/08/node-js-icon.png"
- style="width: 50px;">](bot-api#developper-en-javascript)
-[<img alt="Python Logo" title="Python"
-src="https://www.libraries.rutgers.edu/sites/default/files/styles/resize_to_300px_width/public/events/2020/01/python_3_2.png"
-style="width: 50px;">](bot-api#develop-in-python)
-[<img alt="API" title="Bot API"
-src="https://zappysys.com/blog/wp-content/uploads/2018/06/REST-API-icon.jpg"
-style="width: 50px;">](bot-api#develop-via-lapi)
+
+![logo kotlin](../img/kothlin.png "kotlin"){style="width:50px;"}
+
+![logo nodejs](../img/nodejs.png "nodejs"){style="width:50px;"}
+
+![logo python](../img/python.png "kothlin"){style="width:50px;"}
+
+![logo rest-api](../img/restapi.png "rest api"){style="width:50px;"}
+
 
 > Another section presents the [_Bot Framework_](bot-integre) mode available for Kotlin only,
 > more integrated but also more coupled with the Tock platform.
@@ -51,7 +47,7 @@ To use the websocket client, you must add the `tock-bot-api-websocket` dependenc
 
 For example in a [Maven](https://maven.apache.org/) project:
 
-````xml
+```xml
         <dependency>
             <groupId>ai.tock</groupId>
             <artifactId>tock-bot-api-websocket</artifactId>
@@ -147,19 +143,16 @@ fun main() {
 The [full source code of the example](https://github.com/theopenconversationkit/tock-bot-demo) is available.
 
 ## Developing in Javascript
-<!-->To do bug img nodejs and python<!-->
-<img alt="Logo Nodejs" title="Nodejs"
-src="https://www.boostit.net/wp-content/uploads/2016/08/node-js-icon.png"
-style="width: 100px;">
+
+
+![logo nodejs](../img/nodejs.png "nodejs"){style="width:50px;"}
 
 A client is provided to develop Javascript courses with [Nodejs](https://nodejs.org/).
 For more information, see the documentation on the [`tock-node`](https://github.com/theopenconversationkit/tock-node) repository.
 
 ## Developing in Python
 
-<img alt="Logo Python" title="Python"
-src="https://www.libraries.rutgers.edu/sites/default/files/styles/resize_to_300px_width/public/events/2020/01/python_3_2.png"
-style="width: 100px;">
+![logo python](../img/python.png "kothlin"){style="width:50px;"}
 
 A client is provided for developing courses in [Python](https://www.python.org/).
 For more information, see the documentation on the [`tock-py`](https://github.com/theopenconversationkit/tock-py) repository.

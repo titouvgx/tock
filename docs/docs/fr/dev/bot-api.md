@@ -16,19 +16,18 @@ base de données serait un problème.
 Cette page présente le développement de bots Tock en mode _Bot API_ en [Kotlin](bot-api#developper-en-kotlin). 
 Des clients sont aussi disponibles pour [Javascript/Node](bot-api#developper-en-javascript) et [Python](bot-api#developper-en-python).
 Il est possible de développer des parcours Tock dans n'importe quel langage via la [_Bot API_](bot-api#developper-via-lapi).
-<!-- >To do bug img noejs et python<!-->
-[<img alt="Logo Kotlin" title="Kotlin"
-      src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png" 
-      style="width: 50px;">](bot-api#developper-en-kotlin)
-[<img alt="Logo Nodejs" title="Nodejs"
-      src="https://www.boostit.net/wp-content/uploads/2016/08/node-js-icon.png" 
-      style="width: 50px;">](bot-api#developper-en-javascript)
-[<img alt="Logo Python" title="Python"
-      src="https://www.libraries.rutgers.edu/sites/default/files/styles/resize_to_300px_width/public/events/2020/01/python_3_2.png" 
-      style="width: 50px;">](bot-api#developper-en-python)
-[<img alt="API" title="Bot API"
-      src="https://zappysys.com/blog/wp-content/uploads/2018/06/REST-API-icon.jpg" 
-      style="width: 50px;">](bot-api#developper-via-lapi)
+)
+
+![logo kotlin](../img/kothlin.png "kotlin"){style="width:75px;"}
+
+
+![logo nodejs](../img/nodejs.png "nodejs"){style="width:75px;"}
+
+
+![logo python](../img/python.png "kothlin"){style="width:75px;"}
+
+
+![logo rest-api](../img/restapi.png "rest api"){style="width:75px;"}
 
 
 > Une autre section présente le mode [_Bot Framework_](bot-integre) disponible pour Kotlin uniquement, 
@@ -149,19 +148,16 @@ fun main() {
 Le [code source complet de l'exemple](https://github.com/theopenconversationkit/tock-bot-demo) est disponible.
  
 ## Développer en Javascript
-<!-->To do bug img nodejs et python<!-->
-<img alt="Logo Nodejs" title="Nodejs"
-src="https://www.boostit.net/wp-content/uploads/2016/08/node-js-icon.png" 
-style="width: 100px;">
+![logo nodejs](../img/nodejs.png "nodejs"){style="width:75px;"}
+
 
 Un client est fourni pour développer des parcours en Javascript avec [Nodejs](https://nodejs.org/).  
 Pour en savoir plus, voir la documentation sur le dépôt [`tock-node`](https://github.com/theopenconversationkit/tock-node).
 
 ## Développer en Python
 
-<img alt="Logo Python" title="Python"
-src="https://www.libraries.rutgers.edu/sites/default/files/styles/resize_to_300px_width/public/events/2020/01/python_3_2.png" 
-style="width: 100px;">
+![logo python](../img/python.png "kothlin"){style="width:75px;"}
+
 
 Un client est fourni pour développer des parcours en [Python](https://www.python.org/).  
 Pour en savoir plus, voir la documentation sur le dépôt [`tock-py`](https://github.com/theopenconversationkit/tock-py).

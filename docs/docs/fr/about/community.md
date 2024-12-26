@@ -34,9 +34,9 @@ Pour suivre l'actualité des projets Tock mais aussi les meetups, conférences, 
 
 Vous pouvez également retrouver les nouveautés dans ces pages plus spécfiques :
 
-* [Projets & utilisateurs connus](https://doc.tock.ai/tock/fr/apropos/vitrine/)
-* [Présentations & conférences](https://doc.tock.ai/tock/fr/apropos/ressources/)
-* [Prix & récompenses](https://doc.tock.ai/tock/fr/apropos/recompenses/)
+* [Projets & utilisateurs connus](https://doc.tock.ai/tock/fr/about/showcase/)
+* [Présentations & conférences](https://doc.tock.ai/tock/fr/about/ressources/)
+* [Prix & récompenses](https://doc.tock.ai/tock/fr/about/recompenses/)
 
 Enfin, pour suivre les versions et fonctionnalités de Tock :
 
@@ -82,7 +82,7 @@ La solution est d'ores et déjà utilisée par plusieurs membres du TOSIT, dont 
 
 Pour en savoir plus, voir le site de l'association : [http://tosit.fr/](http://tosit.fr/)
 
-![Logo TOSIT](../img/Logo_TOSIT-picto.svg)
+![Logo TOSIT](../img/tosit.png){style="width:75px;"}
 
 ## Hébergement de la Démo publique
 
@@ -91,7 +91,7 @@ la solution. Elle est accompagnée d'un guide pour faire ses premiers pas. Merci
 plateforme de démo en ligne.
 
 * [Plateforme Démo en ligne](https://demo.tock.ai/) 
-* [Guide _Créer son 1er bot avec Tock_](http://doc.tock.ai/tock/fr/guide/studio/)
+* [Guide _Créer son 1er bot avec Tock_](http://doc.tock.ai/tock/fr/guides/studio/)
 
 ## Aide
 

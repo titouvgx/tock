@@ -15,7 +15,7 @@ Contrairement à la plupart des solutions conversationnelles, Tock ne dépend pa
 L'utilisateur choisit les composants qu'il embarque et peut ainsi conserver la maîtrise de ses modèles et données conversationnelles.
 
 > Tock est utilisé en production depuis 2016 par [OUI.sncf](https://www.oui.sncf/services/assistant)
-> (Web/mobile, réseaux sociaux, enceintes connectées) et [de plus en plus d'organisations](apropos/vitrine) 
+> (Web/mobile, réseaux sociaux, enceintes connectées) et [de plus en plus d'organisations](about/showcase) 
 > (ENEDIS, Linagora, AlloCovid...).
 
 L'ensemble du code source est disponible sur [GitHub](https://github.com/theopenconversationkit/tock) sous 
@@ -24,7 +24,7 @@ L'ensemble du code source est disponible sur [GitHub](https://github.com/theopen
 ## Aperçu
 
 Le site [Tock.ai](https://doc.tock.ai/) est un bon point d'entrée pour découvrir la solution, ses applications et sa communauté grandissante. 
-Des [guides](guide/studio), [supports](apropos/ressources) et une [video de démonstration](https://www.youtube.com/watch?v=UsKkpYL7Hto) 
+Des [guides](guides/studio), [supports](about/ressources) et une [video de démonstration](https://www.youtube.com/watch?v=UsKkpYL7Hto) 
 (20 minutes, en Anglais) sont également disponibles :
 
 <a href="https://www.youtube.com/watch?v=UsKkpYL7Hto"
@@ -78,9 +78,9 @@ Des intégrations [React](https://reactjs.org) et [Flutter](https://flutter.dev/
 ## Démarrer...
 
 * [Table des matières](toc)
-* [Guides](guide/studio) et [plateforme de démonstration](https://demo.tock.ai/)
+* [Guides](guides/studio) et [plateforme de démonstration](https://demo.tock.ai/)
 * Manuels [utilisateur](user/concepts), [développeur](dev/modes), [administrateur](admin/architecture)
-* [Ressources (supports, video)](apropos/ressources) et [exemples de code](dev/exemples-code)
+* [Ressources (supports, video)](about/ressources) et [exemples de code](dev/exemples-code)
 
 [NLU]: https://en.wikipedia.org/wiki/Natural-language_understanding "Natural Language Understanding"
 *[NLU]: Natural Language Understanding

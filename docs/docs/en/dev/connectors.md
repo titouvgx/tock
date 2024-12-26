@@ -92,12 +92,12 @@ class TestConnectorCallback(
             context.response().end(response)
     }
 }         
-
+```
 Implement the ConnectorProvider interface
 Here is an implementation example:
 
-kotlin
-Copier le code
+```kotlin
+
 object TestConnectorProvider : ConnectorProvider {
 
     override val connectorType: ConnectorType = testConnectorType

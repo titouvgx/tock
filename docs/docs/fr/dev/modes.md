@@ -8,19 +8,19 @@ _Tock Studio_ permet de construire des parcours conversationnels (ou _stories_) 
 caroussels, etc. Pour aller plus loin il est possible de programmer des parcours des parcours 
 en [Kotlin](https://kotlinlang.org/), [Javascript](https://nodejs.org/), [Python](https://www.python.org/) 
 ou d'autres langages.
-<!-->To do bug imf nodejs et python<!-->
-<img alt="Logo Kotlin" title="Kotlin"
-      src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png" 
-      style="width: 50px;">
-<img alt="Logo Nodejs" title="Nodejs"
-      src="https://www.boostit.net/wp-content/uploads/2016/08/node-js-icon.png" 
-      style="width: 50px;">
-<img alt="Logo Python" title="Python"
-      src="https://www.libraries.rutgers.edu/sites/default/files/styles/resize_to_300px_width/public/events/2020/01/python_3_2.png" 
-      style="width: 50px;">
-<img alt="API" title="Bot API"
-      src="https://zappysys.com/blog/wp-content/uploads/2018/06/REST-API-icon.jpg" 
-      style="width: 50px;">
+
+
+![logo kotlin](../img/kothlin.png "kotlin"){style="width:75px;"}
+
+
+![logo nodejs](../img/nodejs.png "nodejs"){style="width:75px;"}
+
+
+![logo python](../img/python.png "kothlin"){style="width:75px;"}
+
+
+![logo rest-api](../img/restapi.png "rest api"){style="width:75px;"}
+
 
 Deux modes / frameworks / architectures sont proposés :
 

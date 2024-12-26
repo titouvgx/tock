@@ -13,18 +13,14 @@ instantannée pour GitHub) :<br />
 
 <a href="https://gitter.im/tockchat/Lobby"
 target="gitter">
-<img alt="Gitter" 
-src="https://lh3.googleusercontent.com/FtFJAWed4C9V_-IKFfQsMFcWJslJgqTqqjzxl0ueK52VmnW_i-yMwZ4oScLRfiXlIA=s180" 
-style="width: 100px;">
-</a>
+
+![logo gitter](../img/gitter.png "gitter"){style="width:100px;"}
 
 * Les ***issues*** GitHub permettent aussi de remonter une anomalie ou proposer une évolution :<br />
 [https://github.com/theopenconversationkit/tock/issues](https://github.com/theopenconversationkit/tock/issues)
 
 <a href="https://github.com/theopenconversationkit/tock/issues"
 target="issues">
-<img alt="GitHub issues" 
-src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" 
-style="width: 100px;">
-</a>
+
+![logo github](../img/github.png "github"){style="width:100px;"}
 

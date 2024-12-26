@@ -103,7 +103,7 @@ class WebMarkdownTest {
             |
             |## Overview
             |
-            |The  [Tock.ai](https://doc.tock.ai/)  site is a good starting point to learn about the solution and its growing community.  [Tutorials](https://doc.tock.ai/tock/en/guide/studio),  [presentations](https://doc.tock.ai/tock/en/about/resources)  and a  [live demo](https://www.youtube.com/watch?v=UsKkpYL7Hto)  (20 minutes, in English,  [ℹ️ abstract](https://www.opensource-experience.com/en/event/20-minutes-from-zero-to-live-chatbot-with-tock/)) are also available.
+            |The  [Tock.ai](https://doc.tock.ai/)  site is a good starting point to learn about the solution and its growing community.  [Tutorials](https://doc.tock.ai/tock/en/guides/studio),  [presentations](https://doc.tock.ai/tock/en/about/resources)  and a  [live demo](https://www.youtube.com/watch?v=UsKkpYL7Hto)  (20 minutes, in English,  [ℹ️ abstract](https://www.opensource-experience.com/en/event/20-minutes-from-zero-to-live-chatbot-with-tock/)) are also available.
             """.trimMargin()
         Assertions.assertThat(WebMarkdown.markdown(fullText)).isEqualTo(
             """
@@ -114,7 +114,7 @@ class WebMarkdownTest {
             |</blockquote>
             |<p>The platform source code is available on  <a target="_blank" rel="noopener noreferrer" href="https://github.com/theopenconversationkit/tock">GitHub</a>  under the  <a target="_blank" rel="noopener noreferrer" href="https://github.com/theopenconversationkit/tock/blob/master/LICENSE">Apache License, version 2.0</a>.</p>
             |<h2 style="display: block; font-size: 1.5em; margin-top: 0.83em; margin-bottom: 0.83em; margin-left: 0; margin-right: 0; font-weight: bold;">Overview</h2>
-            |<p>The  <a target="_blank" rel="noopener noreferrer" href="https://doc.tock.ai/">Tock.ai</a>  site is a good starting point to learn about the solution and its growing community.  <a target="_blank" rel="noopener noreferrer" href="https://doc.tock.ai/tock/en/guide/studio">Tutorials</a>,  <a target="_blank" rel="noopener noreferrer" href="https://doc.tock.ai/tock/en/about/resources">presentations</a>  and a  <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=UsKkpYL7Hto">live demo</a>  (20 minutes, in English,  <a target="_blank" rel="noopener noreferrer" href="https://www.opensource-experience.com/en/event/20-minutes-from-zero-to-live-chatbot-with-tock/">ℹ️ abstract</a>) are also available.</p>
+            |<p>The  <a target="_blank" rel="noopener noreferrer" href="https://doc.tock.ai/">Tock.ai</a>  site is a good starting point to learn about the solution and its growing community.  <a target="_blank" rel="noopener noreferrer" href="https://doc.tock.ai/tock/en/guides/studio">Tutorials</a>,  <a target="_blank" rel="noopener noreferrer" href="https://doc.tock.ai/tock/en/about/resources">presentations</a>  and a  <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=UsKkpYL7Hto">live demo</a>  (20 minutes, in English,  <a target="_blank" rel="noopener noreferrer" href="https://www.opensource-experience.com/en/event/20-minutes-from-zero-to-live-chatbot-with-tock/">ℹ️ abstract</a>) are also available.</p>
             """.trimMargin()
         )
     }

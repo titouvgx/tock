@@ -253,10 +253,8 @@ and industry needs by enabling the development and integration of voice operated
 
 The _LinTO NLU (Natural Language Understanding)_ system is based on Tock to support the use of several AI models
 dedicated to specific use cases. It automatically learns according to one's usage when adding or removing skills from the platform.
-<!-->To do bug img <!-->
-<img alt="LinTO by Linagora"
-src="https://linto.ai/assets/img/schema-linto-deploy.png"
-style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align: center;">
+
+![logo LINTO](../img/linto.png "linto"){style="width:150px;"}
 
 * **Name:** _[LinTO](https://linto.ai/enterprises)_
 * **Date of birth:** in production, leveraging Tock since 2019

@@ -7,14 +7,14 @@ title: Stories and Answers
 Le menu permet de construire des parcours et des réponses aux phrases de l'utilisateur.
  
 Dans cette page, le détail de chaque onglet est présenté. Voir aussi 
-[Créer son premier bot avec Tock Studio](../../guide/studio) pour un exemple de création 
+[Créer son premier bot avec Tock Studio](../../guides/studio) pour un exemple de création 
 de parcours ou [Construire un bot multilingue](../../dev/i18n) pour l'utilisation de l'onglet _Answers_.
 
 ## L'onglet _New Story_
 
 ### Créer une réponse simple
 
-> Le guide [Créer son premier bot avec Tock Studio](../../guide/studio) présente 
+> Le guide [Créer son premier bot avec Tock Studio](../../guides/studio) présente 
  un exemple de création de parcours avec une réponse simple via _New Story_.
 >
 > L'onglet _Test_ > _Test the bot_ permet ensuite de rapidement vérifier le comportement du bot sur ce parcours.

@@ -77,8 +77,8 @@ Several TOSIT members, including SNCF, already use or experiment Tock.
 
 To know more about TOSIT, please visit [http://tosit.fr/](http://tosit.fr/)
 
-![TOSIT logo](http://tosit.fr/resources/images/TOSIT_2.png)
-<!-->To do bug img tosit<!-->
+![logo tosit](../img/tosit.png "tosit"){style="width:75px;"}
+
 ## Public Demo hosting
 
 The public Live Demo helps newcomers try and experiment with the solution. A dedicated user guide is available 
@@ -87,7 +87,7 @@ Thanks to [e.Voyageurs SNCF](https://www.sncf.com/fr/groupe/newsroom/e-voyageurs
 public Live Demo platform.
 
 * [Live Demo](https://demo.tock.ai/) 
-* [Guide _Create your 1st bot with Tock_](https://doc.tock.ai/tock/en/guide/studio/)
+* [Guide _Create your 1st bot with Tock_](https://doc.tock.ai/tock/en/guides/studio/)
 
 ## Help
 

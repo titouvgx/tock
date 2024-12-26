@@ -8,19 +8,19 @@ _Tock Studio_ allows you to build conversational paths (or _stories_) including 
 carousels, etc. To go further, it is possible to program paths
 in [Kotlin](https://kotlinlang.org/), [Javascript](https://nodejs.org/), [Python](https://www.python.org/)
 or other languages.
-<!-->To do bug imf nodejs and python<!-->
-<img alt="Kotlin logo" title="Kotlin"
- src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png"
- style="width: 50px;">
-<img alt="Nodejs logo" title="Nodejs"
- src="https://www.boostit.net/wp-content/uploads/2016/08/node-js-icon.png"
- style="width: 50px;">
-<img alt="Python Logo" title="Python"
-src="https://www.libraries.rutgers.edu/sites/default/files/styles/resize_to_300px_width/public/events/2020/01/python_3_2.png"
-style="width: 50px;">
-<img alt="API" title="Bot API"
-src="https://zappysys.com/blog/wp-content/uploads/2018/06/REST-API-icon.jpg"
-style="width: 50px;">
+
+
+![logo kotlin](../img/kothlin.png "kotlin"){style="width:75px;"}
+
+
+![logo nodejs](../img/nodejs.png "nodejs"){style="width:75px;"}
+
+
+![logo python](../img/python.png "kothlin"){style="width:75px;"}
+
+
+![logo rest-api](../img/restapi.png "rest api"){style="width:75px;"}
+
 
 Two modes / frameworks / architectures are proposed:
 
@@ -30,7 +30,7 @@ The _Tock Bot API_ mode (recommended for most cases) allows you to develop in [K
 or other languages ​​with the clients provided for [Javascript/Nodejs](https://nodejs.org/) and
 [Python](https://www.python.org/) or any language using the Tock API:
 
-![BOT API](../../img/bot_api.png "BOT API")
+![BOT API](../img/bot_api.png "BOT API")
 
 This mode is the only one available on the [Tock demo platform](https://demo.tock.ai/).
 It is also the only mode that allows you to develop in any programming language, via the API.

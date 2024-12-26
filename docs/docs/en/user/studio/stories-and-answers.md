@@ -7,14 +7,14 @@ title: Stories and Answers
 The menu allows you to build paths and answers to the user's sentences.
 
 On this page, the details of each tab are presented. See also
-[Create your first bot with Tock Studio](../../guide/studio) for an example of creating a
+[Create your first bot with Tock Studio](../../guides/studio) for an example of creating a
 path or [Build a multilingual bot](../../dev/i18n) for using the _Answers_ tab.
 
 ## The _New Story_ tab
 
 ### Create a simple answer
 
-> The guide [Create your first bot with Tock Studio](../../guide/studio) presents
+> The guide [Create your first bot with Tock Studio](../../guides/studio) presents
 an example of creating a path with a simple answer via _New Story_.
 >
 > The _Test_ tab > _Test the bot_ then allows you to quickly check the behavior of the bot on this path.

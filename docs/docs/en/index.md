@@ -23,7 +23,7 @@ under the [Apache License, version 2.0](https://github.com/theopenconversationki
 ## Overview
 
 The [Tock.ai](https://doc.tock.ai/) site is a good starting point to learn about the solution and its growing community.
-[Tutorials](guide/studio), [presentations](about/resources) and a [live demo](https://www.youtube.com/watch?v=UsKkpYL7Hto) 
+[Tutorials](guides/studio), [presentations](about/ressources) and a [live demo](https://www.youtube.com/watch?v=UsKkpYL7Hto) 
 (20 minutes, in English, [ℹ️ abstract](https://www.opensource-experience.com/en/event/20-minutes-from-zero-to-live-chatbot-with-tock/)) 
 are also available:
 
@@ -69,7 +69,7 @@ _Tock Studio_ graphical user interfaces are built with [Angular](https://angular
 
 ## Getting started...
 * [Contents](toc)
-* Read [Tutorial](guide/studio) and start using the [demo/sandbox platform](https://demo.tock.ai/)
+* Read [Tutorial](guides/studio) and start using the [demo/sandbox platform](https://demo.tock.ai/)
 * User manual for [developers](dev/modes)
 
 *[NLU]: Natural Language Understanding

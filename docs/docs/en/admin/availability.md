@@ -9,7 +9,7 @@ _high availability_ (or _HA - High Availability_) configurations of Tock bots an
 
 > Coming soon: more details on how to achieve high availability on the different
 >Tock components, and feedback on our use in production for several years
->(see [showcase / users](../../apropos/showcase)).
+>(see [showcase / users](../../about/showcase)).
 
 ## Redundancy and resilience
 
