@@ -42,9 +42,7 @@ et lui-même open source : les sources du bot sont disponibles sur le dépôt [`
 > quelques explications techniques sur le bot et la [spécification fonctionnelle](https://github.com/Delegation-numerique-en-sante/covid19-algorithme-orientation) 
 du questionnaire Covid.
 
-<img alt="AlloCovid" 
-src="https://doc.tock.ai/fr/images/allocovid.png" 
-style="text-align: center;">
+![logo Allo covid](../img/allocovid.png "Allo covid")
  
 * **Nom :** _[AlloCovid](https://www.allocovid.com/)_
 * **Date de naissance :** en production au printemps 2020
@@ -69,9 +67,7 @@ Grâce aux nombreux connecteurs Tock, _OUIbot_ répond présent sur de nombreux 
 En 2019, _OUIbot_ accompagne près de 10 000 utilisateurs par jour. Il a été élu _[Best Robot Experience](https://blog-cultures-services.com/2019/07/09/ouibot-de-ouisncf-laureat-prix-best-robot-experience-2019/)_
  pour la deuxième année consécutive.
 
-<img alt="Recompense OUIbot 2019" 
-src="https://www.academieduservice.com/wp-content/uploads/2020/10/blog.png" 
-style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align: center;">
+![img Best robot experience](../img/blog.png "Best robot experience")
  
 * **Nom :** _[OUIbot](https://www.oui.sncf/services/assistant)_
 * **Date de naissance :** en production depuis 2016
@@ -90,9 +86,7 @@ l'application mobile des voyageurs SNCF sur Android et iOS, couvrant le train ma
 Accessible via le "microphone" dans l'application mobile, le bot conversationnel de l'_Assistant SNCF_ est construit
 avec Tock et les fonctions _speech-to-text_ Android et iOS.
 
-<img alt="Application mobile l'Assistant SNCF"
-src="https://www.sncf.com/sites/default/files/styles/crop_header_edito/public/2019-06/Assistant_incrustation_2B.jpg?h=fba073f2&itok=KVCTbuOc"
-style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align: center;">
+![img assistant](../img/assistantmobile.jpg "assistant mobile")
 
 * **Nom :** _[L'Assistant SNCF](https://www.sncf.com/fr/itineraire-reservation/informations-trafic/application-sncf)_
 * **Date de naissance :** en production, fonction vocale Tock depuis 2019
@@ -109,9 +103,7 @@ _[Tilien](https://www.facebook.com/botsncftransilien/)_ est le chatbot Transilie
 
 Motorisé par Tock, le chatbot vous attend sur Facebook Messenger pour offrir ses services.
 
-<img alt="Tilien le chatbot Transilien"
-src="https://i2.wp.com/www.lechotouristique.com/wp-content/uploads/2019/03/sncf.jpg?fit=960%2C640&ssl=1"
-style="width: 500px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align: center;">
+![img sncf](../img/sncf.webp)
 
 * **Nom :** _[Tilien](https://www.facebook.com/botsncftransilien/)_
 * **Date de naissance :** en production, depuis 2018 sur Tock
@@ -131,9 +123,7 @@ Présent sur la page Facebook _TGV INOUI_ et le
 [portail Wifi à Bord](https://www.sncf.com/fr/offres-voyageurs/tgv-inoui/connectez-vous-pendant-votre-voyage), l'assistant
 s'appuie sur Tock et le [`tock-react-kit`](../../user/guides/canaux#react).
 
-<img alt="Mon Assistant TGV INOUI"
-src="https://www.thetrainline.com/cmsmedia/cms/10783/tgv-inoui-interieur.jpg?width=500&height=333.5"
-style="width: 500px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align: center;">
+![img inoui](../img/inoui.jpg)
 
 * **Nom :** _[Mon Assistant TGV INOUI](https://www.facebook.com/TGVINOUI/)_
 * **Date de naissance :** en production depuis 2019
@@ -179,9 +169,7 @@ Le callbot est construit avec Tock et utilise le [_connecteur Allo-Media_](../..
 La solution de _Speech-To-Text (STT)_ utilisée est [Allo-Media](https://www.allo-media.net/), et la solution
 de _Text-To-Speech (TTS)_ est [Voxygen](https://www.voxygen.fr/).
 
-<img alt="EDF"
-src="https://upload.wikimedia.org/wikipedia/commons/1/12/%C3%89lectricit%C3%A9_de_France_logo.svg"
-style="text-align: center; width: 400px;">
+![logo sncf](../img/logosncf.svg)
 
 * **Nom :** _Callbot EDF_
 * **Date de naissance :** janvier 2021
@@ -318,12 +306,10 @@ _RocBOT_ est destiné aux Exploitants des équipes DEA SNCF. Il est à l'écoute
 _RocBOT_ est en production depuis 2020, disponible sur desktop et en mobilité grâce au 
 [_connecteur Teams_](../../user/guides/canaux#teams) fourni avec Tock.
 
-<img alt="RocBOT un bot pour l'Exploitation"
-src="https://doc.tock.ai/fr/images/doc/rocbot_bonjour.png"
-style="width: 400px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align: center;">
-<img alt="RocBOT un bot pour l'Exploitation"
-src="https://doc.tock.ai/fr/images/doc/rocbot_application.png"
-style="width: 300px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align: center;">
+![img robot](../img/robot1.png )
+
+
+![img robot](../img/robot2.png )
 
 * **Nom :** _RocBOT_
 * **Date de naissance :** en production depuis 2020
@@ -349,9 +335,8 @@ il utilise le [_connecteur Web_](../../user/guides/canaux#web-générique) et le
 [_kit React_](../../user/guides/canaux#react) fournis avec Tock pour s'intégrer en quelques lignes de HTML/JS/CSS 
 sur le [site](https://doc.tock.ai/fr/).
 
-<img alt="Toki le bot qui parle de Tock"
-src="https://doc.tock.ai/fr/images/doc/tockbot_032021.jpg"
-style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align: center;">
+
+![logo kotlin](../img/tockbot.jpg "Tockbot")
 
 * **Nom :** _Toki_
 * **Date de naissance :** en production depuis 2021

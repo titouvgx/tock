@@ -35,9 +35,7 @@ Rather than deploying your own Tock platform, it is possible to test the _WebSoc
 
 ## Develop in Kotlin
 
-<img alt="Kotlin Logo" title="Kotlin"
-src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png"
-style="width: 100px;">
+![logo kotlin](../img/kothlin.png "kotlin"){style="width:100px;"}
 
 ### Enable WebSocket mode
 
@@ -159,9 +157,7 @@ For more information, see the documentation on the [`tock-py`](https://github.co
 
 ## Develop via API
 
-<img alt="Logo API" title="REST API"
-src="https://zappysys.com/blog/wp-content/uploads/2018/06/REST-API-icon.jpg"
-style="width: 100px;">
+![logo rest-api](../img/restapi.png "rest api"){style="width:50px;"}
 
 It is possible to develop Tock courses in any language, by interfacing directly with the
 [API](api#tock-bot-definition-api).

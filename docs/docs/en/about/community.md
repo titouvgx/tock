@@ -20,9 +20,8 @@ Join them to see how much the community is active and open.
 
 <a href="https://gitter.im/tockchat/Lobby"
 target="gitter">
-<img alt="Gitter" 
-src="https://lh3.googleusercontent.com/FtFJAWed4C9V_-IKFfQsMFcWJslJgqTqqjzxl0ueK52VmnW_i-yMwZ4oScLRfiXlIA=s180" 
-style="width: 100px;">
+![logo gitter](../img/gitter.png "Gitter"){style="width:75px;"}
+
 </a>
 
 ## Follow Tock news
@@ -59,10 +58,8 @@ For other types of contribution, don't hesitate to use GitHub [_issues_](https:/
 and [join the community](https://gitter.im/tockchat/Lobby) directly on Gitter.
 
 <a href="https://github.com/theopenconversationkit/tock/"
-target="github">
-<img alt="GitHub" 
-src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" 
-style="width: 100px;">
+
+![logo kotlin](../img/github.png "kotlin"){style="width:100px;"}
 </a>
 
 ## TOSIT association
@@ -77,7 +74,7 @@ Several TOSIT members, including SNCF, already use or experiment Tock.
 
 To know more about TOSIT, please visit [http://tosit.fr/](http://tosit.fr/)
 
-![logo tosit](../img/tosit.png "tosit"){style="width:75px;"}
+![logo tosit](../img/tosit.png "tosit"){style="width:100px;"}
 
 ## Public Demo hosting
 

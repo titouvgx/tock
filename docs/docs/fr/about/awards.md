@@ -21,9 +21,7 @@ a récompensé la SNCF pour sa démarche et le partage de plateformes ouvertes c
 [Tock](https://doc.tock.ai/) (filiale e.Voyageurs) 
 et [Navitia](https://github.com/CanalTP/navitia) (filiale Kisio Digital).
 
-<img alt="Recompense LesActeursDuLibre 2019" 
-src="https://pbs.twimg.com/media/ELca13sWsAQ5HkR.jpg" 
-style="width: 500px; text-align: center;">
+![logo kotlin](../img/ceremony.jpg "Acteurs du libre")
 
 La remise du prix à [Simon Clavier](https://www.linkedin.com/in/clavier/) et [François Nollen](https://www.linkedin.com/in/francois-nollen-42102782/) 
 eut lieu le 10 décembre dans le Grand Auditorium du [_Paris Open Source Summit_](http://2019.opensourcesummit.paris/).
@@ -34,9 +32,7 @@ Pour en savoir plus, voir aussi [_Les Acteurs Du Libre_](https://lesacteursdulib
 
 ## *Best Robot Experience 2019* (OUI.sncf)
 
-<img alt="Recompense OUIbot 2019" 
-src="https://www.academieduservice.com/wp-content/uploads/2020/10/blog.png" 
-style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align: center;">
+![logo kotlin](../img/blog.png "Acteurs du libre")
 
 En 2019, _OUIbot_ a reçu le prix 
 _[Best Robot Experience](https://blog-cultures-services.com/2019/07/09/ouibot-de-ouisncf-laureat-prix-best-robot-experience-2019/)_
@@ -51,10 +47,7 @@ Voir aussi le blog [Cultures Services](https://blog-cultures-services.com/2019/0
 
 ## *Best Robot Experience 2018* (OUI.sncf)
 
-<img alt="Recompense OUIbot 2018"
-title="L'équipe 'Jarvis' du bot OUI.sncf" 
-src="https://pbs.twimg.com/media/DhQ_uchWkAI3-o5.jpg" 
-style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align: center;">
+![logo kotlin](../img/BRE.jpg "Best Robot Experience 2018")
 
 En 2018, _OUIbot_ l'assistant [OUI.sncf](https://www.oui.sncf/) qui accompagne près de 10 000 utilisateurs 
 par jour a été élu _[Best Robot Experience](https://www.sensduclient.com/2018/04/ouibot-ouisncf-est-le-gagnant-de-best.html)_

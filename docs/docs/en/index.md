@@ -29,9 +29,8 @@ are also available:
 
 <a href="https://www.youtube.com/watch?v=UsKkpYL7Hto"
 target="tock_osxp">
-<img alt="Tock @ OSXP 2021"
-src="https://doc.tock.ai/en/images/tock_osxp_2021.png"
-style="width: 400px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align: center;">
+
+![logo kotlin](img/tockosxp2021.png "kotlin")
 </a>
 
 ## Features

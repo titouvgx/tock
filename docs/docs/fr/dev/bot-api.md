@@ -40,9 +40,7 @@ Plutôt que déployer se propre plateforme Tock, il est possible de tester les m
 
 ## Développer en Kotlin
 
-<img alt="Logo Kotlin" title="Kotlin"
-src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png" 
-style="width: 100px;">
+![logo kotlin](../img/kothlin.png "kotlin"){style="width:200px;"}
 
 ### Activer le mode WebSocket
 
@@ -164,9 +162,7 @@ Pour en savoir plus, voir la documentation sur le dépôt [`tock-py`](https://gi
 
 ## Développer via l'API
 
-<img alt="Logo API" title="REST API"
-src="https://zappysys.com/blog/wp-content/uploads/2018/06/REST-API-icon.jpg" 
-style="width: 100px;">
+![logo rest-api](../img/restapi.png "rest api"){style="width:100px;"}
 
 Il est possible de développer des parcours Tock dans n'importe quel langage, en s'interfaçant directement avec 
 l'[API](api#tock-bot-definition-api).

@@ -36,9 +36,7 @@ Cette page liste en fait :
 
 ![logo teams](../../img/teams.png "teams"){style="width:50px;"}
 
-[<img alt="Logo Business Chat" title="Apple Business Chat"
- src="http://cdn.osxdaily.com/wp-content/uploads/2014/11/Messages-icon-300x300.png"
- style="width: 50px;">](../channels#business-chat)
+![logo BusinessChat Logo](../../img/message.png "BusinessChat Logo"){style="width:50px;"}
 
 ![logo twitter](../../img/twitter.png "twitter"){style="width:50px;"}
 
@@ -47,9 +45,7 @@ Cette page liste en fait :
 
 ![logo web](../../img/web.png "web"){style="width:50px;"}
 
-[<img alt="Logo Test" title="Test (generic)"
- src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR_8-ubeyOzkkKclCUX3V-LSJVik_u8wtbJs6FBGWp9P19kzAQH&usqp=CAU"
- style="width: 50px;">](../channels#generic-test)
+![logo test](../../img/test.jpeg "test"){style="width:50px;"}
 
 - Les [kits utilisant le _connecteur Web_](../canaux#integrations-via-le-connecteur-web) pour intégrer d'autres canaux :  
 
@@ -58,9 +54,7 @@ Cette page liste en fait :
 ![logo flutter](../../img/flutter.png "allo media"){style="width:50px;"}
 
 
-[<img alt="Logo SharePoint" title="Microsoft SharePoint"
-src="https://expertime.com/wp-content/uploads/2019/12/Logo_SharePoint-expertime.png"
-style="width: 50px;">](../channels#sharepoint-beta)
+![logo Sharepoint](../../img/sharepoint.png "Sharepopint"){style="width:50px;"}
 
 - Les [intégrations possibles pour le traitement de la voix](../canaux#technologies-vocales) :  
 ![logo android](../../img/android.png "allo media"){style="width:50px;"}
@@ -73,9 +67,7 @@ style="width: 50px;">](../channels#sharepoint-beta)
 
 ![logo ios](../../img/ios.png "ios"){style="width:50px;"}
 
-[<img alt="BusinessChat Logo" title="Apple Business Chat"
- src="http://cdn.osxdaily.com/wp-content/uploads/2014/11/Messages-icon-300x300.png"
- style="width: 50px;">](../channels#apple-ios)
+![logo BusinessChat Logo](../../img/message.png "BusinessChat Logo"){style="width:50px;"}
 
 ![Logo Alexa](../../img/alexa2.png "Alexa"){style="width: 75px;"}
 
@@ -96,9 +88,8 @@ n'hésitez pas à consulter la page [vitrine Tock](../../about/showcase).
 
 ### Messenger
 
-<img alt="Logo Messenger" title="Facebook Messenger"
-src="https://cdn.iconscout.com/icon/free/png-256/facebook-messenger-2-569346.png" 
-style="width: 100px;">
+![logo messenger](../../img/messenger.png "whatsapp"){style="width:50px;"}
+
 
 * **Canal** : [Facebook Messenger](https://www.messenger.com/)
 * **Type** : texte _(+ voix via l'upload de messages vocaux)_
@@ -140,9 +131,8 @@ Pour en savoir plus sur ce connecteur, voir ses sources et son _README_ dans le 
 
 ### Alexa / Echo
 
-<img alt="Logo Alexa" title="Amazon Alexa / Amazon Echo"
-src="https://cognyapps.com/wp-content/uploads/2018/09/amazon-alexa-logo-e1538253665426.png" 
-style="width: 100px;">
+![Logo Alexa](../../img/alexa2.png "alexa"){style="width: 75px;"}
+
 
 * **Canal** : [Amazon Alexa](https://alexa.amazon.com/) / Amazon Echo
 * **Type** : voix
@@ -156,9 +146,7 @@ Pour en savoir plus sur ce connecteur, voir ses sources et son _README_ dans le 
 
 ### Rocket.Chat
 
-<img alt="Logo RocketChat" title="Rocket.Chat"
-src="https://dl2.macupdate.com/images/icons256/58493.png?d=1565347347" 
-style="width: 100px;">
+![logo Rocket rachat](../../img/rocketrachat.png "rocket rachat"){style="width:50px;"}
 
 * **Canal** : [Rocket.Chat](https://rocket.chat/)
 * **Type** : texte
@@ -192,9 +180,7 @@ Pour en savoir plus sur ce connecteur, voir ses sources et son _README_ dans le 
 
 ### Business Chat
 
-<img alt="Logo BusinessChat" title="Apple Business Chat"
-src="http://cdn.osxdaily.com/wp-content/uploads/2014/11/Messages-icon-300x300.png" 
-style="width: 100px;">
+![logo BusinessChat Logo](../../img/message.png "BusinessChat Logo"){style="width:50px;"}
 
 * **Canal** : [Apple Business Chat (Messages)](https://www.apple.com/fr/ios/business-chat/)
 * **Type** : texte
@@ -216,9 +202,7 @@ Pour en savoir plus sur ce connecteur, voir ses sources et son _README_ dans le 
 
 ### Allo-Media
 
-<img alt="Logo Allo-Media" title="Allo-Media"
-src="https://s3-eu-central-1.amazonaws.com/glassdollar/logos/GD_5bcf9307048f6.png" 
-style="width: 100px;">
+![logo BusinessChat Logo](../../img/allomedia.png "BusinessChat Logo"){style="width:75px;"}
 
 * **Canal** : [Allo-Media](https://www.allo-media.net/) (téléphonie)
 * **Type** : voix
@@ -230,9 +214,7 @@ avec les [sources du bot](https://github.com/theopenconversationkit/allocovid) s
 
 ### Google Chat
 
-<img alt="Logo Google Chat" title="Google Chat"
-src="https://cdn.zapier.com/storage/photos/bfbce5bee25b1b50d8a910c30588c61e.png" 
-style="width: 100px;">
+![logo google chat ](../../img/ggchat.png "google chat"){style="width:50px;"}
 
 * **Canal** : [Google Chat](https://chat.google.com) (anciennement Google Hangouts)
 * **Type** : texte
@@ -243,9 +225,8 @@ Pour en savoir plus sur ce connecteur, voir ses sources et son _README_ dans le 
 
 ### Web (générique)
 
-<img alt="Logo Web" title="Web (générique)"
- src="https://static.vecteezy.com/system/resources/previews/000/425/842/non_2x/vector-web-search-icon.jpg" 
- style="width: 100px;">
+![logo web](../../img/web.png "web"){style="width:75px;"}
+
 
 Ce connecteur générique permet d'intégrer un bot Tock à n'importe quel site Web ou application :
 portail, application Web ou mobile, client REST, etc.
@@ -268,9 +249,8 @@ Il contient exemples et documentation format _Swagger_ de l'API REST.
 
 ### Test (générique)
 
-<img alt="Logo Web" title="Test (générique)"
- src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR_8-ubeyOzkkKclCUX3V-LSJVik_u8wtbJs6FBGWp9P19kzAQH&usqp=CAU" 
- style="width: 100px;">
+![logo web](../../img/web.png "web"){style="width:75px;"}
+
  
 Ce connecteur est interne à Tock, il sert à dialoguer avec un bot directement dans l'interface 
 _Tock Studio_ (vue _Test_ > _Test the bot_) en émulant d'autres connecteurs.
@@ -283,9 +263,7 @@ En conséquence, il permet encore davantage d'intégrations côté "frontend", u
 
 ### React
 
-<img alt="Logo React" title="React"
-src="https://blog.octo.com/wp-content/uploads/2015/12/react-logo-1000-transparent.png" 
-style="width: 100px;">
+![logo React](../../img/React.png "React"){style="width:50px;"}
 
 Ce composant React intègre un bot Tock et en assure le rendu graphique dans une application Web.  
 L'application Web communique avec le bot via un [connecteur Web](../canaux#web-générique).
@@ -297,11 +275,11 @@ L'application Web communique avec le bot via un [connecteur Web](../canaux#web-g
 Pour en savoir plus, voir les sources et le _README_ dans le dépôt 
 [`tock-react-kit`](https://github.com/theopenconversationkit/tock-react-kit) sur GitHub.
 
-### Flutter _(beta)_
+### Flutter *(beta)*
 
-<img alt="Logo Flutter" title="Google Flutter"
-src="https://plugins.jetbrains.com/files/9212/97400/icon/pluginIcon.png" 
-style="width: 100px;">
+
+![logo flutter](../../img/flutter.png "allo media"){style="width:50px;"}
+
 
 Ce composant Flutter intègre un bot Tock et en assure le rendu graphique dans une application mobile ou Web.  
 L'application communique avec le bot via un [connecteur Web](../canaux#web-générique).
@@ -313,11 +291,9 @@ L'application communique avec le bot via un [connecteur Web](../canaux#web-gén�
 Pour en savoir plus, voir les sources et le _README_ dans le dépôt 
 [`tock-flutter-kit`](https://github.com/theopenconversationkit/tock-flutter-kit) sur GitHub.
 
-### SharePoint _(beta)_
+### SharePoint *(beta)*
 
-<img alt="Logo SharePoint" title="Microsoft SharePoint"
-src="https://expertime.com/wp-content/uploads/2019/12/Logo_SharePoint-expertime.png" 
-style="width: 100px;">
+![logo Sharepoint](../../img/sharepoint.png "Sharepopint"){style="width:50px;"}
 
 Ce composant _WebPart_ permet d'intégrer un bot Tock dans un site SharePoint.  
 Il embarque le [tock-react-kit](../canaux#react) pour communiquer avec le bot 
@@ -373,13 +349,9 @@ Les fonctions _Speech-To-Text_ et _Text-To-Speech_ d'Apple sont utilisées à tr
 [connecteur Business Chat](../canaux#business-chat), ainsi qu'au sein d'iOS
 pour des développements mobiles natifs.
 
-<img alt="Logo iOS" title="Apple iOS"
-src="https://www.freeiconspng.com/uploads/app-ios-png-4.png"
-style="width: 50px;">
+![logo ios](../../img/ios.png "ios"){style="width:50px;"}
 
-<img alt="Logo BusinessChat" title="Apple Business Chat"
-src="http://cdn.osxdaily.com/wp-content/uploads/2014/11/Messages-icon-300x300.png"
-style="width: 50px;">
+![logo BusinessChat Logo](../../img/message.png "BusinessChat Logo"){style="width:50px;"}
 
 * **Technologie** : STT & TTS Apple / iOS
 * **Status** : utilisé avec Tock en production (via connecteur Business Chat 
@@ -390,9 +362,7 @@ et en natif iOS pour les bots intégrés _on-app_)
 Les fonctions _Speech-To-Text_ et _Text-To-Speech_ d'Alexa (Amazon) sont utilisées à travers le 
 [connecteur Alexa / Echo](../canaux#alexa-echo).
 
-<img alt="Logo Alexa" title="Amazon Alexa"
-src="https://cognyapps.com/wp-content/uploads/2018/09/amazon-alexa-logo-e1538253665426.png" 
-style="width: 100px;">
+![Logo Alexa](../../img/alexa2.png "alexa"){style="width: 75px;"}
 
 * **Technologie** : STT & TTS Amazon / Alexa
 * **Status** : utilisé avec Tock en production (via connecteur Alexa)
@@ -407,11 +377,9 @@ A l'occasion du développement du bot [AlloCovid](https://www.allocovid.com/), u
 a été développé pour intégrer le bot (Tock) aux services Allo-Media : 
 _Speech-To-Text_ et _Text-To-Speech_ avec Voxygen.
 
-<img alt="Logo Allo-Media" title="Allo-Media"
-src="https://s3-eu-central-1.amazonaws.com/glassdollar/logos/GD_5bcf9307048f6.png" 
-style="width: 100px;"> <img alt="Logo Voxygen" title="Voxygen" 
-src="https://res-1.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco/v1502521579/dyuj1cgjsnzhpo6ojwq0.png" 
-style="width: 100px;">
+![logo android](../../img/android.png "allo media"){style="width:50px;"}
+
+![Logo voxygen](../../img/voxygen.png "Voxygen"){style="width: 100px;"}
 
 * **Technologie** : Allo-Media & Voxygen
 * **Status** : utilisé avec Tock en production (via connecteur Allo-Media)

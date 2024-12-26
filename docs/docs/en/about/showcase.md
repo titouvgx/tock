@@ -37,9 +37,7 @@ repository [`allocovid`](https://github.com/theopenconversationkit/allocovid).
 > The source repository also includes the [_Allo-Media connector_](../dev/connectors.md#allo-media), 
 > technical details about the bot and its [functional specification](https://github.com/Delegation-numerique-en-sante/covid19-algorithme-orientation).
 
-<img alt="AlloCovid" 
-src="https://doc.tock.ai/fr/images/allocovid.png" 
-style="text-align: center;">
+![logo Allo covid](../img/allocovid.png "Allo covid")
  
 * **Name:** _[AlloCovid](https://www.allocovid.com/)_
 * **Date of birth:** in production since spring 2020
@@ -65,9 +63,7 @@ Website [www.oui.sncf](https://www.oui.sncf/bot), social networks, voice assista
 In 2019, _OUIbot_ answers approximately 10.000 users a day. It has been awarded _[Best Robot Experience](https://blog-cultures-services.com/2019/07/09/ouibot-de-ouisncf-laureat-prix-best-robot-experience-2019/)_
  for the second year in a row.
 
-<img alt="OUIbot award 2019" 
-src="https://www.academieduservice.com/wp-content/uploads/2020/10/blog.png" 
-style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align: center;">
+![img Best robot experience](../img/blog.png "Best robot experience")
  
 * **Name:** _[OUIbot](https://www.oui.sncf/services/assistant)_
 * **Date of birth:** in production since 2016
@@ -86,9 +82,7 @@ the mobile application for SNCF passengers on Android and iOS, covering both tra
 Accessible via the "microphone" in the mobile application, le SNCF Assistant's conversational bot is built with Tock
 plus the speech-to-text Android and iOS functions.
 
-<img alt="SNCF Assistant mobile app"
-src="https://www.sncf.com/sites/default/files/styles/crop_header_edito/public/2019-06/Assistant_incrustation_2B.jpg?h=fba073f2&itok=KVCTbuOc"
-style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align: center;">
+![img assistant](../img/assistantmobile.jpg "assistant mobile")
 
 * **Name:** _[L' Assistant SNCF](https://www.sncf.com/fr/itineraire-reservation/informations-trafic/application-sncf)_
 * **Date of birth:** in production, featuring Tock voice function since 2019
@@ -105,9 +99,7 @@ _[Tilien](https://www.facebook.com/botsncftransilien/)_ is the Transilien chatbo
 
 Powered by Tock, the chatbot is waiting for you on Facebook Messenger.
 
-<img alt="Tilien the Transilien chatbot"
-src="https://i2.wp.com/www.lechotouristique.com/wp-content/uploads/2019/03/sncf.jpg?fit=960%2C640&ssl=1"
-style="width: 500px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align: center;">
+![img sncf](../img/sncf.webp)
 
 * **Name:** _[Tilien](https://www.facebook.com/botsncftransilien/)_
 * **Date of birth:** in production, since 2018 with Tock
@@ -125,9 +117,7 @@ during and after their journey.
 Located on the _TGV INOUI_ Facebook page and the [WiFi Portal](https://www.sncf.com/en/passenger-offer/tgv-inoui/stay-connected-during-your-journey)
 aboard the train, the assistant is based on Tock and the [`tock-react-kit`](../dev/connectors.md#react).
 
-<img alt="Mon Assistant TGV INOUI"
-src="https://www.thetrainline.com/cmsmedia/cms/10783/tgv-inoui-interieur.jpg?width=500&height=333.5"
-style="width: 500px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align: center;">
+![img inoui](../img/inoui.jpg)
 
 * **Name:** _[Mon Assistant TGV INOUI](https://www.facebook.com/TGVINOUI/)_
 * **Date of birth:** in production since 2019
@@ -171,9 +161,7 @@ The callbot is powered by Tock using the [_Allo-Media connector_](../dev/connect
 The _Speech-To-Text (STT)_ solution is [Allo-Media](https://www.allo-media.net/), and the _Text-To-Speech (TTS)_
 is [Voxygen](https://www.voxygen.fr/).
 
-<img alt="EDF"
-src="https://upload.wikimedia.org/wikipedia/commons/1/12/%C3%89lectricit%C3%A9_de_France_logo.svg"
-style="text-align: center; width: 400px;">
+![logo sncf](../img/logosncf.svg)
 
 * **Name:** _EDF Callbot_
 * **Date of birth:** January 2021
@@ -196,7 +184,7 @@ without the need to contact a customer advisor.
 Co-developped with Enedis experts on TOCK solution, this chatbot is available 
 on the company Website [Enedis.fr](https://www.enedis.fr/).
 
-![Enedis Client Chatbot](../../img/enedis_bot2.png "Enedis Client Chatbot")
+![Enedis Client Chatbot](../img/enedis_bot1.png "Enedis Client Chatbot")
 
 * **Name:** _Enedis Client Chatbot_
 * **Date of birth:** in production from february 2021
@@ -217,10 +205,6 @@ on the company Website [Enedis.fr](https://www.enedis.fr/).
 * use a concierge service ;
 * ask for financial advice, plan for life's projects, etc.
 * and so much more !
-<!-->To do img qui bug, s'affiche en sur le previewer, mais pas en ligne<!-->
-<img title="MaxBot in Aumax pour moi, mobile app"
-alt="Mobile app Aumax pour moi" src="../img/maxbot.jpg"
-style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align: center;">
 
 Through the app, the Aumax pour moi's bot, based on Tock, assists you through every question you may have on the app, your accounts or on your card.
 
@@ -309,12 +293,10 @@ _RocBOT_ is dedicated to Ops teams at SNCF DEA, available at the office and on-t
 _RocBOT_ is available in production since 2020, on Teams desktop and mobile applications through the 
 Tock [_Teams connector_](../dev/connectors.md#teams).
 
-<img alt="RocBOT an Ops assistant"
-src="https://doc.tock.ai/fr/images/doc/rocbot_bonjour.png"
-style="width: 400px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align: center;">
-<img alt="RocBOT an Ops assistant"
-src="https://doc.tock.ai/fr/images/doc/rocbot_application.png"
-style="width: 300px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align: center;">
+![img robot](../img/robot1.png )
+
+
+![img robot](../img/robot2.png )
 
 * **Name:** _RocBOT_
 * **Date of birth:** in production since 2020
@@ -340,9 +322,7 @@ leverages the Tock-provided [_Web connector_](../user/guides/canaux.md#web-gener
 [_React kit_](../user/guides/canaux.md#react) to integrate with the [Website](https://doc.tock.ai/fr/) (with several 
 lines of HTML/JS/CSS).
 
-<img alt="Toki the bot about Tock"
-src="https://doc.tock.ai/fr/images/doc/tockbot_032021.jpg"
-style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align: center;">
+![logo kotlin](../img/tockbot.jpg "Tockbot")
 
 * **Name:** _Toki_
 * **Date of birth:** in production since 2021

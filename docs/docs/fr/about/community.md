@@ -20,9 +20,7 @@ La plupart des utilisateurs et contributeurs Tock se retrouvent sur la messageri
 
 <a href="https://gitter.im/tockchat/Lobby"
 target="gitter">
-<img alt="Gitter" 
-src="https://lh3.googleusercontent.com/FtFJAWed4C9V_-IKFfQsMFcWJslJgqTqqjzxl0ueK52VmnW_i-yMwZ4oScLRfiXlIA=s180" 
-style="width: 100px;">
+![logo gitter](../img/gitter.png "Gitter"){style="width:75px;"}
 </a>
 
 ## Suivre l'actualité de la plateforme
@@ -60,10 +58,8 @@ Pour en savoir plus sur l'organisation des dépôts, les conventions de code, et
 GitHub et à [contacter directement la communauté](https://gitter.im/tockchat/Lobby) avec Gitter.
 
 <a href="https://github.com/theopenconversationkit/tock/"
-target="github">
-<img alt="GitHub" 
-src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" 
-style="width: 100px;">
+
+![logo kotlin](../img/github.png "kotlin"){style="width:100px;"}
 </a>
 
 ## Association TOSIT
