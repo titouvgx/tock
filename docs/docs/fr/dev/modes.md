@@ -24,13 +24,13 @@ ou d'autres langages.
 
 Deux modes / frameworks / architectures sont proposés :
 
-## Le mode _Bot API_
+## Le mode *Bot API*
 
 Le mode _Tock Bot API_ (recommandé pour la plupart des cas) permet de développer en [Kotlin](https://kotlinlang.org/) 
 ou d'autres langages avec les clients fournis pour [Javascript/Nodejs](https://nodejs.org/) et 
 [Python](https://www.python.org/) ou n'importe quel langage grâce à l'API de Tock :
 
-![BOT API](../../img/bot_api.png "BOT API")
+![BOT API](../img/bot_api.png "BOT API")
 
 Ce mode est le seul disponible sur la [plateforme de démonstration Tock](https://demo.tock.ai/). 
 C'est aussi le seul mode permettant de développer dans n'importe quel langage de programmation, via l'API.
