@@ -10,7 +10,7 @@ and [bots designed with Tock](../showcase) have been awarded.
 
 ## *Best Open Source Strategy 2019* (SNCF)
 
-![logo kotlin](../img/acteursdulibre.png "Acteurs du libre")
+![img acteurs du libre](../img/acteursdulibre.png "Acteurs du libre")
 
 In 2019, the _Acteurs du Libre_ award for the 
 [_Best Open Source Strategy_](https://lesacteursdulibre.com/portfolio/prix-meilleure-strategie/)
@@ -18,7 +18,7 @@ was given to [SNCF](https://www.sncf.com/) ("French National Railway Company") f
 [Tock](https://doc.tock.ai/) (e.Voyageurs subsidiary) 
 and [Navitia](https://github.com/CanalTP/navitia) (Kisio Digital subsidiary).
 
-![logo kotlin](../img/ceremony.jpg "Acteurs du libre")
+![img acteurs du libre](../img/ceremony.jpg "Acteurs du libre")
 
 [Simon Clavier](https://www.linkedin.com/in/clavier/) and [François Nollen](https://www.linkedin.com/in/francois-nollen-42102782/) 
 received the award on December 10<sup>th</sup> in the Grand Auditorium of [_Paris Open Source Summit_](http://2019.opensourcesummit.paris/).

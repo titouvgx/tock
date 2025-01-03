@@ -30,7 +30,7 @@ are also available:
 <a href="https://www.youtube.com/watch?v=UsKkpYL7Hto"
 target="tock_osxp">
 
-![logo kotlin](img/tockosxp2021.png "kotlin")
+![img open source experience](img/tockosxp2021.png "video Open Source Experience 2021")
 </a>
 
 ## Features

@@ -102,17 +102,18 @@ target="tock_crip">
 
 Comme le reste des sources Tock, les logos sont disponibles sous [licence Apache 2](https://github.com/theopenconversationkit/tock/blob/master/LICENSE).
 
-**Logo Tock - couleurs par défaut / transparent** (<a href="../img/logo.svg" download="">télécharger</a>) :
-![logo normal](../img/logo.svg ){style="width:150px;"}
+**Logo Tock - couleurs par défaut / transparent**  
+(<a href="../img/logo.svg" download="">télécharger</a>) :
+![logo normal](../img/logo.svg){: style="width:150px;"}
 
-**Logo Tock - bleu / transparent** (<a href="../img/Logo_Tock_Blue.svg" download="">télécharger</a>) :
+**Logo Tock - bleu / transparent**  
+(<a href="../img/Logo_Tock_Blue.svg" download="">télécharger</a>) :
+![logo bleu](../img/Logo_Tock_Blue.svg){: style="width:150px;"}
 
-![logo bleu](../img/Logo_Tock_Blue.svg ){style="width:150px;"}
+**Logo Tock - noir / transparent**  
+(<a href="../img/logo-black.svg" download="">télécharger</a>) :
+![logo black](../img/logo-black.svg){: style="width:200px;"}
 
-**Logo Tock - noir / transparent** (<a href="../img/logo-black.svg" download="">télécharger</a>) :
-
-![logo black](../img/logo-black.svg ){style="width:200px;"}
-
-**Logo Tock - blanc / transparent** (<a href="../../../assets/images/Logo_Tock_White.svg" download="">télécharger</a>) :
-
-![logo white](../img/Logo_Tock_White.svg ){style="width:150px;"}
+**Logo Tock - blanc / transparent**  
+(<a href="../img/Logo_Tock_White.svg" download="">télécharger</a>) :
+![logo white](../img/Logo_Tock_White.svg){: style="width:150px;"}

@@ -15,3 +15,9 @@ python -m venv .venv # Create a virtual env based on this python version
 source .venv/bin/activate # Activate your virtual env
 poetry install # Install dependencies for this project in the virtual env
 ```
+
+To enable the git-committers plugin in MkDocs, configure the MKDOCS_GIT_COMMITTERS_APIKEY environment variable in your .bashrc file as follows:
+
+export MKDOCS_GIT_COMMITTERS_APIKEY=[your_github_token]
+
+Ensure the GitHub token you provide has the necessary repo permissions to access repository data. After adding this line, reload your shell configuration with source ~/.bashrc to apply the changes.

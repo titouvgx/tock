@@ -57,7 +57,7 @@ To know more about repository structure, coding conventions, etc. refer to the [
 For other types of contribution, don't hesitate to use GitHub [_issues_](https://github.com/theopenconversationkit/tock/issues) 
 and [join the community](https://gitter.im/tockchat/Lobby) directly on Gitter.
 
-<a href="https://github.com/theopenconversationkit/tock/"
+<a href="https://github.com/theopenconversationkit/tock/">
 
 ![logo kotlin](../img/github.png "kotlin"){style="width:100px;"}
 </a>

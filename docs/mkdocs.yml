@@ -1,6 +1,6 @@
 site_name: My Docs
 
-repo_url: https://github.com/CreditMutuelArkea/tock
+repo_url: https://github.com/CreditMutuelArkea/tock/tree/1811_mkdocs_documentation_website
 
 theme:
   icon:
@@ -22,9 +22,9 @@ nav:
 plugins:
   - git-authors
   - git-committers:
-      repository: https://github.com/CreditMutuelArkea/tock
-      branch: main
-      
+      repository: CreditMutuelArkea/tock
+      branch: 1811_mkdocs_documentation_website
+      token: !ENV MKDOCS_GIT_COMMITTERS_APIKEY
   - search
   - i18n:
       docs_structure: folder
@@ -53,3 +53,6 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+
+# Configurer l'édition dynamique
+edit_uri: "https://github.com/CreditMutuelArkea/tock/tree/1811_mkdocs_documentation_website/docs/docs/"
