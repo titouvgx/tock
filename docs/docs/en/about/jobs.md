@@ -10,7 +10,7 @@ This page lists companies and organizations, proposing job offers in the field o
 
 |   |   |
 |---|---|
-| ![logo E.SNCF](../img/sncf.png "E.SNCF"){style="width:400px;"} | [e.Voyageurs SNCF](https://www.sncf.com/fr/groupe/newsroom/e-voyageurs-sncf) (Tock creators) recruit various profiles to build conversational assistants with Tock.<br/> To known more, check offers on [Gitter](https://gitter.im/tockchat/Lobby) or [https://jobs.oui.sncf/](https://jobs.oui.sncf/). |
+| ![logo E.SNCF](../img/sncf.png "E.SNCF") | [e.Voyageurs SNCF](https://www.sncf.com/fr/groupe/newsroom/e-voyageurs-sncf) (Tock creators) recruit various profiles to build conversational assistants with Tock.<br/> To known more, check offers on [Gitter](https://gitter.im/tockchat/Lobby) or [https://jobs.oui.sncf/](https://jobs.oui.sncf/). |
 
  
 > _Do you leverage Tock and offer conversational jobs?_

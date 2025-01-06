@@ -16,13 +16,13 @@ This page presents Tock bot development in _Bot API_ mode in [Kotlin](bot-api#de
 Clients are also available for [Javascript/Node](bot-api#develop-in-javascript) and [Python](bot-api#develop-in-python).
 It is possible to develop Tock courses in any language via the [_Bot API_](bot-api#developper-via-lapi).
 
-![logo kotlin](../img/kothlin.png "kotlin"){style="width:50px;"}
+![logo kotlin](../img/kothlin.png "kotlin"){style="width:100px;"}
 
-![logo nodejs](../img/nodejs.png "nodejs"){style="width:50px;"}
+![logo nodejs](../img/nodejs.png "nodejs"){style="width:100px;"}
 
-![logo python](../img/python.png "kothlin"){style="width:50px;"}
+![logo python](../img/python.png "kothlin"){style="width:100px;"}
 
-![logo rest-api](../img/restapi.png "rest api"){style="width:50px;"}
+![logo rest-api](../img/restapi.png "rest api"){style="width:100px;"}
 
 
 > Another section presents the [_Bot Framework_](bot-integre) mode available for Kotlin only,
@@ -143,21 +143,21 @@ The [full source code of the example](https://github.com/theopenconversationkit/
 ## Developing in Javascript
 
 
-![logo nodejs](../img/nodejs.png "nodejs"){style="width:50px;"}
+![logo nodejs](../img/nodejs.png "nodejs"){style="width:100px;"}
 
 A client is provided to develop Javascript courses with [Nodejs](https://nodejs.org/).
 For more information, see the documentation on the [`tock-node`](https://github.com/theopenconversationkit/tock-node) repository.
 
 ## Developing in Python
 
-![logo python](../img/python.png "kothlin"){style="width:50px;"}
+![logo python](../img/python.png "kothlin"){style="width:100px;"}
 
 A client is provided for developing courses in [Python](https://www.python.org/).
 For more information, see the documentation on the [`tock-py`](https://github.com/theopenconversationkit/tock-py) repository.
 
 ## Develop via API
 
-![logo rest-api](../img/restapi.png "rest api"){style="width:50px;"}
+![logo rest-api](../img/restapi.png "rest api"){style="width:100px;"}
 
 It is possible to develop Tock courses in any language, by interfacing directly with the
 [API](api#tock-bot-definition-api).

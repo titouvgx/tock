@@ -20,7 +20,7 @@ As a result, it allows even more integrations on the "frontend" side, using this
 This page actually lists:
 
 - The [_connectors_](../channels#connectors-provided-with-tock) provided with the Tock distribution:
-
+<!-->To do img tres penible<!-->
 ![logo messenger](../../img/messenger.png "whatsapp"){style="width:50px;"}
 
 ![Logo slack](../../img/slack.png "Slack"){style="width: 75px;"}

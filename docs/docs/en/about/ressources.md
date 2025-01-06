@@ -91,23 +91,20 @@ target="tock_opentransport">
 ## Press kit
 
 Like the rest of the Tock sources, the logos are available under [Apache 2 license](https://github.com/theopenconversationkit/tock/blob/master/LICENSE).
-<!-->To do bug img pênible<!-->
-**Tock logo - default colors / transparent**  
-(<a href="../img/logo.svg" download="">Download</a>) :
 
-![logo normal](../img/logo.svg){: style="width:150px;"}
 
-**Tock logo - blue / transparent**  
-(<a href="../img/Logo_Tock_Blue.svg" download="">Download</a>) :
+**Tock logo - default colors / transparent** (<a href="../../img/logo.svg" download="logo-default.svg">download</a>) :
 
-![logo bleu](../img/Logo_Tock_Blue.svg){: style="width:150px;"}
+<img alt="Tock default logo" src="../../img/logo.svg" style="width: 100px;">
 
-**Tock logo - black / transparent**  
-(<a href="../img/logo-black.svg" download="">Download</a>) :
+**Tock logo - blue / transparent** (<a href="../../img/Logo_Tock_Blue.svg" download="logo-blue.svg">download</a>) :
 
-![logo black](../img/logo-black.svg){: style="width:150px;"}
+<img alt="Tock blue logo" src="../../img/Logo_Tock_Blue.svg" style="width: 110px; margin-left: 20px;">
 
-**Tock logo - white / transparent**  
-(<a href="../img/Logo_Tock_White.svg" download="">Download</a>) :
+**Tock logo - black / transparent** (<a href="../../img/logo-black.svg" download="logo-black.svg">download</a>) :
 
-![logo white](../img/Logo_Tock_White.svg){: style="width:200px;"}
+<img alt="Tock black logo" src="../../img/logo-black.svg" style="width: 150px;">
+
+**Tock logo - white / transparent** (<a href="../../img/Logo_Tock_White.svg" download="logo-white.svg">download</a>) :
+
+<img alt="Tock white logo" src="../../img/Logo_Tock_White.svg" style="width: 150px; background-color: black;">
