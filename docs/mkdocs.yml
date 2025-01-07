@@ -18,7 +18,11 @@ theme:
 
 nav:
   # Ajoutez votre navigation ici
+# Hooks
+hooks:
+  - material/overrides/hooks/shortcodes.py
 
+  
 plugins:
   - tags
   - git-authors
