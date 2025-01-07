@@ -2,7 +2,10 @@
 title: Récompenses
 ---
 
-# Prix et récompenses
+# Prix et récompenses 
+
+<!-- md:version 1.0.0 -->
+<!-- md:default none -->
 
 Depuis sa création pour [OUI.sncf](https://www.oui.sncf/) en 2016 jusqu'au
 service _[AlloCovid](https://www.allocovid.com/)_ en 2020, la solution technique et 
