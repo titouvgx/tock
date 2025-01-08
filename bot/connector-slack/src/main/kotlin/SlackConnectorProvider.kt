@@ -68,7 +68,7 @@ internal object SlackConnectorProvider : ConnectorProvider {
                     true
                 )
             ),
-            resourceAsString("/slack.svg")
+            resourceAsString("/slack.md.svg")
         )
 
     override val supportedResponseConnectorMessageTypes: Set<KClass<out ConnectorMessage>> = setOf(SlackMessageOut::class)

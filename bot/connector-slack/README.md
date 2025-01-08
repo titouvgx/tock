@@ -9,7 +9,7 @@ On your Slack Workspace, add an incoming webhook and an outgoing webhook.
 ### Incoming webhook
 You will be given a slack url "Webhook URL". This URL will look like this:
 
-https://hooks.slack.com/services/slackToken1/slackToken2/slackToken3
+https://hooks.slack.com/services/slack.mdToken1/slack.mdToken2/slack.mdToken3
 
 
 slackToken1 is your Slack Workspace id.
