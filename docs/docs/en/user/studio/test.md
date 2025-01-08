@@ -51,4 +51,4 @@ This tool allows you to create and track the execution of automated conversation
 
 Go to [Menu _Analytics_](../analytics) for the rest of the user manual.
 
-> You can also go directly to the next chapter: [Development](../../../dev/modes).
+> You can also go directly to the next chapter: [Development](../../../dev/modes.md).

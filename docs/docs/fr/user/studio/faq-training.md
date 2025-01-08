@@ -37,4 +37,4 @@ Il est possible d'afficher les phrases associées à l'intention _unknown_ en ac
 
 Rendez-vous dans [Menu _FAQ Management_](../faq-management) pour la suite du manuel utilisateur. 
 
-> Vous pouvez aussi passer directement au chapitre suivant : [Développement](../../../dev/modes). 
+> Vous pouvez aussi passer directement au chapitre suivant : [Développement](../../../dev/modes.md). 

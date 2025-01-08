@@ -47,4 +47,4 @@ En haut à droite de l'interface se trouvent :
 
 Rendez-vous dans [Menu _Configuration_](../configuration) pour la suite du manuel utilisateur. 
 
-> Vous pouvez aussi passer directement au chapitre suivant : [Développement](../../../dev/modes). 
+> Vous pouvez aussi passer directement au chapitre suivant : [Développement](../../../dev/modes.md). 

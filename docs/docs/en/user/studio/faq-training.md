@@ -37,4 +37,4 @@ It is possible to display the sentences associated with the _unknown_ intention 
 
 Go to [Menu _FAQ Management_](../faq-management) for the rest of the user manual.
 
-> You can also go directly to the next chapter: [Development](../../../dev/modes).
+> You can also go directly to the next chapter: [Development](../../../dev/modes.md).

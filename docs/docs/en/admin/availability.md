@@ -23,7 +23,7 @@ or even better performance.
 
 ## Performance
 
-As indicated in the [installation](../installation) section, the first parameter to monitor is
+As indicated in the [installation](../../admin/installation.md) section, the first parameter to monitor is
 available memory.
 
 At high load - we have experienced more than 80 req/s on our own bots -

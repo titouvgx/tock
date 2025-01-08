@@ -256,7 +256,7 @@ recognized by the NLP model.
 This anonymization by entity type is configured in the _Language Understanding > Entities_ view. Only
 users with an `admin` or `technicalAdmin` role in _Tock Studio_ can enable/disable this feature.
 
-> For more information, see [_Roles_](../security#roles).
+> For more information, see [_Roles_](../../admin/security.md#roles).
 
 In views where sentences are displayed anonymized (_Inbox_, _Search_ for example), an `admin` or
 `technicalAdmin` can decide to still display (for himself only) a non-anonymized sentence using the
@@ -283,7 +283,7 @@ recognized by the NLP model.
 This anonymization by entity types is configured in the _Language Understanding > Entities_ view. Only
 users with an `admin` or `technicalAdmin` role in _Tock Studio_ can enable/disable this feature.
 
-> For more information, see [_Roles_](../security#roles).
+> For more information, see [_Roles_](../../admin/security.md#roles).
 
 In the views where the sentences are displayed anonymized (_Inbox_, _Search_ for example), an `admin` or
 `technicalAdmin` can decide to still display (for himself only) a non-anonymized sentence thanks to the
@@ -302,5 +302,5 @@ Depending on their nature and use in Tock (NLP, monitoring, debugging, etc.),
 these data have specific, configurable retention periods. **Each Tock user decides and configures
 how long the stored data is retained, based on their needs.**
 
-The [_Installation > Data Retention_](../installation#data-retention) section describes the different
+The [_Installation > Data Retention_](../../admin/installation.md#data-retention) section describes the different
 types of data retained and how to modify their retention period.

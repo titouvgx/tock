@@ -5,7 +5,7 @@ title: Resources
 # Tock Resources
 
 The various supports and presentations below give an overview of the Tock solution,
-in addition to the [guides](../../guides/studio)
+in addition to the [guides](../user/studio.md)
 to test the platform yourself.
 
 ## Conferences / Video
@@ -86,7 +86,7 @@ target="tock_opentransport">
 ![logo TOCK](../img/TOCKmeet.webp "TOCK")
 </a>
 
-> Feel free to [share](../contact) other media and links around Tock.
+> Feel free to [share](contact.md) other media and links around Tock.
 
 ## Press kit
 

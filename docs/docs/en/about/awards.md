@@ -7,7 +7,7 @@ title: Awards
 
 
 
-## Version actuelle : [1.0.0](./changelog.md)
+## Version actuelle : [1.0.0](../../changelog/index.md)
 
  
 
@@ -15,7 +15,7 @@ title: Awards
 
 From its creation in for [OUI.sncf](https://www.oui.sncf/) in 2016 to the French 
 _[AlloCovid](https://www.allocovid.com/)_ service in 2020, both the technical solution 
-and [bots designed with Tock](../showcase) have been awarded.
+and [bots designed with Tock](../about/showcase.md) have been awarded.
 
 ## *Best Open Source Strategy 2019* (SNCF)
 

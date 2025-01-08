@@ -89,4 +89,4 @@ An action allows the user to save their preferences.
 
 Go to [Menu _Model Quality_](../nlu-qa) for the rest of the user manual.
 
-> You can also go directly to the next chapter: [Development](../../../dev/modes).
+> You can also go directly to the next chapter: [Development](../../../dev/modes.md).

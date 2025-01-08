@@ -4,7 +4,7 @@ title: Installation
 <!-->Traduit avec google translate et reverso<!-->
 # Tock Installation
 
-The [architecture](../architecture) page presents the Tock functional and technical architecture, the role of the
+The [architecture](../../admin/architecture.md) page presents the Tock functional and technical architecture, the role of the
 different components as well as the different deployment modes.
 
 This chapter presents the different Tock installation options. In particular, it is about discussing the case of a
@@ -23,7 +23,7 @@ Tock is composed by default of several Docker containers/images and a [MongoDB](
 
 For more information on installing Tock with Docker, see the instructions in the [`tock-docker`](https://github.com/theopenconversationkit/tock-docker) repository.
 
-> The [deploy Tock with Docker](../../guide/platform) guide in the _Discover Tock_ section gives an example of deploying
+> The [deploy Tock with Docker](../../guides/platform.md) guide in the _Discover Tock_ section gives an example of deploying
 > a complete platform in a few minutes with a minimal footprint using Docker and Docker Compose.
 > However, this method is not feasible for a long-term deployment such as a production platform.
 
@@ -249,12 +249,12 @@ it is therefore important not to validate sentences containing personal data for
 
 > Data retention, encryption and anonymization are essential to protect
 > data, especially if it is personal.
-> For more information, see the [_Security > Data_](../security#data) section.
+> For more information, see the [_Security > Data_](../../admin/security.md#data) section.
 
 ## Application Components
 
 Depending on Tock's application components, whether mandatory or optional, some must be _single-instance_ and others
-can be deployed in _multiple instances_ (see the [high availability](../availability) section for more information).
+can be deployed in _multiple instances_ (see the [high availability](availability.md) section for more information).
 
 For convenience, the components below are named after the [Docker](https://www.docker.com/) images provided
 with Tock, although using Docker is not required to install Tock.
@@ -272,8 +272,8 @@ integrate, for the functioning of the _WebHooks_.
 | [`tock/build_worker`](https://hub.docker.com/r/tock/build_worker) | VPN / VPC only | Automatically rebuilds models whenever needed |
 | [`tock/duckling`](https://hub.docker.com/r/tock/duckling) | VPN / VPC only | Parses dates and primitive types using [Duckling](https://duckling.wit.ai) |
 | [`tock/nlp_api`](https://hub.docker.com/r/tock/nlp_api) | VPN / VPC only | Parses sentences from models built in _Tock Studio_ |
-| [`tock/bot_api`](https://hub.docker.com/r/tock/bot_api) | VPN / VPC only | API for developing bots ([_Tock Bot API_](../dev/bot-api) mode) |
-| [`tock/kotlin_compiler`](https://hub.docker.com/r/tock/kotlin_compiler) | VPN / VPC only | (Optional) Script compiler to enter them directly in the [_Build_](../user/studio/stories-and-answers) interface of _Tock Studio_ |
+| [`tock/bot_api`](https://hub.docker.com/r/tock/bot_api) | VPN / VPC only | API for developing bots ([_Tock Bot API_](../dev/bot-api.md) mode) |
+| [`tock/kotlin_compiler`](https://hub.docker.com/r/tock/kotlin_compiler) | VPN / VPC only | (Optional) Script compiler to enter them directly in the [_Build_](../user/studio/stories-and-answers.md) interface of _Tock Studio_ |
 | bot (not provided) | Internet / partners | The bot itself, implementing the programmatic journeys, accessible to external partners/channels via _WebHooks_ |
 
 Of course, the implementation of the bot itself is not provided with Tock (everyone implements their own features for their needs).
@@ -288,7 +288,7 @@ The [Java System Properties](https://docs.oracle.com/javase/8/docs/technotes/gui
 A sample bot in [_Tock Bot Embedded_](../../dev/bot-embedded) mode is available in
 [`docker-compose-bot-open-data.yml`](https://github.com/theopenconversationkit/tock-docker/blob/master/docker-compose-bot-open-data.yml).
 
-Examples and guidelines for packaging bots in [_Tock Bot API_](../../dev/bot-api) mode (_WebHooks_, _WebSockets_) will be available soon.
+Examples and guidelines for packaging bots in [_Tock Bot API_](../../dev/bot-api.md) mode (_WebHooks_, _WebSockets_) will be available soon.
 
 ## Minimum configurations
 
@@ -364,7 +364,7 @@ For `tock/nlp_admin`, you must use the property `adminverticle_base_href`.
 
 For a production use of Tock, we recommend you to also browse the following pages:
 
-- [Security](../security)
+- [Security](../admin/security.md)
 - [Monitoring](../monitoring)
-- [Cloud](../cloud)
-- [High availability](../availability)
+- [Cloud](../admin/cloud.md)
+- [High availability](../admin/availability.md)

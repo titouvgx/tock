@@ -110,7 +110,7 @@ Vous pouvez ensuite instancier ces images via Docker ou les stacks Docker Compos
 Les différents composants Tock peuvent s'exécuter depuis un IDE (environnement de développement intégré). 
 Des configurations sont fournies pour [IntelliJ](https://www.jetbrains.com/idea/).
 
-Voir la section [Installation Tock](../admin/installation).  
+Voir la section [Installation Tock](../admin/installation.md).  
 
 Pour exécuter le bot/exemple en mode intégré, une configuration est aussi disponible : [OpenDataBot](https://github.com/theopenconversationkit/tock-bot-open-data/blob/master/.idea/runConfigurations/OpenDataBot.xml).
 

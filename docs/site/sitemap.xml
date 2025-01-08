@@ -817,15 +817,15 @@
         <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/guides/platform/"/>
     </url>
     <url>
-        <loc>Nonefr/guides/slack/</loc>
+        <loc>Nonefr/guides/slack.md/</loc>
         <lastmod>2024-12-27</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/guides/slack/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/guides/slack.md/"/>
     </url>
     <url>
-        <loc>Nonefr/guides/studio/</loc>
+        <loc>Nonefr/guides/studio.md/</loc>
         <lastmod>2024-12-27</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/guides/studio/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/guides/studio.md/"/>
     </url>
 </urlset>

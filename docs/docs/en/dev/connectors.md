@@ -122,4 +122,4 @@ containing the name of the class:
 
 4) Add all the classes and files created in the classpath of the admin and the bot.
 
-The new connector must then be available in the interface [_Bot Configurations_](../user/studio/configuration) of _Tock Studio_.
+The new connector must then be available in the interface [_Bot Configurations_](../user/studio/configuration.md) of _Tock Studio_.

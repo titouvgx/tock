@@ -15,7 +15,7 @@ Contrairement à la plupart des solutions conversationnelles, Tock ne dépend pa
 L'utilisateur choisit les composants qu'il embarque et peut ainsi conserver la maîtrise de ses modèles et données conversationnelles.
 
 > Tock est utilisé en production depuis 2016 par [OUI.sncf](https://www.oui.sncf/services/assistant)
-> (Web/mobile, réseaux sociaux, enceintes connectées) et [de plus en plus d'organisations](about/showcase) 
+> (Web/mobile, réseaux sociaux, enceintes connectées) et [de plus en plus d'organisations](about/showcase.md) 
 > (ENEDIS, Linagora, AlloCovid...).
 
 L'ensemble du code source est disponible sur [GitHub](https://github.com/theopenconversationkit/tock) sous 
@@ -24,7 +24,7 @@ L'ensemble du code source est disponible sur [GitHub](https://github.com/theopen
 ## Aperçu
 
 Le site [Tock.ai](https://doc.tock.ai/) est un bon point d'entrée pour découvrir la solution, ses applications et sa communauté grandissante. 
-Des [guides](guides/studio), [supports](about/ressources) et une [video de démonstration](https://www.youtube.com/watch?v=UsKkpYL7Hto) 
+Des [guides](guides/studio..md), [supports](about/ressources.md) et une [video de démonstration](https://www.youtube.com/watch?v=UsKkpYL7Hto) 
 (20 minutes, en Anglais) sont également disponibles :
 
 <a href="https://www.youtube.com/watch?v=UsKkpYL7Hto"
@@ -50,11 +50,11 @@ ou [TAL](https://fr.wikipedia.org/wiki/Traitement_automatique_du_langage_naturel
     * Suivi des conversations et tendances / parcours utilisateurs (_Analytics_)
 * Frameworks pour développer des parcours complexes et intégrer des services tiers : <br/> _DSLs_ en 
 [Kotlin](https://kotlinlang.org/), [Javascript/Nodejs](https://nodejs.org/), [Python](https://www.python.org/) 
-et _API_ tous langages (voir [_Bot API_](dev/bot-api))
+et _API_ tous langages (voir [_Bot API_](dev/bot-api.md))
 * Nombreux connecteurs texte et voix : [Messenger](https://www.messenger.com/), [WhatsApp](https://www.whatsapp.com/), 
 [Google Assistant](https://assistant.google.com/), [Alexa](https://alexa.amazon.com/), [Twitter](https://twitter.com/), 
 [Apple Business Chat](https://www.apple.com/fr/ios/business-chat/), [Teams](https://products.office.com/fr-fr/microsoft-teams/), 
-[Slack](https://slack.com/)... (voir [canaux](user/guides/canaux))
+[Slack](https://slack.md.com/)... (voir [canaux](user/guides/canaux.md))
 * Installation _cloud_ ou _on-premise_, avec ou sans [Docker](https://www.docker.com/), 
 même _"embarqué"_ sans Internet 
 
@@ -77,9 +77,9 @@ Des intégrations [React](https://reactjs.org) et [Flutter](https://flutter.dev/
 ## Démarrer...
 
 * [Table des matières](toc)
-* [Guides](guides/studio) et [plateforme de démonstration](https://demo.tock.ai/)
-* Manuels [utilisateur](user/concepts), [développeur](dev/modes), [administrateur](admin/architecture)
-* [Ressources (supports, video)](about/ressources) et [exemples de code](dev/exemples-code)
+* [Guides](guides/studio..md) et [plateforme de démonstration](https://demo.tock.ai/)
+* Manuels [utilisateur](user/concepts.md), [développeur](dev/modes.md), [administrateur](admin/architecture.md)
+* [Ressources (supports, video)](about/ressources.md) et [exemples de code](dev/exemples-code)
 
 [NLU]: https://en.wikipedia.org/wiki/Natural-language_understanding "Natural Language Understanding"
 *[NLU]: Natural Language Understanding

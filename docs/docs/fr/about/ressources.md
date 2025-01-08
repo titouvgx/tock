@@ -5,7 +5,7 @@ title: Ressources
 # Ressources Tock
 
 Les différents supports et présentations ci-dessous donnent un aperçu de la solution Tock, 
-en complément des [guides](../../guides/studio)
+en complément des [guides](../../guides/studio.md)
  pour tester soi-même la plateforme.
 
 ## Conférences / Video

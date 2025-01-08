@@ -25,7 +25,7 @@ It is possible to develop Tock courses in any language via the [_Bot API_](bot-a
 ![logo rest-api](../img/restapi.png "rest api"){style="width:100px;"}
 
 
-> Another section presents the [_Bot Framework_](bot-integre) mode available for Kotlin only,
+> Another section presents the [_Bot Framework_](bot-integre.md) mode available for Kotlin only,
 > more integrated but also more coupled with the Tock platform.
 
 ## Connect to the demo platform
@@ -170,7 +170,7 @@ To use Tock's _Bot API_ mode, a specific module must be deployed with the platfo
 * Exposing the _Bot API_ to potential clients regardless of their programming language
 * Accepting _WebSocket_ connections and/or connecting to the configured webhook
 
-The guide [Deploying Tock with Docker](../../guide/platform) or the chapter
+The guide [Deploying Tock with Docker](../../guides/platform.md) or the chapter
 [Installation](../../admin/installation) show how to deploy this module if necessary.
 
 The only modification required compared to the example code for the demonstration platform is to replace

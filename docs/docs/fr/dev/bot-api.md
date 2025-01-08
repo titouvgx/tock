@@ -30,7 +30,7 @@ Il est possible de développer des parcours Tock dans n'importe quel langage via
 ![logo rest-api](../img/restapi.png "rest api"){style="width:75px;"}
 
 
-> Une autre section présente le mode [_Bot Framework_](bot-integre) disponible pour Kotlin uniquement, 
+> Une autre section présente le mode [_Bot Framework_](bot-integre.md) disponible pour Kotlin uniquement, 
 > plus intégré mais aussi plus couplé à la plateforme Tock.
 
 ## Se connecter sur la plateforme de démonstration

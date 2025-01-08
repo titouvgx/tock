@@ -46,4 +46,4 @@ At the top right of the interface are:
 
 Go to [Configuration_ Menu](../configuration) for the rest of the user manual.
 
-> You can also go directly to the next chapter: [Development](../../../dev/modes).
+> You can also go directly to the next chapter: [Development](../../../dev/modes.md).

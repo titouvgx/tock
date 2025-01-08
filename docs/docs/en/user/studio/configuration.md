@@ -123,4 +123,4 @@ by users via Tock Studio: application creation, connector modifications, imports
 
 Go to [Menu _FAQ Training_](../faq-training) for the rest of the user manual.
 
-> You can also go directly to the next chapter: [Development](../../../dev/modes).
+> You can also go directly to the next chapter: [Development](../../../dev/modes.md).

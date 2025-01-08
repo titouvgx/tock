@@ -12,18 +12,18 @@ In this section, you will find the description of each view and interface.
 For specific themes or features, see also the user guides.
 
 * _Tock Studio_ interfaces:
-* [General interface](../studio/general)
-* [The _Language Understanding_ menu](../studio/nlu)
-* [The _Stories & Answers_ menu](../studio/stories-and-answers)
-* [The _Gen AI_ menu](../studio/gen-ai/gen-ai)
-* [The _Test_ menu](../studio/test)
-* [The _Analytics_ menu](../studio/analytics)
-* [The _Model Quality_ menu](../studio/nlu-qa)
-* [The _Settings_ menu](../studio/configuration)
+* [General interface](../../studio/general.md)
+* [The _Language Understanding_ menu](../../studio/nlu.md)
+* [The _Stories & Answers_ menu](../../studio/stories-and-answers.md)
+* [The _Gen AI_ menu](../../studio/gen-ai/gen-ai.md)
+* [The _Test_ menu](../../studio/test.md)
+* [The _Analytics_ menu](../../studio/analytics.md)
+* [The _Model Quality_ menu](../../studio/nlu-qa.md)
+* [The _Settings_ menu](../../studio/configuration.md)
 
-* [User guides](../guides):
-* [Building a conversational model](../guides/build-model)
-* [Creating a multichannel bot (connectors)](../guides/channels)
-* [Creating a multilingual bot (internationalization)](../guides/i18n)
+* [User guides](../../user/guides.md):
+* [Building a conversational model](../../user/guides/build-model.md)
+* [Creating a multichannel bot (connectors)](../../user/guides/canaux.md)
+* [Creating a multilingual bot (internationalization)](../../user/guides/i18n.md)
 
-> You can also skip directly to the next chapter: [Development](../../dev/modes).
+> You can also skip directly to the next chapter: [Development](../../dev/modes.md).

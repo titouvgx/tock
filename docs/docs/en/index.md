@@ -14,7 +14,7 @@ Tock does not depend on 3rd-party APIs, although it is possible to integrate wit
 Users choose which components to embed and decide to keep (or share) ownership of conversational data and models.
 
 > Tock has been used in production since 2016 by [OUI.sncf](https://www.oui.sncf/services/assistant)
-> (Web/mobile, messaging platforms, smart speakers) and [more and more organisations](about/showcase)
+> (Web/mobile, messaging platforms, smart speakers) and [more and more organisations](../en/about/showcase.md)
 > (energy, banking, healthcare...).
 
 The platform source code is available on [GitHub](https://github.com/theopenconversationkit/tock) 
@@ -23,7 +23,7 @@ under the [Apache License, version 2.0](https://github.com/theopenconversationki
 ## Overview
 
 The [Tock.ai](https://doc.tock.ai/) site is a good starting point to learn about the solution and its growing community.
-[Tutorials](guides/studio), [presentations](about/ressources) and a [live demo](https://www.youtube.com/watch?v=UsKkpYL7Hto) 
+[Tutorials](../en/user/studio.md), [presentations](../en/about/ressources.md) and a [live demo](https://www.youtube.com/watch?v=UsKkpYL7Hto) 
 (20 minutes, in English, [ℹ️ abstract](https://www.opensource-experience.com/en/event/20-minutes-from-zero-to-live-chatbot-with-tock/)) 
 are also available:
 
@@ -42,11 +42,11 @@ target="tock_osxp">
 [Duckling](https://github.com/facebook/duckling), [Rasa](https://rasa.com/) 
 (later [Spacy](https://spacy.io/), [BERT](https://en.wikipedia.org/wiki/BERT_(language_model)), ...)
     * Can be deployed alone (for use cases like [_Internet Of Things_](https://en.wikipedia.org/wiki/Internet_of_Things))(img/tock-nlp-admin.png "NLU interface example - qualifying a sentence")tps://nodejs.org/), [Python](https://www.python.org/) _DSLs_ 
-and any-language _REST API_ (see [_Bot API_](dev/bot-api))
+and any-language _REST API_ (see [_Bot API_](dev/bot-api.md))
 * Numerous text/voice integrations available with [Messenger](https://www.messenger.com/), [WhatsApp](https://www.whatsapp.com/), 
 [Google Assistant](https://assistant.google.com/), [Alexa](https://alexa.amazon.com/), [Twitter](https://twitter.com/), 
 [Apple Business Chat](https://www.apple.com/fr/ios/business-chat/), [Teams](https://products.office.com/fr-fr/microsoft-teams/), 
-[Slack](https://slack.com/)... (see [connectors](dev/connectors))
+[Slack](https://slack.md.com/)... (see [connectors](dev/connectors.md))
 * _Cloud_ or _on-premise_ setups, with or without [Docker](https://www.docker.com/), 
 _"embedded"_ bots without Internet 
 
@@ -68,7 +68,7 @@ _Tock Studio_ graphical user interfaces are built with [Angular](https://angular
 
 ## Getting started...
 * [Contents](toc)
-* Read [Tutorial](guides/studio) and start using the [demo/sandbox platform](https://demo.tock.ai/)
-* User manual for [developers](dev/modes)
+* Read [Tutorial](en/user/studio.md) and start using the [demo/sandbox platform](https://demo.tock.ai/)
+* User manual for [developers](dev/modes.md)
 
 *[NLU]: Natural Language Understanding

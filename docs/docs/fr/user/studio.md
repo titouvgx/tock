@@ -26,4 +26,4 @@ Pour des thèmes ou fonctionnalités particulières, voir aussi les guides utili
     * [Créer un bot multicanal (connecteurs)](../guides/canaux)
     * [Créer un bot multilingue (internationalisation)](../guides/i18n)
     
-> Vous pouvez aussi passer directement au chapitre suivant : [Développement](../../dev/modes). 
+> Vous pouvez aussi passer directement au chapitre suivant : [Développement](../../dev/modes.md). 

@@ -91,4 +91,4 @@ Choose a Story from the _Select story_ drop-down list.
 
 Go to [_User guides_](../../guides) for the rest of the user manual.
 
-> You can also go directly to the next chapter: [Development](../../../dev/modes).
+> You can also go directly to the next chapter: [Development](../../../dev/modes.md).

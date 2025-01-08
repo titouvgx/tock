@@ -22,7 +22,7 @@ Cette page liste en fait :
 - Les [_connecteurs_](../canaux#connecteurs-fournis-avec-tock) fournis avec la distribution Tock :  
 ![logo messenger](../../img/messenger.png "whatsapp"){style="width:50px;"}
 
-![Logo slack](../../img/slack.png "Slack"){style="width: 75px;"}
+![Logo slack](../../img/slack.md.png "Slack"){style="width: 75px;"}
 
 ![Logo Google assistant](../../img/googelassist.png "google assisstant"){style="width: 70px;"}
 
@@ -84,7 +84,7 @@ des canaux grand public.
  > Exemples : arrivée de Google Home en France en 2017, Alexa en 2018, ouverture des API WhatsApp puis Business Chat en 2019, etc. 
 
 Pour en savoir plus sur les bots référencés utilisant tel ou tel connecteur en production, 
-n'hésitez pas à consulter la page [vitrine Tock](../../about/showcase).
+n'hésitez pas à consulter la page [vitrine Tock](../../about/showcase.md).
 
 ### Messenger
 
@@ -103,14 +103,14 @@ Pour en savoir plus sur ce connecteur, vous pouvez aussi vous rendre dans le dos
 où vous retrouverez les sources et le _README_ du connecteur.
 
 ### Slack
-![logo slack](../../img/slack.png "slack"){style="width:100px;"}
+![logo slack](../../img/slack.md.png "slack"){style="width:100px;"}
 
-* **Canal** : [Slack](https://slack.com/)
+* **Canal** : [Slack](https://slack.md.com/)
 * **Type** : texte
 * **Status** : connecteur Tock utilisé hors production
 
-Le guide [Connecter son bot à Slack](../../guide/slack) explique comment intégrer un bot 
-Tock avec une _chaîne_ [Slack](https://slack.com/).
+Le guide [Connecter son bot à Slack](../../guide/slack.md) explique comment intégrer un bot 
+Tock avec une _chaîne_ [Slack](https://slack.md.com/).
 
 Pour en savoir plus sur ce connecteur, vous pouvez aussi vous rendre dans le dossier 
 [connector-slack](https://github.com/theopenconversationkit/tock/tree/master/bot/connector-slack) sur GitHub, 
@@ -419,5 +419,5 @@ Il est possible de créer son propre connecteur Tock, par exemple pour interface
 l'organisation (souvent un site Web ou une application mobile spécifiques), ou bien quand un canal grand public 
 s'ouvre aux bots conversationnels et que le connecteur Tock n'existe pas encore.
 
-La section [_Bot Framework_](../../dev/bot-integre) du manuel développeur Tock donne des indications pour 
+La section [_Bot Framework_](../../dev/bot-integre.md) du manuel développeur Tock donne des indications pour 
 implémenter son propre connecteur.

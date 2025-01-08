@@ -39,4 +39,4 @@ This API is used by Kotlin, JavaScript/Node.js, and Python clients available in 
 
 > Note: The API is still under development (beta), and its documentation will be available soon.
 
-For development in _Bot API_ mode, see [this page](bot-api).
+For development in _Bot API_ mode, see [this page](bot-api.md).

@@ -274,5 +274,5 @@ En fonction de leur nature et leur utilisation dans le fonctionnement de Tock (N
 ces données ont des durées de rétention spécifiques, et configurables. **Chaque utilisateur de Tock décide et configure
 combien de temps les données stockées sont conservées, en fonction de ses besoins.**
 
-La section [_Installation > Conservation des données_](../installation#conservation-des-données) décrit les différents
+La section [_Installation > Conservation des données_](../../admin/installation.md#conservation-des-données) décrit les différents
 types de données conservées et comment modifier leur durée de rétention.

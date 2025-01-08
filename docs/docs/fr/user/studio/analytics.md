@@ -91,4 +91,4 @@ Une action permet à l'utilisateur de sauvegarder ses préférences.
 
 Rendez-vous dans [Menu _Model Quality_](../nlu-qa) pour la suite du manuel utilisateur. 
 
-> Vous pouvez aussi passer directement au chapitre suivant : [Développement](../../../dev/modes). 
+> Vous pouvez aussi passer directement au chapitre suivant : [Développement](../../../dev/modes.md). 

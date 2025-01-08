@@ -4,7 +4,7 @@ title: Installation
 
 # Installation Tock
 
-La page [architecture](../architecture) présente l'architecture fonctionnelle et technique Tock, le rôle des différents
+La page [architecture](../../admin/architecture.md) présente l'architecture fonctionnelle et technique Tock, le rôle des différents
 composants ainsi que les différents modes de déploiement.
 
 Ce chapitre présente les différentes options d'installation de Tock. En particulier, il s'agit d'évoquer le cas d'une
@@ -270,8 +270,8 @@ s'intégrer, pour le fonctionnement des _WebHooks_.
 | [`tock/build_worker`](https://hub.docker.com/r/tock/build_worker)       | VPN / VPC uniquement   | Reconstruit les modèles automatiquement dès que nécessaire                                                                                      |
 | [`tock/duckling`](https://hub.docker.com/r/tock/duckling)               | VPN / VPC uniquement   | Analyse les dates et types primitifs en utilisant [Duckling](https://duckling.wit.ai)                                                           |
 | [`tock/nlp_api`](https://hub.docker.com/r/tock/nlp_api)                 | VPN / VPC uniquement   | Analyse les phrases à partir des modèles construits dans _Tock Studio_                                                                          |
-| [`tock/bot_api`](https://hub.docker.com/r/tock/bot_api)                 | VPN / VPC uniquement   | API pour développer des bots (mode [_Tock Bot API_](../dev/bot-api))                                                                            |
-| [`tock/kotlin_compiler`](https://hub.docker.com/r/tock/kotlin_compiler) | VPN / VPC uniquement   | (Facultatif) Compilateur de scripts pour les saisir directement dans l'interface [_Build_](../user/studio/stories-and-answers) de _Tock Studio_ |
+| [`tock/bot_api`](https://hub.docker.com/r/tock/bot_api)                 | VPN / VPC uniquement   | API pour développer des bots (mode [_Tock Bot API_](../dev/bot-api.md))                                                                            |
+| [`tock/kotlin_compiler`](https://hub.docker.com/r/tock/kotlin_compiler) | VPN / VPC uniquement   | (Facultatif) Compilateur de scripts pour les saisir directement dans l'interface [_Build_](../user/studio/stories-and-answers.md) de _Tock Studio_ |
 | bot (non fourni)                                                        | Internet / partenaires | Le bot lui-même, implémentant les parcours programmatiques, accessible des partenaires/canaux externes via des _WebHooks_                       |
 
 Bien sûr, l'implémentation du bot lui-même n'est pas fournie avec Tock (chacun implémente ses fonctionnalités propres pour son besoin).
@@ -286,7 +286,7 @@ Les [propriétés système Java](https://docs.oracle.com/javase/8/docs/technotes
 Un exemple de bot en mode [_Tock Bot intégré_](../../dev/bot-integre) est disponible dans
 [`docker-compose-bot-open-data.yml`](https://github.com/theopenconversationkit/tock-docker/blob/master/docker-compose-bot-open-data.yml).
 
-Des exemples et indications pour packager des bots en mode [_Tock Bot API_](../../dev/bot-api) (_WebHooks_, _WebSockets_) seront bientôt disponibles.
+Des exemples et indications pour packager des bots en mode [_Tock Bot API_](../../dev/bot-api.md) (_WebHooks_, _WebSockets_) seront bientôt disponibles.
 
 ## Configurations minimales
 
@@ -364,5 +364,5 @@ Pour une utilisation de Tock en production, nous vous recommandons de parcourir 
 
 - [Sécurité](../securite)
 - [Supervision](../supervision)
-- [Cloud](../cloud)
+- [Cloud](../../admin/cloud.md)
 - [Haute disponibilité](../disponibilite)

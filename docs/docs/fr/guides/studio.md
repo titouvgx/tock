@@ -54,14 +54,14 @@ Pour intéragir avec le bot, il faut utiliser un _connecteur_ afin de l'exposer 
 De nombreux connecteurs existent pour Tock : [Messenger](https://www.messenger.com/), [WhatsApp](https://www.whatsapp.com/),
 [Google Assistant](https://assistant.google.com/) et [Google Home](https://store.google.com/fr/product/google_home),
 [Twitter](https://twitter.com/), [Alexa](https://alexa.amazon.com/), [Business Chat](https://www.apple.com/fr/ios/business-chat/), 
-[Teams](https://products.office.com/fr-fr/microsoft-teams/), [Slack](https://slack.com/), 
+[Teams](https://products.office.com/fr-fr/microsoft-teams/), [Slack](https://slack.md.com/), 
 [Rocket.Chat](https://rocket.chat/)... 
 Il est même possible de développer ses propres connecteurs pour ouvrir le bot à de nouveaux canaux.
 
-> Pour ce tutoriel, vous allez configurer un connecteur pour [Slack](https://slack.com/). 
+> Pour ce tutoriel, vous allez configurer un connecteur pour [Slack](https://slack.md.com/). 
 Dans un premier temps, vous testerez le bot en restant dans l'interface _Tock Studio_, et n'aurez pas besoin d'utiliser Slack.
 >
->Dans la section suivante [Configurer Slack](../slack),
+>Dans la section suivante [Configurer Slack](slack.md)
 vous pourrez compléter la configuration côté Slack et côté Tock afin que le bot soit fonctionnel sur cette plateforme collaborative.
 >
 > De même, la section [Configurer Messenger](../messenger) vous montrera comment activer le même bot sur la messagerie du réseau social Facebook.
@@ -116,7 +116,7 @@ type de réponse, etc.
 * Terminez avec _Create Story_
 
 > Il est possible de répondre par plusieurs messages, ou des messages plus évolués comme des images, des liens, des 
->boutons d'_Action_ de manière à continuer le dialogue, etc. La section [Tock Studio](../user/studio) du manuel
+>boutons d'_Action_ de manière à continuer le dialogue, etc. La section [Tock Studio](../user/studio.md) du manuel
 >utilisateur Tock vous en apprendra plus.
 
 
@@ -202,7 +202,7 @@ pour créer des parcours conversationnels simples sans écrire ni déployer de c
 
 Dans les sections suivantes vous apprendrez à :
 
-* [Configurer le bot pour le canal Slack](../slack) (requiert un compte Slack)
+* [Configurer le bot pour le canal Slack](../slack.md) (requiert un compte Slack)
 
 * [Configurer le bot pour le canal Messenger](../messenger) (requiert un compte Facebook)
 

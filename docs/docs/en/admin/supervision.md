@@ -477,4 +477,4 @@ For more information, see the [Docker Compose documentation](https://docs.docker
 
 ### Encryption and anonymization
 
-See the [security](../security) page for log encryption and anonymization options.
+See the [security](../admin/security.md) page for log encryption and anonymization options.

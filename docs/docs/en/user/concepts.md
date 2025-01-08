@@ -19,7 +19,7 @@ draw a set of statistical models (allowing it to analyze and interpret user sent
 In conversational mode, the _application_ also includes different parameters defining the responses and
 behavior of the _bot_. In other words, **an _application_ generally corresponds to a _bot_**.
 
-See [_Tock Studio > Settings > Applications_](studio/configuration#longlet-applications).
+See [_Tock Studio > Settings > Applications_](studio.md/configuration#longlet-applications).
 
 ### *Configuration*
 
@@ -30,7 +30,7 @@ In conversational mode, **a _configuration_ corresponds to a set of responses an
 on these channels. For example, for the same scenario (_story_) of the application it is possible to configure different
 responses (_answers_, _story rules_, etc.) according to several _configurations_.
 
-See [_Tock Studio > Settings > Configurations_](studio/configuration#longlet-configurations).
+See [_Tock Studio > Settings > Configurations_](studio.md/configuration#longlet-configurations).
 
 ### *Connector*
 
@@ -41,7 +41,7 @@ Its detailed configuration depends on the channel concerned.
 Tock makes it very easy to share the code of a _bot_ so that it responds on several channels thanks to its
 connectors. However, it is possible to fine-tune responses and behaviors depending on the connector, if needed.
 
-See [_Tock Studio > Settings > Configurations_](studio/configuration##manage-connectors) and
+See [_Tock Studio > Settings > Configurations_](studio.md/configuration##manage-connectors) and
 the [_Bot Multichannel_](guides/channels) page to learn more about the available connectors.
 
 ### *Namespace*
@@ -58,7 +58,7 @@ While most objects and settings depend on an _application_ that itself belongs t
 some objects such as answers are directly attached to the _namespace_:
 they are therefore shared between the applications in this _namespace_.
 
-See [_Tock Studio > Settings > Namespaces_](studio/configuration#namespaces-tab).
+See [_Tock Studio > Settings > Namespaces_](studio.md/configuration#namespaces-tab).
 
 ### *Intentions*
 
@@ -78,7 +78,7 @@ To take the example above, with a model made up of the three example sentences,
 it is likely that a new sentence of the type "What will the weather be like tomorrow?" will be
 automatically recognized by Tock as corresponding to the intention "weather".
 
-See [_Tock Studio > Language Understanding_](studio/nlu).
+See [_Tock Studio > Language Understanding_](studio.md/nlu.md).
 
 ### *Entities*
 
@@ -102,7 +102,7 @@ There are two steps in taking an entity into account:
 By default, Tock identifies the entity, but does not value it, except for certain types.
 By default, entities in the namespace "duckling" will be automatically valued.
 
-See [_Tock Studio > Language Understanding_](studio/nlu).
+See [_Tock Studio > Language Understanding_](studio.md/nlu.md).
 
 ### *Scenario* (or _Story_)
 
@@ -120,7 +120,7 @@ of the initial question.
 
 The _Story_ is the main unit of the Tock conversational framework.
 
-See [_Tock Studio > Stories & Answers_](studio/stories-and-answers).
+See [_Tock Studio > Stories & Answers_](studio.md/stories-and-answers.md).
 
 ## Terms & Mappings
 
@@ -154,4 +154,4 @@ solutions:
 
 ## Continue...
 
-You can now start the next chapter: [Interfaces _Tock Studio_](studio).
+You can now start the next chapter: [Interfaces _Tock Studio_](studio.md).

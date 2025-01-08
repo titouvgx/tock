@@ -159,4 +159,4 @@ In the example above, two labels are defined for the week value:
 
 To learn more about entity management, especially in programmatically created intentions,
 or simply to continue browsing the Tock user manual,
-you can go to the [Development](../../dev/modes) chapter.
+you can go to the [Development](../../dev/modes.md) chapter.

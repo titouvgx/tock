@@ -87,7 +87,7 @@ la solution. Elle est accompagnée d'un guide pour faire ses premiers pas. Merci
 plateforme de démo en ligne.
 
 * [Plateforme Démo en ligne](https://demo.tock.ai/) 
-* [Guide _Créer son 1er bot avec Tock_](http://doc.tock.ai/tock/fr/guides/studio/)
+* [Guide _Créer son 1er bot avec Tock_](http://doc.tock.ai/tock/fr/guides/studio.md/)
 
 ## Aide
 

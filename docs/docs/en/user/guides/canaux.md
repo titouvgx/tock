@@ -23,7 +23,7 @@ This page actually lists:
 <!-->To do img tres penible<!-->
 ![logo messenger](../../img/messenger.png "whatsapp"){style="width:50px;"}
 
-![Logo slack](../../img/slack.png "Slack"){style="width: 75px;"}
+![Logo slack](../../img/slack.md.png "Slack"){style="width: 75px;"}
 
 ![Logo Google assistant](../../img/googelassist.png "google assisstant"){style="width: 70px;"}
 
@@ -107,14 +107,14 @@ where you will find the sources and the _README_ of the connector.
 ### Slack
 
 
-![logo slack](../../img/slack.png "slack"){style="width:100px;"}
+![logo slack](../../img/slack.md.png "slack"){style="width:100px;"}
 
-* **Channel** : [Slack](https://slack.com/)
+* **Channel** : [Slack](https://slack.md.com/)
 * **Type** : text
 * **Status** : Tock connector used outside production
 
-The guide [Connect your bot to Slack](../../guide/slack) explains how to integrate a bot
-Tock with a [Slack](https://slack.com/) _channel_.
+The guide [Connect your bot to Slack](../../guide/slack.md) explains how to integrate a bot
+Tock with a [Slack](https://slack.md.com/) _channel_.
 
 To learn more about this connector, you can also go to the folder
 [connector-slack](https://github.com/theopenconversationkit/tock/tree/master/bot/connector-slack) on GitHub,
@@ -420,5 +420,5 @@ It is possible to create your own Tock connector, for example to interface a Toc
 the organization (often a specific website or mobile application), or when a general public channel
 opens to conversational bots and the Tock connector does not yet exist.
 
-The [_Bot Framework_](../../dev/bot-integre) section of the Tock developer manual gives instructions for
+The [_Bot Framework_](../../dev/bot-integre.md) section of the Tock developer manual gives instructions for
 implementing your own connector.
