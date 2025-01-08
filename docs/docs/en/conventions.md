@@ -8,12 +8,6 @@ This documentation use some symbols for illustration purposes. Before you read
 on, please make sure you've made yourself familiar with the following list of
 conventions:
 
-### <!-- md:sponsors --> – Sponsors only { data-toc-label="Sponsors only" }
-
-The pumping heart symbol denotes that a specific feature or behavior is only
-available to sponsors via [Insiders]. Make sure that you have access to
-[Insiders] if you want to use the feature.
-
 ### <!-- md:version --> – Version { data-toc-label="Version" }
 
 The tag symbol in conjunction with a version number denotes when a specific

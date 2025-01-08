@@ -36,8 +36,8 @@ style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.
 
 * Give it a name (e.g. _My Tock Bot_)
 
-<img src="https://doc.tock.ai/en/images/doc/connector-messenger/create-page-2.png" alt= "Create a page part 3"
-style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" />
+<img src="https://doc.tock.ai/fr/images/doc/connector-messenger/create-app-2.png" alt="create an app part 3" 
+style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); width: 75%;" />
 
 > Recommendation: do not publish the page to limit its access to Messenger users:
 _Settings > General > Page visibility > **Not published**_
@@ -57,13 +57,11 @@ style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.
 style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" />
 
 * Enter a name for the _application_
-
-<img src="https://doc.tock.ai/en/images/doc/connector-messenger/create-app-2.png" alt="Create an application part 3"
+<img src="https://doc.tock.ai/fr/images/doc/connector-messenger/create-app-2.png" alt="Créer une application partie 3" 
 style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); width: 75%;" />
-
 * Add a product: _Messenger_
 
-<img src="https://doc.tock.ai/en/images/doc/connector-messenger/add-messenger-page-0.png" alt="Add messenger to a application part 1"
+<img src="https://doc.tock.ai/fr/images/doc/connector-messenger/add-messenger-page-0.png" alt="Ajouter messenger à une application partie 1"
 style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" />
 
 <img src="https://doc.tock.ai/fr/images/doc/connector-messenger/add-messenger-page-1.png" alt="Add messenger to an application part 2" style="box -shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); width: 40%;" />

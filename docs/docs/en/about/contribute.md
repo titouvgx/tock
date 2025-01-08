@@ -81,7 +81,7 @@ at the root of the repository.
 
 ### Run Tock in IDE
 
-> To run Tock using Docker Compose outside the IDE, rather see [Deploy Tock with Docker](../getting-started).
+> To run Tock using Docker Compose outside the IDE, rather see [Deploy Tock with Docker](../guides/platform.md).
 
 Tock components (NLU, Studio, bot...) can run in an IDE, such as  
 [IntelliJ](https://www.jetbrains.com/idea/), [Eclipse](https://www.eclipse.org/) or [Visual Studio Code](https://code.visualstudio.com/) for instance.
@@ -142,5 +142,5 @@ Every new feature or fix should embed its unit test(s).
 
 ## Contact us
 
-To contribute to the project or to known more about the implementation, feel free to [contact us](../contact).
+To contribute to the project or to known more about the implementation, feel free to [contact us](contact.md).
 Ideas and feedback is more than welcome.

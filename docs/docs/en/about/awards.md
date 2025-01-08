@@ -7,8 +7,7 @@ title: Awards
 
 
 
-## Version actuelle : [1.0.0](../../changelog/index.md)
-
+<!-- md:version toto -->
  
 
 
