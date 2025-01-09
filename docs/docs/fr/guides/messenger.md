@@ -4,13 +4,13 @@ title: Messenger
 
 # Configurer son bot pour Messenger
 
-Si vous avez suivi le guide [Créer son premier bot avec _Tock Studio_](../guides/studio.md.md), vous avez déclaré un connecteur
+Si vous avez suivi le guide [Créer son premier bot avec _Tock Studio_](../guides/studio.md), vous avez déclaré un connecteur
  de type Slack.
 
 Dans ce guide, vous allez créer une configuration pour [Facebook Messenger](https://fr-fr.facebook.com/messenger/) 
 et intégrer le bot pour dialoguer avec lui sur ce réseau social.
 
-Si vous le souhaitez, vous pouvez aussi sauter cette étape et passer directement à [la suite](../guides/api.md.md).
+Si vous le souhaitez, vous pouvez aussi sauter cette étape et passer directement à [la suite](../guides/api.md).
 
 ## Ce que vous allez créer
 
@@ -22,7 +22,7 @@ Si vous le souhaitez, vous pouvez aussi sauter cette étape et passer directemen
 
 * Environ 20 minutes
 
-* Un bot Tock fonctionnel (par exemple suite au guide [premier bot Tock](../guides/studio.md.md))
+* Un bot Tock fonctionnel (par exemple suite au guide [premier bot Tock](../guides/studio.md))
 
 * Un compte [Facebook Developer](https://developers.facebook.com/)
 
@@ -154,7 +154,7 @@ spécifiques, etc.
 
 Dans les sections suivantes vous apprendrez à :
 
-* [Créer des parcours programmés en Kotlin](../guides/api.md.md), ouvrant la voie à des comportements complexes et 
+* [Créer des parcours programmés en Kotlin](../guides/api.md), ouvrant la voie à des comportements complexes et 
 l'intégration d'API tierces si besoin
 
 * [Déployer une plateforme Tock](../plateforme) en quelques minutes avec Docker

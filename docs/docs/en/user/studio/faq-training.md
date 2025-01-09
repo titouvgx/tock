@@ -35,6 +35,6 @@ It is possible to display the sentences associated with the _unknown_ intention 
 
 ## Continue...
 
-Go to [Menu _FAQ Management_](../../user/studio/faq-management.md.md) for the rest of the user manual.
+Go to [Menu _FAQ Management_](../../user/studio/faq-management.md) for the rest of the user manual.
 
 > You can also go directly to the next chapter: [Development](../../../dev/modes.md).

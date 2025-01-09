@@ -55,7 +55,7 @@ with Tock):
 built in _Tock Studio_
 
 * Conversational part:
-* [`tock/bot_api`](https://hub.docker.com/r/tock/bot_api): API to develop bots ([_Tock Bot API_](../dev/bot-api.md.md) mode)
+* [`tock/bot_api`](https://hub.docker.com/r/tock/bot_api): API to develop bots ([_Tock Bot API_](../dev/bot-api.md) mode)
 * [`tock/kotlin_compiler`](https://hub.docker.com/r/tock/kotlin_compiler) (optional): script compiler to enter them directly in the [_Stories and Answers_](../../user/studio.md/stories-and-answers) interface of _Tock Studio_
 
 A final component, the bot itself, must be added and made accessible to partners and external channels with which
@@ -83,8 +83,8 @@ using all the possibilities of Tock but accessing the MongoDB database directly 
 
 ## See also...
 
-* [Installation](../admin/installation.md.md.md)
+* [Installation](../admin/installation.md)
 * [Security](../../admin/security.md)
-* [Supervision](../admin/supervision.md.md)
+* [Supervision](../admin/supervision.md)
 * [Cloud](../../admin/cloud.md)
-* [High availability](../admin/availability.md.md.md)
+* [High availability](../admin/availability.md)

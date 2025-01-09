@@ -35,6 +35,6 @@ Il est possible d'afficher les phrases associées à l'intention _unknown_ en ac
 
 ## Continuer...
 
-Rendez-vous dans [Menu _FAQ Management_](../../user/studio/faq-management.md.md) pour la suite du manuel utilisateur. 
+Rendez-vous dans [Menu _FAQ Management_](../../user/studio/faq-management.md) pour la suite du manuel utilisateur. 
 
 > Vous pouvez aussi passer directement au chapitre suivant : [Développement](../../../dev/modes.md). 

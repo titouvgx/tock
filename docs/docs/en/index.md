@@ -46,7 +46,7 @@ and any-language _REST API_ (see [_Bot API_](dev/bot-api.md))
 * Numerous text/voice integrations available with [Messenger](https://www.messenger.com/), [WhatsApp](https://www.whatsapp.com/), 
 [Google Assistant](https://assistant.google.com/), [Alexa](https://alexa.amazon.com/), [Twitter](https://twitter.com/), 
 [Apple Business Chat](https://www.apple.com/fr/ios/business-chat/), [Teams](https://products.office.com/fr-fr/microsoft-teams/), 
-[Slack](https://slack.md.com/)... (see [connectors](dev/connectors.md))
+[Slack](https://slack.com/)... (see [connectors](dev/connectors.md))
 * _Cloud_ or _on-premise_ setups, with or without [Docker](https://www.docker.com/), 
 _"embedded"_ bots without Internet 
 

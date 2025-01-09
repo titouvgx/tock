@@ -54,11 +54,11 @@ Pour intéragir avec le bot, il faut utiliser un _connecteur_ afin de l'exposer 
 De nombreux connecteurs existent pour Tock : [Messenger](https://www.messenger.com/), [WhatsApp](https://www.whatsapp.com/),
 [Google Assistant](https://assistant.google.com/) et [Google Home](https://store.google.com/fr/product/google_home),
 [Twitter](https://twitter.com/), [Alexa](https://alexa.amazon.com/), [Business Chat](https://www.apple.com/fr/ios/business-chat/), 
-[Teams](https://products.office.com/fr-fr/microsoft-teams/), [Slack](https://slack.md.com/), 
+[Teams](https://products.office.com/fr-fr/microsoft-teams/), [Slack](https://slack.com/), 
 [Rocket.Chat](https://rocket.chat/)... 
 Il est même possible de développer ses propres connecteurs pour ouvrir le bot à de nouveaux canaux.
 
-> Pour ce tutoriel, vous allez configurer un connecteur pour [Slack](https://slack.md.com/). 
+> Pour ce tutoriel, vous allez configurer un connecteur pour [Slack](https://slack.com/). 
 Dans un premier temps, vous testerez le bot en restant dans l'interface _Tock Studio_, et n'aurez pas besoin d'utiliser Slack.
 >
 >Dans la section suivante [Configurer Slack](slack.md)

@@ -24,12 +24,12 @@ To add an application, click on _Create New Application_ :
 
 * Enter a name / identifier for the application
 
-* Choose whether the template can include _entities_ or even _sub-entities_ (see [Concepts](../../user/concepts.md.md) for more information)
+* Choose whether the template can include _entities_ or even _sub-entities_ (see [Concepts](../../user/concepts.md) for more information)
 
-* Select one or more languages ​​(see [Building a multilingual bot](../../user/guides/i18n.md.md) for more information)
+* Select one or more languages ​​(see [Building a multilingual bot](../../user/guides/i18n.md) for more information)
 
 * Select an NLU engine ([Apache OpenNLP](https://opennlp.apache.org/) or [Stanford CoreNLP](https://stanfordnlp.github.io/CoreNLP/),
-see [Installation](../admin/installation.md.md.md.md) for more information)
+see [Installation](../admin/installation.md) for more information)
 
 ### Edit, import and export an application
 
@@ -71,7 +71,7 @@ in Kotlin or in another programming language like Javascript/Nodejs or Python
 
 * An address / URL can be configured to use the _WebHook_ mode of _Bot API_
 
-To learn more about these settings and path development, see [Bot API](../dev/bot-api.md.md.md.md).
+To learn more about these settings and path development, see [Bot API](../dev/bot-api.md).
 
 ### Manage connectors
 
@@ -92,7 +92,7 @@ All connectors have the following configuration:
 Each connector also has an additional configuration specific to this connector type. These settings
 
 are in _Connector Custom Configuration_. These specific settings are documented with each connector/channel type,
-see [Connectors](../../user/guides.md.md/channels).
+see [Connectors](../../user/guides.md/channels).
 
 ### Test connectors
 
@@ -121,6 +121,6 @@ by users via Tock Studio: application creation, connector modifications, imports
 
 ## Continue...
 
-Go to [Menu _FAQ Training_](../../user/studio/faq-training.md.md) for the rest of the user manual.
+Go to [Menu _FAQ Training_](../../user/studio/faq-training.md) for the rest of the user manual.
 
 > You can also go directly to the next chapter: [Development](../../../dev/modes.md).

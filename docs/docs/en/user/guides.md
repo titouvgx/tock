@@ -6,6 +6,6 @@ title: Guides
 
 To learn more about _Tock Studio_ features here are the step-by-step tutorials for:
 
-* [Build a conversational model](../user/guides/build-model.md.md)
+* [Build a conversational model](../user/guides/build-model.md)
 * [Create a multichannel bot (connectors)](../guides/channels)
-* [Create a multilingual bot (internationalization)](../user/guides/i18n.md.md)
+* [Create a multilingual bot (internationalization)](../user/guides/i18n.md)

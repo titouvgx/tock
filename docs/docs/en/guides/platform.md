@@ -71,7 +71,7 @@ This is an alternative way to start Tock, from the [Tock Docker](https://github.
 In addition to [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/), you need either a [Git](https://git-scm.com/) client to retrieve the sources (`git clone` command) or to have already copied the GitHub sources locally.
 
 > To start without Git or the repository sources locally, follow the
-[previous paragraph](../guides/platform.md.md#deploy-a-tock-platform-without-sources).
+[previous paragraph](../guides/platform.md#deploy-a-tock-platform-without-sources).
 ```shell
 # Get the lastest sources from GitHub
 $ git clone https://github.com/theopenconversationkit/tock-docker.git && cd tock-docker
@@ -97,7 +97,7 @@ Once the platform is ready, the _Tock Studio_ interfaces are on port `80` by def
 
 ## Create an application, a connector and an intention
 
-As in the [first bot](../guides/studio.md.md) guide using the demo platform, you will create a
+As in the [first bot](../guides/studio.md) guide using the demo platform, you will create a
 _Tock_ application and a connector to start using the local platform. Feel free to go back to the
 previous guides for more comments.
 
@@ -134,11 +134,11 @@ When you first access the local platform:
 
 ## Connect a course in Kotlin (optional)
 
-As in the guide [program courses](../guides/api.md.md) using the demo platform, you will create a
+As in the guide [program courses](../guides/api.md) using the demo platform, you will create a
 _Kotlin application_ connecting in _WebSocket_ to the local Tock platform. Feel free to go back to the
 previous guides for more details.
 
-* Create a Kotlin project for example with Maven as indicated in the guide [program courses](../guides/api.md.md)
+* Create a Kotlin project for example with Maven as indicated in the guide [program courses](../guides/api.md)
 
 > The _classpath_ must include `tock-bot-api-websocket` to use the _WebSocket_ mode.
 
@@ -195,7 +195,7 @@ developments, for Tock contributors or if you have to work without Internet acce
 
 > Warning, the provided Docker implementation is not enough to guarantee resilience and scalability of the platform
 >whatever the production conditions. For this, some recommendations are proposed in the
->[high availability](../admin/availability.md.md) section of the Tock manual.
+>[high availability](../admin/availability.md) section of the Tock manual.
 
 ## Continue...
 

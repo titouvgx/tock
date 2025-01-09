@@ -54,7 +54,7 @@ et _API_ tous langages (voir [_Bot API_](dev/bot-api.md))
 * Nombreux connecteurs texte et voix : [Messenger](https://www.messenger.com/), [WhatsApp](https://www.whatsapp.com/), 
 [Google Assistant](https://assistant.google.com/), [Alexa](https://alexa.amazon.com/), [Twitter](https://twitter.com/), 
 [Apple Business Chat](https://www.apple.com/fr/ios/business-chat/), [Teams](https://products.office.com/fr-fr/microsoft-teams/), 
-[Slack](https://slack.md.com/)... (voir [canaux](user/guides/canaux.md))
+[Slack](https://slack.com/)... (voir [canaux](user/guides/canaux.md))
 * Installation _cloud_ ou _on-premise_, avec ou sans [Docker](https://www.docker.com/), 
 même _"embarqué"_ sans Internet 
 

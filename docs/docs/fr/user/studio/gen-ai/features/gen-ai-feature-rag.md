@@ -20,7 +20,7 @@ Cette fonctionnalité permettra à TOCK de générer une réponse à une requêt
 
 **Un provider IA :** (LLM Engine)
 - Cette section permet de paramétrer les options liées au modèle IA qui génère la réponse à l’utilisateur.
-- Voir la [liste des fournisseurs d'IA](../../../../user/studio/gen-ai/providers/gen-ai-provider-llm-and-embedding.md.md)
+- Voir la [liste des fournisseurs d'IA](../../../../user/studio/gen-ai/providers/gen-ai-provider-llm-and-embedding.md)
 
 **Température :**
 - On peut définir une température située entre 0 et 1.
@@ -34,7 +34,7 @@ Cette fonctionnalité permettra à TOCK de générer une réponse à une requêt
 
 **Un provider IA :** (Embedding Engine)
 - Cette section permet de paramétrer les options liées au modèle IA qui interagit avec la base documentaire vectorisée.
-- Voir la [liste des fournisseurs d'IA](../../../../user/studio/gen-ai/providers/gen-ai-provider-llm-and-embedding.md.md)
+- Voir la [liste des fournisseurs d'IA](../../../../user/studio/gen-ai/providers/gen-ai-provider-llm-and-embedding.md)
 
 **Indexing session :**
 - Renseigner l’ID de l’Indexing Session de votre base documentaire vectorisée

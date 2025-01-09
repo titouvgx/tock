@@ -87,6 +87,6 @@ Choisir une Story dans la liste déroulante _Select story_.
 
 ## Continuer...
 
-Rendez-vous dans [_Guides utilisateur_](../../user/guides.md.md) pour la suite du manuel utilisateur.
+Rendez-vous dans [_Guides utilisateur_](../../user/guides.md) pour la suite du manuel utilisateur.
 
 > Vous pouvez aussi passer directement au chapitre suivant : [Développement](../../../dev/modes.md).

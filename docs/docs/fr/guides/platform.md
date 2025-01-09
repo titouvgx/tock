@@ -104,7 +104,7 @@ Une fois la plateforme prête, les interfaces _Tock Studio_ sont sur le port `80
 
 ## Créer une application, un connecteur et une intention
 
-Comme dans le guide [premier bot](../guides/studio.md.md) utilisant la plateforme de démonstration, vous allez créer une 
+Comme dans le guide [premier bot](../guides/studio.md) utilisant la plateforme de démonstration, vous allez créer une 
 _application_ Tock et un connecteur pour commencer à utiliser la plateforme locale. N'hésitez pas à retourner voir les 
 précédents guides pour plus de commentaires.
 
@@ -141,11 +141,11 @@ Au premier accès à la plateforme locale :
 
 ## Connecter un parcours en Kotlin (optionnel)
 
-Comme dans le guide [programmer des parcours](../guides/api.md.md) utilisant la plateforme de démonstration, vous allez créer une 
+Comme dans le guide [programmer des parcours](../guides/api.md) utilisant la plateforme de démonstration, vous allez créer une 
 _application_ Kotlin se connectant en _WebSocket_ à la plateforme Tock locale. N'hésitez pas à retourner voir les 
 précédents guides pour plus de détails.
 
-* Créez un projet Kotlin par exemple avec Maven comme indiqué dans le guide [programmer des parcours](../guides/api.md.md)
+* Créez un projet Kotlin par exemple avec Maven comme indiqué dans le guide [programmer des parcours](../guides/api.md)
 
 > Le _classpath_ doit inclure `tock-bot-api-websocket` pour utiliser le mode _WebSocket_.
 

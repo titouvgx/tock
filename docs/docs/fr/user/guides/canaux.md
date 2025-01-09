@@ -22,7 +22,7 @@ Cette page liste en fait :
 - Les [_connecteurs_](canaux.md#connecteurs-fournis-avec-tock) fournis avec la distribution Tock :  
 ![logo messenger](../../img/messenger.png "whatsapp"){style="width:50px;"}
 
-![Logo slack](../../img/slack.md.png "Slack"){style="width: 75px;"}
+![Logo slack](../../img/slack.png "Slack"){style="width: 75px;"}
 
 ![Logo Google assistant](../../img/googelassist.png "google assisstant"){style="width: 70px;"}
 
@@ -103,14 +103,14 @@ Pour en savoir plus sur ce connecteur, vous pouvez aussi vous rendre dans le dos
 où vous retrouverez les sources et le _README_ du connecteur.
 
 ### Slack
-![logo slack](../../img/slack.md.png "slack"){style="width:100px;"}
+![logo slack](../../img/slack.png "slack"){style="width:100px;"}
 
-* **Canal** : [Slack](https://slack.md.com/)
+* **Canal** : [Slack](https://slack.com/)
 * **Type** : texte
 * **Status** : connecteur Tock utilisé hors production
 
 Le guide [Connecter son bot à Slack](../../guide/slack.md) explique comment intégrer un bot 
-Tock avec une _chaîne_ [Slack](https://slack.md.com/).
+Tock avec une _chaîne_ [Slack](https://slack.com/).
 
 Pour en savoir plus sur ce connecteur, vous pouvez aussi vous rendre dans le dossier 
 [connector-slack](https://github.com/theopenconversationkit/tock/tree/master/bot/connector-slack) sur GitHub, 

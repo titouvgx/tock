@@ -5,7 +5,7 @@ title: Ressources
 # Ressources Tock
 
 Les différents supports et présentations ci-dessous donnent un aperçu de la solution Tock, 
-en complément des [guides](../../user/guides.md.md/studio.md)
+en complément des [guides](../../user/guides.md/studio.md)
  pour tester soi-même la plateforme.
 
 ## Conférences / Video
@@ -96,7 +96,7 @@ target="tock_crip">
 </a>
 
 
-> N'hésitez pas à [partager](/home/Titouan.Perivier-Vigouroux/Documents/tock/docs/docs/fr/about/contact.md.md) d'autres supports et liens autour de Tock.
+> N'hésitez pas à [partager](/home/Titouan.Perivier-Vigouroux/Documents/tock/docs/docs/fr/about/contact.md) d'autres supports et liens autour de Tock.
 
 ## Kit presse
 

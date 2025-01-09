@@ -13,7 +13,7 @@ Deux composants majeurs sont disponibles :
 
 * le moteur _NLU_ : _Natural Language Understanding_ (voir [_Tock Studio_](../../user/studio.md))
 * le framework conversationnel intégré aux services _NLU_ et à différents connecteurs comme 
- Messenger, Google Assistant ou Slack (voir [manuel développeur](../../dev/modes.md) et [connecteurs](../user/guides/canaux.md.md)).
+ Messenger, Google Assistant ou Slack (voir [manuel développeur](../../dev/modes.md) et [connecteurs](../user/guides/canaux.md)).
 
 ![schéma Tock](../img/tock.png "Les différentes composantes de Tock")
  
@@ -56,7 +56,7 @@ avec Tock) :
 construits dans _Tock Studio_
 
 * Partie conversationnelle :
-    * [`tock/bot_api`](https://hub.docker.com/r/tock/bot_api) : API pour développer des bots (mode [_Tock Bot API_](../dev/bot-api.md.md))
+    * [`tock/bot_api`](https://hub.docker.com/r/tock/bot_api) : API pour développer des bots (mode [_Tock Bot API_](../dev/bot-api.md))
     * [`tock/kotlin_compiler`](https://hub.docker.com/r/tock/kotlin_compiler) (facultatif) : compilateur de scripts 
 pour les saisir directement dans l'interface [_Stories and Answers_](../../user/studio.md/stories-and-answers) de _Tock Studio_
 
@@ -85,8 +85,8 @@ en utilisant toutes les possibilités de Tock mais en accédant à la base Mongo
 
 ## Voir aussi...
 
-* [Installation](../admin/installation.md.md.md)
+* [Installation](../admin/installation.md)
 * [Sécurité](../securite)
-* [Supervision](../admin/supervision.md.md)
+* [Supervision](../admin/supervision.md)
 * [Cloud](../../admin/cloud.md)
 * [Haute disponibilité](../disponibilite)

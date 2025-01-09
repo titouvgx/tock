@@ -51,10 +51,10 @@ When you first access the demo platform, a wizard invites you to create an _appl
 To interact with the bot, you must use a _connector_ to expose it to a communication channel. Many connectors exist for Tock: [Messenger](https://www.messenger.com/), [WhatsApp](https://www.whatsapp.com/),
 [Google Assistant](https://assistant.google.com/) and [Google Home](https://store.google.com/fr/product/google_home),
 [Twitter](https://twitter.com/), [Alexa](https://alexa.amazon.com/), [Business Chat](https://www.apple.com/fr/ios/business-chat/),
-[Teams](https://products.office.com/fr-fr/microsoft-teams/), [Slack](https://slack.md.com/),
+[Teams](https://products.office.com/fr-fr/microsoft-teams/), [Slack](https://slack.com/),
 [Rocket.Chat](https://rocket.chat/)...
 It is even possible to develop your own connectors to open the bot to new channels.
-> For this tutorial, you will configure a connector for [Slack](https://slack.md.com/).
+> For this tutorial, you will configure a connector for [Slack](https://slack.com/).
 First, you will test the bot by staying in the _Tock Studio_ interface, and will not need to use Slack.
 >
 >In the next section [Configure Slack](slack.md)

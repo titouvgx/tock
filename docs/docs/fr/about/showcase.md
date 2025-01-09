@@ -38,7 +38,7 @@ comme les technologies vocales [Allo-Media](https://www.allo-media.net/) et [Vox
 Le bot _AlloCovid_ est construit autour de technologies open source (à travers la plateforme Tock), 
 et lui-même open source : les sources du bot sont disponibles sur le dépôt [`allocovid`](https://github.com/theopenconversationkit/allocovid).
 
-> Avec les sources du bot on trouve également celles du [_connecteur Allo-Media_](../user/guides/canaux.md#allo-media.md), 
+> Avec les sources du bot on trouve également celles du [_connecteur Allo-Media_](../user/guides/canaux.md#allo-media), 
 > quelques explications techniques sur le bot et la [spécification fonctionnelle](https://github.com/Delegation-numerique-en-sante/covid19-algorithme-orientation) 
 du questionnaire Covid.
 
@@ -121,7 +121,7 @@ pendant et après leur trajet.
 
 Présent sur la page Facebook _TGV INOUI_ et le
 [portail Wifi à Bord](https://www.sncf.com/fr/offres-voyageurs/tgv-inoui/connectez-vous-pendant-votre-voyage), l'assistant
-s'appuie sur Tock et le [`tock-react-kit`](../user/guides/canaux.md#react.md).
+s'appuie sur Tock et le [`tock-react-kit`](../user/guides/canaux.md#react).
 
 ![img inoui](../img/inoui.jpg)
 
@@ -140,7 +140,7 @@ voyageur et les éventuelles perturbations sur tous les trains (TGV, IC, TER, Eu
 >informations et l'état du trafic, ou encore parler à un Agent.
 
 Accessible sur le site Web [_sncf.com_](https://www.sncf.com/fr/itineraire-reservation/info-trafic/), la page Facebook
-et la page Twitter de la SNCF, l'_Agent virtuel_ est basé sur Tock et utilise le [`tock-react-kit`](../user/guides/canaux.md#react.md)
+et la page Twitter de la SNCF, l'_Agent virtuel_ est basé sur Tock et utilise le [`tock-react-kit`](../user/guides/canaux.md#react)
 pour l'intégration Web.
 
 ![L'Agent virtuel SNCF](https://pbs.twimg.com/media/D_HqJrjXYAEOrhE.jpg:large)
@@ -165,7 +165,7 @@ Systèmes d'Informations et du Numérique (DSIN)_ d'[EDF Commerce](https://www.e
 > Il permet par ailleurs de transférer le contexte de la conversation qu'il y a eu entre le client et le callbot
 > auprès du conseiller clientèle.
 
-Le callbot est construit avec Tock et utilise le [_connecteur Allo-Media_](../user/guides/canaux.md#allo-media.md).
+Le callbot est construit avec Tock et utilise le [_connecteur Allo-Media_](../user/guides/canaux.md#allo-media).
 La solution de _Speech-To-Text (STT)_ utilisée est [Allo-Media](https://www.allo-media.net/), et la solution
 de _Text-To-Speech (TTS)_ est [Voxygen](https://www.voxygen.fr/).
 
@@ -304,7 +304,7 @@ _RocBOT_ est destiné aux Exploitants des équipes DEA SNCF. Il est à l'écoute
 > les bons contacts, etc.
 
 _RocBOT_ est en production depuis 2020, disponible sur desktop et en mobilité grâce au 
-[_connecteur Teams_](../user/guides/canaux.md#teams.md) fourni avec Tock.
+[_connecteur Teams_](../user/guides/canaux.md#teams) fourni avec Tock.
 
 ![img robot](../img/robot1.png )
 
@@ -331,8 +331,8 @@ régulièrement notamment de la [communauté Tock sur Gitter](https://gitter.im/
 
 Le bot est construit entièrement "0 code" grâce à _Tock Studio_. Autant une démo qu'un outil pour la 
 communauté, _Toki_ est hébergé sur la [plateforme démo publique](https://demo.tock.ai/), 
-il utilise le [_connecteur Web_](../user/guides/canaux.md#web-générique.md) et le 
-[_kit React_](../user/guides/canaux.md#react.md) fournis avec Tock pour s'intégrer en quelques lignes de HTML/JS/CSS 
+il utilise le [_connecteur Web_](../user/guides/canaux.md#web-générique) et le 
+[_kit React_](../user/guides/canaux.md#react) fournis avec Tock pour s'intégrer en quelques lignes de HTML/JS/CSS 
 sur le [site](https://doc.tock.ai/fr/).
 
 
@@ -356,6 +356,6 @@ PME et ESN, expérimentent ou utilisent Tock pour leurs projets d'assistants ou 
 
 La plateforme est suffisamment générique pour permettre de nombreux usages et l'intégration de canaux 
 internes ou externes. Si vous avez un doute sur les possibilités de Tock ou la faisabilité d'un nouveau projet, vous pouvez 
-[nous contacter](/home/Titouan.Perivier-Vigouroux/Documents/tock/docs/docs/fr/about/contact.md.md) pour en parler.
+[nous contacter](/home/Titouan.Perivier-Vigouroux/Documents/tock/docs/docs/fr/about/contact.md) pour en parler.
 
 _Quant à vos propres réalisations, n'hésitez pas à les partager ! 🙂_

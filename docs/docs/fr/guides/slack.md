@@ -4,8 +4,8 @@ title: Slack
 
 # Configurer son bot pour Slack
 
-Si vous avez suivi le guide [Créer son premier bot avec _Tock Studio_](../guides/studio.md.md), vous avez déclaré un connecteur
- de type Slack mais celui-ci n'est pas encore configuré pour que le bot parle réellement sur [Slack](https://slack.md.com/).
+Si vous avez suivi le guide [Créer son premier bot avec _Tock Studio_](../guides/studio.md), vous avez déclaré un connecteur
+ de type Slack mais celui-ci n'est pas encore configuré pour que le bot parle réellement sur [Slack](https://slack.com/).
 
 Avec un peu de configuration côté Slack et côté Tock, un bot peut recevoir des messages et répondre sur ce canal.
 
@@ -22,11 +22,11 @@ ou passer directement à [la suite](api.md).
 
 * Environ 15 minutes
 
-* Un bot Tock fonctionnel (par exemple suite au guide [premier bot Tock](../guides/studio.md.md))
+* Un bot Tock fonctionnel (par exemple suite au guide [premier bot Tock](../guides/studio.md))
 
 * Un compte Slack et un _espace de travail_ / une _chaîne_ où intégrer le bot
 
-> Si vous n'avez jamais utilisé Slack, rendez-vous sur sur [https://slack.md.com/](https://slack.md.com/)
+> Si vous n'avez jamais utilisé Slack, rendez-vous sur sur [https://slack.com/](https://slack.com/)
 
 ## Créer une application dans Slack
 
@@ -135,9 +135,9 @@ Comme vous le constatez, connecter un bot Tock à un (ou plusieurs) canaux exter
 
 Dans les sections suivantes vous apprendrez à :
 
-* [Configurer le bot pour le canal Messenger](../guides/messenger.md.md) (requiert un compte Facebook)
+* [Configurer le bot pour le canal Messenger](../guides/messenger.md) (requiert un compte Facebook)
 
-* [Créer des parcours programmés en Kotlin](../guides/api.md.md), ouvrant la voie à des comportements complexes et 
+* [Créer des parcours programmés en Kotlin](../guides/api.md), ouvrant la voie à des comportements complexes et 
 l'intégration d'API tierces si besoin
 
 * [Déployer une plateforme Tock](../plateforme) en quelques minutes avec Docker
