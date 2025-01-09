@@ -12,14 +12,14 @@ In this section, you will find the description of each view and interface.
 For specific themes or features, see also the user guides.
 
 * _Tock Studio_ interfaces:
-* [General interface](../../studio/general.md)
-* [The _Language Understanding_ menu](../../studio/nlu.md)
-* [The _Stories & Answers_ menu](../../studio/stories-and-answers.md)
-* [The _Gen AI_ menu](../../studio/gen-ai/gen-ai.md)
-* [The _Test_ menu](../../studio/test.md)
-* [The _Analytics_ menu](../../studio/analytics.md)
-* [The _Model Quality_ menu](../../studio/nlu-qa.md)
-* [The _Settings_ menu](../../studio/configuration.md)
+* [General interface](../user/studio/general.md)
+* [The _Language Understanding_ menu](../user/studio/nlu.md)
+* [The _Stories & Answers_ menu](../user/studio/stories-and-answers.md)
+* [The _Gen AI_ menu](../user/studio/gen-ai/gen-ai.md)
+* [The _Test_ menu](../user/studio/test.md)
+* [The _Analytics_ menu](../user/studio/analytics.md)
+* [The _Model Quality_ menu](../user/studio/nlu-qa.md)
+* [The _Settings_ menu](../user/studio/configuration.md)
 
 * [User guides](../../user/guides.md):
 * [Building a conversational model](../../user/guides/build-model.md)

@@ -77,7 +77,7 @@ Pour reprendre l'exemple ci-dessus, avec un modèle constitué des trois phrases
 il est probable qu'une nouvelle phrase du type "Quel temps fera t'il demain ?" sera reconnue
 automatiquement par Tock comme correspondant à l'intention "météo".
 
-Voir [_Tock Studio > Language Understanding_](studio.md/nlu.md).
+Voir [_Tock Studio > Language Understanding_](../user/studio/nlu.md).
 
 ### *Entités*
 
@@ -101,7 +101,7 @@ On distingue deux étapes dans la prise en compte d'une entité :
 Tock par défaut identifie l'entité, mais ne la valorise pas, sauf pour certains types.
 Par défaut, les entités de namespace "duckling" seront automatiquement valorisées.
 
-Voir [_Tock Studio > Language Understanding_](studio.md/nlu.md).
+Voir [_Tock Studio > Language Understanding_](../user/studio/nlu.md).
 
 ### *Scénario* (ou _Story_)
 

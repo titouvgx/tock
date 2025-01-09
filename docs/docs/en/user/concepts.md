@@ -78,7 +78,7 @@ To take the example above, with a model made up of the three example sentences,
 it is likely that a new sentence of the type "What will the weather be like tomorrow?" will be
 automatically recognized by Tock as corresponding to the intention "weather".
 
-See [_Tock Studio > Language Understanding_](studio.md/nlu.md).
+See [_Tock Studio > Language Understanding_](../user/studio/nlu.md).
 
 ### *Entities*
 
@@ -102,7 +102,7 @@ There are two steps in taking an entity into account:
 By default, Tock identifies the entity, but does not value it, except for certain types.
 By default, entities in the namespace "duckling" will be automatically valued.
 
-See [_Tock Studio > Language Understanding_](studio.md/nlu.md).
+See [_Tock Studio > Language Understanding_](../user/studio/nlu.md).
 
 ### *Scenario* (or _Story_)
 

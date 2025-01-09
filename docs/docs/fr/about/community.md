@@ -5,7 +5,7 @@ title: Communauté
 # Communauté Tock
 
 Tock est bâti sur un modèle communautaire pour créer une plateforme ouverte.  
-Pour en savoir plus, voir [pourquoi Tock](../pourquoi).
+Pour en savoir plus, voir [pourquoi Tock](why.md).
 
 La communauté Tock est ouverte à la contribution et tous les retours comme les _feature requests_ et 
 _pull requests_ sont les bienvenus !

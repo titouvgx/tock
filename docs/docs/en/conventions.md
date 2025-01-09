@@ -17,8 +17,7 @@ if you want to use it.
 ### <!-- md:version insiders- --> – Version (Insiders)  { data-toc-label="Version (Insiders)" }
 
 The tag symbol with a heart in conjunction with a version number denotes that a
-specific feature or behavior was added to the [Insiders] version of Material for
-MkDocs.
+specific feature 
 
 ### <!-- md:default --> – Default value { #default data-toc-label="Default value" }
 
@@ -84,4 +83,4 @@ added by the author.
 Besides plugins, there are some utilities that build on top of MkDocs in order
 to provide extended functionality, like for example support for versioning.
 
-  [Insiders]: insiders/index.md
+ 

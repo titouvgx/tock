@@ -60,7 +60,7 @@ First, you will test the bot by staying in the _Tock Studio_ interface, and will
 >In the next section [Configure Slack](slack.md)
 you will be able to complete the configuration on the Slack and Tock sides so that the bot is functional on this collaborative platform.
 >
-> Similarly, the section [Configure Messenger](../messenger) will show you how to activate the same bot on the Facebook social network messaging.
+> Similarly, the section [Configure Messenger](messenger.md) will show you how to activate the same bot on the Facebook social network messaging.
 
 Create a first connector for your application:
 
@@ -76,7 +76,7 @@ Create a first connector for your application:
 
 > Note that an _API Key_ was automatically generated for your application when creating the first connector.
 >This will be used to connect to the bot's API if you try the _WebHook_ or _WebSocket_ mode in the
->_[Programming journeys](../api)_ guide.
+>_[Programming journeys](api.md)_ guide.
 
 > If you click on _Display test configurations_, you can see that a second configuration is created.
 >This special connector will be used to test the bot directly from the _Tock Studio_ interface.
@@ -195,14 +195,14 @@ to create simple conversational paths without writing or deploying code.
 
 In the following sections you will learn how to:
 
-* [Configure the bot for the Slack channel](../slack.md) (requires a Slack account)
+* [Configure the bot for the Slack channel](slack.md) (requires a Slack account)
 
-* [Configure the bot for the Messenger channel](../messenger) (requires a Facebook account)
+* [Configure the bot for the Messenger channel](messenger.md) (requires a Facebook account)
 
-* [Create programmed paths in Kotlin](../api), opening the way to complex behaviors and
+* [Create programmed paths in Kotlin](api.md), opening the way to complex behaviors and
 integrating third-party APIs if needed
 
-* [Deploy a Tock platform](../platform) in minutes with Docker
-
+* [Deploy a Tock platform](platform.md) in minutes with Docker
+<!-->To do  user manual<!-->
 To learn more about _Tock Studio_, Tock's features and deployment modes, you can also
 browse the more complete [user manual](../../toc).
