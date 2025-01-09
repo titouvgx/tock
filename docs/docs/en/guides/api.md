@@ -30,7 +30,7 @@ different development languages ​​and frameworks.
 In this guide, you will use the [Kotlin](https://kotlinlang.org/) language and the
 _WebSocket_ mode to add an intent to a bot initiated in _Tock Studio_.
 
-If you want, you can skip this step and [deploy a platform with Docker](../platform)
+If you want, you can skip this step and [deploy a platform with Docker](../guides/platform.md.md)
 or go directly to the [user manual](../../toc) to learn more about the possibilities of _Tock Studio_.
 
 ## What you will create
@@ -43,7 +43,7 @@ or go directly to the [user manual](../../toc) to learn more about the possibili
 
 * About 10 minutes
 
-* A functional Tock bot (for example following the [first Tock bot](../studio) guide)
+* A functional Tock bot (for example following the [first Tock bot](../guides/studio.md.md) guide)
 
 * A development environment (or _IDE_) supporting [Kotlin](https://kotlinlang.org/), for example
 [IntelliJ](https://www.jetbrains.com/idea/) with recent versions of [JDK](https://jdk.java.net/)
@@ -220,7 +220,7 @@ business rules, etc.
 
 In the next section you will learn how to:
 
-* [Deploy a Tock platform](../platform) in a few minutes with Docker
+* [Deploy a Tock platform](../guides/platform.md.md) in a few minutes with Docker
 
 To learn more about using _Tock Bot API_ in _WebSocket_ mode, but also other deployment modes, message types supported by Tock, etc. you can consult the
 [user manual](../../toc).

@@ -283,10 +283,10 @@ Les [propriétés système Java](https://docs.oracle.com/javase/8/docs/technotes
 
 ### Packaging du bot
 
-Un exemple de bot en mode [_Tock Bot intégré_](../../dev/bot-integre) est disponible dans
+Un exemple de bot en mode [_Tock Bot intégré_](../dev/bot-integre.md.md) est disponible dans
 [`docker-compose-bot-open-data.yml`](https://github.com/theopenconversationkit/tock-docker/blob/master/docker-compose-bot-open-data.yml).
 
-Des exemples et indications pour packager des bots en mode [_Tock Bot API_](../../dev/bot-api.md) (_WebHooks_, _WebSockets_) seront bientôt disponibles.
+Des exemples et indications pour packager des bots en mode [_Tock Bot API_](../dev/bot-api.md.md.md) (_WebHooks_, _WebSockets_) seront bientôt disponibles.
 
 ## Configurations minimales
 
@@ -363,6 +363,6 @@ Pour `tock/nlp_admin`, il faut utiliser la propriété `adminverticle_base_href`
 Pour une utilisation de Tock en production, nous vous recommandons de parcourir également les pages suivantes :
 
 - [Sécurité](../securite)
-- [Supervision](../supervision)
+- [Supervision](../admin/supervision.md.md)
 - [Cloud](../../admin/cloud.md)
 - [Haute disponibilité](../disponibilite)

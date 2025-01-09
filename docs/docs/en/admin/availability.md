@@ -9,7 +9,7 @@ _high availability_ (or _HA - High Availability_) configurations of Tock bots an
 
 > Coming soon: more details on how to achieve high availability on the different
 >Tock components, and feedback on our use in production for several years
->(see [showcase / users](../../about/showcase)).
+>(see [showcase / users](../about/showcase.md.md)).
 
 ## Redundancy and resilience
 
@@ -23,7 +23,7 @@ or even better performance.
 
 ## Performance
 
-As indicated in the [installation](../../admin/installation.md) section, the first parameter to monitor is
+As indicated in the [installation](../admin/installation.md.md.md) section, the first parameter to monitor is
 available memory.
 
 At high load - we have experienced more than 80 req/s on our own bots -

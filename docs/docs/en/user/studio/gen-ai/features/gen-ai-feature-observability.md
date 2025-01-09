@@ -23,5 +23,5 @@ Pour permettre à Tock de se connecter à un outil d'observabilité, un écran d
 
 ## Utilisation
 
-- Voici la [liste des fournisseurs d'observabilité des LLM](../../providers/gen-ai-provider-observability) qui sont pris en compte par Tock.
+- Voici la [liste des fournisseurs d'observabilité des LLM](../../../../user/studio/gen-ai/providers/gen-ai-provider-observability.md.md) qui sont pris en compte par Tock.
 - Veuillez vous référer à la documentation de chaque outil pour comprendre comment l'utiliser.

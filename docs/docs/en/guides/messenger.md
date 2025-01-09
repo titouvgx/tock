@@ -3,12 +3,12 @@ title: Messenger
 ---
 # Configure your bot for Messenger
 
-If you followed the guide [Create your first bot with _Tock Studio_](../studio), you declared a Slack-type connector.
+If you followed the guide [Create your first bot with _Tock Studio_](../guides/studio.md.md), you declared a Slack-type connector.
 
 In this guide, you will create a configuration for [Facebook Messenger](https://fr-fr.facebook.com/messenger/)
 and integrate the bot to communicate with it on this social network.
 
-If you wish, you can also skip this step and go directly to [the rest](../api).
+If you wish, you can also skip this step and go directly to [the rest](../guides/api.md.md).
 
 ## What you will create
 
@@ -20,7 +20,7 @@ If you wish, you can also skip this step and go directly to [the rest](../api).
 
 * About 20 minutes
 
-* A functional Tock bot (for example following the guide [first Tock bot](../studio))
+* A functional Tock bot (for example following the guide [first Tock bot](../guides/studio.md.md))
 
 * A [Facebook Developer](https://developers.facebook.com/) account
 
@@ -148,10 +148,10 @@ components, etc.
 
 In the following sections you will learn how to:
 
-* [Create programmed paths in Kotlin](../api), opening the way to complex behaviors and
+* [Create programmed paths in Kotlin](../guides/api.md.md), opening the way to complex behaviors and
 integrating third-party APIs if needed
 
-* [Deploy a Tock platform](../platform) in a few minutes with Docker
+* [Deploy a Tock platform](../guides/platform.md.md) in a few minutes with Docker
 
 To learn more about the Messenger connector provided with Tock, go to the
 [connector-messenger](https://github.com/theopenconversationkit/tock/tree/master/bot/connector-messenger) folder on GitHub,

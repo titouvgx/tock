@@ -12,9 +12,9 @@ database would be an issue.
 > Only _Bot API_ mode is available on the public Tock [demo platform](https://demo.tock.ai/)
 > platform.
 
-This page presents Tock bot development in _Bot API_ mode in [Kotlin](bot-api#develop-in-kotlin).
-Clients are also available for [Javascript/Node](bot-api#develop-in-javascript) and [Python](bot-api#develop-in-python).
-It is possible to develop Tock courses in any language via the [_Bot API_](bot-api#developper-via-lapi).
+This page presents Tock bot development in _Bot API_ mode in [Kotlin](/home/Titouan.Perivier-Vigouroux/Documents/tock/docs/docs/en/dev/#develop-in-kotlin.md).
+Clients are also available for [Javascript/Node](/home/Titouan.Perivier-Vigouroux/Documents/tock/docs/docs/en/dev/#develop-in-javascript.md) and [Python](/home/Titouan.Perivier-Vigouroux/Documents/tock/docs/docs/en/dev/#develop-in-python.md).
+It is possible to develop Tock courses in any language via the [_Bot API_](/home/Titouan.Perivier-Vigouroux/Documents/tock/docs/docs/en/dev/#developper-via-lapi.md).
 
 ![logo kotlin](../img/kothlin.png "kotlin"){style="width:100px;"}
 
@@ -160,7 +160,7 @@ For more information, see the documentation on the [`tock-py`](https://github.co
 ![logo rest-api](../img/restapi.png "rest api"){style="width:100px;"}
 
 It is possible to develop Tock courses in any language, by interfacing directly with the
-[API](api#tock-bot-definition-api).
+[API](/home/Titouan.Perivier-Vigouroux/Documents/tock/docs/docs/en/dev/api.md#tock-bot-definition-api.md).
 
 ## Install Bot API on the server side
 
@@ -170,8 +170,8 @@ To use Tock's _Bot API_ mode, a specific module must be deployed with the platfo
 * Exposing the _Bot API_ to potential clients regardless of their programming language
 * Accepting _WebSocket_ connections and/or connecting to the configured webhook
 
-The guide [Deploying Tock with Docker](../../guides/platform.md) or the chapter
-[Installation](../../admin/installation) show how to deploy this module if necessary.
+The guide [Deploying Tock with Docker](../../user/guides.md.md/platform.md) or the chapter
+[Installation](../admin/installation.md.md) show how to deploy this module if necessary.
 
 The only modification required compared to the example code for the demonstration platform is to replace
 the `startWithDemo` method with `start`, specifying if necessary the address of the `bot-api` server.

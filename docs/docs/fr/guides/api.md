@@ -43,7 +43,7 @@ ou passer directement au [manuel utilisateur](../../toc) pour en savoir plus sur
 
 * Environ 10 minutes
 
-* Un bot Tock fonctionnel (par exemple suite au guide [premier bot Tock](../studio))
+* Un bot Tock fonctionnel (par exemple suite au guide [premier bot Tock](../guides/studio.md.md))
 
 * Un environnement de développement (ou _IDE_) supportant [Kotlin](https://kotlinlang.org/), par exemple 
 [IntelliJ](https://www.jetbrains.com/idea/) avec des versions récentes du [JDK](https://jdk.java.net/) 

@@ -92,4 +92,4 @@ plateforme de démo en ligne.
 ## Aide
 
 Que ce soit pour de l'aide, des questions, des suggestions :  
-n'hésitez pas à [nous contacter](../contact).
+n'hésitez pas à [nous contacter](/home/Titouan.Perivier-Vigouroux/Documents/tock/docs/docs/fr/about/contact.md.md).

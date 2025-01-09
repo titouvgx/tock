@@ -16,7 +16,7 @@ Le menu _Gen AI - Sentence Generation Settings_ permet de configurer la fonction
 Pour activer la fonction de génération de phrases, vous devez choisir :
 
 **Un provider IA :**
-- Voir la [liste des fournisseurs d'IA](../../providers/gen-ai-provider-llm-and-embedding)
+- Voir la [liste des fournisseurs d'IA](../../../../user/studio/gen-ai/providers/gen-ai-provider-llm-and-embedding.md.md)
 
 
 **Une température :**

@@ -6,6 +6,6 @@ title: Guides
 
 Pour apprendre plus sur les fonctionnalités _Tock Studio_ voici les tutoriels pas à pas pour : 
 
-* [Construire un modèle conversationnel](../guides/build-model)
-* [Créer un bot multicanal (connecteurs)](../guides/canaux)
-* [Créer un bot multilingue (internationalisation)](../guides/i18n)
+* [Construire un modèle conversationnel](../user/guides/build-model.md.md)
+* [Créer un bot multicanal (connecteurs)](/home/Titouan.Perivier-Vigouroux/Documents/tock/docs/docs/fr/user/guides/canaux.md.md)
+* [Créer un bot multilingue (internationalisation)](../user/guides/i18n.md.md)

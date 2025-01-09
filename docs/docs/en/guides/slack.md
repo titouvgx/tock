@@ -3,7 +3,7 @@ title: Slack
 ---
 # Configure your bot for Slack
 
-If you followed the guide [Create your first bot with _Tock Studio_](../studio), you have declared a Slack-type connector
+If you followed the guide [Create your first bot with _Tock Studio_](../guides/studio.md.md), you have declared a Slack-type connector
 but it is not yet configured so that the bot actually speaks on [Slack](https://slack.md.com/).
 
 With a little configuration on the Slack and Tock sides, a bot can receive messages and respond on this channel.
@@ -21,7 +21,7 @@ or go directly to [the rest](api.md).
 
 * About 15 minutes
 
-* A working Tock bot (e.g. following the [first Tock bot](../studio) guide)
+* A working Tock bot (e.g. following the [first Tock bot](../guides/studio.md.md) guide)
 
 * A Slack account and a _workspace_ / _channel_ to integrate the bot into
 
@@ -132,12 +132,12 @@ independently of the channels you want to talk to it on, today or in the future.
 
 In the following sections you will learn how to:
 
-* [Configure the bot for the Messenger channel](../messenger) (requires a Facebook account)
+* [Configure the bot for the Messenger channel](../guides/messenger.md.md) (requires a Facebook account)
 
-* [Create programmed journeys in Kotlin](../api), opening the way to complex behaviors and
+* [Create programmed journeys in Kotlin](../guides/api.md.md), opening the way to complex behaviors and
 integrating third-party APIs if needed
 
-* [Deploy a Tock platform](../platform) in minutes with Docker
+* [Deploy a Tock platform](../guides/platform.md.md) in minutes with Docker
 
 To learn more about the Slack connector provided with Tock, go to the
 [connector-slack](https://github.com/theopenconversationkit/tock/tree/master/bot/connector-slack) folder on GitHub,

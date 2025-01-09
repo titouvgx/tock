@@ -160,4 +160,4 @@ Chaque nouvelle évolution ou correctif devrait embarquer ses tests unitaires.
 
 _Un problème ? Une question sur l'implémentation ? Une idée à partager ?_
 
-Pour contribuer au projet ou simplement en savoir plus, n'hésitez pas à [nous contacter](../contact).
+Pour contribuer au projet ou simplement en savoir plus, n'hésitez pas à [nous contacter](/home/Titouan.Perivier-Vigouroux/Documents/tock/docs/docs/fr/about/contact.md.md).

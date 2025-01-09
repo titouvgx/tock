@@ -13,9 +13,9 @@ base de données serait un problème.
 > Seul le mode _Bot API_ est disponible sur la [plateforme de démonstration](https://demo.tock.ai/)
 > publique Tock.
 
-Cette page présente le développement de bots Tock en mode _Bot API_ en [Kotlin](bot-api#developper-en-kotlin). 
-Des clients sont aussi disponibles pour [Javascript/Node](bot-api#developper-en-javascript) et [Python](bot-api#developper-en-python).
-Il est possible de développer des parcours Tock dans n'importe quel langage via la [_Bot API_](bot-api#developper-via-lapi).
+Cette page présente le développement de bots Tock en mode _Bot API_ en [Kotlin](/home/Titouan.Perivier-Vigouroux/Documents/tock/docs/docs/fr/dev/#developper-en-kotlin.md). 
+Des clients sont aussi disponibles pour [Javascript/Node](/home/Titouan.Perivier-Vigouroux/Documents/tock/docs/docs/fr/dev/#developper-en-javascript.md) et [Python](/home/Titouan.Perivier-Vigouroux/Documents/tock/docs/docs/fr/dev/#developper-en-python.md).
+Il est possible de développer des parcours Tock dans n'importe quel langage via la [_Bot API_](/home/Titouan.Perivier-Vigouroux/Documents/tock/docs/docs/en/dev/#developper-via-lapi.md).
 )
 
 ![logo kotlin](../img/kothlin.png "kotlin"){style="width:75px;"}
@@ -165,7 +165,7 @@ Pour en savoir plus, voir la documentation sur le dépôt [`tock-py`](https://gi
 ![logo rest-api](../img/restapi.png "rest api"){style="width:100px;"}
 
 Il est possible de développer des parcours Tock dans n'importe quel langage, en s'interfaçant directement avec 
-l'[API](api#tock-bot-definition-api).
+l'[API](/home/Titouan.Perivier-Vigouroux/Documents/tock/docs/docs/en/dev/api.md#tock-bot-definition-api.md).
 
 ## Installer Bot API côté serveur
 
@@ -176,7 +176,7 @@ Pour utiliser le mode _Bot API_ de Tock, un module spécifique doit être déplo
 * D'accepter des connexions en _WebSocket_ et/ou de se connecter au webhook configuré
 
 Le guide [Déployer Tock avec Docker](../../guide/plateforme) ou encore le chapitre 
-[Installation](../../admin/installation) montrent comment déployer ce module si nécessaire.
+[Installation](../admin/installation.md.md) montrent comment déployer ce module si nécessaire.
 
 La seule modification nécessaire par rapport au code d'exemple pour la platforme de démonstration est de remplacer
 la méthode `startWithDemo` par `start` en précisant si besoin l'adresse de du serveur `bot-api`.

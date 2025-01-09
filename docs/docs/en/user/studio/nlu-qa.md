@@ -74,6 +74,6 @@ Like _Intent Test Errors_ for entities, this screen presents the results of _par
 
 ## Continue...
 
-Go to [Menu _Settings_](../configuration) for the rest of the user manual.
+Go to [Menu _Settings_](../../user/studio/configuration.md.md) for the rest of the user manual.
 
 > You can also go directly to the next chapter: [Development](../../../dev/modes.md).

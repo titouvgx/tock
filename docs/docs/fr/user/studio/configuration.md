@@ -2,13 +2,13 @@
 title: Configuration
 ---
 
-# Le menu _Settings_
+# Le menu *Settings*
 
 Le menu _Settings_ permet de créer et paramétrer les applications conversationnelles Tock (c'est-à-dire les  
 modèles / bots pouvant co-exister sur une plateforme). Plusieurs fonctions d'administration et de configuration des 
 bots sont également disponibles via ce menu : importer/exporter une configuration, paramétrer la langue, les connecteurs, etc.
 
-## L'onglet _Applications_
+## L'onglet *Applications*
 
 Cet écran permet de créer, modifier, supprimer des applications conversationnelles Tock.
 
@@ -24,12 +24,12 @@ Pour ajouter une application, cliquez sur _Create New Application_ :
 
 * Saisissez un nom / identifiant pour l'application
 
-* Choisissez si le modèle pourra inclure des _entités_ voire des _sous-entités_ (cf [Concepts](../../concepts) pour en savoir plus)
+* Choisissez si le modèle pourra inclure des _entités_ voire des _sous-entités_ (cf [Concepts](../concepts.md) pour en savoir plus)
 
-* Sélectionnez une ou plusieurs langues (voir [Construire un bot multilingue](../../guides/i18n) pour en savoir plus)
+* Sélectionnez une ou plusieurs langues (voir [Construire un bot multilingue](../guides/) pour en savoir plus)
 
 * Sélectionnez un moteur NLU ([Apache OpenNLP](https://opennlp.apache.org/) ou [Stanford CoreNLP](https://stanfordnlp.github.io/CoreNLP/), 
-voir [Installation](../../../admin/installation) pour en savoir plus)
+voir [Installation](../admin/installation.md.md.md.md) pour en savoir plus)
 
 ### Modifier, importer et exporter une application
 
@@ -57,7 +57,7 @@ La fonction _Upload dump_ (voir ci-dessus) est également accessible directement
 * Soit de modifier une application (si l'`application name` existe)
 * Soit d'en créer/importer une nouvelle
 
-## L'onglet _Configurations_
+## L'onglet *Configurations*
 
 Cet écran permet d'accéder aux _connecteurs_ d'un bot, d'en ajouter, modifier ou supprimer. C'est aussi là que vous trouvez 
 les informations pour se connecter programmatiquement.
@@ -72,7 +72,7 @@ en Kotlin ou dans un autre langage de programmation comme Javascript/Nodejs ou P
 
 * Une adresse / URL peut être configurée pour utiliser le mode _WebHook_ de _Bot API_
 
-Pour en savoir plus sur ces paramètres et le développement de parcours, voir [Bot API](../../../dev/bot-api).
+Pour en savoir plus sur ces paramètres et le développement de parcours, voir [Bot API](../dev/bot-api.md.md.md.md).
 
 ### Gérer les connecteurs
 
@@ -91,7 +91,7 @@ Tous les connecteurs possèdent la configuration suivante :
 
 Chaque connecteur possède également une configuration supplémentaire spécifique à ce type de connecteur. Ces paramètres 
 sont dans _Connector Custom Configuration_. Ces paramètres spécifiques sont documentés avec chaque type de connecteur/canal, 
-voir [Les connecteurs](../../guides/canaux).
+voir [Les connecteurs](../../user/guides.md.md/canaux).
 
 
 ### Connecteurs de test
@@ -108,7 +108,7 @@ configurations_ pour les voir et éventuellement les modifier.
 >dans le descripteur `docker-compose-bot.yml`).
 
 
-## L'onglet _Namespaces_
+## L'onglet *Namespaces*
 
 Cet écran permet de gérer un ou plusieurs espaces de nommage ou _namespaces_. Chaque application, chaque bot est créé 
 au sein d'un namespace. Il est possible de gérer plusieurs namespaces, et de partager certains d'entre eux avec 
@@ -116,13 +116,13 @@ une équipe ou d'autres utilisateurs Tock Studio. Pour cela, il suffit d'éditer
 utilisateurs (en leur donnant plus ou moins de droits sur le namespace).
 
 
-## L'onglet _Log_
+## L'onglet *Log*
 
 Cette vue permet de suivre les principales modifications de configuration applicative effectuées 
 par les utilisateurs via Tock Studio: création d'applications, modifications des connecteurs, imports, etc.
 
 ## Continuer...
 
-Rendez-vous dans [Menu _FAQ Training_](../faq-training) pour la suite du manuel utilisateur. 
+Rendez-vous dans [Menu _FAQ Training_](faq-training.md) pour la suite du manuel utilisateur. 
 
-> Vous pouvez aussi passer directement au chapitre suivant : [Développement](../../../dev/modes.md). 
+> Vous pouvez aussi passer directement au chapitre suivant : [Développement](../../../dev/modes.md).    
