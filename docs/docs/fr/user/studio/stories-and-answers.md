@@ -7,14 +7,14 @@ title: Stories and Answers
 Le menu permet de construire des parcours et des réponses aux phrases de l'utilisateur.
  
 Dans cette page, le détail de chaque onglet est présenté. Voir aussi 
-[Créer son premier bot avec Tock Studio](../../user/guides.md/studio.md) pour un exemple de création 
-de parcours ou [Construire un bot multilingue](../../dev/i18n.md) pour l'utilisation de l'onglet _Answers_.
+[Créer son premier bot avec Tock Studio](../../user/studio.md)  pour un exemple de création 
+de parcours ou [Construire un bot multilingue](../../user/guides/i18n.md) pour l'utilisation de l'onglet _Answers_.
 
-## L'onglet _New Story_
+## L'onglet *New Story*
 
 ### Créer une réponse simple
 
-> Le guide [Créer son premier bot avec Tock Studio](../../user/guides.md/studio.md) présente 
+> Le guide [Créer son premier bot avec Tock Studio](../../user/studio.md) présente 
  un exemple de création de parcours avec une réponse simple via _New Story_.
 >
 > L'onglet _Test_ > _Test the bot_ permet ensuite de rapidement vérifier le comportement du bot sur ce parcours.
@@ -43,12 +43,12 @@ Les actions sont présentées comme des suggestions, quand le canal le permet.
 
 Il est possible de présenter une arborescence d'actions pour construire un arbre de décision.
 
-## L'onglet _Stories_
+## L'onglet *Stories*
 
 Cet écran permet de parcourir et gérer les parcours ou _stories_ créées.
 
 Il peut s'agir des parcours configurés via _Tock Studio_ (ie. avec l'onglet _New Story_) mais aussi les parcours 
-déclarés programmatiquement via [_Bot API_](../dev/bot-api.md). Pour voir ces derniers, décochez l'option 
+déclarés programmatiquement via [_Bot API_](../../dev/bot-api.md). Pour voir ces derniers, décochez l'option 
 _Only Configured Stories_.
 
 ## L'onglet _Rules_
@@ -93,6 +93,6 @@ les aspects développement sur ce thème.
 
 ## Continuer...
 
-Rendez-vous dans [Menu _Test_](../../user/studio/test.md) pour la suite du manuel utilisateur. 
+Rendez-vous dans [Menu _Test_](../../dev/test.md) pour la suite du manuel utilisateur. 
 
-> Vous pouvez aussi passer directement au chapitre suivant : [Développement](../../../dev/modes.md). 
+> Vous pouvez aussi passer directement au chapitre suivant : [Développement](../../dev/modes.md) 

@@ -4,14 +4,14 @@ title: Connectors
 
 # Tock Connectors
 
-The [Multichannel Bot](../user/guides/channels) page of the user documentation introduces the concept of Tock _connectors_ and provides a list of the connectors already available.
+The [Multichannel Bot](../user/guides/canaux.md) page of the user documentation introduces the concept of Tock _connectors_ and provides a list of the connectors already available.
 
 This page only adds elements specific to developing with Tock _connectors_ or creating new connectors.
 
 ## Connectors Provided with Tock
 
 To learn more about the connectors included with the Tock distribution, you can refer to the folder for each connector.  
-The [Multichannel Bot](../user/guides/channels) page lists all available connectors.
+The [Multichannel Bot](../user/guides/canaux.md) page lists all available connectors.
 
 > For example, the folder  
 [connector-messenger](https://github.com/theopenconversationkit/tock/tree/master/bot/connector-messenger)  
@@ -20,7 +20,7 @@ contains the source code and the _README_ for the Tock connector for Messenger.
 ## Kits Based on the Web Connector
 
 Components using the Web Connector to integrate Tock bots with other channels are available in their own GitHub repositories, alongside the main Tock repository.  
-The [Multichannel Bot](../user/guides/channels) page lists all available kits.
+The [Multichannel Bot](../user/guides/canaux.md) page lists all available kits.
 
 > For example, the repository  
 [`tock-react-kit`](https://github.com/theopenconversationkit/tock-react-kit)  

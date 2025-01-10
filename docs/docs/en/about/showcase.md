@@ -34,7 +34,7 @@ technologies such as [Allo-Media](https://www.allo-media.net/) and [Voxygen](htt
 The _AlloCovid_ bot is powered by open source technologies (Tock) and open source itself: its sources are available on 
 repository [`allocovid`](https://github.com/theopenconversationkit/allocovid).
 
-> The source repository also includes the [_Allo-Media connector_](../dev/connectors.md#allo-media), 
+> The source repository also includes the [_Allo-Media connector_](../dev/connectors.md), 
 > technical details about the bot and its [functional specification](https://github.com/Delegation-numerique-en-sante/covid19-algorithme-orientation).
 
 ![logo Allo covid](../img/allocovid.png "Allo covid")
@@ -134,7 +134,7 @@ and any disruptions on all trains (TGV, Intercites, TER, Eurostar, etc.) in a co
 > Query the bot by train number, passenger file, next departures, etc. to get the latest information and traffic status.
 
 Accessible via the SNCF Facebook page, Twitter and [_sncf.com_](https://www.sncf.com/fr/itineraire-reservation/info-trafic/),
-the _Agent virtuel_ leverages Tock and the [`tock-react-kit`](../dev/connectors.md#react).
+the _Agent virtuel_ leverages Tock and the [`tock-react-kit`](../dev/connectors.md)
 
 ![L'Agent virtuel SNCF](https://pbs.twimg.com/media/D_HqJrjXYAEOrhE.jpg:large)
 
