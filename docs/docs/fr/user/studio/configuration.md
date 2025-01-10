@@ -26,10 +26,10 @@ Pour ajouter une application, cliquez sur _Create New Application_ :
 
 * Choisissez si le modèle pourra inclure des _entités_ voire des _sous-entités_ (cf [Concepts](../concepts.md) pour en savoir plus)
 
-* Sélectionnez une ou plusieurs langues (voir [Construire un bot multilingue](../guides/) pour en savoir plus)
+* Sélectionnez une ou plusieurs langues (voir [Construire un bot multilingue](../guides.md) pour en savoir plus)
 
 * Sélectionnez un moteur NLU ([Apache OpenNLP](https://opennlp.apache.org/) ou [Stanford CoreNLP](https://stanfordnlp.github.io/CoreNLP/), 
-voir [Installation](../admin/installation.md) pour en savoir plus)
+voir [Installation](../../admin/installation.md) pour en savoir plus)
 
 ### Modifier, importer et exporter une application
 
@@ -72,7 +72,7 @@ en Kotlin ou dans un autre langage de programmation comme Javascript/Nodejs ou P
 
 * Une adresse / URL peut être configurée pour utiliser le mode _WebHook_ de _Bot API_
 
-Pour en savoir plus sur ces paramètres et le développement de parcours, voir [Bot API](../dev/bot-api.md).
+Pour en savoir plus sur ces paramètres et le développement de parcours, voir [Bot API](../../dev/bot-api.md).
 
 ### Gérer les connecteurs
 
@@ -91,7 +91,7 @@ Tous les connecteurs possèdent la configuration suivante :
 
 Chaque connecteur possède également une configuration supplémentaire spécifique à ce type de connecteur. Ces paramètres 
 sont dans _Connector Custom Configuration_. Ces paramètres spécifiques sont documentés avec chaque type de connecteur/canal, 
-voir [Les connecteurs](../../user/guides.md/canaux).
+voir [Les connecteurs](../../user/guides/canaux.md).
 
 
 ### Connecteurs de test
