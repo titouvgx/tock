@@ -143,5 +143,3 @@ To learn more about the Slack connector provided with Tock, go to the
 [connector-slack](https://github.com/theopenconversationkit/tock/tree/master/bot/connector-slack) folder on GitHub,
 where you will find the sources and the _README_ of the connector.
 
-To learn more about _Tock Studio_, Tock's features and deployment modes, you can also
-browse the more complete [user manual](../../toc).

@@ -19,7 +19,7 @@ As a result, it allows even more integrations on the "frontend" side, using this
 
 This page actually lists:
 
-- The [_connectors_](../channels#connectors-provided-with-tock) provided with the Tock distribution:
+- The [_connectors_](canaux.md#connectors-provided-with-tock) provided with the Tock distribution:
 <!-->To do img tres penible<!-->
 ![logo messenger](../../img/messenger.png "whatsapp"){style="width:50px;"}
 
@@ -49,7 +49,7 @@ This page actually lists:
 
 ![logo test](../../img/test.jpeg "test"){style="width:50px;"}
 
-- The [kits using the _Web connector_](../channels#integrations-via-the-web-connector) to integrate other channels:
+- The [kits using the _Web connector_](canaux.md#integrations-via-the-web-connector) to integrate other channels:
 
 ![logo React](../../img/React.png "React"){style="width:50px;"}
 
@@ -58,7 +58,7 @@ This page actually lists:
 
 ![logo Sharepoint](../../img/sharepoint.png "Sharepopint"){style="width:50px;"}
 
-- The [possible integrations for voice processing](../channels#voice-technologies):
+- The [possible integrations for voice processing](canaux.md#voice-technologies):
 
 ![logo android](../../img/android.png "allo media"){style="width:50px;"}
 
@@ -237,9 +237,9 @@ portal, web or mobile application, REST client, etc.
 The connector exposes a REST API to the bot, easily integrated from any web or mobile application, or programming language.
 
 Several kits and components based on the Web connector are already available to integrate Tock bots into
-different sites and applications, such as websites with [React](../channels#react),
-native mobile applications with [Flutter](../channels#flutter-beta) or even
-intranets [SharePoint](../channels#sharepoint-beta).
+different sites and applications, such as websites with [React](canaux.md#react),
+native mobile applications with [Flutter](canaux.md#flutter-beta) or even
+intranets [SharePoint](canaux.md#sharepoint-beta).
 
 * **Channel** : Web (generic for all sites & web applications)
 * **Type** : text
@@ -265,7 +265,7 @@ As a result, it allows even more integrations on the "frontend" side, using this
 ![logo React](../../img/React.png "React"){style="width:100px;"}
 
 This React component integrates a Tock bot and renders it graphically in a web application.
-The web application communicates with the bot via a [Web connector](../channels#generic-web).
+The web application communicates with the bot via a [Web connector](canaux.md#web-generic).
 
 * **Integration** : [React](https://fr.reactjs.org/) (JavaScript / JSX)
 * **Type** : Web applications
@@ -278,7 +278,7 @@ For more information, see the sources and the _README_ in the repository
 
 ![logo flutter](../../img/flutter.png "allo media"){style="width:75px;"}
 
-This Flutter component integrates a Tock bot and provides its graphical rendering in a mobile or web application. The app communicates with the bot via a [web connector](../channels#generic-web).
+This Flutter component integrates a Tock bot and provides its graphical rendering in a mobile or web application. The app communicates with the bot via a [web connector](canaux.md#web-generic).
 
 * **Integration**: [Flutter](https://flutter.dev/) (Dart)
 * **Type**: Native mobile and web apps
@@ -292,8 +292,8 @@ For more information, see the sources and the _README_ in the
 ![logo Sharepoint](../../img/sharepoint.png "Sharepopint"){style="width:75px;"}
 
 This _WebPart_ component allows you to integrate a Tock bot into a SharePoint site.
-It embeds the [tock-react-kit](../channels#react) to communicate with the bot
-via a [Web connector](../channels#generic-web) and manage the graphic rendering of the bot in the SharePoint page.
+It embeds the [tock-react-kit](canaux.md#react) to communicate with the bot
+via a [Web connector](canaux.md#web-generic) and manage the graphic rendering of the bot in the SharePoint page.
 
 * **Integration** : [Microsoft SharePoint](https://www.microsoft.com/en-us/microsoft-365/sharepoint/collaboration)
 * **Type** : Websites & Intranets
@@ -319,9 +319,9 @@ They are mentioned for information purposes, even when no ready-to-use _connecto
 ### Google / Android
 
 Google's _Speech-To-Text_ and _Text-To-Speech_ functions are used through the
-[Google Assistant / Home connector](../channels#google-assistant-home), also by the voice
+[Google Assistant / Home connector](canaux.md#google-assistant-home), also by the voice
 functions of the [Microsoft Teams app for Android](https://play.google.com/store/apps/details?id=com.microsoft.teams)
-compatible with the [Teams connector](../channels#teams), as well as within the Android platform
+compatible with the [Teams connector](canaux.md#teams), as well as within the Android platform
 in particular for native mobile developments. 
 
 
@@ -336,14 +336,14 @@ in particular for native mobile developments.
 
 * **Technology** : STT & TTS Google / Android
 * **Status** : used with Tock in production
-(via connectors [Google Assistant / Home](../channels#google-assistant-home),
-[Microsoft Teams](../channels#teams)
+(via connectors [Google Assistant / Home](canaux.md#google-assistant-home),
+[Microsoft Teams](canaux.md#teams)
 and natively Android for botsintegrated _on-app_)
 
 ### Apple / iOS
 
 Apple's _Speech-To-Text_ and _Text-To-Speech_ features are used through the
-[Business Chat connector](../channels#business-chat), as well as within iOS
+[Business Chat connector](canaux.md#business-chat), as well as within iOS
 for native mobile developments.
 
 ![logo ios](../../img/ios.png "ios"){style="width:75px;"}
@@ -357,7 +357,7 @@ and natively iOS for integrated _on-app_ bots)
 ### Amazon / Alexa
 
 Alexa (Amazon) _Speech-To-Text_ and _Text-To-Speech_ functions are used through the
-[Alexa connector / Echo](../channels#alexa-echo).
+[Alexa connector / Echo](canaux.md#alexa-echo).
 
 ![logo alexa](../../img/alexa2.png "Alexa"){style="width:75px;"}
 
@@ -370,7 +370,7 @@ The company [Allo-Media](https://www.allo-media.net/) offers an AI platform base
 
 [Voxygen](https://www.voxygen.fr/) offers speech synthesis services.
 
-On the occasion of the development of the [AlloCovid](https://www.allocovid.com/) bot, an [Allo-Media connector](../channels#allo-media)
+On the occasion of the development of the [AlloCovid](https://www.allocovid.com/) bot, an [Allo-Media connector](canaux.md#allo-media)
 was developed to integrate the bot (Tock) with the Allo-Media services:
 _Speech-To-Text_ and _Text-To-Speech_ with Voxygen.
 

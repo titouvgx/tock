@@ -203,6 +203,3 @@ In the following sections you will learn how to:
 integrating third-party APIs if needed
 
 * [Deploy a Tock platform](platform.md) in minutes with Docker
-<!-->To do  user manual<!-->
-To learn more about _Tock Studio_, Tock's features and deployment modes, you can also
-browse the more complete [user manual](../../toc).

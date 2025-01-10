@@ -24,7 +24,7 @@ L'ensemble du code source est disponible sur [GitHub](https://github.com/theopen
 ## Aperçu
 
 Le site [Tock.ai](https://doc.tock.ai/) est un bon point d'entrée pour découvrir la solution, ses applications et sa communauté grandissante. 
-Des [guides](guides/studio..md), [supports](about/ressources.md) et une [video de démonstration](https://www.youtube.com/watch?v=UsKkpYL7Hto) 
+Des [guides](guides/studio.md), [supports](about/ressources.md) et une [video de démonstration](https://www.youtube.com/watch?v=UsKkpYL7Hto) 
 (20 minutes, en Anglais) sont également disponibles :
 
 <a href="https://www.youtube.com/watch?v=UsKkpYL7Hto"
@@ -77,7 +77,7 @@ Des intégrations [React](https://reactjs.org) et [Flutter](https://flutter.dev/
 ## Démarrer...
 
 * [Table des matières](toc)
-* [Guides](guides/studio..md) et [plateforme de démonstration](https://demo.tock.ai/)
+* [Guides](guides/studio.md) et [plateforme de démonstration](https://demo.tock.ai/)
 * Manuels [utilisateur](user/concepts.md), [développeur](dev/modes.md), [administrateur](admin/architecture.md)
 * [Ressources (supports, video)](about/ressources.md) et [exemples de code](dev/exemples-code)
 

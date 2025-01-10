@@ -11,10 +11,7 @@ the construction and configuration of Tock bots without having to install the pl
 In this guide, you will learn how to deploy a complete Tock platform in a few minutes, thanks
 to the [Docker](https://www.docker.com/) / [Docker Compose](https://docs.docker.com/compose/) implementation examples provided.
 
-Note that it is entirely possible to deploy Tock without using Docker. A specific section of the
-[user manual](../../toc) will teach you more about the architecture, possibilities and
-recommendations for deploying and using Tock in production.
-
+Note that it is entirely possible to deploy Tock without using Docker. 
 ## What you will create
 
 * A complete local Tock platform: _Tock Studio_, _Bot API_, etc.
@@ -40,8 +37,6 @@ _WebSocket_
 of [JDK](https://jdk.java.net/) and [Maven](https://maven.apache.org/)
 
 > Without _IDE_ or without Maven, no problem. It is quite possible to compile and run the program with other tools.
->
-> Other modes than Kotlin and _WebSocket_ are presented in the [Tock user manual](../../toc).
 
 ## Deploy a Tock platform - without sources
 
@@ -201,7 +196,6 @@ developments, for Tock contributors or if you have to work without Internet acce
 
 You have just completed the Tock quick start guides.
 
-From here, you can launch directly on a Tock platform, or browse the
-[user manual](../../toc) to learn more about _Tock Studio_, _Bot API_ and _Bot Flow_ for example.
+From here, you can launch directly on a Tock platform.
 
 Other pages also present customer case studies, code examples, how to contact the Tock community, etc.

@@ -109,7 +109,7 @@ où vous retrouverez les sources et le _README_ du connecteur.
 * **Type** : texte
 * **Status** : connecteur Tock utilisé hors production
 
-Le guide [Connecter son bot à Slack](../../guide/slack.md) explique comment intégrer un bot 
+Le guide [Connecter son bot à Slack](../../guides/slack.md)explique comment intégrer un bot 
 Tock avec une _chaîne_ [Slack](https://slack.com/).
 
 Pour en savoir plus sur ce connecteur, vous pouvez aussi vous rendre dans le dossier 

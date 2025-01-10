@@ -29,7 +29,7 @@ To add an application, click on _Create New Application_ :
 * Select one or more languages ​​(see [Building a multilingual bot](../../user/guides/i18n.md) for more information)
 
 * Select an NLU engine ([Apache OpenNLP](https://opennlp.apache.org/) or [Stanford CoreNLP](https://stanfordnlp.github.io/CoreNLP/),
-see [Installation](../admin/installation.md) for more information)
+see [Installation](../../admin/installation.md)more information)
 
 ### Edit, import and export an application
 
@@ -71,7 +71,7 @@ in Kotlin or in another programming language like Javascript/Nodejs or Python
 
 * An address / URL can be configured to use the _WebHook_ mode of _Bot API_
 
-To learn more about these settings and path development, see [Bot API](../dev/bot-api.md).
+To learn more about these settings and path development, see [Bot API](../../dev/bot-api.md)
 
 ### Manage connectors
 

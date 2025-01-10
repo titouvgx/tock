@@ -157,5 +157,3 @@ To learn more about the Messenger connector provided with Tock, go to the
 [connector-messenger](https://github.com/theopenconversationkit/tock/tree/master/bot/connector-messenger) folder on GitHub,
 where you will find the sources and the _README_ of the connector.
 
-To learn more about _Tock Studio_, the features and deployment modes of Tock, you can also
-browse the [user manual](../../toc), more complete.

@@ -211,5 +211,4 @@ l'intégration d'API tierces si besoin
 
 * [Déployer une plateforme Tock](platform.md) en quelques minutes avec Docker
 
-Pour en savoir plus sur _Tock Studio_, les fonctionnalités et les modes de déploiement de Tock, vous pouvez aussi 
-parcourir le [manuel utilisateur](../../toc), plus complet.
+P

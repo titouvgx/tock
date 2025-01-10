@@ -2564,7 +2564,7 @@ then make it multichannel later by adding connectors.</p>
 As a result, it allows even more integrations on the "frontend" side, using this API as a gateway.</p>
 <p>This page actually lists:</p>
 <ul>
-<li>The <a href="../channels#connectors-provided-with-tock"><em>connectors</em></a> provided with the Tock distribution:</li>
+<li>The <a href="canaux.md#connectors-provided-with-tock"><em>connectors</em></a> provided with the Tock distribution:</li>
 </ul>
 <p><img alt="logo messenger" src="../../../img/messenger.png" title="whatsapp" />{style="width:50px;"}</p>
 <p><img alt="Logo slack" src="../../../img/slack.png" title="Slack" />{style="width: 75px;"}</p>
@@ -2580,13 +2580,13 @@ As a result, it allows even more integrations on the "frontend" side, using this
 <p><img alt="logo web" src="../../../img/web.png" title="web" />{style="width:50px;"}</p>
 <p><img alt="logo test" src="../../../img/test.jpeg" title="test" />{style="width:50px;"}</p>
 <ul>
-<li>The <a href="../channels#integrations-via-the-web-connector">kits using the <em>Web connector</em></a> to integrate other channels:</li>
+<li>The <a href="canaux.md#integrations-via-the-web-connector">kits using the <em>Web connector</em></a> to integrate other channels:</li>
 </ul>
 <p><img alt="logo React" src="../../../img/React.png" title="React" />{style="width:50px;"}</p>
 <p><img alt="logo flutter" src="../../../img/flutter.png" title="allo media" />{style="width:50px;"}</p>
 <p><img alt="logo Sharepoint" src="../../../img/sharepoint.png" title="Sharepopint" />{style="width:50px;"}</p>
 <ul>
-<li>The <a href="../channels#voice-technologies">possible integrations for voice processing</a>:</li>
+<li>The <a href="canaux.md#voice-technologies">possible integrations for voice processing</a>:</li>
 </ul>
 <p><img alt="logo android" src="../../../img/android.png" title="allo media" />{style="width:50px;"}</p>
 <p><img alt="Logo Google assistant" src="../../../img/googelassist.png" title="google assistant" />{style="width: 70px;"}</p>
@@ -2721,9 +2721,9 @@ class with the <a href="https://github.com/theopenconversationkit/allocovid">bot
 portal, web or mobile application, REST client, etc.</p>
 <p>The connector exposes a REST API to the bot, easily integrated from any web or mobile application, or programming language.</p>
 <p>Several kits and components based on the Web connector are already available to integrate Tock bots into
-different sites and applications, such as websites with <a href="../channels#react">React</a>,
-native mobile applications with <a href="../channels#flutter-beta">Flutter</a> or even
-intranets <a href="../channels#sharepoint-beta">SharePoint</a>.</p>
+different sites and applications, such as websites with <a href="canaux.md#react">React</a>,
+native mobile applications with <a href="canaux.md#flutter-beta">Flutter</a> or even
+intranets <a href="canaux.md#sharepoint-beta">SharePoint</a>.</p>
 <ul>
 <li><strong>Channel</strong> : Web (generic for all sites &amp; web applications)</li>
 <li><strong>Type</strong> : text</li>
@@ -2742,7 +2742,7 @@ As a result, it allows even more integrations on the "frontend" side, using this
 <h3 id="react">React</h3>
 <p><img alt="logo React" src="../../../img/React.png" title="React" />{style="width:100px;"}</p>
 <p>This React component integrates a Tock bot and renders it graphically in a web application.
-The web application communicates with the bot via a <a href="../channels#generic-web">Web connector</a>.</p>
+The web application communicates with the bot via a <a href="canaux.md#generic-web">Web connector</a>.</p>
 <ul>
 <li><strong>Integration</strong> : <a href="https://fr.reactjs.org/">React</a> (JavaScript / JSX)</li>
 <li><strong>Type</strong> : Web applications</li>
@@ -2752,7 +2752,7 @@ The web application communicates with the bot via a <a href="../channels#generic
 <a href="https://github.com/theopenconversationkit/tock-react-kit"><code>tock-react-kit</code></a> on GitHub.</p>
 <h3 id="flutter-beta">Flutter <em>(beta)</em></h3>
 <p><img alt="logo flutter" src="../../../img/flutter.png" title="allo media" />{style="width:75px;"}</p>
-<p>This Flutter component integrates a Tock bot and provides its graphical rendering in a mobile or web application. The app communicates with the bot via a <a href="../channels#generic-web">web connector</a>.</p>
+<p>This Flutter component integrates a Tock bot and provides its graphical rendering in a mobile or web application. The app communicates with the bot via a <a href="canaux.md#generic-web">web connector</a>.</p>
 <ul>
 <li><strong>Integration</strong>: <a href="https://flutter.dev/">Flutter</a> (Dart)</li>
 <li><strong>Type</strong>: Native mobile and web apps</li>
@@ -2763,8 +2763,8 @@ The web application communicates with the bot via a <a href="../channels#generic
 <h3 id="sharepoint-beta">SharePoint <em>(beta)</em></h3>
 <p><img alt="logo Sharepoint" src="../../../img/sharepoint.png" title="Sharepopint" />{style="width:75px;"}</p>
 <p>This <em>WebPart</em> component allows you to integrate a Tock bot into a SharePoint site.
-It embeds the <a href="../channels#react">tock-react-kit</a> to communicate with the bot
-via a <a href="../channels#generic-web">Web connector</a> and manage the graphic rendering of the bot in the SharePoint page.</p>
+It embeds the <a href="canaux.md#react">tock-react-kit</a> to communicate with the bot
+via a <a href="canaux.md#generic-web">Web connector</a> and manage the graphic rendering of the bot in the SharePoint page.</p>
 <ul>
 <li><strong>Integration</strong> : <a href="https://www.microsoft.com/en-us/microsoft-365/sharepoint/collaboration">Microsoft SharePoint</a></li>
 <li><strong>Type</strong> : Websites &amp; Intranets</li>
@@ -2785,9 +2785,9 @@ managing the STT and TTS voice aspects.</p>
 They are mentioned for information purposes, even when no ready-to-use <em>connector</em> is provided.</p>
 <h3 id="google-android">Google / Android</h3>
 <p>Google's <em>Speech-To-Text</em> and <em>Text-To-Speech</em> functions are used through the
-<a href="../channels#google-assistant-home">Google Assistant / Home connector</a>, also by the voice
+<a href="canaux.md#google-assistant-home">Google Assistant / Home connector</a>, also by the voice
 functions of the <a href="https://play.google.com/store/apps/details?id=com.microsoft.teams">Microsoft Teams app for Android</a>
-compatible with the <a href="../channels#teams">Teams connector</a>, as well as within the Android platform
+compatible with the <a href="canaux.md#teams">Teams connector</a>, as well as within the Android platform
 in particular for native mobile developments. </p>
 <p><img alt="logo android" src="../../../img/android.png" title="allo media" />{style="width:75px;"}</p>
 <p><img alt="Logo Google assistant" src="../../../img/googelassist.png" title="google assistant" />{style="width: 75px;"}</p>
@@ -2796,13 +2796,13 @@ in particular for native mobile developments. </p>
 <ul>
 <li><strong>Technology</strong> : STT &amp; TTS Google / Android</li>
 <li><strong>Status</strong> : used with Tock in production
-(via connectors <a href="../channels#google-assistant-home">Google Assistant / Home</a>,
-<a href="../channels#teams">Microsoft Teams</a>
+(via connectors <a href="canaux.md#google-assistant-home">Google Assistant / Home</a>,
+<a href="canaux.md#teams">Microsoft Teams</a>
 and natively Android for botsintegrated <em>on-app</em>)</li>
 </ul>
 <h3 id="apple-ios">Apple / iOS</h3>
 <p>Apple's <em>Speech-To-Text</em> and <em>Text-To-Speech</em> features are used through the
-<a href="../channels#business-chat">Business Chat connector</a>, as well as within iOS
+<a href="canaux.md#business-chat">Business Chat connector</a>, as well as within iOS
 for native mobile developments.</p>
 <p><img alt="logo ios" src="../../../img/ios.png" title="ios" />{style="width:75px;"}</p>
 <p><img alt="logo BusinessChat Logo" src="../../../img/message.png" title="BusinessChat Logo" />{style="width:75px;"}</p>
@@ -2813,7 +2813,7 @@ and natively iOS for integrated <em>on-app</em> bots)</li>
 </ul>
 <h3 id="amazon-alexa">Amazon / Alexa</h3>
 <p>Alexa (Amazon) <em>Speech-To-Text</em> and <em>Text-To-Speech</em> functions are used through the
-<a href="../channels#alexa-echo">Alexa connector / Echo</a>.</p>
+<a href="canaux.md#alexa-echo">Alexa connector / Echo</a>.</p>
 <p><img alt="logo alexa" src="../../../img/alexa2.png" title="Alexa" />{style="width:75px;"}</p>
 <ul>
 <li><strong>Technology</strong>: STT &amp; TTS Amazon / Alexa</li>
@@ -2822,7 +2822,7 @@ and natively iOS for integrated <em>on-app</em> bots)</li>
 <h3 id="allo-media-voxygen">Allo-Media &amp; Voxygen</h3>
 <p>The company <a href="https://www.allo-media.net/">Allo-Media</a> offers an AI platform based on phone calls.</p>
 <p><a href="https://www.voxygen.fr/">Voxygen</a> offers speech synthesis services.</p>
-<p>On the occasion of the development of the <a href="https://www.allocovid.com/">AlloCovid</a> bot, an <a href="../channels#allo-media">Allo-Media connector</a>
+<p>On the occasion of the development of the <a href="https://www.allocovid.com/">AlloCovid</a> bot, an <a href="canaux.md#allo-media">Allo-Media connector</a>
 was developed to integrate the bot (Tock) with the Allo-Media services:
 <em>Speech-To-Text</em> and <em>Text-To-Speech</em> with Voxygen.</p>
 <p><img alt="logo BusinessChat Logo" src="../../../img/allomedia.png" title="BusinessChat Logo" />{style="width:100px;"}</p>

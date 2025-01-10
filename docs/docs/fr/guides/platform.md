@@ -11,9 +11,7 @@ la construction et la configuration des bots Tock sans avoir à installer la pla
 Dans ce guide, vous allez apprendre à déployer une plateforme complète Tock en quelques minutes, grâce 
  aux exemples d'implémentations [Docker](https://www.docker.com/) / [Docker Compose](https://docs.docker.com/compose/) fournies.
 
-Notez qu'il est tout à fait possible de déployer Tock sans utiliser Docker. Une section spécifique du 
-[manuel utilisateur](../../toc) vous en apprendra plus sur l'architecture, les possibilités et les 
-recommandations pour le déploiement et l'utilisation de Tock en production.
+Notez qu'il est tout à fait possible de déployer Tock sans utiliser Docker. 
 
 ## Ce que vous allez créer
 
@@ -40,8 +38,6 @@ _WebSocket_
 du [JDK](https://jdk.java.net/) et de [Maven](https://maven.apache.org/)
 
 > Sans _IDE_ ou sans Maven, pas de problème. Il est tout à fait possible de compiler et exécuter le programme avec d'autres outils.
->
-> D'autres modes que Kotlin et _WebSocket_ sont présentés dans le [manuel utilisateur Tock](../../toc).
 
 ## Déployer une plateforme Tock - sans les sources
 
@@ -77,7 +73,7 @@ Il vous faut, en plus de [Docker](https://www.docker.com/) et [Docker Compose](h
   les sources de GitHub en local.
  
 > Pour démarrer sans Git ni les sources du dépôt en local, suivez le 
-[paragraphe précédent](../plateforme#deployer-une-plateforme-tock-sans-les-sources).
+[paragraphe précédent](../platform.mddeployer-une-plateforme-tock-sans-les-sources).
 
 ```shell
 # Get the lastest sources from GitHub
@@ -209,7 +205,6 @@ développements, pour les contributeurs Tock ou encore si vous devez travailler 
 
 Vous venez de terminer les guides de démarrage rapide Tock.
 
-A partir de là, vous pouvez vous lancer directement sur une plateforme Tock, ou parcourir le 
-[manuel utilisateur](../../toc) pour en savoir plus sur _Tock Studio_, _Bot API_ et _Bot Flow_ par exemple.
+A partir de là, vous pouvez vous lancer directement sur une plateforme Tock
 
 D'autres pages présentent aussi des études de cas clients, des exemples de code, comment contacter la communauté Tock, etc.
