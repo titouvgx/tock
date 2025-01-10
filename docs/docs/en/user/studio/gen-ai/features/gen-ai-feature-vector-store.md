@@ -12,7 +12,7 @@ Dans l'IA, les bases vectorielles sont utilisées pour représenter des données
 Elles sont notamment utilisées dans les modèles d'apprentissage automatique pour traiter et analyser des textes, des images ou d'autres types de données complexes.
 
 > Pour accéder à cette page il faut bénéficier du rôle **_botUser_**.
-> <br />( plus de détails sur les rôles dans [securité](../../../../../admin/securite#rôles) ).
+> <br />( plus de détails sur les rôles dans [securité](../../../../admin/security.md#roles) ).
 
 
 ## Configuration

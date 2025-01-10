@@ -247,7 +247,7 @@ il est donc important de ne pas valider des phrases comportant des données pers
 
 > La conservation des données, le chiffrement et l'anonymisation sont essentiels à la protection
 > des données, en particulier si elles sont personnelles.
-> Pour en savoir plus, voir la section [_Sécurité > Données_](../securite#donnees).
+> Pour en savoir plus, voir la section [_Sécurité > Données_](security.md#données).
 
 ## Composants applicatifs
 
@@ -362,7 +362,7 @@ Pour `tock/nlp_admin`, il faut utiliser la propriété `adminverticle_base_href`
 
 Pour une utilisation de Tock en production, nous vous recommandons de parcourir également les pages suivantes :
 
-- [Sécurité](../securite)
-- [Supervision](../admin/supervision.md)
-- [Cloud](../../admin/cloud.md)
-- [Haute disponibilité](../disponibilite)
+- [Sécurité](security.md)
+- [Supervision](supervision.md)
+- [Cloud](cloud.md)
+- [Haute disponibilité](availability.md)

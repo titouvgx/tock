@@ -14,7 +14,7 @@ title: Gen AI - Observability Settings
 
 
 > Pour accéder à cette page il faut bénéficier du rôle **_botUser_**.
-> <br />( plus de détails sur les rôles dans [securité](../../../../../admin/securite#rôles) ).
+> <br />( plus de détails sur les rôles dans [securité](../../../../admin/security.md#rôles) ).
 
 ## Configuration
 Pour permettre à Tock de se connecter à un outil d'observabilité, un écran de configuration a été mis en place : 

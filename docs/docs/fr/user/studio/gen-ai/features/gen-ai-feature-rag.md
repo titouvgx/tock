@@ -9,7 +9,7 @@ Le menu _Gen AI / RAG Settings_ (Retrieving augmented Generation) vous permet de
 Cette fonctionnalité permettra à TOCK de générer une réponse à une requête de l'utilisateur, sur la base d'un ensemble de documents intégrés dans une base de données vectorielle.
 
 > Pour accéder à cette page il faut bénéficier du rôle **_botUser_**.
-> <br />( plus de détails sur les rôles dans [securité](../../../../../admin/securite#rôles) ).
+> <br />( plus de détails sur les rôles dans [securité](../../../../admin/security.md#rôles) ).
 
 ### Activation du RAG & Configuration du LLM Engine
 ![RAG - Partie 1](../../../../img/gen-ai/gen-ai-settings-rag-llm.png "Ecran de configuration du RAG - Partie 1")

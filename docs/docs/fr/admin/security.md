@@ -255,7 +255,7 @@ reconnues par le modèle NLP.
 Cette anonymisation par types d'entités se configure dans la vue _Language Understanding > Entities_. Seuls les
 utilisateurs ayant un rôle `admin` ou `technicalAdmin` dans _Tock Studio_ peuvent activer/désactiver cette fonctionnalité.
 
-> Pour en savoir plus, voir [_Rôles_](../securite#rôles).
+> Pour en savoir plus, voir [_Rôles_](security.md#rôles).
 
 Dans les vues où les phrases sont affichées anonymisées (_Inbox_, _Search_ par exemple), un `admin` ou
 `technicalAdmin` peut décider d'afficher quand même (pour lui-même uniquement) une phrase non anonymisée grâce à l'action
