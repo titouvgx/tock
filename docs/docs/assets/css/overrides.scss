@@ -1,96 +1,38 @@
-/* Base badge style */
-.badge {
-  display: inline-block;
-  padding: 0.4em 0.8em;
-  font-size: 0.95rem;
-  font-weight: bold;
-  border-radius: 10px;
-  margin-right: 10px;
-  color: #fff;
-  text-align: center;
-  text-decoration: none;
-}
-
-/* Version badge */
+/* CSS pour badge version */
 .badge-version {
-  background-color: #007bff; /* Blue for version */
+  background-color: #007bff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
 }
 
-/* Insiders version badge */
+/* CSS pour badge insiders */
 .badge-insiders {
-  background-color: #ff4c00; /* Orange for Insiders */
+  background-color: #e83e8c;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
 }
 
-/* Default value badge */
-.badge-default {
-  background-color: #6c757d; /* Grey for default */
+/* Pour ajouter une icône dans le badge version */
+.badge-version:before {
+  content: url('https://upload.wikimedia.org/wikipedia/commons/4/42/Markdown_Logo_2015.svg');
+  margin-right: 5px;
+  height: 16px; /* Ajuste la taille de l'icône si nécessaire */
+  width: 16px; /* Ajuste la taille de l'icône si nécessaire */
 }
 
-/* Badge for computed default value */
-.badge-default-computed {
-  background-color: #ffc107; /* Yellow for computed values */
-}
-
-/* Badge for empty default value */
-.badge-default-none {
-  background-color: #6f42c1; /* Purple for empty default */
-}
-
-/* Metadata property badge */
-.badge-metadata {
-  background-color: #28a745; /* Green for metadata */
-}
-
-/* Multiple instances badge */
-.badge-multiple {
-  background-color: #17a2b8; /* Cyan for multiple instances */
-}
-
-/* Optional feature badge */
-.badge-feature {
-  background-color: #6610f2; /* Violet for optional feature */
-}
-
-/* Experimental feature badge */
-.badge-experimental {
-  background-color: #e83e8c; /* Pink for experimental */
-}
-
-/* Plugin badge */
-.badge-plugin {
-  background-color: #007bff; /* Blue for plugins */
-}
-
-/* Markdown extension badge */
-.badge-extension {
-  background-color: #fd7e14; /* Orange for Markdown extensions */
-}
-
-/* Required value badge */
-.badge-required {
-  background-color: #dc3545; /* Red for required values */
-}
-
-/* Customization badge */
-.badge-customization {
-  background-color: #ffc107; /* Yellow for customization */
-}
-
-/* Utility badge */
-.badge-utility {
-  background-color: #28a745; /* Green for utilities */
-}
-
-/* Hover effect for badges */
-.badge:hover {
-  opacity: 0.8;
-  cursor: pointer;
-}
-
-/* Responsive styles for smaller screens */
-@media (max-width: 600px) {
-  .badge {
-    font-size: 0.85rem;
-    padding: 0.3em 0.6em;
-  }
+/* Pour ajouter une icône dans le badge insiders */
+.badge-insiders:before {
+  content: '❤️'; /* Utilisation d'un emoji comme icône */
+  margin-right: 5px;
+  font-size: 16px; /* Taille de l'icône emoji */
 }

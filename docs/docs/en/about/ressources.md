@@ -10,6 +10,12 @@ to test the platform yourself.
 
 ## Conferences / Video
 
+  * _REX - Hybride Gen AI with TOCK_ @ _[Open Source Experience 2024](https://www.opensource-experience.com/)_ (REX l’Open Source pour industrialiser l’IA Générative [TOSIT])
+  [ℹ️ info](https://www.opensource-experience.com/event/#conf-15915)
+  [📽️ 21 min](https://youtu.be/9ilX731vN64?si=g2RD2bij8i9O4uO1)
+
+[![REX l’Open Source pour industrialiser l’IA Générative [TOSIT]](../img/confREX.jpg)](https://youtu.be/9ilX731vN64?si=g2RD2bij8i9O4uO1)
+
 * _Gen AI with TOCK_ @ _[WAX](https://www.waxconf.fr/)_
 **2024** (RAG and LLM Open Source? Towards more responsible Generative AI.)
 [ℹ️ info](https://www.waxconf.fr/#:~:text=RAG%20et%20LLM%20Open%20Source%20%3F%20Vers%20des%20IA%20G%C3%A9n%C3%A9ratives%20plus%20responsables.)

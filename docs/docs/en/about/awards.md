@@ -5,9 +5,11 @@ title: Awards
 # Awards 
 
 
+<span class="badge badge-version">1.0.0</span>
+<span class="badge badge-default">none</span>
+<span class="badge badge-insiders">insiders</span>
 
 
-<!-- md:version toto -->
  
 
 
