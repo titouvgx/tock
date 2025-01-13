@@ -2,7 +2,7 @@
 title: Gen AI - Sentence generation
 ---
 
-# Le menu _Gen AI - Sentence generation_
+# Le menu *Gen AI - Sentence generation*
 
 ## Configuration
 

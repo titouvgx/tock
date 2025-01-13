@@ -19,7 +19,7 @@ draw a set of statistical models (allowing it to analyze and interpret user sent
 In conversational mode, the _application_ also includes different parameters defining the responses and
 behavior of the _bot_. In other words, **an _application_ generally corresponds to a _bot_**.
 
-See [_Tock Studio > Settings > Applications_](studio.md/configuration#longlet-applications).
+See [_Tock Studio > Settings > Applications_](../user/studio/configuration.md#the-applications-tab).
 
 ### *Configuration*
 
@@ -30,7 +30,7 @@ In conversational mode, **a _configuration_ corresponds to a set of responses an
 on these channels. For example, for the same scenario (_story_) of the application it is possible to configure different
 responses (_answers_, _story rules_, etc.) according to several _configurations_.
 
-See [_Tock Studio > Settings > Configurations_](studio.md/configuration#longlet-configurations).
+See [_Tock Studio > Settings > Configurations_](../user/studio/configuration.md#the-configurations-tab).
 
 ### *Connector*
 
@@ -41,8 +41,8 @@ Its detailed configuration depends on the channel concerned.
 Tock makes it very easy to share the code of a _bot_ so that it responds on several channels thanks to its
 connectors. However, it is possible to fine-tune responses and behaviors depending on the connector, if needed.
 
-See [_Tock Studio > Settings > Configurations_](studio.md/configuration##manage-connectors) and
-the [_Bot Multichannel_](guides/channels) page to learn more about the available connectors.
+See [_Tock Studio > Settings > Configurations_](../user/studio/configuration.md#manage-connectors) and
+the [_Bot Multichannel_](../user/guides/canaux.md) page to learn more about the available connectors.
 
 ### *Namespace*
 
@@ -58,7 +58,7 @@ While most objects and settings depend on an _application_ that itself belongs t
 some objects such as answers are directly attached to the _namespace_:
 they are therefore shared between the applications in this _namespace_.
 
-See [_Tock Studio > Settings > Namespaces_](studio.md/configuration#namespaces-tab).
+See [_Tock Studio > Settings > Namespaces_](../user/studio/configuration.md#the-namespaces-tab).
 
 ### *Intentions*
 
@@ -120,7 +120,7 @@ of the initial question.
 
 The _Story_ is the main unit of the Tock conversational framework.
 
-See [_Tock Studio > Stories & Answers_](studio.md/stories-and-answers.md).
+See [_Tock Studio > Stories & Answers_](../user/studio/stories-and-answers.md).
 
 ## Terms & Mappings
 
@@ -149,7 +149,7 @@ solutions:
 | Configuration | | Space | |
 | Application | Domain | Bot | |
 
-> The documentation of the [Tock connectors](guides/channels) also gives the correspondence with other terms specific to
+> The documentation of the [Tock connectors](../user/guides/canaux.md) also gives the correspondence with other terms specific to
 > this or that channel.
 
 ## Continue...

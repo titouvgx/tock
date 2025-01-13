@@ -53,6 +53,10 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: true
 
+
+extra_css:
+  - /assets/css/overrides.scss
+
 markdown_extensions:
   - admonition
   - codehilite

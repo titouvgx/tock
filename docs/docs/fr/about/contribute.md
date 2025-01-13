@@ -42,7 +42,7 @@ sous licence [GPL](https://fr.wikipedia.org/wiki/Licence_publique_g%C3%A9n%C3%A9
 et [Docker Compose](https://docs.docker.com/compose/), pour faciliter la prise en main et le déploiement de la plateforme dans différentes configurations.
 
 * [`tock-bot-samples`](https://github.com/theopenconversationkit/tock-bot-samples) : des exemples de code notamment pour programmer des parcours en mode _WebHook_ ou _WebSocket_ 
-comme dans les [guides Tock](../guide/api).
+comme dans les [guides Tock](../guides/api.md).
  
 * [`tock-bot-open-data`](https://github.com/theopenconversationkit/tock-bot-open-data) : un exemple de bot basé 
 sur les [API _Open Data_ de la SNCF](https://www.digital.sncf.com/startup/api), implémentant également des bases pour 
@@ -105,7 +105,7 @@ Vous pouvez ensuite instancier ces images via Docker ou les stacks Docker Compos
 
 ### Exécuter dans un IDE
 
-> Pour démarrer Tock avec Docker Compose hors d'un IDE, voir [Déployer Tock avec Docker](../guide/plateforme).
+> Pour démarrer Tock avec Docker Compose hors d'un IDE, voir [Déployer Tock avec Docker](../guides/platform.md).
 
 Les différents composants Tock peuvent s'exécuter depuis un IDE (environnement de développement intégré). 
 Des configurations sont fournies pour [IntelliJ](https://www.jetbrains.com/idea/).
@@ -160,4 +160,4 @@ Chaque nouvelle évolution ou correctif devrait embarquer ses tests unitaires.
 
 _Un problème ? Une question sur l'implémentation ? Une idée à partager ?_
 
-Pour contribuer au projet ou simplement en savoir plus, n'hésitez pas à [nous contacter](/home/Titouan.Perivier-Vigouroux/Documents/tock/docs/docs/fr/about/contact.md).
+Pour contribuer au projet ou simplement en savoir plus, n'hésitez pas à [nous contacter](contact.md).

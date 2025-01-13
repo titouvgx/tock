@@ -19,7 +19,7 @@ tirer un ensemble de modèles statistiques (lui permettant d'analyser et d'inter
 En mode conversationnel, l'_application_ inclue également différents paramètres définissant les réponses et le 
 comportement du _bot_. Autrement dit, **une _application_ correspond généralement à un _bot_**.
 
-Voir [_Tock Studio > Settings > Applications_](studio.md/configuration#longlet-applications).
+Voir [_Tock Studio > Settings > Applications_](../user/studio/configuration.md#longlet-applications).
 
 ### *Configuration*
 
@@ -30,7 +30,7 @@ En mode conversationnel, **une _configuration_ correspond à un ensemble de rép
 sur ces canaux. Par exemple, pour un même scénario (_story_) de l'application il est possible de paramétrer des réponses 
 différentes (_answers_, _story rules_, etc.) selon plusieurs _configurations_.
 
-Voir [_Tock Studio > Settings > Configurations_](studio.md/configuration#longlet-configurations).
+Voir [_Tock Studio > Settings > Configurations_](../user/studio/configuration.md#longlet-configurations).
 
 ### *Connecteur*
 
@@ -40,7 +40,7 @@ Sa configuration détaillée dépend du canal concerné.
 Tock permet de mutualiser très facilement le code d'un _bot_ pour qu'il réponde sur plusieurs canaux grâce à ses 
 connecteurs. Il est toutefois possible d'ajuster finement réponses et comportements en fonction du connecteur, si besoin. 
 
-Voir [_Tock Studio > Settings > Configurations_](studio.md/configuration##gerer-les-connecteurs) et
+Voir [_Tock Studio > Settings > Configurations_](../user/studio/configuration.md#gérer-les-connecteurs) et
 la page [_Bot Multicanal_](guides/canaux.md) pour en savoir plus sur les connecteurs disponibles.
 
 ### *Namespace*
@@ -57,7 +57,7 @@ Si la plupart des objets et paramètres dépendent d'une _application_ appartena
 certains objets comme les réponses (_answers_) sont directement rattachés au _namespace_ :
 ils sont donc partagés entre les applications de ce _namespace_.
 
-Voir [_Tock Studio > Settings > Namespaces_](studio.md/configuration#longlet-namespaces).
+Voir [_Tock Studio > Settings > Namespaces_](../user/studio/configuration.md#longlet-namespaces).
 
 ### *Intentions*
 
@@ -103,7 +103,7 @@ Par défaut, les entités de namespace "duckling" seront automatiquement valoris
 
 Voir [_Tock Studio > Language Understanding_](../user/studio/nlu.md).
 
-### *Scénario* (ou _Story_)
+### *Scénario* (ou *Story*)
 
 Un scénario ou _story_ est un regroupement fonctionnel qui permet de répondre aux questions
  sur un sujet bien délimité.
@@ -118,7 +118,7 @@ de la question initiale.
 
 La _Story_ est l'unité principale du framework conversationnel de Tock.
 
-Voir [_Tock Studio > Stories & Answers_](studio.md/stories-and-answers.md).
+Voir [_Tock Studio > Stories & Answers_](../user/studio/stories-and-answers.md).
 
 ## Termes & correspondances
 

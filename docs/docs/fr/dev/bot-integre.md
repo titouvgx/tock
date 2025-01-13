@@ -164,12 +164,12 @@ Une fois exportés les fichiers _dumps_ de Tock Studio dans le _classpath_ du bo
 on peut appeler une ou plusieurs des fonctions suivantes depuis le `main` :
 
 * `importApplicationDump` : importe une application à partir d'un 
-  [_dump_ d'application](/home/Titouan.Perivier-Vigouroux/Documents/tock/docs/docs/en/dev/../user/studio/configuration.md#modifier-importer-et-exporter-une-application.md).
+  [_dump_ d'application](../user/studio/configuration.md#modifier-importer-et-exporter-une-application).
   Remarque : l'import est ignoré si l'application cible existe déjà.
 * `importNlpDump` : importe un modèle NLP (intentions, phrases, entités) à partir d'un
-  [_dump_ NLP](/home/Titouan.Perivier-Vigouroux/Documents/tock/docs/docs/en/dev/../user/studio/configuration.md#modifier-importer-et-exporter-une-application.md).
+  [_dump_ NLP](../user/studio/configuration.md#modifier-importer-et-exporter-une-application).
 * `importI18nDump` : importe des labels (aka _i18n_) à partir d'un
-  [_dump_ de labels](/home/Titouan.Perivier-Vigouroux/Documents/tock/docs/docs/en/dev/../user/studio/stories-and-answers.md#longlet-answers.md).
+  [_dump_ de labels](../user/studio/stories-and-answers.md#longlet-answers).
 
 Exemple :
 
@@ -506,4 +506,4 @@ Pour récupérer les paramètres du bouton sur lequel on a cliqué :
 
 ### Tests Unitaires
 
-La page [Tests Unitaires](tester) présente le framework fourni pour réaliser des TUs  avec Tock.
+La page [Tests Unitaires](test.md) présente le framework fourni pour réaliser des TUs  avec Tock.

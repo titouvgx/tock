@@ -30,7 +30,7 @@ Toutefois, il est possible de construire des réponses et des parcours plus comp
 Dans ce guide, vous utiliserez le langage [Kotlin](https://kotlinlang.org/) et le mode 
   _WebSocket_ pour ajouter une intention à un bot initié dans _Tock Studio_.
 
-Si vous le souhaitez, vous pouvez sauter cette étape et [déployer un plateforme avec Docker](../platform.md) 
+Si vous le souhaitez, vous pouvez sauter cette étape et [déployer un plateforme avec Docker](platform.md) 
 
  
 ## Ce que vous allez créer

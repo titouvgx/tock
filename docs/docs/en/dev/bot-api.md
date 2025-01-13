@@ -11,10 +11,10 @@ database would be an issue.
 
 > Only _Bot API_ mode is available on the public Tock [demo platform](https://demo.tock.ai/)
 > platform.
-<!--Todo-->
-This page presents Tock bot development in _Bot API_ mode in [Kotlin](/home/Titouan.Perivier-Vigouroux/Documents/tock/docs/docs/en/dev/#develop-in-kotlin.md).
-Clients are also available for [Javascript/Node](/home/Titouan.Perivier-Vigouroux/Documents/tock/docs/docs/en/dev/#develop-in-javascript.md) and [Python](/home/Titouan.Perivier-Vigouroux/Documents/tock/docs/docs/en/dev/#develop-in-python.md).
-It is possible to develop Tock courses in any language via the [_Bot API_](/home/Titouan.Perivier-Vigouroux/Documents/tock/docs/docs/en/dev/#developper-via-lapi.md).
+<!--Todo lien qui ne pointe vers aucun fichier et # inexistant 5 erreurs-->
+This page presents Tock bot development in _Bot API_ mode in [Kotlin](../dev/#develop-in-kotlin.md).
+Clients are also available for [Javascript/Node](../dev/#develop-in-javascript.md) and [Python](../dev/#develop-in-python.md).
+It is possible to develop Tock courses in any language via the [_Bot API_](../dev/#developper-via-lapi.md).
 
 ![logo kotlin](../img/kothlin.png "kotlin"){style="width:100px;"}
 
@@ -104,6 +104,7 @@ Pour le moment, les composants suivants sont supportés pour les réponses :
 Voici un exemple de bot simple avec quelques parcours déclarés : 
  
 ```kotlin
+
 fun main() {
     startWithDemo(
         newBot(
@@ -160,7 +161,7 @@ For more information, see the documentation on the [`tock-py`](https://github.co
 ![logo rest-api](../img/restapi.png "rest api"){style="width:100px;"}
 
 It is possible to develop Tock courses in any language, by interfacing directly with the
-[API](/home/Titouan.Perivier-Vigouroux/Documents/tock/docs/docs/en/dev/api.md#tock-bot-definition-api.md).
+[API](../dev/api.md#tock-bot-definition-api.md).
 
 ## Install Bot API on the server side
 
@@ -170,7 +171,7 @@ To use Tock's _Bot API_ mode, a specific module must be deployed with the platfo
 * Exposing the _Bot API_ to potential clients regardless of their programming language
 * Accepting _WebSocket_ connections and/or connecting to the configured webhook
 
-The guide [Deploying Tock with Docker](../../user/guides.md/platform.md) or the chapter
+The guide [Deploying Tock with Docker](../guides/platform.md) or the chapter
 [Installation](../admin/installation.md) show how to deploy this module if necessary.
 
 The only modification required compared to the example code for the demonstration platform is to replace

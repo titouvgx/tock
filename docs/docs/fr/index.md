@@ -76,10 +76,9 @@ Des intégrations [React](https://reactjs.org) et [Flutter](https://flutter.dev/
 
 ## Démarrer...
 
-* [Table des matières](toc)
 * [Guides](guides/studio.md) et [plateforme de démonstration](https://demo.tock.ai/)
 * Manuels [utilisateur](user/concepts.md), [développeur](dev/modes.md), [administrateur](admin/architecture.md)
-* [Ressources (supports, video)](about/ressources.md) et [exemples de code](dev/exemples-code)
+* [Ressources (supports, video)](about/ressources.md) et [exemples de code](dev/examples-code.md)
 
 [NLU]: https://en.wikipedia.org/wiki/Natural-language_understanding "Natural Language Understanding"
 *[NLU]: Natural Language Understanding

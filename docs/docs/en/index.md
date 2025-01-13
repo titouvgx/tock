@@ -5,6 +5,11 @@ permalink: /en/
 ---
 # Welcome to Tock - open conversational platform
 
+<span class="badge badge-version">1.0.0</span>
+<span class="badge badge-default">none</span>
+<span class="badge badge-insiders">insiders</span>
+
+
 ![NLU interface example - qualifying a sentence](img/favicon.png "NLU interface example - qualifying a sentence")
 
 
@@ -67,7 +72,6 @@ _Tock Studio_ graphical user interfaces are built with [Angular](https://angular
 [React](https://reactjs.org) and [Flutter](https://flutter.dev/) toolkits are provided for Web and Mobile integrations.
 
 ## Getting started...
-* [Contents](toc)
 * Read [Tutorial](en/user/studio.md) and start using the [demo/sandbox platform](https://demo.tock.ai/)
 * User manual for [developers](dev/modes.md)
 

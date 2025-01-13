@@ -12,8 +12,8 @@ base de données serait un problème.
 
 > Seul le mode _Bot API_ est disponible sur la [plateforme de démonstration](https://demo.tock.ai/)
 > publique Tock.
-
-Cette page présente le développement de bots Tock en mode _Bot API_ en [Kotlin](/home/Titouan.Perivier-Vigouroux/Documents/tock/docs/docs/fr/dev/#developper-en-kotlin.md). 
+<!-->prblm lien complet mais surtout # inexsitant <!-->
+Cette page présente le développement de bots Tock en mode _Bot API_ en [Kotlin](../dev/#developper-en-kotlin.md). 
 Des clients sont aussi disponibles pour [Javascript/Node](/home/Titouan.Perivier-Vigouroux/Documents/tock/docs/docs/fr/dev/#developper-en-javascript.md) et [Python](/home/Titouan.Perivier-Vigouroux/Documents/tock/docs/docs/fr/dev/#developper-en-python.md).
 Il est possible de développer des parcours Tock dans n'importe quel langage via la [_Bot API_](/home/Titouan.Perivier-Vigouroux/Documents/tock/docs/docs/en/dev/#developper-via-lapi.md).
 )
@@ -175,7 +175,7 @@ Pour utiliser le mode _Bot API_ de Tock, un module spécifique doit être déplo
 * D'exposer la _Bot API_ aux clients potentiels quelque soit leur langage de programmation
 * D'accepter des connexions en _WebSocket_ et/ou de se connecter au webhook configuré
 
-Le guide [Déployer Tock avec Docker](../../guide/plateforme) ou encore le chapitre 
+Le guide [Déployer Tock avec Docker](../guides/platform.md) ou encore le chapitre 
 [Installation](../admin/installation.md) montrent comment déployer ce module si nécessaire.
 
 La seule modification nécessaire par rapport au code d'exemple pour la platforme de démonstration est de remplacer

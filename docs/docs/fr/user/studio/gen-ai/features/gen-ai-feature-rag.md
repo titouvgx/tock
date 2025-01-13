@@ -2,7 +2,7 @@
 title: Gen AI / RAG Settings
 ---
 
-# Le menu _Gen AI / RAG Settings_
+# Le menu *Gen AI / RAG Settings*
 
 ## Configuration
 Le menu _Gen AI / RAG Settings_ (Retrieving augmented Generation) vous permet de choisir les modèles d'IA générative pris en charge par Tock et de configurer un ensemble de critères spécifiques à chaque fournisseur d'IA.

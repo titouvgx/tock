@@ -20,7 +20,7 @@ As a result, it allows even more integrations on the "frontend" side, using this
 This page actually lists:
 
 - The [_connectors_](canaux.md#connectors-provided-with-tock) provided with the Tock distribution:
-<!-->To do img tres penible<!-->
+
 ![logo messenger](../../img/messenger.png "whatsapp"){style="width:50px;"}
 
 ![Logo slack](../../img/slack.png "Slack"){style="width: 75px;"}
@@ -87,7 +87,7 @@ public channels to bots.
 > Examples: arrival of Google Home in France in 2017, Alexa in 2018, opening of WhatsApp APIs then Business Chat in 2019, etc.
 
 To learn more about the referenced bots using this or that connector in production,
-do not hesitate to consult the page [Tock showcase](.. /../about/showcase).
+do not hesitate to consult the page [Tock showcase](../../about/showcase.md).
 
 ### Messenger
 
@@ -97,7 +97,7 @@ do not hesitate to consult the page [Tock showcase](.. /../about/showcase).
 * **Type** : text _(+ voice via voice message upload )_
 * **Status** : Tock connector used in production since 2016
 
-The guide [Connect your bot to Messenger](../../guide/messenger) explains how to integrate a bot
+The guide [Connect your bot to Messenger](../../guides/messenger.md) explains how to integrate a bot
 Tock with a Facebook page / [Messenger] (https://www.messenger.com/).
 
 To learn more about this connector, you can also go to the folder
@@ -113,7 +113,7 @@ where you will find the sources and the _README_ of the connector.
 * **Type** : text
 * **Status** : Tock connector used outside production
 
-The guide [Connect your bot to Slack](../../guide/slack.md) explains how to integrate a bot
+The guide [Connect your bot to Slack](../../guides/slack.md) explains how to integrate a bot
 Tock with a [Slack](https://slack.com/) _channel_.
 
 To learn more about this connector, you can also go to the folder

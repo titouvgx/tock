@@ -8,7 +8,7 @@ The _Language Understanding_ (or _NLU_) menu allows you to create, modify, and e
 declare _intentions_ and _entities_, _qualify_ sentences, etc. (see [Concepts](../concepts.md)
 for more information).
 
-In this page, the details of each tab are presented. See also [Building conversational models](../user/guides/build-model.md)
+In this page, the details of each tab are presented. See also [Building conversational models](../../user/guides/build-model.md)
 for a more usage-driven presentation.
 
 ## The _New Sentence_ tab
@@ -37,7 +37,7 @@ selection lists under the sentence
 ![Tock schema](../../img/try-it-3.png "Adding an entity - step 1")
 
 > Note: if you have enabled this option at the application/bot level, it is possible to declare
->_sub-entities_. You will learn more in [Building conversational models](../user/guides/build-model.md).
+>_sub-entities_. You will learn more in [Building conversational models](../../user/guides/build-model.md).
 
 The following buttons and commands are available for the sentence as a whole:
 

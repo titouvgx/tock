@@ -54,7 +54,7 @@ sous [licence Apache 2](https://github.com/theopenconversationkit/tock/blob/mast
 * [Contributeurs](https://github.com/theopenconversationkit/tock/graphs/contributors)
 
 Pour en savoir plus sur l'organisation des dépôts, les conventions de code, etc. voir le  
-[guide de contribution](../contribuer) Tock. Pour tout autre forme de contribution, n'hésitez pas à utiliser les [_issues_](https://github.com/theopenconversationkit/tock/issues) 
+[guide de contribution](contribute.md) Tock. Pour tout autre forme de contribution, n'hésitez pas à utiliser les [_issues_](https://github.com/theopenconversationkit/tock/issues) 
 GitHub et à [contacter directement la communauté](https://gitter.im/tockchat/Lobby) avec Gitter.
 
 <a href="https://github.com/theopenconversationkit/tock/"
@@ -92,4 +92,4 @@ plateforme de démo en ligne.
 ## Aide
 
 Que ce soit pour de l'aide, des questions, des suggestions :  
-n'hésitez pas à [nous contacter](/home/Titouan.Perivier-Vigouroux/Documents/tock/docs/docs/fr/about/contact.md).
+n'hésitez pas à [nous contacter](contact.md).

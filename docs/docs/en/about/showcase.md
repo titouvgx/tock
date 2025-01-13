@@ -113,7 +113,7 @@ during and after their journey.
 
 > The chatbot can tell you all about the service status, train departure platforms, customer seats, onboard services
 >(bar, electrical outlets, etc.). It also allows you to talk with a SNCF agents while remaining in the same conversation.
-
+<!-->Todo bug pas #react<!-->
 Located on the _TGV INOUI_ Facebook page and the [WiFi Portal](https://www.sncf.com/en/passenger-offer/tgv-inoui/stay-connected-during-your-journey)
 aboard the train, the assistant is based on Tock and the [`tock-react-kit`](../dev/connectors.md#react).
 
@@ -156,7 +156,7 @@ Systèmes d'Informations et du Numérique (DSIN)_ of [EDF (Electricité de Franc
 > in order to route customer calls toward the right skill, either human or automated.  
 > It also forwards the conversation context between the customer and the callbot
 > to the advisor.
-
+<!-->Todo bug pas #allo-media<!-->
 The callbot is powered by Tock using the [_Allo-Media connector_](../dev/connectors.md#allo-media).
 The _Speech-To-Text (STT)_ solution is [Allo-Media](https://www.allo-media.net/), and the _Text-To-Speech (TTS)_
 is [Voxygen](https://www.voxygen.fr/).
@@ -289,7 +289,7 @@ _RocBOT_ is dedicated to Ops teams at SNCF DEA, available at the office and on-t
 
 > The chabot helps collaborators quickly find information about the applications.
 > RocBOT can check, weither alerts were raised by supervision, find on-call duty agenda or people, etc.
-
+<!-->Todo bug pas #teams<!-->
 _RocBOT_ is available in production since 2020, on Teams desktop and mobile applications through the 
 Tock [_Teams connector_](../dev/connectors.md#teams).
 

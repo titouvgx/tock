@@ -2,7 +2,7 @@
 title: NLU
 ---
 
-# Le menu _Language Understanding_
+# Le menu *Language Understanding*
 
 Le menu _Language Understanding_ (ou _NLU_) permet de créer, modifier, enrichir les modèles conversationnels :
  déclarer des _intentions_ et des _entités_, _qualifier_ des phrases, etc. (voir [Concepts](../concepts.md)
@@ -11,7 +11,7 @@ Le menu _Language Understanding_ (ou _NLU_) permet de créer, modifier, enrichir
 Dans cette page, le détail de chaque onglet est présenté. Voir aussi [Construire les modèles conversationnels](../guides/build-model.md)
 pour une présentation plus guidée par l'usage.
 
-## L'onglet _New Sentence_
+## L'onglet *New Sentence*
 
 Cet écran permet d'entrer des phrases et et de vérifier quelle intention/entités sont détectées.
 
@@ -50,7 +50,7 @@ Les boutons et commandes suivantes sont disponibles pour la phrase dans sa globa
 D'autres liens sont accessibles pour afficher les conversations contenant cette phrase, copier le contenu de la 
 phrase, créer un parcours à partir de cette phrase.
 
-## L'onglet _Inbox_
+## L'onglet *Inbox*
 
 Cet onglet montre (avec de la pagination et quelques options d'affichage) l'ensemble des phrases reçues par le modèle 
  _NLU_ avec les intentions/entités/langue/scores détectés.
@@ -63,26 +63,26 @@ ou encore d'une conversation via la page _Test the bot_ dans _Tock Studio_.
 
 Les boutons et commandes sous chaque phrase sont identiques à ceux de l'onglet _Try it_ (voir ci-dessus).
 
-## L'onglet _Search_
+## L'onglet *Search*
 
 Cet écran permet de faire des recherches dans l'ensemble des phrases : _Inbox_ mais aussi phrases qualifiées 
 enregistrées dans le modèle.
 
 ![schéma Tock](../../../img/search.png "Recherche d'une phrase")
 
-## L'onglet _Unknown_
+## L'onglet *Unknown*
 
 Cet écran permet de parcourir les phrases dont l'intention n'a pas été reconnue (intention _unknown_).
 
-## L'onglet _Intents_
+## L'onglet *Intents*
 
 Cet écran permet de gérer les intentions.
 
-## L'onglet _Entities_
+## L'onglet *Entities*
 
 Cet écran permet de gérer les entités, notamment les notions d'entités partagées.
 
-## L'onglet _Logs_
+## L'onglet *Logs*
 
 Cet écran présente le journal complet des phrases reçues et permet de remonter aux conversations (ie. l'ensemble des 
 phrases reçues et réponses du bot pour un utilisateur).
@@ -94,6 +94,6 @@ phrases reçues et réponses du bot pour un utilisateur).
 
 ## Continuer...
 
-Rendez-vous dans [Menu _Stories & Answers_](../../user/studio/stories-and-answers.md) pour la suite du manuel utilisateur. 
+Rendez-vous dans [Menu _Stories & Answers_](../studio/stories-and-answers.md) pour la suite du manuel utilisateur. 
 
-> Vous pouvez aussi passer directement au chapitre suivant : [Développement](../../../dev/modes.md). 
+> Vous pouvez aussi passer directement au chapitre suivant : [Développement](../../dev/modes.md). 

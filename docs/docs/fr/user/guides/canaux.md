@@ -19,7 +19,7 @@ En conséquence, il permet encore davantage d'intégrations côté "frontend", u
 
 Cette page liste en fait :
 
-- Les [_connecteurs_](canaux.md#connecteurs-fournis-avec-tock) fournis avec la distribution Tock :  
+- Les [_connecteurs_](canaux.md#intégrations-via-le-connecteur-web) fournis avec la distribution Tock :  
 ![logo messenger](../../img/messenger.png "whatsapp"){style="width:50px;"}
 
 ![Logo slack](../../img/slack.png "Slack"){style="width: 75px;"}

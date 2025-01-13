@@ -92,7 +92,7 @@ All connectors have the following configuration:
 Each connector also has an additional configuration specific to this connector type. These settings
 
 are in _Connector Custom Configuration_. These specific settings are documented with each connector/channel type,
-see [Connectors](../../user/guides.md/channels).
+see [Connectors](../guides/canaux.md).
 
 ### Test connectors
 

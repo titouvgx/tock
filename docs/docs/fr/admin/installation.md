@@ -22,7 +22,7 @@ Tock est composé par défaut de plusieurs conteneurs/images Docker et d'une bas
 
 Pour en savoir plus sur l'installation de Tock avec Docker, voir les instructions du dépôt [`tock-docker`](https://github.com/theopenconversationkit/tock-docker).
 
-> Le guide [déployer Tock avec Docker](../../guide/plateforme) dans la section _Découvrir Tock_ donne un exemple de déploiement
+> Le guide [déployer Tock avec Docker](../guides/platform.md) dans la section _Découvrir Tock_ donne un exemple de déploiement
 > d'une plateforme complète en quelques minutes avec une empreinte minimale en utilisant Docker et Docker Compose.
 > Cependant, cette méthode n'est pas envisageable pour un déploiement pérenne comme une plateforme de production.
 
@@ -252,7 +252,7 @@ il est donc important de ne pas valider des phrases comportant des données pers
 ## Composants applicatifs
 
 Selon les composants applicatifs de Tock, obligatoires ou facultatifs, certains doivent être _mono-instance_ et d'autres
-peuvent être déployés en _plusieurs instances_ (voir la section [haute disponibilité](../disponibilite) pour en savoir plus).
+peuvent être déployés en _plusieurs instances_ (voir la section [haute disponibilité](availability.md) pour en savoir plus).
 
 Pour plus de commodité, les composants ci-dessous sont nommé comme les images [Docker](https://www.docker.com/) fournies
 avec Tock, bien que l'utilisation de Docker ne soit pas obligatoire pour installer Tock.

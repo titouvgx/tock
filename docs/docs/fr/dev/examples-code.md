@@ -7,7 +7,7 @@ title: Exemples
 ## Les exemples dans *Bot Samples*
 
 Le dépôt [tock-bot-samples](https://github.com/theopenconversationkit/tock-bot-samples) contient des exemples de code, notamment ceux utilisés dans 
-[la documentation Tock](../guide/api) pour programmer des parcours en modes _WebHook_ ou _WebSocket_.
+[la documentation Tock](api.md) pour programmer des parcours en modes _WebHook_ ou _WebSocket_.
 
 ## Le bot *Open Data*
 

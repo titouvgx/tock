@@ -73,7 +73,7 @@ Il vous faut, en plus de [Docker](https://www.docker.com/) et [Docker Compose](h
   les sources de GitHub en local.
  
 > Pour démarrer sans Git ni les sources du dépôt en local, suivez le 
-[paragraphe précédent](../platform.mddeployer-une-plateforme-tock-sans-les-sources).
+[paragraphe précédent](platform.md#déployer-une-plateforme-tock---sans-les-sources).
 
 ```shell
 # Get the lastest sources from GitHub
