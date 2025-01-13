@@ -115,7 +115,7 @@ during and after their journey.
 >(bar, electrical outlets, etc.). It also allows you to talk with a SNCF agents while remaining in the same conversation.
 <!-->Todo bug pas #react<!-->
 Located on the _TGV INOUI_ Facebook page and the [WiFi Portal](https://www.sncf.com/en/passenger-offer/tgv-inoui/stay-connected-during-your-journey)
-aboard the train, the assistant is based on Tock and the [`tock-react-kit`](../dev/connectors.md#react).
+aboard the train, the assistant is based on Tock and the [`tock-react-kit`](../dev/connectors.md#developing-your-own-connector#).
 
 ![img inoui](../img/inoui.jpg)
 

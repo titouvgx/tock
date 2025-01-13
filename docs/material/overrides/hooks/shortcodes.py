@@ -98,11 +98,11 @@ def setting(type: str):
 # Resolve path of file relative to given page - the posixpath always includes
 # one additional level of `..` which we need to remove
 def _resolve_path(path: str, page: Page, files: Files):
-    print("----- PATH ------")
-    print(path)
+    #print("----- PATH ------")
+    #print(path)
     path, anchor, *_ = f"{path}#".split("#")
-    print("----- PATH ------")
-    print(path)
+    #print("----- PATH ------")
+    #print(path)
     path = _resolve(files.get_file_from_path(path), page)
     return "#".join([path, anchor]) if anchor else path
 

@@ -12,9 +12,9 @@ database would be an issue.
 > Only _Bot API_ mode is available on the public Tock [demo platform](https://demo.tock.ai/)
 > platform.
 <!--Todo lien qui ne pointe vers aucun fichier et # inexistant 5 erreurs-->
-This page presents Tock bot development in _Bot API_ mode in [Kotlin](../dev/#develop-in-kotlin.md).
-Clients are also available for [Javascript/Node](../dev/#develop-in-javascript.md) and [Python](../dev/#develop-in-python.md).
-It is possible to develop Tock courses in any language via the [_Bot API_](../dev/#developper-via-lapi.md).
+This page presents Tock bot development in _Bot API_ mode in [Kotlin](#develop-in-kotlin).
+Clients are also available for [Javascript/Node](#developing-in-javascript) and [Python](#developing-in-python).
+It is possible to develop Tock courses in any language via the [_Bot API_](#develop-via-api).
 
 ![logo kotlin](../img/kothlin.png "kotlin"){style="width:100px;"}
 
@@ -161,7 +161,7 @@ For more information, see the documentation on the [`tock-py`](https://github.co
 ![logo rest-api](../img/restapi.png "rest api"){style="width:100px;"}
 
 It is possible to develop Tock courses in any language, by interfacing directly with the
-[API](../dev/api.md#tock-bot-definition-api.md).
+[API](api.md#tock-bot-definition-api).
 
 ## Install Bot API on the server side
 

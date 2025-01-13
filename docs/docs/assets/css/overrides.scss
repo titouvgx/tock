@@ -1,32 +1,96 @@
-/* Base styles for badges */
-span.badge {
+/* Base badge style */
+.badge {
   display: inline-block;
-  font-family: "Open Sans", sans-serif;
-  padding: 4px 10px;
-  margin: 0 5px 5px 0;
-  font-size: 0.85rem;
-  border-radius: 3px;
-  color: #fff;
+  padding: 0.4em 0.8em;
+  font-size: 0.95rem;
   font-weight: bold;
-  text-transform: uppercase;
-  background-color: #333; /* Default background */
+  border-radius: 10px;
+  margin-right: 10px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
 }
 
-/* Specific badge types */
-span.badge-version {
-  background-color: #3c7dae;
+/* Version badge */
+.badge-version {
+  background-color: #007bff; /* Blue for version */
 }
 
-span.badge-default {
-  background-color: #999;
+/* Insiders version badge */
+.badge-insiders {
+  background-color: #ff4c00; /* Orange for Insiders */
 }
 
-span.badge-none {
-  background-color: #f0f0f0;
-  color: #333;
-  border: 1px solid #ddd;
+/* Default value badge */
+.badge-default {
+  background-color: #6c757d; /* Grey for default */
 }
 
-span.badge-insiders {
-  background-color: #d9534f;
+/* Badge for computed default value */
+.badge-default-computed {
+  background-color: #ffc107; /* Yellow for computed values */
+}
+
+/* Badge for empty default value */
+.badge-default-none {
+  background-color: #6f42c1; /* Purple for empty default */
+}
+
+/* Metadata property badge */
+.badge-metadata {
+  background-color: #28a745; /* Green for metadata */
+}
+
+/* Multiple instances badge */
+.badge-multiple {
+  background-color: #17a2b8; /* Cyan for multiple instances */
+}
+
+/* Optional feature badge */
+.badge-feature {
+  background-color: #6610f2; /* Violet for optional feature */
+}
+
+/* Experimental feature badge */
+.badge-experimental {
+  background-color: #e83e8c; /* Pink for experimental */
+}
+
+/* Plugin badge */
+.badge-plugin {
+  background-color: #007bff; /* Blue for plugins */
+}
+
+/* Markdown extension badge */
+.badge-extension {
+  background-color: #fd7e14; /* Orange for Markdown extensions */
+}
+
+/* Required value badge */
+.badge-required {
+  background-color: #dc3545; /* Red for required values */
+}
+
+/* Customization badge */
+.badge-customization {
+  background-color: #ffc107; /* Yellow for customization */
+}
+
+/* Utility badge */
+.badge-utility {
+  background-color: #28a745; /* Green for utilities */
+}
+
+/* Hover effect for badges */
+.badge:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 600px) {
+  .badge {
+    font-size: 0.85rem;
+    padding: 0.3em 0.6em;
+  }
 }

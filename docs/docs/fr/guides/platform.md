@@ -48,7 +48,7 @@ Il est possible de récupérer seulement quelques fichiers du dépôt GitHub, sa
  [Docker](https://www.docker.com/) et [Docker Compose](https://docs.docker.com/compose/).
  
 > Pour démarrer depuis les sources du dépôt Tock Docker, passez plutôt au 
-[paragraphe suivant](/home/Titouan.Perivier-Vigouroux/Documents/tock/docs/docs/fr/guides/../index.md#deployer-une-plateforme-tock-depuis-les-sources.md).
+[paragraphe suivant](#déployer-une-plateforme-tock---depuis-les-sources).
 
 ```shell
 # Get the lastest docker-compose from GitHub (including Bot API)
@@ -73,7 +73,7 @@ Il vous faut, en plus de [Docker](https://www.docker.com/) et [Docker Compose](h
   les sources de GitHub en local.
  
 > Pour démarrer sans Git ni les sources du dépôt en local, suivez le 
-[paragraphe précédent](platform.md#déployer-une-plateforme-tock---sans-les-sources).
+[paragraphe précédent](#déployer-une-plateforme-tock---sans-les-sources).
 
 ```shell
 # Get the lastest sources from GitHub

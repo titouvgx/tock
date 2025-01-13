@@ -19,7 +19,7 @@ tirer un ensemble de modèles statistiques (lui permettant d'analyser et d'inter
 En mode conversationnel, l'_application_ inclue également différents paramètres définissant les réponses et le 
 comportement du _bot_. Autrement dit, **une _application_ correspond généralement à un _bot_**.
 
-Voir [_Tock Studio > Settings > Applications_](../user/studio/configuration.md#longlet-applications).
+Voir [_Tock Studio > Settings > Applications_](../user/studio/configuration.md#gérer-les-connecteurs).
 
 ### *Configuration*
 
