@@ -5,9 +5,54 @@ title: Awards
 # Awards 
 
 
-<span class="badge badge-version">1.0.0</span>
-<span class="badge badge-default">none</span>
-<span class="badge badge-insiders">insiders</span>
+## Version 1.0.0
+
+### Badges
+
+Voici quelques exemples de badges que tu peux tester dans ton fichier Awards.md :
+
+- <span class="mdx-badge">Standard Badge</span>
+- <span class="mdx-badge mdx-badge--heart">Badge avec cœur</span>
+- <span class="mdx-badge mdx-badge--right">Badge à droite</span>
+- <span class="mdx-badge mdx-badge--heart mdx-badge--right">Badge avec cœur et à droite</span>
+
+### Insiders Badges
+
+- <span class="mdx-badge mdx-badge--heart">❤️ Insiders Badge</span>
+- <span class="mdx-badge mdx-badge--heart mdx-badge--right">❤️ Insiders Badge à droite</span>
+
+### Autres Badges
+
+- <span class="mdx-badge">Badge de Test</span>
+- <span class="mdx-badge mdx-badge--heart">Badge Test avec cœur</span>
+
+# Award Badges Example
+
+## Heart Badge
+
+This badge uses a heart animation.  
+![Heart Badge](https://img.shields.io/badge/❤️-Proudly--Awarded-red)
+
+## Twitter Badge
+
+This badge links to Twitter.  
+![Twitter Badge](https://img.shields.io/twitter/url/https%3A%2F%2Fexample.com)
+
+## Mastodon Badge
+
+This badge represents Mastodon.  
+![Mastodon Badge](https://img.shields.io/mastodon/follow/@example)
+
+## Custom Badge
+
+Here’s a custom badge example.  
+![Custom Badge](https://img.shields.io/badge/Custom--Badge-blue)
+
+## Video Badge
+
+This badge represents a video link.  
+![Video Badge](https://img.shields.io/badge/🎥-Video--Content-yellow)
+
 
 
  

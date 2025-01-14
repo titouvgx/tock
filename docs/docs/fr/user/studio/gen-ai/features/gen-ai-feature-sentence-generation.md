@@ -9,7 +9,7 @@ title: Gen AI - Sentence generation
 Le menu _Gen AI - Sentence Generation Settings_ permet de configurer la fonctionnalité de génération de phrases d'entraînement pour les bots FAQ.
 
 > Pour accéder à cette page il faut bénéficier du rôle **_botUser_**.
-> <br />( plus de détails sur les rôles dans [securité](../../../../admin/security.md#rôles) ).
+> <br />( plus de détails sur les rôles dans [securité](../../../../admin/security.md#roles) ).
 
 ![Génération des phrases - Configuration](../../../../img/gen-ai/gen-ai-settings-sentence-generation.png "Ecran de configuration")
 

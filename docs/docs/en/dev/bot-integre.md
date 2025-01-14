@@ -427,7 +427,7 @@ More details on this topic [below](#postback-buttons-quick-replies).
 #### `StoryStep` with behavior
 
 In more complex cases, we want to be able to define a behavior for each step.
-Using [`HandlerDef`](#use-handlerdef) is then a prerequisite.
+Using [`HandlerDef`](#using-handlerdef) is then a prerequisite.
 
 ```kotlin
 enum class MySteps : StoryStep<MyHandlerDef> {

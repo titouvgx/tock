@@ -227,7 +227,7 @@ class with the [bot sources](https://github.com/theopenconversationkit/allocovid
 To learn more about this connector, see its sources and _README_ in the
 [connector-google-chat](https://github.com/theopenconversationkit/tock/tree/master/bot/connector-google-chat) folder on GitHub.
 
-### Web (generic)
+### Web generic
 
 ![logo BusinessChat Logo](../../img/web.png "BusinessChat Logo"){style="width:75px;"}
 

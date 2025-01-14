@@ -1,13 +1,11 @@
-# Changelog
-
 ## [1.0.0] - 2025-01-07
 
 ### ADD
-- <span class="badge badge-version">1.0.0</span> - Version 1.0.0 released
-- <span class="badge badge-insiders">insiders</span> - Insiders Version added
+- <span class="mdx-badge mdx-badge--heart">Version 1.0.0 released</span>
+- <span class="mdx-badge mdx-badge--right">Insiders Version added</span>
 
 ### FIX
-- <span class="badge badge-default">none</span> - Default computed value fixed
+- <span class="mdx-heart">Fixed default computed value</span>
 
 ### CHANGED
-- <span class="badge badge-feature">new-feature</span> - New optional feature added
+- <span class="mdx-heart">New optional feature added</span>

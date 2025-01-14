@@ -2,7 +2,7 @@
 title: Bot API
 ---
 
-# Développer en mode Tock Bot API
+# Developper en mode Tock Bot API
 
 Le mode _Bot API_ de Tock permet de développer des bots en se connectant à une plateforme _Tock Studio_ en 
 utilisant l'API REST conversationnelle de Tock.
@@ -13,9 +13,9 @@ base de données serait un problème.
 > Seul le mode _Bot API_ est disponible sur la [plateforme de démonstration](https://demo.tock.ai/)
 > publique Tock.
 <!-->prblm lien complet mais surtout # inexsitant <!-->
-Cette page présente le développement de bots Tock en mode _Bot API_ en [Kotlin]( #développer-en-kotlin). 
-Des clients sont aussi disponibles pour [Javascript/Node](#développer-en-javascript) et [Python](#développer-en-python).
-Il est possible de développer des parcours Tock dans n'importe quel langage via la [_Bot API_](#développer-via-lapi).
+Cette page présente le développement de bots Tock en mode _Bot API_ en [Kotlin]( #developper-en-kotlin). 
+Des clients sont aussi disponibles pour [Javascript/Node](#developper-en-javascript) et [Python](#developper-en-python).
+Il est possible de développer des parcours Tock dans n'importe quel langage via la [_Bot API_](#developper-via-lapi).
 
 
 ![logo kotlin](../img/kothlin.png "kotlin"){style="width:75px;"}
@@ -38,7 +38,7 @@ Il est possible de développer des parcours Tock dans n'importe quel langage via
 Plutôt que déployer se propre plateforme Tock, il est possible de tester les modes _WebSocket_ ou _Webhook_ directement sur la
 [plateforme de démonstration Tock](https://demo.tock.ai/). 
 
-## Développer en Kotlin
+## Developper en Kotlin
 
 ![logo kotlin](../img/kothlin.png "kotlin"){style="width:200px;"}
 
@@ -145,14 +145,14 @@ fun main() {
 
 Le [code source complet de l'exemple](https://github.com/theopenconversationkit/tock-bot-demo) est disponible.
  
-## Développer en Javascript
+## Developper en Javascript
 ![logo nodejs](../img/nodejs.png "nodejs"){style="width:75px;"}
 
 
 Un client est fourni pour développer des parcours en Javascript avec [Nodejs](https://nodejs.org/).  
 Pour en savoir plus, voir la documentation sur le dépôt [`tock-node`](https://github.com/theopenconversationkit/tock-node).
 
-## Développer en Python
+## Developper en Python
 
 ![logo python](../img/python.png "kothlin"){style="width:75px;"}
 
@@ -160,12 +160,12 @@ Pour en savoir plus, voir la documentation sur le dépôt [`tock-node`](https://
 Un client est fourni pour développer des parcours en [Python](https://www.python.org/).  
 Pour en savoir plus, voir la documentation sur le dépôt [`tock-py`](https://github.com/theopenconversationkit/tock-py).
 
-## Développer via l'API
+## Developper via l'API
 
 ![logo rest-api](../img/restapi.png "rest api"){style="width:100px;"}
 
 Il est possible de développer des parcours Tock dans n'importe quel langage, en s'interfaçant directement avec 
-l'[API](/home/Titouan.Perivier-Vigouroux/Documents/tock/docs/docs/en/dev/api.md#tock-bot-definition-api.md).
+l'[API](api.md#tock-bot-definition-api).
 
 ## Installer Bot API côté serveur
 

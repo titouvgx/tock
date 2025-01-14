@@ -2,7 +2,7 @@
 title: Sécurité
 ---
 
-# Sécurité
+# Sécurite
 
 ## Utilisateurs *Tock Studio*
 
@@ -31,7 +31,7 @@ Des détails et exemples de configuration sont donnés plus bas dans cette page.
 Si ces modèles ne correspondent pas à votre besoin, il est relativement simple d'en développer d'autres
 en se basant sur les exemples ci-dessus. N'hésitez pas à contribuer au projet et à nous contacter pour toute question!
 
-### Rôles
+### Roles
 
 Tock permet d'affecter plusieurs _rôles_ ou niveaux d'habilitations aux utilisateurs dans les interfaces _Tock Studio_.
 En fonction du système d'authentification utilisé (par propriétés, _0Auth_, etc.) chaque utilisateur se voit assigné
@@ -52,7 +52,7 @@ Les rôles disponibles sont définis dans l'enum `TockUserRole`:
 La manière de configurer quel utilisateur _Tock Studio_ a quel rôle dépend du mode d'authentification,
 autrement dit l'implémentation de `TockAuthProvider` utilisée.
 
-### Implémentation par propriétés
+### Implementation par proprietes
 
 La configuration par "propriétés" est utilisée par défaut. Elle ne dépend d'aucun système tiers
 pour fonctionner.
@@ -93,7 +93,7 @@ Dans cet exemple, Alice a le rôle `botUser`, alors que Bob a tous les rôles.
 > Pour en savoir plus sur le fonctionnement précis de cette implémentation, voir la classe
 > [`PropertyBasedAuthProvider`](https://github.com/theopenconversationkit/tock/blob/master/shared/src/main/kotlin/security/auth/PropertyBasedAuthProvider.kt).
 
-### Implémentation 0Auth2 générique
+### Implementation 0Auth2 generique
 
 Cette implémentation générique est à utiliser dès que vous souhaitez paramétrer une configuration OAuth2.
 
@@ -119,7 +119,7 @@ Voici les propriétés et leurs valeurs par défaut :
 
 Il est nécessaire d'indiquer en callback url `https://[host admin]/rest/callback`.
 
-### Implémentation 0Auth2 pour Keycloak
+### Implementation 0Auth2 pour Keycloak
 
 Cette implémentation OAuth2 Keycloak est à utiliser dès que vous souhaitez paramétrer une configuration OAuth2 avec Keycloak.
 
@@ -151,7 +151,7 @@ Il n'est en revanche alors pas nécessaire de définir tock_keycloak_access_toke
 
 Si tock_custom_namespace_mapping n'est pas défini ou si l'attribut n'est pas trouvé, le namespace "app" par défaut est utilisé.
 
-### Implémentation 0Auth/GitHub
+### Implementation 0Auth/GitHub
 
 Cette implémentation assez simpliste est utilisée à titre d'exemple, ainsi que pour la plateforme publique de démo
 [https://demo.tock.ai](https://demo.tock.ai).
@@ -175,7 +175,7 @@ Voici les propriétés et leurs valeurs par défaut :
 > Pour en savoir plus sur le fonctionnement précis de cette implémentation, voir la classe
 > [`GithubOAuthProvider`](https://github.com/theopenconversationkit/tock/blob/master/shared/src/main/kotlin/security/auth/GithubOAuthProvider.kt).
 
-### Implémentation SSO/CAS
+### Implementation SSO/CAS
 
 Cette implémentation a pour vocation de servir de pont entre un environnement entreprise et Tock.
 Elle est donc en partie spécifique à chaque entreprise, dans la mesure ou il est nécessaire de faire correspondre
@@ -207,7 +207,7 @@ Note complémentaire:
 
 > Lorsque l'authentification est de type SSO le bouton de Logout n'est pas disponible
 
-## Données
+## Donnees
 
 Les utilisateurs pouvant transmettre aux bots des données personnelles à travers leurs conversations, il est important
 de réfléchir à la nature des données manipulées dans _Tock Studio_ ou stockées par Tock, et
@@ -216,7 +216,7 @@ durée de rétention, restrictions d'accès basées sur des rôles, etc.).
 
 > Voir en particulier la réglementation [RGPD](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation).
 
-### Chiffrement des données
+### Chiffrement des donnees
 
 #### Chiffrement de la base
 
@@ -255,7 +255,7 @@ reconnues par le modèle NLP.
 Cette anonymisation par types d'entités se configure dans la vue _Language Understanding > Entities_. Seuls les
 utilisateurs ayant un rôle `admin` ou `technicalAdmin` dans _Tock Studio_ peuvent activer/désactiver cette fonctionnalité.
 
-> Pour en savoir plus, voir [_Rôles_](#rôles).
+> Pour en savoir plus, voir [_Rôles_](#roles).
 
 Dans les vues où les phrases sont affichées anonymisées (_Inbox_, _Search_ par exemple), un `admin` ou
 `technicalAdmin` peut décider d'afficher quand même (pour lui-même uniquement) une phrase non anonymisée grâce à l'action

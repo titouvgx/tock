@@ -331,7 +331,7 @@ régulièrement notamment de la [communauté Tock sur Gitter](https://gitter.im/
 
 Le bot est construit entièrement "0 code" grâce à _Tock Studio_. Autant une démo qu'un outil pour la 
 communauté, _Toki_ est hébergé sur la [plateforme démo publique](https://demo.tock.ai/), 
-il utilise le [_connecteur Web_](../user/guides/canaux.md#web-générique) et le 
+il utilise le [_connecteur Web_](../user/guides/canaux.md#web-generique) et le 
 [_kit React_](../user/guides/canaux.md#react) fournis avec Tock pour s'intégrer en quelques lignes de HTML/JS/CSS 
 sur le [site](https://doc.tock.ai/fr/).
 

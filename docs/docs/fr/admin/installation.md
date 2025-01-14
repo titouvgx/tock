@@ -247,7 +247,7 @@ il est donc important de ne pas valider des phrases comportant des données pers
 
 > La conservation des données, le chiffrement et l'anonymisation sont essentiels à la protection
 > des données, en particulier si elles sont personnelles.
-> Pour en savoir plus, voir la section [_Sécurité > Données_](security.md#données).
+> Pour en savoir plus, voir la section [_Sécurité > Données_](security.md#donnees).
 
 ## Composants applicatifs
 

@@ -140,7 +140,7 @@ Dans les sections suivantes vous apprendrez à :
 * [Créer des parcours programmés en Kotlin](../guides/api.md), ouvrant la voie à des comportements complexes et 
 l'intégration d'API tierces si besoin
 
-* [Déployer une plateforme Tock](../plateforme) en quelques minutes avec Docker
+* [Déployer une plateforme Tock](platform.md) en quelques minutes avec Docker
 
 Pour en savoir plus sur le connecteur Slack fourni avec Tock, rendez-vous dans le dossier 
 [connector-slack](https://github.com/theopenconversationkit/tock/tree/master/bot/connector-slack) sur GitHub, 

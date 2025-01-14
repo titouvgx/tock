@@ -55,7 +55,7 @@ plugins:
 
 
 extra_css:
-  - docs/docs/assets/css/overrides.scss
+  - docs/docs/assets/css/style.css
 markdown_extensions:
   - admonition
   - codehilite

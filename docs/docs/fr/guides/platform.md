@@ -2,7 +2,10 @@
 title: Plateforme
 ---
 
-# Déployer une plateforme avec Docker
+# Deployer une plateforme avec Docker
+
+[Paragraphe suivant](#deployer-une-plateforme-tock---depuis-les-sources)
+
 
 Dans les sections précédentes pour découvrir et tester Tock, vous avez utilisé la 
 [plateforme de démonstration](https://demo.tock.ai/). Cela vous a permis de découvrir 
@@ -13,7 +16,7 @@ Dans ce guide, vous allez apprendre à déployer une plateforme complète Tock e
 
 Notez qu'il est tout à fait possible de déployer Tock sans utiliser Docker. 
 
-## Ce que vous allez créer
+## Ce que vous allez creer
 
 * Une plateforme Tock complète en local : _Tock Studio_, _Bot API_, etc.
 
@@ -22,7 +25,7 @@ Notez qu'il est tout à fait possible de déployer Tock sans utiliser Docker.
 * (Optionnel) Un programme [Kotlin](https://kotlinlang.org/) se connectant à la plateforme locale en 
 _WebSocket_
 
-## Pré-requis
+## Pre-requis
 
 * Environ 20 minutes
 
@@ -39,7 +42,7 @@ du [JDK](https://jdk.java.net/) et de [Maven](https://maven.apache.org/)
 
 > Sans _IDE_ ou sans Maven, pas de problème. Il est tout à fait possible de compiler et exécuter le programme avec d'autres outils.
 
-## Déployer une plateforme Tock - sans les sources
+## Deployer une plateforme Tock - sans les sources
 
 Il est possible de récupérer seulement quelques fichiers du dépôt GitHub, sans télécharger toutes les sources Tock. 
  En quelques lignes de commande, la plateforme est opérationnelle.
@@ -48,7 +51,7 @@ Il est possible de récupérer seulement quelques fichiers du dépôt GitHub, sa
  [Docker](https://www.docker.com/) et [Docker Compose](https://docs.docker.com/compose/).
  
 > Pour démarrer depuis les sources du dépôt Tock Docker, passez plutôt au 
-[paragraphe suivant](#déployer-une-plateforme-tock---depuis-les-sources).
+[Paragraphe suivant](#deployer-une-plateforme-tock---depuis-les-sources).
 
 ```shell
 # Get the lastest docker-compose from GitHub (including Bot API)
@@ -63,7 +66,7 @@ $ docker-compose up
 ```
 
 
-## Déployer une plateforme Tock - depuis les sources
+## Deployer une plateforme Tock - depuis les sources
 
 Ceci est une manière alternative de démarrer Tock, à partir du dépôt 
  [Tock Docker](https://github.com/theopenconversationkit/tock-docker). 
@@ -73,7 +76,7 @@ Il vous faut, en plus de [Docker](https://www.docker.com/) et [Docker Compose](h
   les sources de GitHub en local.
  
 > Pour démarrer sans Git ni les sources du dépôt en local, suivez le 
-[paragraphe précédent](#déployer-une-plateforme-tock---sans-les-sources).
+[paragraphe précédent](#deployer-une-plateforme-tock---sans-les-sources).
 
 ```shell
 # Get the lastest sources from GitHub
@@ -84,7 +87,7 @@ $ chmod +x scripts/setup.sh
 # Run the stack (including Bot API)
 $ docker-compose -f docker-compose-bot.yml up
 ```
-## Accéder à *Tock Studio*
+## Acceder à *Tock Studio*
 
 Une fois la plateforme prête, les interfaces _Tock Studio_ sont sur le port `80` par défaut :
  
@@ -189,7 +192,7 @@ allez dans _Settings_ > _Configurations_ et reportez la valeur _API Key_ dans le
     
 * Retournez dans _Test_ > _Test the Bot_. Dites "qui es-tu ?" : le bot répond !
 
-## Félicitations!
+## Felicitations!
 
 Vous venez de déployer votre propre plateforme conversationnelle Tock en local.
 
@@ -199,7 +202,7 @@ développements, pour les contributeurs Tock ou encore si vous devez travailler 
 
 > Attention, l'implémentation Docker fournie ne suffit pas à garantir résilience et montée en charge de la plateforme 
 >quelles que soient les conditions en production. Pour cela, quelques recommandations sont proposées dans la section 
->[haute disponibilité](../../admin/disponibilite) du manuel Tock.
+>[haute disponibilité](../admin/availability.md) du manuel Tock.
 
 ## Continuer...
 

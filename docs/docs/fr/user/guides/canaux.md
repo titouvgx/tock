@@ -95,7 +95,7 @@ n'hésitez pas à consulter la page [vitrine Tock](../../about/showcase.md).
 * **Type** : texte _(+ voix via l'upload de messages vocaux)_
 * **Status** : connecteur Tock utilisé en production depuis 2016
 
-Le guide [Connecter son bot à Messenger](../../guide/messenger) explique comment intégrer un bot 
+Le guide [Connecter son bot à Messenger](../../guides/messenger.md) explique comment intégrer un bot 
 Tock avec une page Facebook / [Messenger](https://www.messenger.com/).
 
 Pour en savoir plus sur ce connecteur, vous pouvez aussi vous rendre dans le dossier 
@@ -223,7 +223,7 @@ avec les [sources du bot](https://github.com/theopenconversationkit/allocovid) s
 Pour en savoir plus sur ce connecteur, voir ses sources et son _README_ dans le dossier 
 [connector-google-chat](https://github.com/theopenconversationkit/tock/tree/master/bot/connector-google-chat) sur GitHub.
 
-### Web (générique)
+### Web generique
 
 ![logo web](../../img/web.png "web"){style="width:75px;"}
 
@@ -247,7 +247,7 @@ Pour en savoir plus sur ce connecteur, voir ses sources et son _README_ dans le 
 Il contient exemples et documentation format _Swagger_ de l'API REST.
 
 
-### Test (générique)
+### Test generique
 
 ![logo web](../../img/web.png "web"){style="width:75px;"}
 
@@ -256,7 +256,7 @@ Ce connecteur est interne à Tock, il sert à dialoguer avec un bot directement 
 _Tock Studio_ (vue _Test_ > _Test the bot_) en émulant d'autres connecteurs.
 
 
-## Intégrations via le connecteur Web
+## Integrations via le connecteur Web
 
 Le _connecteur Web_ expose une API générique pour interagir avec un bot Tock.
 En conséquence, il permet encore davantage d'intégrations côté "frontend", utilisant cette API comme passerelle.
@@ -266,7 +266,7 @@ En conséquence, il permet encore davantage d'intégrations côté "frontend", u
 ![logo React](../../img/React.png "React"){style="width:50px;"}
 
 Ce composant React intègre un bot Tock et en assure le rendu graphique dans une application Web.  
-L'application Web communique avec le bot via un [connecteur Web](#web-générique).
+L'application Web communique avec le bot via un [connecteur Web](#web-generique).
 
 * **Intégration** : [React](https://fr.reactjs.org/) (JavaScript / JSX)
 * **Type** : applications Web
@@ -282,7 +282,7 @@ Pour en savoir plus, voir les sources et le _README_ dans le dépôt
 
 
 Ce composant Flutter intègre un bot Tock et en assure le rendu graphique dans une application mobile ou Web.  
-L'application communique avec le bot via un [connecteur Web](#web-générique).
+L'application communique avec le bot via un [connecteur Web](#web-generique).
 
 * **Intégration** : [Flutter](https://flutter.dev/) (Dart)
 * **Type** : applications mobiles natives et Web
@@ -297,7 +297,7 @@ Pour en savoir plus, voir les sources et le _README_ dans le dépôt
 
 Ce composant _WebPart_ permet d'intégrer un bot Tock dans un site SharePoint.  
 Il embarque le [tock-react-kit](canaux.md#react) pour communiquer avec le bot 
-via un [connecteur Web](canaux.md#web-générique) et gérer le rendu graphique du bot dans la page SharePoint.
+via un [connecteur Web](canaux.md#web-generique) et gérer le rendu graphique du bot dans la page SharePoint.
 
 * **Intégration** : [Microsoft SharePoint](https://www.microsoft.com/fr-fr/microsoft-365/sharepoint/collaboration)
 * **Type** : sites Web & intranets
@@ -413,7 +413,7 @@ Tock présente plusieurs avantages :
 * Même si un bot est connecté à plusieurs canaux/partenaires externes, seule la plateforme Tock possède l'ensemble des
 conversations sur tous ces canaux.
 
-## Développer son propre connecteur
+## Developper son propre connecteur
 
 Il est possible de créer son propre connecteur Tock, par exemple pour interfacer un bot Tock avec un canal propre à 
 l'organisation (souvent un site Web ou une application mobile spécifiques), ou bien quand un canal grand public 

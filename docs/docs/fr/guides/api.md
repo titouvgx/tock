@@ -221,6 +221,6 @@ construire toutes sortes de parcours simples et complexes, interroger des API ti
 
 Dans la section suivante vous apprendrez à :
 
-* [Déployer une plateforme Tock](../plateforme) en quelques minutes avec Docker
+* [Déployer une plateforme Tock](platform.md) en quelques minutes avec Docker
 
 

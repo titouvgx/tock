@@ -115,7 +115,7 @@ during and after their journey.
 >(bar, electrical outlets, etc.). It also allows you to talk with a SNCF agents while remaining in the same conversation.
 <!-->Todo bug pas #react<!-->
 Located on the _TGV INOUI_ Facebook page and the [WiFi Portal](https://www.sncf.com/en/passenger-offer/tgv-inoui/stay-connected-during-your-journey)
-aboard the train, the assistant is based on Tock and the [`tock-react-kit`](../dev/connectors.md#developing-your-own-connector#).
+aboard the train, the assistant is based on Tock and the [`tock-react-kit`](../dev/connectors.md#developing-your-own-connector).
 
 ![img inoui](../img/inoui.jpg)
 
@@ -318,7 +318,7 @@ in particular from the [Tock community on Gitter](https://gitter.im/tockchat/Lob
 
 The chatbot has been built with "0 code", leveraging _Tock Studio_. As much a demo bot as a tool for the 
 community, _Toki_ lives on the [public demo platform](https://demo.tock.ai/),
-leverages the Tock-provided [_Web connector_](../user/guides/canaux.md#web-generique) and 
+leverages the Tock-provided [_Web connector_](../user/guides/canaux.md#web-generic) and 
 [_React kit_](../user/guides/canaux.md#react) to integrate with the [Website](https://doc.tock.ai/fr/) (with several 
 lines of HTML/JS/CSS).
 
