@@ -8,44 +8,6 @@ title: Awards
 <!-- md:plugin [tags] – built-in -->
 <!-- md:flag multiple -->
 
-
-### Badges
-
-Voici quelques exemples de badges que tu peux tester dans ton fichier Awards.md :
-
-[![Version](https://img.shields.io/badge/version-1.0.0-blue "Version 1.0.0")](../../changelog/index.md)
-
-## Heart Badge
-
-This badge uses a heart animation.  
-![Heart Badge](https://img.shields.io/badge/❤️-Proudly--Awarded-red)
-
-## Twitter Badge
-
-This badge links to Twitter.  
-![Twitter Badge](https://img.shields.io/twitter/url/https%3A%2F%2Fexample.com)
-
-## Mastodon Badge
-
-This badge represents Mastodon.  
-![Mastodon Badge](https://img.shields.io/mastodon/follow/@example)
-
-## Custom Badge
-
-Here’s a custom badge example.  
-![Custom Badge](https://img.shields.io/badge/Custom--Badge-blue)
-
-## Video Badge
-
-This badge represents a video link.  
-![Video Badge](https://img.shields.io/badge/🎥-Video--Content-yellow)
-
-
-
- 
-
-
-
 From its creation in for [OUI.sncf](https://www.oui.sncf/) in 2016 to the French 
 _[AlloCovid](https://www.allocovid.com/)_ service in 2020, both the technical solution 
 and [bots designed with Tock](showcase.md) have been awarded.
@@ -98,3 +60,4 @@ the award assessed mutliple criteria to rank 24 virtual agents from prestigious 
 ![Principaux critères 2018](https://1.bp.blogspot.com/-kjccUpSlsHw/WttCWg_TqXI/AAAAAAAALEM/Fa2ZvP8r824SiHLZYW-SGsjK0Uyd2ob5QCLcBGAs/s400/bestrobotexperience2-2018.jpg "Principaux critères Best Robot Experience 2018")
 
 To find out more, visit the [Sens du client](https://www.sensduclient.com/2018/04/ouibot-ouisncf-est-le-gagnant-de-best.html) blog.
+

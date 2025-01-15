@@ -53,18 +53,18 @@
     margin-left: 0.35em;
 }
 .md-typeset .mdx-badge__icon {
-    padding: px2rem(4px);
+    padding: 4px;
     background: var(--md-accent-fg-color--transparent);
-    border-start-start-radius: px2rem(2px);
-    border-end-start-radius: px2rem(2px);
+    border-start-start-radius: 2px;
+    border-end-start-radius: 2px;
 }
 .md-typeset .mdx-badge__icon:last-child {
-    border-radius: px2rem(2px);
+    border-radius: 2px;
 }
 .md-typeset .mdx-badge__text {
     padding: 0.2rem 0.3rem;
-    border-start-end-radius: px2rem(2px);
-    border-end-end-radius: px2rem(2px);
+    border-start-end-radius: 2px;
+    border-end-end-radius: 2px;
     box-shadow: 0 0 0 1px inset var(--md-accent-fg-color--transparent);
 }
 .md-typeset .mdx-switch button {
@@ -96,7 +96,7 @@
 }
 .md-typeset .mdx-flags__item {
     display: flex;
-    gap: px2rem(12px);
+    gap: 12px;
 }
 .md-typeset .mdx-flags__content {
     display: flex;

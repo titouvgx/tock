@@ -117,22 +117,22 @@
   
       // Badge icon
       &__icon {
-        padding: px2rem(4px);
+        padding: 4px;
         background: var(--md-accent-fg-color--transparent);
-        border-start-start-radius: px2rem(2px);
-        border-end-start-radius: px2rem(2px);
+        border-start-start-radius: 2px;
+        border-end-start-radius: 2px;
   
         // If icon is alone, round corners
         &:last-child {
-          border-radius: px2rem(2px);
+          border-radius: 2px;
         }
       }
   
       // Badge text
       &__text {
-        padding: px2rem(4px) px2rem(6px);
-        border-start-end-radius: px2rem(2px);
-        border-end-end-radius: px2rem(2px);
+        padding: 4px 6px;
+        border-start-end-radius: 2px;
+        border-end-end-radius: 2px;
         box-shadow: 0 0 0 1px inset var(--md-accent-fg-color--transparent);
       }
     }
@@ -194,7 +194,7 @@
       // Language item
       &__item {
         display: flex;
-        gap: px2rem(12px);
+        gap: 12px;
       }
   
       // Language content
@@ -235,7 +235,7 @@
       // Social card layer
       &__layer {
         position: absolute;
-        margin-top: px2rem(80px);
+        margin-top: 80px;
         transition: 250ms cubic-bezier(0.7, 0, 0.3, 1);
         transform-style: preserve-3d;
   
@@ -262,7 +262,7 @@
       // Social card image
       &__image {
         box-shadow:
-          px2rem(-5px) px2rem(5px) px2rem(10px)
+          px2rem(-5px) 5px 10px
           rgba(0, 0, 0, 0.05);
         transition: all 250ms;
         transform: rotate(-40deg) skew(15deg, 15deg) scale(0.7);
@@ -277,7 +277,7 @@
       &__label {
         position: absolute;
         display: block;
-        padding: px2rem(4px) px2rem(8px);
+        padding: 4px 8px;
         color: var(--md-default-bg-color);
         background-color: var(--md-default-fg-color--light);
         opacity: 0;
