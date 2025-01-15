@@ -24,12 +24,12 @@ hooks:
   - material/overrides/hooks/shortcodes.py
 
 plugins:
-  - tags
-  - git-authors
-  - git-committers:
-      repository: CreditMutuelArkea/tock
-      branch: 1811_mkdocs_documentation_website
-      token: !ENV MKDOCS_GIT_COMMITTERS_APIKEY
+  #- tags
+  #- git-authors
+  #- git-committers:
+#    repository: CreditMutuelArkea/tock
+ #     branch: 1811_mkdocs_documentation_website
+  #    token: !ENV MKDOCS_GIT_COMMITTERS_APIKEY
   - search
   - i18n:
       docs_structure: folder
@@ -49,8 +49,8 @@ plugins:
           theme:
             palette:
               primary: blue
-  - git-revision-date-localized:
-      enable_creation_date: true
+ # - git-revision-date-localized:
+ #     enable_creation_date: true
 
 
 extra_css:
