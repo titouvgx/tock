@@ -18,7 +18,7 @@ Cet écran permet de créer, modifier, supprimer des applications conversationne
 >un assistant simplifié permet de créer la première application (le premier bot). Par la suite, vous pouvez passer par 
 >cet écran pour ajouter d'autres applications.
 
-### Créer une application
+### Creer une application
 
 Pour ajouter une application, cliquez sur _Create New Application_ :
 
@@ -74,7 +74,7 @@ en Kotlin ou dans un autre langage de programmation comme Javascript/Nodejs ou P
 
 Pour en savoir plus sur ces paramètres et le développement de parcours, voir [Bot API](../../dev/bot-api.md).
 
-### Gérer les connecteurs
+### Gerer les connecteurs
 
 La liste des _connecteurs_ du bot est affichée sous la clef d'API. Pour ajouter un connecteur au bot, cliquez sur
 _Create a new Configuration_.

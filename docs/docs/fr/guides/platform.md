@@ -4,8 +4,6 @@ title: Plateforme
 
 # Deployer une plateforme avec Docker
 
-[Paragraphe suivant](#deployer-une-plateforme-tock---depuis-les-sources)
-
 
 Dans les sections précédentes pour découvrir et tester Tock, vous avez utilisé la 
 [plateforme de démonstration](https://demo.tock.ai/). Cela vous a permis de découvrir 
@@ -51,7 +49,7 @@ Il est possible de récupérer seulement quelques fichiers du dépôt GitHub, sa
  [Docker](https://www.docker.com/) et [Docker Compose](https://docs.docker.com/compose/).
  
 > Pour démarrer depuis les sources du dépôt Tock Docker, passez plutôt au 
-[Paragraphe suivant](#deployer-une-plateforme-tock---depuis-les-sources).
+[Paragraphe suivant](#deployer-une-plateforme-tock-depuis-les-sources).
 
 ```shell
 # Get the lastest docker-compose from GitHub (including Bot API)
@@ -76,7 +74,7 @@ Il vous faut, en plus de [Docker](https://www.docker.com/) et [Docker Compose](h
   les sources de GitHub en local.
  
 > Pour démarrer sans Git ni les sources du dépôt en local, suivez le 
-[paragraphe précédent](#deployer-une-plateforme-tock---sans-les-sources).
+[paragraphe précédent](#deployer-une-plateforme-tock-sans-les-sources).
 
 ```shell
 # Get the lastest sources from GitHub

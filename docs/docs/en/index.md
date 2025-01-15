@@ -5,11 +5,6 @@ permalink: /en/
 ---
 # Welcome to Tock - open conversational platform
 
-<span class="badge badge-version">1.0.0</span>
-<span class="badge badge-default">none</span>
-<span class="badge badge-insiders">insiders</span>
-
-
 ![NLU interface example - qualifying a sentence](img/favicon.png "NLU interface example - qualifying a sentence")
 
 

@@ -1,7 +1,7 @@
-
 ---
 title: Restriction d’intentions
 ---
+
 # Restreindre la portée des intentions
 
 Dans certains cas, la détection d’intention peut s’avérer complexe, en particulier lorsque l'entraînement d’une partie du modèle est rendu impossible du fait du champ des possibles.

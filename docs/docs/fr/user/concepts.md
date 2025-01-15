@@ -19,7 +19,7 @@ tirer un ensemble de modèles statistiques (lui permettant d'analyser et d'inter
 En mode conversationnel, l'_application_ inclue également différents paramètres définissant les réponses et le 
 comportement du _bot_. Autrement dit, **une _application_ correspond généralement à un _bot_**.
 
-Voir [_Tock Studio > Settings > Applications_](../user/studio/configuration.md#gérer-les-connecteurs).
+Voir [_Tock Studio > Settings > Applications_](../user/studio/configuration.md#gerer-les-connecteurs).
 
 ### *Configuration*
 
@@ -40,7 +40,7 @@ Sa configuration détaillée dépend du canal concerné.
 Tock permet de mutualiser très facilement le code d'un _bot_ pour qu'il réponde sur plusieurs canaux grâce à ses 
 connecteurs. Il est toutefois possible d'ajuster finement réponses et comportements en fonction du connecteur, si besoin. 
 
-Voir [_Tock Studio > Settings > Configurations_](../user/studio/configuration.md#gérer-les-connecteurs) et
+Voir [_Tock Studio > Settings > Configurations_](../user/studio/configuration.md#gerer-les-connecteurs) et
 la page [_Bot Multicanal_](guides/canaux.md) pour en savoir plus sur les connecteurs disponibles.
 
 ### *Namespace*

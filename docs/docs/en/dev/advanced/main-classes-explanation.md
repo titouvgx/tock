@@ -1,104 +1,74 @@
-Le projet est constitué de divers modules, les modules principaux concerne le moteur `tock-bot-engine`
+The project consists of various modules, the main modules concern the `tock-bot-engine` engine
 
 ## Story
-Une Story est un bout de conversation à propos d'un sujet précis.
-Elle est liée au minimum a une intention (intent) - la StarterIntent
+A Story is a piece of conversation about a specific topic.
+It is linked to at least one intention (intent) - the StarterIntent
 
-Pas de service "sélection de story" comme il peut y avoir une bibliothèque de lecture du scxml pour la machine à état, le routage des story fait partie du moteur de manière générale.
+No "story selection" service as there can be a scxml reading library for the state machine, story routing is part of the engine in general.
 
 ### Pre-defined story slot
-Ce sont StoryDefinition appelées à divers moments dans le bot en-dehors du flux classique, généralement pour une action spécifique.
-- unknownStory : Story par default si aucune intention n'est détectée
-- keywordStory  : Si un mot clef est reconnu dans le message utilisateur, court-circuit le NLP et lance directement cette story
-- helloStory        : Lancée au démarrage du bot
-- goodbyeStory  : Lancée à la sortie du bot
-- noInputStory   : ? appelée si l'utilisateur est inactif
-- userLocationStory : Story utilisée pour l'action SendLocation
-- handleAttachmentStory : Story utilisée pour l'action SendAttachment
-- keywordStory : Story utilisée pour bypass la NLP avec des mots clés
+These are StoryDefinition called at various times in the bot outside the classic flow, generally for a specific action.
+- unknownStory: Default story if no intention is detected
+- keywordStory: If a keyword is recognized in the user message, bypass the NLP and launch this story directly
+- helloStory: Launched when the bot starts
+- goodbyeStory: Launched when the bot exits
+- noInputStory: ? called if the user is inactive
+- userLocationStory : Story used for the SendLocation action
+- handleAttachmentStory : Story used for the SendAttachment action
+- keywordStory : Story used to bypass NLP with keywords
 
-
-#### Pièce jointes
-Tock prend un comportement spécifique pour les pièces jointes.
-Dans le cas de la réception d'une pièce jointe le bot attend du connecteur une action SendAttachment. Le NLP est alors court-circuité
+#### Attachments
+Tock takes a specific behavior for attachments.
+In the case of receiving an attachment, the bot expects a SendAttachment action from the connector. NLP is then bypassed
 
 ### SwitchStory
-Il est possible de basculer automatiquement d'une Story à une autre depuis une story grâce à BotBus::switchStory(StoryDefinition).
-La story est ajouté au dialog comme dernière story et son intention principale est définit comme intention courante.
-Basculer d'une Story à une autre n'a pas de sens pour la machine à état, les changements sont effectués, par définition, par l'intermédiaire d'une transition jamais d'état à état.
-En mettant en place le système d'événements internes il est possible d'avoir un comportement similaire avec la machine à état, l'événement déclenche la transition dans la machine à état qui déclenche la Story correspondante.
+It is possible to automatically switch from one Story to another from a story using BotBus::switchStory(StoryDefinition).
+The story is added to the dialog as the last story and its main intention is defined as the current intention.
+Switching from one Story to another does not make sense for the state machine, changes are made, by definition, through a transition, never from state to state.
+By implementing the internal event system it is possible to have a similar behavior with the state machine, the event triggers the transition in the state machine which triggers the corresponding Story.
 
 ### Intent = Story Id
-Le Bot utilise l'intention courante pour faire le lien directement avec la StoryDefinition à exécuter, le NlpController utilise la liste de story pour vérifier si l'intent est supportée par le bot,
+The Bot uses the current intent to make the link directly with the StoryDefinition to execute, the NlpController uses the story list to check if the intent is supported by the bot,
 
 ### Bot
-Controller pour le comportement du bot.
-Fait appel à la partie NLP (si besoin) pour trouver l'intention et les entités à partir d'un message et execute la story correspondant à l'intention.
-Pour trouver la Story un lien directe est fait entre Story et intention.
+Controller for the behavior of the bot.
+Calls the NLP part (if necessary) to find the intent and entities from a message and executes the story corresponding to the intent.
+To find the Story a direct link is made between Story and intent.
 
 ### Nlp (NlpController impl)
-Controller pour la partie NLP.
-Fait appel au NLP pour identifier l'intention et les entités d'un message et les enregistre dans le Dialog.
-Vérifie grâce à `BotDefinition::findIntent` si une intention retournée par le  NLP est connue du bot, transmet `Intent::unknown` si ce n'est pas le cas.
+Controller for the NLP part.
+Calls the NLP to identify the intent and entities of a message and saves them in the Dialog.
+Checks with `BotDefinition::findIntent` if an intent returned by the NLP is known to the bot, transmits `Intent::unknown` if it is not the case.
 
-# Technico-fonctionnel Tock
+# Technical-functional Tock
 ### UserTimeline
-Contient les informations du dialogue et les données utilisateurs.
-Contient la dernière Action du dialog (bot) et la dernière UserAction (user) [Action](http://doc.tock.ai/tock/dokka/tock/ai.tock.bot.engine.action/-action/index.html)
+Contains the dialog information and user data.
+Contains the last Action of the dialog (bot) and the last UserAction (user) [Action](http://doc.tock.ai/tock/dokka/tock/ai.tock.bot.engine.action/-action/index.html)
 
 ### [Dialog](https://doc.tock.ai/tock/dokka/tock/ai.tock.bot.engine.dialog/-dialog/index.html)
-Représente la conversation entre l'utilisateur et le ou les bots.
-Dispose d'un objet [DialogState](http://doc.tock.ai/tock/dokka/tock/ai.tock.bot.engine.dialog/-dialog-state/index.html) qui semble intéressant pour introduire l'état de la machine à état afin d'être rétrocompatible.
+Represents the conversation between the user and the bot(s).
+Has a [DialogState](http://doc.tock.ai/tock/dokka/tock/ai.tock.bot.engine.dialog/-dialog-state/index.html) object that seems interesting to introduce the state of the state machine in order to be backwards compatible.
 
 ### DefinitionBuilders
-Regroupe des fonctions utilitaires pour instancier de nouvelles definition de Bot et Story.
-Pour les Stories utilise l'interface IntentAware pour faire le lien entre divers intentions pré-définies  et la StoryDefinition qui sera exécutée.
-Utilise les intentions pour récupérer la story correspondante.
+Groups utility functions to instantiate new Bot and Story definitions.
+For Stories uses the IntentAware interface to link various pre-defined intents to the StoryDefinition that will be executed.
+Uses intents to retrieve the corresponding story.
 [Dokka](http://doc.tock.ai/tock/dokka/tock/ai.tock.bot.definition/index.html)
 - Bot Api Client
 `ClientDefintionBuilders`
 - Bot Engine
 `DefinitionBuilders`
 
-Peut-être utile pour créer des définitions de FAQ simples ou scenarii qui seront instanciées côté client.
+Maybe useful to create simple FAQ definitions or scenarios that will be instantiated on the client side.
 
-## Les classes definitions :
+## The definitions classes:
 
-- Bot engine : <br>
-Ce sont les abstractions qui définissent les objets principaux (définis dans l'engine) du chatbot Tock et utilisés dans le Dialog Manager, il y a notamment `StoryDefinition`,`BotDefinition`
-C'est ici le plus intéressant si on souhaite ajouter de nouvelles fonctionnalités rétroactives à l'ensemble du chatbot. 
-Les implémentations par défaut sont `BotDefinitionBase` et `StoryDefinitionBase`.
+- Bot engine: <br>
+These are the abstractions that define the main objects (defined in the engine) of the Tock chatbot and used in the Dialog Manager, including `StoryDefinition`, `BotDefinition`
+This is the most interesting if you want to add new retroactive features to the entire chatbot.
+The default implementations are `BotDefinitionBase` and `StoryDefinitionBase`.
 - Bot Api Client :
-  Ce sont les implémentations utilisées lors de l'instance d'un bot Api Client :
-  `ClientStoryDefinition`, `ClientBotDefinition` qui crée des `StoryConfiguration` et `BotConfiguration` lors de leur instanciantion.
-- <b>NOTE :</b> Les définitions entre l'engine et le client sont différentes. L'engine (en mode intégré) dispose de plus de prédefined story slots dans `BotDefinitionBase`, cf plus haut)
-- Sinon il peut-êre utile de surcharger le `BotApiDefinition` qui implémente un BotDefinitionBase spécfique.
-
-- NLP Front Shared
-Définition des objets dans le front :
-`ApplicationDefinition`, `IntentDefinition`, `EntityDefinition`
-
-### StoryDefinition
-Interface pour les objets qui porteront le code métier. Une StoryDefinition définit les actions effectuées lors de l’exécution d'une Story.
-Porte la liste des intentions primaires supportées par une story, la liste complète des intentions supportées par la story.
-Propose la vérification du support d'une intention ou si elle est une intention primaire.
-Expose l'intention de référence.
-
-### StoryDefinitionBase
-Implémentation abstraite de StoryDefinition
-
-### StoryStep
-Une étape dans l'exécution d'une Story. Les Steps définissent les différents comportements d'une Story au cours des exécutions successives ou d'intentions différentes.
-Les Steps reprennent les même intentions que leur Story et ont une structure similaire avec une liste d'intentions primaires et secondaire et une intention (facultative) principale.
-
-### BotBus
-Porte le flux d'information d'une exécution du bot suite à un message utilisateur. Un Bus est instancié à chaque message.
-Porte l'ensemble des données pertinentes à l'exécution du workflow, y compris le Dialog, la UserTimeline, la Story courante, les entitées et l'action de l'utilisateur.
-Expose l'API de réponses du bot.
-Étendu par les connecteurs pour ajouter des réponses spécifiques
-
-### StoryStep
-Le moteur de Tock propose le mécanisme de step, les Step correspondent à une étape dans l'exécution d'une Story et une Story peut passer d'une Step à une autre selon des critères arbitraires comme l'intention courante ou le nombre d'exécution de la Story.
-Les Step sont structurées comme les Story avec des intentions primaires et secondaires et une intention principale mais celles-ci sont facultatives. Si des intentions sont définit pour une Step elle sera exécuté automatiquement, si une intention principale est définit le bot basculera automatiquement vers la Story correspondante.
-Les Step peuvent aussi contenir des Step enfant permettant de faire des stepceptions.
-Les Step n'ont pas d'équivalent côté machine à état, les états sont normalement déjà la plus petite unité d'exécution dans la machine à état.
+These are the implementations used when instantiating a bot Api Client :
+`ClientStoryDefinition`, `ClientBotDefinition` which creates `StoryConfiguration` and `BotConfiguration` when instantiating them.
+- <b>NOTE :</b> The definitions between the engine and the client are different. The engine (in integrated mode) has more predefined story slots in `BotDefinitionBase`, see above)
+- Otherwise it may be useful to overload the

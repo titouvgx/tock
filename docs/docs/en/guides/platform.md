@@ -47,7 +47,7 @@ However, it is essential to have recent versions of
 [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/).
 
 > To start from the sources of the Tock Docker repository, go instead to the
-[next paragraph](#deploying-a-tock-platform---from-sources).
+[next paragraph](#deploying-a-tock-platform-from-sources).
 ```shell
 # Get the lastest docker-compose from GitHub (including Bot API)
 $ curl -o docker-compose.yml https://raw.githubusercontent.com/theopenconversationkit/tock-docker/master/docker-compose-bot.yml

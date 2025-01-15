@@ -4,29 +4,16 @@ title: Awards
 
 # Awards 
 
+<!-- md:feature toto -->
+<!-- md:plugin [tags] – built-in -->
+<!-- md:flag multiple -->
 
-## Version 1.0.0
 
 ### Badges
 
 Voici quelques exemples de badges que tu peux tester dans ton fichier Awards.md :
 
-- <span class="mdx-badge">Standard Badge</span>
-- <span class="mdx-badge mdx-badge--heart">Badge avec cœur</span>
-- <span class="mdx-badge mdx-badge--right">Badge à droite</span>
-- <span class="mdx-badge mdx-badge--heart mdx-badge--right">Badge avec cœur et à droite</span>
-
-### Insiders Badges
-
-- <span class="mdx-badge mdx-badge--heart">❤️ Insiders Badge</span>
-- <span class="mdx-badge mdx-badge--heart mdx-badge--right">❤️ Insiders Badge à droite</span>
-
-### Autres Badges
-
-- <span class="mdx-badge">Badge de Test</span>
-- <span class="mdx-badge mdx-badge--heart">Badge Test avec cœur</span>
-
-# Award Badges Example
+[![Version](https://img.shields.io/badge/version-1.0.0-blue "Version 1.0.0")](../../changelog/index.md)
 
 ## Heart Badge
 

@@ -23,7 +23,6 @@ nav:
 hooks:
   - material/overrides/hooks/shortcodes.py
 
-  
 plugins:
   - tags
   - git-authors
@@ -55,11 +54,15 @@ plugins:
 
 
 extra_css:
-  - docs/docs/assets/css/style.css
+  - assets/css/style.css
+  - assets/css/badge.css
+
 markdown_extensions:
   - admonition
   - codehilite
-  - pymdownx.emoji
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
   - attr_list
   - pymdownx.superfences:
       custom_fences:

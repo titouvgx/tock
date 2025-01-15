@@ -1,7 +1,11 @@
 ---
 title: Architecture
 ---
-<!-->Traduit avec google translate et reverso<!-->
+
+
+<!-->Traduit avec google translate et reverso -->
+
+
 # Tock Architecture
 
 This chapter presents the general architecture of a Tock platform: components and dependencies,

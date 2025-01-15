@@ -156,8 +156,8 @@ Systèmes d'Informations et du Numérique (DSIN)_ of [EDF (Electricité de Franc
 > in order to route customer calls toward the right skill, either human or automated.  
 > It also forwards the conversation context between the customer and the callbot
 > to the advisor.
-<!-->Todo bug pas #allo-media<!-->
-The callbot is powered by Tock using the [_Allo-Media connector_](../dev/connectors.md#allo-media).
+
+The callbot is powered by Tock using the [_Allo-Media connector_](../user/guides/canaux.md#allo-media).
 The _Speech-To-Text (STT)_ solution is [Allo-Media](https://www.allo-media.net/), and the _Text-To-Speech (TTS)_
 is [Voxygen](https://www.voxygen.fr/).
 
@@ -291,7 +291,7 @@ _RocBOT_ is dedicated to Ops teams at SNCF DEA, available at the office and on-t
 > RocBOT can check, weither alerts were raised by supervision, find on-call duty agenda or people, etc.
 <!-->Todo bug pas #teams<!-->
 _RocBOT_ is available in production since 2020, on Teams desktop and mobile applications through the 
-Tock [_Teams connector_](../dev/connectors.md#teams).
+Tock [_Teams connector_](../user/guides/canaux.md#teams).
 
 ![img robot](../img/robot1.png )
 

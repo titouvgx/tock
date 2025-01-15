@@ -1,7 +1,7 @@
 ---
 title: Installation
 ---
-<!-->Traduit avec google translate et reverso<!-->
+<!-->Traduit avec google translate et reverso-->
 # Tock Installation
 
 The [architecture](../../admin/architecture.md) page presents the Tock functional and technical architecture, the role of the
@@ -285,7 +285,7 @@ The [Java System Properties](https://docs.oracle.com/javase/8/docs/technotes/gui
 
 ### Bot Packaging
 <!-->Todo pas "bot-embedded<!-->
-A sample bot in [_Tock Bot Embedded_](../../dev/bot-embedded) mode is available in
+A sample bot in [_Tock Bot Embedded_](../dev/bot-integre.md) mode is available in
 [`docker-compose-bot-open-data.yml`](https://github.com/theopenconversationkit/tock-docker/blob/master/docker-compose-bot-open-data.yml).
 
 Examples and guidelines for packaging bots in [_Tock Bot API_](../../dev/bot-api.md) mode (_WebHooks_, _WebSockets_) will be available soon.
@@ -365,6 +365,6 @@ For `tock/nlp_admin`, you must use the property `adminverticle_base_href`.
 For a production use of Tock, we recommend you to also browse the following pages:
 <!-->Todo /monitoring inexistant<!-->
 - [Security](../admin/security.md)
-- [Monitoring](../monitoring)  
+- [Monitoring](../admin/supervision.md)  
 - [Cloud](../admin/cloud.md)
 - [High availability](../admin/availability.md)

@@ -1,7 +1,7 @@
 ---
 title: Cloud
 ---
-<!-->Traduit avec google translate et reverso<!-->
+<!-->Traduit avec google translate et reverso-->
 # Cloud
 
 This page presents the aspects related to the use of _Cloud_ services (private or public) to deploy

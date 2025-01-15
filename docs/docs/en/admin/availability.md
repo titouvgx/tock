@@ -1,7 +1,7 @@
 ---
 title: High Availability
 ---
-<!-->Traduit avec google translate et reverso<!-->
+<!-->Traduit avec google translate et reverso-->
 # High Availability
 
 This page is intended to provide advice and feedback on the

@@ -4,9 +4,7 @@ title: Récompenses
 
 # Prix et récompenses 
 
-<span class="badge badge-version">1.0.0</span>
-<span class="badge badge-default">none</span>
-<span class="badge badge-insiders">insiders</span>
+
 
 Depuis sa création pour [OUI.sncf](https://www.oui.sncf/) en 2016 jusqu'au
 service _[AlloCovid](https://www.allocovid.com/)_ en 2020, la solution technique et 

@@ -19,7 +19,7 @@ En conséquence, il permet encore davantage d'intégrations côté "frontend", u
 
 Cette page liste en fait :
 
-- Les [_connecteurs_](#intégrations-via-le-connecteur-web) fournis avec la distribution Tock :  
+- Les [_connecteurs_](#integrations-via-le-connecteur-web) fournis avec la distribution Tock :  
 ![logo messenger](../../img/messenger.png "whatsapp"){style="width:50px;"}
 
 ![Logo slack](../../img/slack.png "Slack"){style="width: 75px;"}
@@ -47,7 +47,7 @@ Cette page liste en fait :
 
 ![logo test](../../img/test.jpeg "test"){style="width:50px;"}
 
-- Les [kits utilisant le _connecteur Web_](#intégrations-via-le-connecteur-web) pour intégrer d'autres canaux :  
+- Les [kits utilisant le _connecteur Web_](#integrations-via-le-connecteur-web) pour intégrer d'autres canaux :  
 
 ![logo React](../../img/React.png "React"){style="width:50px;"}
 
@@ -116,7 +116,7 @@ Pour en savoir plus sur ce connecteur, vous pouvez aussi vous rendre dans le dos
 [connector-slack](https://github.com/theopenconversationkit/tock/tree/master/bot/connector-slack) sur GitHub, 
 où vous retrouverez les sources et le _README_ du connecteur.
 
-### Google Assistant / Home
+### Google Assistant - Home
 
 ![Logo Google assistant](../../img/googelassist.png "google assistant"){style="width: 100px;"}
 
@@ -324,7 +324,7 @@ Elles sont mentionnées à titre indicatif, même quand il n'est pas fourni de _
 ### Google / Android
 
 Les fonctions _Speech-To-Text_ et _Text-To-Speech_ de Google sont utilisées à travers le 
-[connecteur Google Assistant / Home](#google-assistant--home), également par les fonctions 
+[connecteur Google Assistant / Home](canaux.md#integrations-via-le-connecteur-web), également par les fonctions 
 vocales de l'[application Microsoft Teams pour Android](https://play.google.com/store/apps/details?id=com.microsoft.teams)
 compatible avec le [connecteur Teams](#teams), ainsi qu'au sein de la plateforme Android 
 notamment pour des développements mobiles natifs.
@@ -339,7 +339,7 @@ notamment pour des développements mobiles natifs.
 
 * **Technologie** : STT & TTS Google / Android
 * **Status** : utilisé avec Tock en production 
-(via connecteurs [Google Assistant / Home](#google-assistant--home), 
+(via connecteurs [Google Assistant / Home](#google-assistant-home), 
 [Microsoft Teams](canaux.md#teams) 
 et en natif Android pour les bots intégrés _on-app_)
  
@@ -360,7 +360,7 @@ et en natif iOS pour les bots intégrés _on-app_)
 ### Amazon / Alexa
 
 Les fonctions _Speech-To-Text_ et _Text-To-Speech_ d'Alexa (Amazon) sont utilisées à travers le 
-[connecteur Alexa / Echo](#alexa--echo).
+[connecteur Alexa / Echo](#alexa-echo).
 
 ![Logo Alexa](../../img/alexa2.png "alexa"){style="width: 75px;"}
 

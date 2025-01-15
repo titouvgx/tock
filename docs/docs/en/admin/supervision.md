@@ -1,7 +1,7 @@
 ---
 title: Supervision
 ---
-<!-->Traduit avec google translate et reverso<!-->
+<!-->Traduit avec google translate et reverso-->
 # Supervision
 
 This chapter presents some supervision and _monitoring_ aspects of the functioning of the platform
