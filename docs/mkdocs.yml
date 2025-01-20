@@ -71,7 +71,7 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.snippets:
       auto_append:
-        - includes/main.html
+        - includes/chatbot.html
 
 # Configurer l'édition dynamique
 edit_uri: "https://github.com/CreditMutuelArkea/tock/tree/1811_mkdocs_documentation_website/docs/docs/"
