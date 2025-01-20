@@ -8,9 +8,7 @@ theme:
     view: material/eye
     repo: fontawesome/brands/github
   name: material
-  custom_dir: overrides/partials/
 
-  
   palette:
     primary: blue
   features:
@@ -21,6 +19,7 @@ theme:
 
 nav:
   # Ajoutez votre navigation ici
+
 # Hooks
 hooks:
   - material/overrides/hooks/shortcodes.py
@@ -29,9 +28,9 @@ plugins:
   - tags
   # - git-authors
   # - git-committers:
-  #    repository: CreditMutuelArkea/tock
-  #    branch: 1811_mkdocs_documentation_website
-  #    token: !ENV MKDOCS_GIT_COMMITTERS_APIKEY
+  #     repository: CreditMutuelArkea/tock
+  #     branch: 1811_mkdocs_documentation_website
+  #     token: !ENV MKDOCS_GIT_COMMITTERS_APIKEY
   - search
   - i18n:
       docs_structure: folder
@@ -52,8 +51,7 @@ plugins:
             palette:
               primary: blue
   # - git-revision-date-localized:
-  #     enable_creation_date: true
-
+  #       enable_creation_date: true
 
 extra_css:
   - assets/css/style.css
@@ -71,9 +69,9 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
- 
-          
+  - pymdownx.snippets:
+      auto_append:
+        - includes/main.html
+
 # Configurer l'édition dynamique
 edit_uri: "https://github.com/CreditMutuelArkea/tock/tree/1811_mkdocs_documentation_website/docs/docs/"
-
-

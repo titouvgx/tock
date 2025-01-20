@@ -1,7 +1,7 @@
 ---
 title: Installation
 ---
-<!-->Traduit avec google translate et reverso-->
+[//]: # (Traduit avec Google Translate et Reverso)
 # Tock Installation
 
 The [architecture](../../admin/architecture.md) page presents the Tock functional and technical architecture, the role of the

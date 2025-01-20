@@ -1,6 +1,3 @@
-{% extends "base.html" %}
-
-{% block extrahead %}
   <title>DoC-Tock-Chat-Bot</title>
   <html>
     <head>
@@ -124,10 +121,7 @@
         }
       </style>
     </head>
-{% endblock %}
 
-{% block content %}
-{{ super() }}
   <!-- Icône de chat flottant -->
   <div id="chat-icon" onclick="toggleChat()">
     <i class="bi bi-chat"></i>
@@ -203,8 +197,3 @@
         }
       });
   </script>
-{% endblock %}
-
-{% block scripts %}
-  {{ super() }}
-{% endblock %}

@@ -1,7 +1,7 @@
 ---
 title: Security
 ---
-<!-->Traduit avec google translate et reverso-->
+[//]: # (Traduit avec Google Translate et Reverso)
 
 # Security
 
