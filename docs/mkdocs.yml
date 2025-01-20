@@ -8,6 +8,8 @@ theme:
     view: material/eye
     repo: fontawesome/brands/github
   name: material
+  custom_dir: overrides/partials/
+
   
   palette:
     primary: blue
