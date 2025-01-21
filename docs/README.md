@@ -1,6 +1,6 @@
 ##### Using pyenv && poetry (recommended)
 
-It's recommended to use pyenv, see install and usage guide here :
+It's recommended to use pyenv, see install and usage guide here:
 https://gist.github.com/trongnghia203/9cc8157acb1a9faad2de95c3175aa875
 
 Basic usage to create a venv with a specific version of Python for this project :
