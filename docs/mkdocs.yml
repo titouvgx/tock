@@ -23,6 +23,7 @@ nav:
 # Hooks
 hooks:
   - material/overrides/hooks/shortcodes.py
+  - hooks/copyapiswagger.py
 
 plugins:
   - tags
