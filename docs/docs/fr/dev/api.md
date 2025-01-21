@@ -10,14 +10,14 @@ Cette section de la documentation Tock présente sommairement les différentes A
 
 Le connecteur Web de Tock permet de dialoguer avec un bot à travers une API REST.
 <!-->Todo pas de folder api/   3erreurs lié a ca <!-->
-La documentation de cette API est disponible dans [/api/web-connector](../../../api/web-connector). 
+La documentation de cette API est disponible dans [/api/web-connector](../../api/web-connector.html). 
 
 ## *Tock NLU API*
 
 L'API _NLU / NLP_ de Tock (reconnaissance du langage naturel) permet d'interroger programmatiquement le 
 modèle conversationnel et d'analyser une phrase.
 
-La documentation de l'API Tock NLU est disponible dans [/api](../../../api/).
+La documentation de l'API Tock NLU est disponible dans [/api](https://doc.tock.ai/tock/api/).
 
 Vous pouvez retrouver cette documentation sur la plateforme de démonstration Tock, à l'adresse
 [https://demo.tock.ai/doc/](https://demo.tock.ai/doc/).
@@ -27,7 +27,7 @@ fournies, vous pouvez retrouver cette documentation en ligne à l'adresse [http:
 
 ## *Tock Studio / Admin API*
 
-De même, la documentation de l'API _Tock Studio_ est disponible dans [/api/admin](../../../api/admin). 
+De même, la documentation de l'API _Tock Studio_ est disponible dans [/api/admin](../../api/admin.html). 
 
 Vous pouvez retrouver cette documentation sur la plateforme de démonstration Tock, à l'adresse
 [https://demo.tock.ai/doc/admin.html](https://demo.tock.ai/doc/admin.html).
