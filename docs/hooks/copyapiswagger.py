@@ -4,14 +4,12 @@ from pathlib import Path
 from mkdocs.plugins import BasePlugin
 
 tock_apistatic = {
-    "../../bot/connector-web/web-connector.html":"api/web-connector.html",
-    "../../bot/connector-web/Swagger_TOCKWebConnector.yaml":"api/Swagger_TOCKWebConnector.yaml",
-    "../../nlp/api/doc/src/main/doc/admin.html":"api/admin.html",
-    "../../nlp/api/doc/src/main/doc/admin.yaml":"api/admin.yaml",
-    "../../nlp/api/doc/src/main/doc/index.html":"api/index.html",
-    "../../nlp/api/doc/src/main/doc/nlp.yaml":"api/nlp.yaml"
-
-    
+    "../../bot/connector-web/web-connector.html": "api/web-connector.html",
+    "../../bot/connector-web/Swagger_TOCKWebConnector.yaml": "api/Swagger_TOCKWebConnector.yaml",
+    "../../nlp/api/doc/src/main/doc/admin.html": "api/admin.html",
+    "../../nlp/api/doc/src/main/doc/admin.yaml": "api/admin.yaml",
+    "../../nlp/api/doc/src/main/doc/index.html": "api/index.html",
+    "../../nlp/api/doc/src/main/doc/nlp.yaml": "api/nlp.yaml"
 }
 
 def on_pre_build(config):
@@ -23,20 +21,27 @@ def on_pre_build(config):
 
     for source, relative_dest in tock_apistatic.items():
         # Construct the full destination path
-        destination = docs_dir/relative_dest
-        source = docs_dir/source
+        destination = docs_dir / relative_dest
+        source_path = docs_dir / source
+        
         # Ensure the destination directory exists
-        destination.parent.mkdir(exist_ok=True)
+        destination.parent.mkdir(parents=True, exist_ok=True)
+
+        # Delete the existing destination file if it exists
+        if destination.exists():
+            try:
+                print(f"Deleting existing file: {destination}")
+                destination.unlink()
+            except Exception as e:
+                print(f"Error deleting {destination}: {e}")
 
         # Copy the file from source to destination
         try:
             print('///////////////////////////////////////////////////////////')
-            print(f"Debug {source} to {destination}")
-            shutil.copy(source, destination)
-            print(f"Copied {source} to {destination}")
+            print(f"Debug {source_path} to {destination}")
+            shutil.copy(source_path, destination)
+            print(f"Copied {source_path} to {destination}")
         except FileNotFoundError:
-            print(f"Error: Source file {source} not found.")
+            print(f"Error: Source file {source_path} not found.")
         except Exception as e:
-            print(f"Error copying {source} to {destination}: {e}")
-                
-
+            print(f"Error copying {source_path} to {destination}: {e}")
