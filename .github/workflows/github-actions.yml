@@ -2,41 +2,55 @@ name: Deploy MkDocs Site
 on:
   push:
     branches:
-      - master
-      - main
+      - 1811_mkdocs_documentation_website
 permissions:
   contents: write
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       # 1. Vérification du code source
       - uses: actions/checkout@v4
 
       # 2. Configuration des identifiants Git
-      - name: Configure Git Credentials
-        run: |
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+      # - name: Configure Git Credentials
+      #   run: |
+      #     git config user.name github-actions[bot]
+      #     git config user.email 41898282+github-actions[bot]@users.noreply.github.com
 
       # 3. Installation de Python
       - uses: actions/setup-python@v5
         with:
-          python-version: 3.x
-
-      # 4. Installation des dépendances MkDocs
-      - name: Install dependencies
-        run: pip install -r docs/requirements.txt
-
-      # 5. Construction du site statique dans un dossier temporaire (site/)
+          python-version: 3.13.0The URL of the deployed Pages 
       - name: Build MkDocs site
         run: |
-          mkdocs build --config-file docs/mkdocs.yml --site-dir site
+          cd docs
+          mkdocs build --site-dir site
 
-      # 6. Déploiement vers GitHub Pages
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Upload static files as artifact
+        id: deployment
+        uses: actions/upload-pages-artifact@v3 # or specific "vX.X.X" version tag for this action
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: site
-          publish_branch: gh-pages
+          path: docs/site
+
+  
+  deploy:
+      # Add a dependency to the build job
+      needs: build
+
+      # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+      permissions:
+        pages: write      # to deploy to Pages
+        id-token: write   # to verify the deployment originates from an appropriate source
+
+      # Deploy to the github-pages environment
+      environment:
+        name: github-pages
+        url: ${{ steps.deployment.outputs.page_url }}
+
+      # Specify runner + deployment step
+      runs-on: ubuntu-latest
+      steps:
+        - name: Deploy to GitHub Pages
+          id: deployment
+          uses: actions/deploy-pages@v4 # or specific "vX.X.X" version tag for this action
