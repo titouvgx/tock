@@ -21,7 +21,7 @@ jobs:
       # 3. Installation de Python
       - uses: actions/setup-python@v5
         with:
-          python-version: 3.13.0The URL of the deployed Pages 
+          python-version: 3.13.0
       - name: Build MkDocs site
         run: |
           cd docs
