@@ -2572,7 +2572,6 @@ to provide extended functionality, like for example support for versioning.</p>
       --tvk_wrapper_max-width: 45vw;
       --tvk_wrapper_min-height: 25em;
     }
-
     #chat-wrapped {
       display: none;
       position: fixed;
@@ -2585,7 +2584,6 @@ to provide extended functionality, like for example support for versioning.</p>
       transition: all 0.3s ease;
       animation: fadeIn 0.8s ease-in-out;
     }
-
     .chat-header {
       background-color: var(--md-primary-fg-color);
       color: white;
@@ -2596,7 +2594,6 @@ to provide extended functionality, like for example support for versioning.</p>
       justify-content: space-between;
       align-items: center;
     }
-
     .chat-header-title {
       display: flex;
       align-items: center;
@@ -2608,11 +2605,9 @@ to provide extended functionality, like for example support for versioning.</p>
     #chat-header-close {
       margin-top: -3px;
     }
-
     #chat-container {
       flex-grow: 1;
     }
-
     #chat-icon {
       position: fixed;
       bottom: 20px;
@@ -2629,15 +2624,12 @@ to provide extended functionality, like for example support for versioning.</p>
       cursor: pointer;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
-
     #chat-icon:hover {
       background-color: var(--md-accent-fg-color);
     }
-
     .pointer {
       cursor: pointer;
     }
-
     @keyframes fadeIn {
       from {
         opacity: 0;
@@ -2652,17 +2644,16 @@ to provide extended functionality, like for example support for versioning.</p>
 
   <!-- Icône de chat flottant -->
   <div id="chat-icon" onclick="toggleChat()" title="Chat with Tock">
-    <img src="img/Logo_Tock_White.svg" />
+    <img src="{{PATH_TO_DOCS_ROOT}}img/Logo_Tock_White.svg" />
   </div>
 
   <!-- Fenêtre du chatbot -->
   <div id="chat-wrapped">
     <div class="chat-header">
       <div class="chat-header-title">
-        <img src="img/Logo_Tock_White.svg" class="chat-header-title-logo" />
+        <img src="{{PATH_TO_DOCS_ROOT}}img/Logo_Tock_White.svg" class="chat-header-title-logo" />
         <span id="chat-header-title-string">Chat with Tock</span>
       </div>
-
       <span
         id="chat-header-close"
         onclick="closeChat()"
@@ -2773,7 +2764,7 @@ to provide extended functionality, like for example support for versioning.</p>
             header: {
               avatar: {
                 botImage: {
-                  src: "img/favicon.png",
+                  src: "{{PATH_TO_DOCS_ROOT}}img/favicon.png",
                   width: "1.5em",
                   height: "1.5em",
                 },
@@ -2819,53 +2810,6 @@ to provide extended functionality, like for example support for versioning.</p>
 
 
 
-  
-    
-  
-  
-    
-  
-
-
-  <aside class="md-source-file">
-    
-      
-  <span class="md-source-file__fact">
-    <span class="md-icon" title="Dernière mise à jour">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
-    </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">15 janvier 2025</span>
-  </span>
-
-    
-    
-      
-  <span class="md-source-file__fact">
-    <span class="md-icon" title="Créé">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
-    </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">7 janvier 2025</span>
-  </span>
-
-    
-    
-      
-  
-  <span class="md-source-file__fact">
-    <span class="md-icon" title="Contributeurs">
-      
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
-      
-    </span>
-    <nav>
-      
-        <a href="mailto:titouan.perivier-vigouroux@arkea.com">Titouan Perivier--Vigouroux</a>
-    </nav>
-  </span>
-
-    
-    
-  </aside>
 
 
 

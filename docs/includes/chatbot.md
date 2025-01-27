@@ -31,7 +31,6 @@
       --tvk_wrapper_max-width: 45vw;
       --tvk_wrapper_min-height: 25em;
     }
-
     #chat-wrapped {
       display: none;
       position: fixed;
@@ -44,7 +43,6 @@
       transition: all 0.3s ease;
       animation: fadeIn 0.8s ease-in-out;
     }
-
     .chat-header {
       background-color: var(--md-primary-fg-color);
       color: white;
@@ -55,7 +53,6 @@
       justify-content: space-between;
       align-items: center;
     }
-
     .chat-header-title {
       display: flex;
       align-items: center;
@@ -67,11 +64,9 @@
     #chat-header-close {
       margin-top: -3px;
     }
-
     #chat-container {
       flex-grow: 1;
     }
-
     #chat-icon {
       position: fixed;
       bottom: 20px;
@@ -88,15 +83,12 @@
       cursor: pointer;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
-
     #chat-icon:hover {
       background-color: var(--md-accent-fg-color);
     }
-
     .pointer {
       cursor: pointer;
     }
-
     @keyframes fadeIn {
       from {
         opacity: 0;
@@ -111,17 +103,16 @@
 
   <!-- Icône de chat flottant -->
   <div id="chat-icon" onclick="toggleChat()" title="Chat with Tock">
-    <img src="img/Logo_Tock_White.svg" />
+    <img src="{{PATH_TO_DOCS_ROOT}}img/Logo_Tock_White.svg" />
   </div>
 
   <!-- Fenêtre du chatbot -->
   <div id="chat-wrapped">
     <div class="chat-header">
       <div class="chat-header-title">
-        <img src="img/Logo_Tock_White.svg" class="chat-header-title-logo" />
+        <img src="{{PATH_TO_DOCS_ROOT}}img/Logo_Tock_White.svg" class="chat-header-title-logo" />
         <span id="chat-header-title-string">Chat with Tock</span>
       </div>
-
       <span
         id="chat-header-close"
         onclick="closeChat()"
@@ -232,7 +223,7 @@
             header: {
               avatar: {
                 botImage: {
-                  src: "img/favicon.png",
+                  src: "{{PATH_TO_DOCS_ROOT}}img/favicon.png",
                   width: "1.5em",
                   height: "1.5em",
                 },

@@ -1,6 +1,9 @@
 ---
 title: Studio
 ---
+<div>
+    <img src="{{PATH_TO_DOCS_ROOT}}img/Logo_Tock_White.svg" />
+</div>
 
 # Créer son premier bot avec Tock Studio
 
@@ -211,4 +214,4 @@ l'intégration d'API tierces si besoin
 
 * [Déployer une plateforme Tock](platform.md) en quelques minutes avec Docker
 
-P
+
