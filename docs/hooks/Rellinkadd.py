@@ -27,8 +27,14 @@ def on_page_markdown(
     with open(chatbot_path, 'r', encoding='utf-8') as f:
         chatbot_content = f.read()
 
-
     # Ajouter le contenu de chatbot.md à la fin du markdown de la page
     markdown += "\n\n" + chatbot_content  # Ajouter chatbot.md après le contenu de la page actuelle
+
+    # Calculer la profondeur du fichier courant dans la hiérarchie des dossiers
+    depth = len(page.file.url.split('/')) - 1
+    path_to_docs_root = '../' * depth
+
+    # Remplacer toutes les occurrences de {{PATH_TO_DOCS_ROOT}} par le chemin calculé
+    markdown = markdown.replace('{{PATH_TO_DOCS_ROOT}}', path_to_docs_root)
 
     return markdown
