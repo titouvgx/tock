@@ -9,7 +9,7 @@ Cette section de la documentation Tock présente sommairement les différentes A
 ## *Tock Web Connector API*
 
 Le connecteur Web de Tock permet de dialoguer avec un bot à travers une API REST.
-<!-->Todo pas de folder api/   3erreurs lié a ca <!-->
+
 La documentation de cette API est disponible dans [/api/web-connector](../../api/web-connector.html). 
 
 ## *Tock NLU API*

@@ -1,9 +1,6 @@
 ---
 title: Studio
 ---
-<div>
-    <img src="{{PATH_TO_DOCS_ROOT}}img/Logo_Tock_White.svg" />
-</div>
 
 # Créer son premier bot avec Tock Studio
 

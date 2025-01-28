@@ -8,33 +8,32 @@ theme:
     view: material/eye
     repo: fontawesome/brands/github
   name: material
-
   palette:
-    primary: blue
+    - scheme: default  
+      primary: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate  
+      primary: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
   features:
     - content.action.edit
     - content.code.copy
     - navigation.expand
     - navigation.path
+    - palette.toggle
 
-nav:
-  # Ajoutez votre navigation ici
-
-# Hooks
 hooks:
    - material/overrides/hooks/shortcodes.py
    - hooks/copyapiswagger.py
    - hooks/Rellinkadd.py
 
-  
 plugins:
-  # - tags
-  # - git-authors
-  # - git-committers:
-  #     repository: CreditMutuelArkea/tock
-  #     branch: 1811_mkdocs_documentation_website
-  #     token: !ENV MKDOCS_GIT_COMMITTERS_APIKEY
-  - search 
+  - search
   - i18n:
       docs_structure: folder
       fallback_to_default: true
@@ -50,11 +49,7 @@ plugins:
           name: Français
           build: true
           site_name: "Tock Documentation"
-          theme:
-            palette:
-              primary: blue
-  # - git-revision-date-localized:
-  #     enable_creation_date: true
+
 
 extra_css:
   - assets/css/style.css
@@ -73,6 +68,6 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
 
-
+          
 # Configurer l'édition dynamique
 edit_uri: "https://github.com/CreditMutuelArkea/tock/tree/1811_mkdocs_documentation_website/docs/docs/"

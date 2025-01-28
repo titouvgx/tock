@@ -284,7 +284,7 @@ The [Java System Properties](https://docs.oracle.com/javase/8/docs/technotes/gui
 `https.proxyHost`, `http.proxyHost`, and `http.nonProxyHosts` are the recommended way to configure a proxy.
 
 ### Bot Packaging
-<!-->Todo pas "bot-embedded<!-->
+
 A sample bot in [_Tock Bot Embedded_](../dev/bot-integre.md) mode is available in
 [`docker-compose-bot-open-data.yml`](https://github.com/theopenconversationkit/tock-docker/blob/master/docker-compose-bot-open-data.yml).
 
@@ -363,7 +363,7 @@ For `tock/nlp_admin`, you must use the property `adminverticle_base_href`.
 ## See also...
 
 For a production use of Tock, we recommend you to also browse the following pages:
-<!-->Todo /monitoring inexistant<!-->
+
 - [Security](../admin/security.md)
 - [Monitoring](../admin/supervision.md)  
 - [Cloud](../admin/cloud.md)

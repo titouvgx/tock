@@ -9,13 +9,13 @@ This section of the Tock documentation provides a brief overview of the differen
 ## *Tock Web Connector API*
 
 The Tock Web Connector allows interaction with a bot through a REST API.
-<!-->Todo api/web-connector inexistant<!-->
+
 The documentation for this API is available at [/api/web-connector](../../api/web-connector.html).
 
 ## *Tock NLU API*
 
 The Tock _NLU/NLP_ API (Natural Language Understanding/Processing) allows programmatic querying of the conversational model and sentence analysis.
-<!-->Todo /api/ inexistant<!-->
+
 The Tock NLU API documentation is available at [/api](https://doc.tock.ai/tock/api/).
 
 You can find this documentation on the Tock demo platform at [https://demo.tock.ai/doc/](https://demo.tock.ai/doc/).
@@ -23,7 +23,7 @@ You can find this documentation on the Tock demo platform at [https://demo.tock.
 If you have deployed a Tock platform locally using the provided [Docker images](https://github.com/theopenconversationkit/tock-docker), this documentation is available at [http://localhost/doc/index.html](http://localhost/doc/index.html).
 
 ## *Tock Studio / Admin API*
-<!-->Todo api/admin inexistant<!-->
+
 Similarly, the _Tock Studio_ API documentation is available at [/api/admin](../../api/admin.html).
 
 You can find this documentation on the Tock demo platform at [https://demo.tock.ai/doc/admin.html](https://demo.tock.ai/doc/admin.html).
