@@ -28,6 +28,7 @@ theme:
     - navigation.expand
     - navigation.path
     - palette.toggle
+    - navigation.top
 
 hooks:
    - material/overrides/hooks/shortcodes.py
