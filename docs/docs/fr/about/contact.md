@@ -14,7 +14,7 @@ instantannée pour GitHub) :<br />
 <a href="https://gitter.im/tockchat/Lobby"
 target="gitter">
 
-![logo gitter](../img/gitter.png "gitter"){style="width:100px;"}
+![logo gitter](../../img/gitter.png "gitter"){style="width:100px;"}
 
 * Les ***issues*** GitHub permettent aussi de remonter une anomalie ou proposer une évolution :<br />
 [https://github.com/theopenconversationkit/tock/issues](https://github.com/theopenconversationkit/tock/issues)
@@ -22,5 +22,5 @@ target="gitter">
 <a href="https://github.com/theopenconversationkit/tock/issues"
 target="issues">
 
-![logo github](../img/github.png "github"){style="width:100px;"}
+![logo github](../../img/github.png "github"){style="width:100px;"}
 

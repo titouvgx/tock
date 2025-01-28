@@ -15,7 +15,7 @@ and [bots designed with Tock](showcase.md) have been awarded.
 
 ## *Best Open Source Strategy 2019* (SNCF)
 
-![img acteurs du libre](../img/acteursdulibre.png "Acteurs du libre")
+![img acteurs du libre](../../img/acteursdulibre.png "Acteurs du libre")
 
 In 2019, the _Acteurs du Libre_ award for the 
 [_Best Open Source Strategy_](https://lesacteursdulibre.com/portfolio/prix-meilleure-strategie/)

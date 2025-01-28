@@ -14,14 +14,14 @@ en complément des [guides](../guides/studio.md)
   [ℹ️ info](https://www.opensource-experience.com/event/#conf-15915)
   [📽️ 21 min](https://youtu.be/9ilX731vN64?si=g2RD2bij8i9O4uO1)
 
-[![REX l’Open Source pour industrialiser l’IA Générative [TOSIT]](../img/confREX.jpg)](https://youtu.be/9ilX731vN64?si=g2RD2bij8i9O4uO1)
+[![REX l’Open Source pour industrialiser l’IA Générative [TOSIT]](../../img/confREX.jpg)](https://youtu.be/9ilX731vN64?si=g2RD2bij8i9O4uO1)
 
 * _Gen AI with TOCK_ @ _[WAX](https://www.waxconf.fr/)_
   **2024** (RAG et LLM Open Source ? Vers des IA Génératives plus responsables.)
   [ℹ️ info](https://www.waxconf.fr/#:~:text=RAG%20et%20LLM%20Open%20Source%20%3F%20Vers%20des%20IA%20G%C3%A9n%C3%A9ratives%20plus%20responsables.)
   [📽️ 45 min](https://youtu.be/lYmUeYoVkwc)
 
-[![RAG et LLM Open Source ? Vers des IA Génératives plus responsables](../img/0.jpg)](https://youtu.be/lYmUeYoVkwc)
+[![RAG et LLM Open Source ? Vers des IA Génératives plus responsables](../../img/0.jpg)](https://youtu.be/lYmUeYoVkwc)
 
 
 * _[20 minutes from zero to live chatbot with Tock](https://www.youtube.com/watch?v=UsKkpYL7Hto)_  
@@ -31,7 +31,7 @@ en complément des [guides](../guides/studio.md)
 
 <a href="https://www.youtube.com/watch?v=UsKkpYL7Hto"
 target="tock_osxp">
-![logo tockosxp](../img/tockosxp2021.png )
+![logo tockosxp](../../img/tockosxp2021.png )
 
 * _AlloCovid_ @ _Voice Tech Paris_
   **2020** (REX INSERM, Allo-Media & SNCF)
@@ -39,7 +39,7 @@ target="tock_osxp">
 
 <a href="https://www.voicetechparis.com/conferences-2/"
 target="tock_voicetech">
-![img voice tech paris](../img/voicetechparis2020.jpeg "Voice Tech Paris")
+![img voice tech paris](../../img/voicetechparis2020.jpeg "Voice Tech Paris")
 </a>
 
 * _[Tock & Mélusine](https://fr.slideshare.net/FrancoisN0/tock-mlusine-rex-ia-open-source-aiparis-2020)_ @ _AI Paris_ 
@@ -49,7 +49,7 @@ target="tock_voicetech">
 
 <a href="https://fr.slideshare.net/FrancoisN0/tock-mlusine-rex-ia-open-source-aiparis-2020"
 target="tock_aiparis">
-![img T/M IA](../img/aiparis2020rex.jpg "Tock / Mélusine")
+![img T/M IA](../../img/aiparis2020rex.jpg "Tock / Mélusine")
 </a>
 
 * _[Conversationnel & Open Source](https://www.youtube.com/watch?v=fTy6uit7Ejg)_ @ _Paris Open Source Summit_ **2019**  
@@ -59,7 +59,7 @@ target="tock_aiparis">
 
 <a href="https://www.youtube.com/watch?v=fTy6uit7Ejg"
 target="tock_poss">
-![img POSS2019](../img/POSS2019.jpeg "POSS 2019")
+![img POSS2019](../../img/POSS2019.jpeg "POSS 2019")
 </a>
 
 * _[Développer un bot sur Messenger et Google Assistant en 30 minutes](https://www.youtube.com/watch?v=K4q8ZHw9TuI)_  
@@ -68,7 +68,7 @@ target="tock_poss">
 
 <a href="https://www.youtube.com/watch?v=K4q8ZHw9TuI"
 target="tock_devoxx">
-![img DEVOX FRANCE](../img/hq720.webp "MEET UP ")
+![img DEVOX FRANCE](../../img/hq720.webp "MEET UP ")
 </a>
 
 
@@ -89,7 +89,7 @@ target="tock_ima_01_2021">
 
 <a href="https://fr.slideshare.net/FrancoisN0/tock-the-open-conversation-kit-meetup-open-transport-161569957"
 target="tock_opentransport">
-![img tock meet](../img/TOCKmeet.webp "TOCK MEET")
+![img tock meet](../../img/TOCKmeet.webp "TOCK MEET")
 </a>
 
 * [Tock - _The Open Conversation Kit_](https://fr.slideshare.net/FrancoisN0/tock-the-open-conversation-kit-crip-open-source)
@@ -98,7 +98,7 @@ target="tock_opentransport">
 
 <a href="https://fr.slideshare.net/FrancoisN0/tock-the-open-conversation-kit-crip-open-source"
 target="tock_crip">
-![img tock crip](../img/TOCKCRIP.webp "TOCK CRIP")
+![img tock crip](../../img/TOCKCRIP.webp "TOCK CRIP")
 </a>
 
 

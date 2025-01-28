@@ -20,7 +20,7 @@ La plupart des utilisateurs et contributeurs Tock se retrouvent sur la messageri
 
 <a href="https://gitter.im/tockchat/Lobby"
 target="gitter">
-![logo gitter](../img/gitter.png "Gitter"){style="width:75px;"}
+![logo gitter](../../img/gitter.png "Gitter"){style="width:75px;"}
 </a>
 
 ## Suivre l'actualité de la plateforme
@@ -59,7 +59,7 @@ GitHub et à [contacter directement la communauté](https://gitter.im/tockchat/L
 
 <a href="https://github.com/theopenconversationkit/tock/"
 
-![logo kotlin](../img/github.png "kotlin"){style="width:100px;"}
+![logo kotlin](../../img/github.png "kotlin"){style="width:100px;"}
 </a>
 
 ## Association TOSIT
@@ -78,7 +78,7 @@ La solution est d'ores et déjà utilisée par plusieurs membres du TOSIT, dont 
 
 Pour en savoir plus, voir le site de l'association : [http://tosit.fr/](http://tosit.fr/)
 
-![Logo TOSIT](../img/tosit.png){style="width:75px;"}
+![Logo TOSIT](../../img/tosit.png){style="width:75px;"}
 
 ## Hébergement de la Démo publique
 

@@ -2,7 +2,7 @@
 
 This documentation provides detailed information about our multilingual synchronization feature now accessible via the settings of your application. It is presented as follows:
 
-![Synchronization](../img/synchronization.png)
+![Synchronization](../../img/synchronization.png)
 
 This feature requires the user to specify a source and a target, each associated with a namespace and an application, to synchronize data between different bots. It facilitates the development, testing, and maintenance of your chatbots, whether in monolingual or multilingual mode.
 

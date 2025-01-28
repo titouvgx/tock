@@ -10,16 +10,16 @@ en [Kotlin](https://kotlinlang.org/), [Javascript](https://nodejs.org/), [Python
 ou d'autres langages.
 
 
-![logo kotlin](../img/kothlin.png "kotlin"){style="width:75px;"}
+![logo kotlin](../../img/kothlin.png "kotlin"){style="width:75px;"}
 
 
-![logo nodejs](../img/nodejs.png "nodejs"){style="width:75px;"}
+![logo nodejs](../../img/nodejs.png "nodejs"){style="width:75px;"}
 
 
-![logo python](../img/python.png "kothlin"){style="width:75px;"}
+![logo python](../../img/python.png "kothlin"){style="width:75px;"}
 
 
-![logo rest-api](../img/restapi.png "rest api"){style="width:75px;"}
+![logo rest-api](../../img/restapi.png "rest api"){style="width:75px;"}
 
 
 Deux modes / frameworks / architectures sont proposés :
@@ -30,7 +30,7 @@ Le mode _Tock Bot API_ (recommandé pour la plupart des cas) permet de développ
 ou d'autres langages avec les clients fournis pour [Javascript/Nodejs](https://nodejs.org/) et 
 [Python](https://www.python.org/) ou n'importe quel langage grâce à l'API de Tock :
 
-![BOT API](../img/bot_api.png "BOT API")
+![BOT API](../../img/bot_api.png "BOT API")
 
 Ce mode est le seul disponible sur la [plateforme de démonstration Tock](https://demo.tock.ai/). 
 C'est aussi le seul mode permettant de développer dans n'importe quel langage de programmation, via l'API.
@@ -52,6 +52,6 @@ accède directement à la base de données MongoDB. Il est donc nécessaire pour
 de la plateforme Tock utilisée
 - De maîtriser le langage de programmation [Kotlin](https://kotlinlang.org/)
 
-![Bot TOCK](../img/bot_open_data.png "Bot Tock")
+![Bot TOCK](../../img/bot_open_data.png "Bot Tock")
 
 Pour en savoir plus, voir la page [_Bot intégré_](../dev/bot-integre.md).

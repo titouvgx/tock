@@ -19,7 +19,7 @@ Two major components are available:
 * the conversational framework integrated into _NLU_ services and various connectors such as
 Messenger, Google Assistant or Slack (see [developer manual](../dev/modes.md) and [connectors](../user/guides/canaux.md)).
 
-![Tock diagram](../img/tock.png "The different components of Tock")
+![Tock diagram](../../img/tock.png "The different components of Tock")
 
 The NLU platform is independent of the conversational part. It is possible to use the NLU without having to
 master the complexity induced by conversation management. In some important use cases, such as the [Internet of Things](https://fr.wikipedia.org/wiki/Internet_des_objets),
@@ -73,17 +73,17 @@ we wish to integrate.
 
 - The _NLU platform_ mode alone (without conversational part):
 
-![NLU schema](../img/nlp_api.png "NLU schema")
+![NLU schema](../../img/nlp_api.png "NLU schema")
 
 - The _Tock Bot API_ mode (recommended for most cases), allowing to develop in [Kotlin](https://kotlinlang.org/)
 or another language through the Tock conversational API:
 
-![BOT API](../img/bot_api.png "BOT API")
+![BOT API](../../img/bot_api.png "BOT API")
 
 - The _Tock Bot integrated_ mode (historical) allowing to develop in [Kotlin](https://kotlinlang.org/) only
 using all the possibilities of Tock but accessing the MongoDB database directly from the bot:
 
-![Bot TOCK](../img/bot_open_data.png "Bot Tock")
+![Bot TOCK](../../img/bot_open_data.png "Bot Tock")
 
 ## See also...
 

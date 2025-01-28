@@ -18,16 +18,16 @@ Des clients sont aussi disponibles pour [Javascript/Node](#developper-en-javascr
 Il est possible de développer des parcours Tock dans n'importe quel langage via la [_Bot API_](#developper-via-lapi).
 
 
-![logo kotlin](../img/kothlin.png "kotlin"){style="width:75px;"}
+![logo kotlin](../../img/kothlin.png "kotlin"){style="width:75px;"}
 
 
-![logo nodejs](../img/nodejs.png "nodejs"){style="width:75px;"}
+![logo nodejs](../../img/nodejs.png "nodejs"){style="width:75px;"}
 
 
-![logo python](../img/python.png "kothlin"){style="width:75px;"}
+![logo python](../../img/python.png "kothlin"){style="width:75px;"}
 
 
-![logo rest-api](../img/restapi.png "rest api"){style="width:75px;"}
+![logo rest-api](../../img/restapi.png "rest api"){style="width:75px;"}
 
 
 > Une autre section présente le mode [_Bot Framework_](bot-integre.md) disponible pour Kotlin uniquement, 
@@ -40,7 +40,7 @@ Plutôt que déployer se propre plateforme Tock, il est possible de tester les m
 
 ## Developper en Kotlin
 
-![logo kotlin](../img/kothlin.png "kotlin"){style="width:200px;"}
+![logo kotlin](../../img/kothlin.png "kotlin"){style="width:200px;"}
 
 ### Activer le mode WebSocket
 
@@ -146,7 +146,7 @@ fun main() {
 Le [code source complet de l'exemple](https://github.com/theopenconversationkit/tock-bot-demo) est disponible.
  
 ## Developper en Javascript
-![logo nodejs](../img/nodejs.png "nodejs"){style="width:75px;"}
+![logo nodejs](../../img/nodejs.png "nodejs"){style="width:75px;"}
 
 
 Un client est fourni pour développer des parcours en Javascript avec [Nodejs](https://nodejs.org/).  
@@ -154,7 +154,7 @@ Pour en savoir plus, voir la documentation sur le dépôt [`tock-node`](https://
 
 ## Developper en Python
 
-![logo python](../img/python.png "kothlin"){style="width:75px;"}
+![logo python](../../img/python.png "kothlin"){style="width:75px;"}
 
 
 Un client est fourni pour développer des parcours en [Python](https://www.python.org/).  
@@ -162,7 +162,7 @@ Pour en savoir plus, voir la documentation sur le dépôt [`tock-py`](https://gi
 
 ## Developper via l'API
 
-![logo rest-api](../img/restapi.png "rest api"){style="width:100px;"}
+![logo rest-api](../../img/restapi.png "rest api"){style="width:100px;"}
 
 Il est possible de développer des parcours Tock dans n'importe quel langage, en s'interfaçant directement avec 
 l'[API](api.md#tock-bot-definition-api).

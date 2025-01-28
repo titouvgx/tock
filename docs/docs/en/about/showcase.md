@@ -37,7 +37,7 @@ repository [`allocovid`](https://github.com/theopenconversationkit/allocovid).
 > The source repository also includes the [_Allo-Media connector_](../dev/connectors.md), 
 > technical details about the bot and its [functional specification](https://github.com/Delegation-numerique-en-sante/covid19-algorithme-orientation).
 
-![logo Allo covid](../img/allocovid.png "Allo covid")
+![logo Allo covid](../../img/allocovid.png "Allo covid")
  
 * **Name:** _[AlloCovid](https://www.allocovid.com/)_
 * **Date of birth:** in production since spring 2020
@@ -63,7 +63,7 @@ Website [www.oui.sncf](https://www.oui.sncf/bot), social networks, voice assista
 In 2019, _OUIbot_ answers approximately 10.000 users a day. It has been awarded _[Best Robot Experience](https://blog-cultures-services.com/2019/07/09/ouibot-de-ouisncf-laureat-prix-best-robot-experience-2019/)_
  for the second year in a row.
 
-![img Best robot experience](../img/blog.png "Best robot experience")
+![img Best robot experience](../../img/blog.png "Best robot experience")
  
 * **Name:** _[OUIbot](https://www.oui.sncf/services/assistant)_
 * **Date of birth:** in production since 2016
@@ -82,7 +82,7 @@ the mobile application for SNCF passengers on Android and iOS, covering both tra
 Accessible via the "microphone" in the mobile application, le SNCF Assistant's conversational bot is built with Tock
 plus the speech-to-text Android and iOS functions.
 
-![img assistant](../img/assistantmobile.jpg "assistant mobile")
+![img assistant](../../img/assistantmobile.jpg "assistant mobile")
 
 * **Name:** _[L' Assistant SNCF](https://www.sncf.com/fr/itineraire-reservation/informations-trafic/application-sncf)_
 * **Date of birth:** in production, featuring Tock voice function since 2019
@@ -99,7 +99,7 @@ _[Tilien](https://www.facebook.com/botsncftransilien/)_ is the Transilien chatbo
 
 Powered by Tock, the chatbot is waiting for you on Facebook Messenger.
 
-![img sncf](../img/sncf.webp)
+![img sncf](../../img/sncf.webp)
 
 * **Name:** _[Tilien](https://www.facebook.com/botsncftransilien/)_
 * **Date of birth:** in production, since 2018 with Tock
@@ -117,7 +117,7 @@ during and after their journey.
 Located on the _TGV INOUI_ Facebook page and the [WiFi Portal](https://www.sncf.com/en/passenger-offer/tgv-inoui/stay-connected-during-your-journey)
 aboard the train, the assistant is based on Tock and the [`tock-react-kit`](../dev/connectors.md#developing-your-own-connector).
 
-![img inoui](../img/inoui.jpg)
+![img inoui](../../img/inoui.jpg)
 
 * **Name:** _[Mon Assistant TGV INOUI](https://www.facebook.com/TGVINOUI/)_
 * **Date of birth:** in production since 2019
@@ -161,7 +161,7 @@ The callbot is powered by Tock using the [_Allo-Media connector_](../user/guides
 The _Speech-To-Text (STT)_ solution is [Allo-Media](https://www.allo-media.net/), and the _Text-To-Speech (TTS)_
 is [Voxygen](https://www.voxygen.fr/).
 
-![logo sncf](../img/logosncf.svg)
+![logo sncf](../../img/logosncf.svg)
 
 * **Name:** _EDF Callbot_
 * **Date of birth:** January 2021
@@ -184,7 +184,7 @@ without the need to contact a customer advisor.
 Co-developped with Enedis experts on TOCK solution, this chatbot is available 
 on the company Website [Enedis.fr](https://www.enedis.fr/).
 
-![Enedis Client Chatbot](../img/enedis_bot1.png "Enedis Client Chatbot")
+![Enedis Client Chatbot](../../img/enedis_bot1.png "Enedis Client Chatbot")
 
 * **Name:** _Enedis Client Chatbot_
 * **Date of birth:** in production from february 2021
@@ -238,7 +238,7 @@ and industry needs by enabling the development and integration of voice operated
 The _LinTO NLU (Natural Language Understanding)_ system is based on Tock to support the use of several AI models
 dedicated to specific use cases. It automatically learns according to one's usage when adding or removing skills from the platform.
 
-![logo LINTO](../img/linto.png "linto"){style="width:150px;"}
+![logo LINTO](../../img/linto.png "linto"){style="width:150px;"}
 
 * **Name:** _[LinTO](https://linto.ai/enterprises)_
 * **Date of birth:** in production, leveraging Tock since 2019
@@ -258,7 +258,7 @@ It also aims at better understanding employee needs through the analysis of most
 
 Built with Tock, the chatbot is available on an internal company Website.
 
-![Enedis internal Chatbot](../img/enedis_bot1.png "Enedis internal Chatbot")
+![Enedis internal Chatbot](../../img/enedis_bot1.png "Enedis internal Chatbot")
 
 * **Name:** _Chatbot interne Enedis_
 * **Date of birth:** in production since 2020
@@ -293,10 +293,10 @@ _RocBOT_ is dedicated to Ops teams at SNCF DEA, available at the office and on-t
 _RocBOT_ is available in production since 2020, on Teams desktop and mobile applications through the 
 Tock [_Teams connector_](../user/guides/canaux.md#teams).
 
-![img robot](../img/robot1.png )
+![img robot](../../img/robot1.png )
 
 
-![img robot](../img/robot2.png )
+![img robot](../../img/robot2.png )
 
 * **Name:** _RocBOT_
 * **Date of birth:** in production since 2020
@@ -322,7 +322,7 @@ leverages the Tock-provided [_Web connector_](../user/guides/canaux.md#web-gener
 [_React kit_](../user/guides/canaux.md#react) to integrate with the [Website](https://doc.tock.ai/fr/) (with several 
 lines of HTML/JS/CSS).
 
-![logo kotlin](../img/tockbot.jpg "Tockbot")
+![logo kotlin](../../img/tockbot.jpg "Tockbot")
 
 * **Name:** _Toki_
 * **Date of birth:** in production since 2021

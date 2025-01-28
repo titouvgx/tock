@@ -3,9 +3,11 @@ layout: page
 title: Tock
 permalink: /en/
 ---
+
+
 # Welcome to Tock - open conversational platform
 
-![NLU interface example - qualifying a sentence](img/favicon.png "NLU interface example - qualifying a sentence")
+![NLU interface example - qualifying a sentence](../img/favicon.png "NLU interface example - qualifying a sentence")
 
 
 **Tock** (*The Open Conversation Kit*) is a complete and open platform to build conversational agents - also known as _bots_. 
@@ -30,7 +32,7 @@ are also available:
 <a href="https://www.youtube.com/watch?v=UsKkpYL7Hto"
 target="tock_osxp">
 
-![img open source experience](img/tockosxp2021.png "video Open Source Experience 2021")
+![img open source experience](../img/tockosxp2021.png "video Open Source Experience 2021")
 </a>
 
 ## Features

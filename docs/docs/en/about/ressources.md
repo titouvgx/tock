@@ -14,14 +14,14 @@ to test the platform yourself.
   [ℹ️ info](https://www.opensource-experience.com/event/#conf-15915)
   [📽️ 21 min](https://youtu.be/9ilX731vN64?si=g2RD2bij8i9O4uO1)
 
-[![REX l’Open Source pour industrialiser l’IA Générative [TOSIT]](../img/confREX.jpg)](https://youtu.be/9ilX731vN64?si=g2RD2bij8i9O4uO1)
+[![REX l’Open Source pour industrialiser l’IA Générative [TOSIT]](../../img/confREX.jpg)](https://youtu.be/9ilX731vN64?si=g2RD2bij8i9O4uO1)
 
 * _Gen AI with TOCK_ @ _[WAX](https://www.waxconf.fr/)_
 **2024** (RAG and LLM Open Source? Towards more responsible Generative AI.)
 [ℹ️ info](https://www.waxconf.fr/#:~:text=RAG%20et%20LLM%20Open%20Source%20%3F%20Vers%20des%20IA%20G%C3%A9n%C3%A9ratives%20plus%20responsables.)
 [📽️ 45 min](https://youtu.be/lYmUeYoVkwc)
 
-[![RAG and LLM Open Source? Towards more responsible Generative AI](../img/0.jpg)](https://youtu.be/lYmUeYoVkwc)
+[![RAG and LLM Open Source? Towards more responsible Generative AI](../../img/0.jpg)](https://youtu.be/lYmUeYoVkwc)
 
 
 * _[20 minutes from zero to live chatbot with Tock](https://www.youtube.com/watch?v=UsKkpYL7Hto)_
@@ -31,7 +31,7 @@ to test the platform yourself.
 
 <a href="https://www.youtube.com/watch?v=UsKkpYL7Hto"
 target="tock_osxp">
-![logo tockosxp](../img/tockosxp2021.png )
+![logo tockosxp](../../img/tockosxp2021.png )
 </a>
 
 * _AlloCovid_ @ _Voice Tech Paris_
@@ -40,7 +40,7 @@ target="tock_osxp">
 
 <a href="https://www.voicetechparis.com/conferences-2/"
 target="tock_voicetech">
-![logo voicetech paris ](../img/voicetechparis2020.jpeg "voicetech")
+![logo voicetech paris ](../../img/voicetechparis2020.jpeg "voicetech")
 </a>
 
 * _[Tock & Mélusine](https://fr.slideshare.net/FrancoisN0/tock-mlusine-rex-ia-open-source-aiparis-2020)_ @ _AI Paris_
@@ -50,7 +50,7 @@ target="tock_voicetech">
 
 <a href="https://fr.slideshare.net/FrancoisN0/tock-mlusine-rex-ia-open-source-aiparis-2020"
 target="tock_aiparis">
-![logo air paris](../img/aiparis2020rex.jpg "AI paris ")
+![logo air paris](../../img/aiparis2020rex.jpg "AI paris ")
 </a>
 * _[Conversational & Open Source](https://www.youtube.com/watch?v=fTy6uit7Ejg)_ @ _Paris Open Source Summit_ **2019**
 (REX SNCF & guests EDF, Enedis, Orange, SogetiLabs, TOSIT)
@@ -59,7 +59,7 @@ target="tock_aiparis">
 
 <a href="https://www.youtube.com/watch?v=fTy6uit7Ejg"
 target="stock_poss">
-![logo POSS](../img/POSS2019.jpeg "POSS")
+![logo POSS](../../img/POSS2019.jpeg "POSS")
 </a>
 
 * _[Develop a bot on Messenger and Google Assistant in 30 minutes](https://www.youtube.com/watch?v=K4q8ZHw9TuI)_
@@ -68,7 +68,7 @@ target="stock_poss">
 
 <a href="https://www.youtube.com/watch?v=K4q8ZHw9TuI"
 target="tock_devoxx">
-![logo kotlin](../img/hq720.webp)
+![logo kotlin](../../img/hq720.webp)
 </a>
 
 
@@ -80,7 +80,7 @@ target="tock_devoxx">
 
 <a href="https://www.ima-dt.org/ima/event/detail.html/idConf/952"
 target="tock_ima_01_2021">
-![logo IMA](../img/ima.png "Innovation Makers Alliance")
+![logo IMA](../../img/ima.png "Innovation Makers Alliance")
 </a>
 
 * [Tock - _The Open Conversation Kit_](https://fr.slideshare.net/FrancoisN0/tock-the-open-conversation-kit-meetup-open-transport-161569957)
@@ -89,7 +89,7 @@ target="tock_ima_01_2021">
 
 <a href="https://fr.slideshare.net/FrancoisN0/tock-the-open-conversation-kit-meetup-open-transport-161569957"
 target="tock_opentransport">
-![logo TOCK](../img/TOCKmeet.webp "TOCK")
+![logo TOCK](../../img/TOCKmeet.webp "TOCK")
 </a>
 
 > Feel free to [share](contact.md) other media and links around Tock.

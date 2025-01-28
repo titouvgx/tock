@@ -11,7 +11,7 @@ Developers, users and curious people are more than welcome to share about Tock w
 
 <a href="https://gitter.im/tockchat/Lobby"
 target="gitter">
-![logo gitter](../img/gitter.png "gitter"){style="width:100px;"}
+![logo gitter](../../img/gitter.png "gitter"){style="width:100px;"}
 
 
 * GitHub ***issues*** can be used to keep track of bugs, enhancements or feature requests:<br />
@@ -20,4 +20,4 @@ target="gitter">
 <a href="https://github.com/theopenconversationkit/tock/issues"
 target="issues">
 
-![logo github](../img/github.png "github"){style="width:100px;"}
+![logo github](../../img/github.png "github"){style="width:100px;"}
