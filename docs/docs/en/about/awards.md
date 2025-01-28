@@ -23,7 +23,7 @@ was given to [SNCF](https://www.sncf.com/) ("French National Railway Company") f
 [Tock](https://doc.tock.ai/) (e.Voyageurs subsidiary) 
 and [Navitia](https://github.com/CanalTP/navitia) (Kisio Digital subsidiary).
 
-![img acteurs du libre](../img/ceremony.jpg "Acteurs du libre")
+![img acteurs du libre](../../img/ceremony.jpg "Acteurs du libre")
 
 [Simon Clavier](https://www.linkedin.com/in/clavier/) and [François Nollen](https://www.linkedin.com/in/francois-nollen-42102782/) 
 received the award on December 10<sup>th</sup> in the Grand Auditorium of [_Paris Open Source Summit_](http://2019.opensourcesummit.paris/).
@@ -34,7 +34,7 @@ To find out more, see [_Les Acteurs Du Libre_](https://lesacteursdulibre.com/por
 
 ## *Best Robot Experience 2019* (OUI.sncf)
 
-![logo kotlin](../img/blog.png "Acteurs du libre")
+![logo kotlin](../../img/blog.png "Acteurs du libre")
 
 In 2019, _OUIbot_ was awarded the 
 _[Best Robot Experience](https://blog-cultures-services.com/2019/07/09/ouibot-de-ouisncf-laureat-prix-best-robot-experience-2019/)_
@@ -49,7 +49,7 @@ More on the [Cultures Services](https://blog-cultures-services.com/2019/07/09/ou
 
 ## *Best Robot Experience 2018* (OUI.sncf)
 
-![logo kotlin](../img/BRE.jpg "Best Robot Experience 2018")
+![logo kotlin](../../img/BRE.jpg "Best Robot Experience 2018")
 
 In 2018, _OUIbot_ (the [OUI.sncf](https://en.oui.sncf/en/) assistant, with 10.000 users a day) 
 received the _[Best Robot Experience](https://www.sensduclient.com/2018/04/ouibot-ouisncf-est-le-gagnant-de-best.html)_

@@ -19,8 +19,14 @@ def on_page_markdown(
         chatbot_content = f.read()
    
     markdown += "\n\n" + chatbot_content  
-    depth = len(page.file.url.split('/')) - 1
-    path_to_docs_root = '../' * depth
+   
+ 
+    if page.file.url in ('fr/index.md', 'en/index.md'):
+        path_to_docs_root = './'  
+    else:
+
+        depth = len(page.file.url.split('/')) - 1
+        path_to_docs_root = '../' * depth
 
     markdown = markdown.replace('{{PATH_TO_DOCS_ROOT}}', path_to_docs_root)
 
