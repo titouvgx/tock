@@ -1,3 +1,6 @@
 !requirements.txt
 #file copied using hook
 docs/api
+# mkdocs build location
+site/ 
+
