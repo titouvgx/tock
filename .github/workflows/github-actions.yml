@@ -15,7 +15,7 @@ jobs:
         with:
             ref: ${{github.event.pull_request.head.ref}}
             repository: ${{github.event.pull_request.head.repo.full_name}}
-            
+
       - name: Get artifact ID from the latest successful run
         id: get_artifact
         uses: actions/github-script@v6
@@ -28,7 +28,7 @@ jobs:
             const workflow_id = 'github-actions.yml'; 
             
             // 1) Fetch the last successful run for the specified workflow.
-            const runsResponse = await github.rest.actions.listWorkflowRuns({
+            const runsResponse = await github.rest.actions.listWorkflowRunArtifacts({
               owner,
               repo,
               workflow_id,
