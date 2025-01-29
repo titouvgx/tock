@@ -7,6 +7,9 @@ on:
 permissions:
   contents: write
 jobs:
+ concurrency:
+    group: deploy-${{ github.repository }}
+    cancel-in-progress: false
   build:
     runs-on: ubuntu-latest
     steps:
@@ -108,9 +111,7 @@ jobs:
       issues: write
       pull-requests: write
     # Use concurrency to ensure only one deploy job runs at a time (queued execution)
-    concurrency:
-      group: deploy-${{ github.repository }}
-      cancel-in-progress: false
+   
 
     # Deploy to the GitHub Pages environment
     environment:
