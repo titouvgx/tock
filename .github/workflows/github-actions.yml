@@ -15,6 +15,58 @@ jobs:
         with:
             ref: ${{github.event.pull_request.head.ref}}
             repository: ${{github.event.pull_request.head.repo.full_name}}
+            
+      - name: Get artifact ID from the latest successful run
+        id: get_artifact
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            
+            // Change this to the workflow file name (or numerical ID) 
+            // of the workflow you want to pull artifacts from.
+            const workflow_id = 'github-actions.yml'; 
+            
+            // 1) Fetch the last successful run for the specified workflow.
+            const runsResponse = await github.rest.actions.listWorkflowRuns({
+              owner,
+              repo,
+              workflow_id,
+              status: 'success',
+              per_page: 1  // just get the latest
+            });
+            
+            const runs = runsResponse.data.workflow_runs;
+            
+            if (!runs || runs.length === 0) {
+              core.setFailed(`No successful runs found for workflow: ${workflow_id}`);
+              return;
+            }
+            
+            // Grab the first (most recent) successful run.
+            const latestRun = runs[0];
+            const run_id = latestRun.id;
+            console.log(`Latest successful run_id: ${run_id}`);
+            
+            // 2) List artifacts for that run.
+            const artifactsResponse = await github.rest.actions.listArtifactsForRun({
+              owner,
+              repo,
+              run_id
+            });
+            
+            const artifacts = artifactsResponse.data.artifacts;
+            if (!artifacts || artifacts.length === 0) {
+              core.setFailed(`No artifacts found for run: ${run_id}`);
+              return;
+            }
+            
+            // If multiple artifacts exist, pick one by name or just grab the first
+            const artifact = artifacts[0]; 
+            console.log(`Found artifact: ${artifact.name} (ID: ${artifact.id})`);
+            
+            // Output the artifact ID so we can use it in the next step
+            core.setOutput('artifact_id', artifact.id);
 
       # 3. Installation de Python
       - uses: actions/setup-python@v5
