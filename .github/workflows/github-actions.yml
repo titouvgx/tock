@@ -21,11 +21,6 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
-            module.exports = async ({
-              github,
-              context,
-              core
-            }) => {
               const { owner, repo } = context.repo;
               
               // Change this to the workflow file name (or numerical ID) 
@@ -67,8 +62,7 @@ jobs:
               } else {
                 core.setFailed("No artifact found");
               }
-            }
-
+              
       - name: DEBUG files
         run: |
           ls -lisha
