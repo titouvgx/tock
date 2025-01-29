@@ -106,6 +106,7 @@ jobs:
       pages: write      
       id-token: write
       issues: write
+      pull-requests: write
     # Use concurrency to ensure only one deploy job runs at a time (queued execution)
     concurrency:
       group: deploy-${{ github.repository }}
@@ -124,6 +125,7 @@ jobs:
         
             
       - uses: actions/github-script@v7
+        name: post comment
         if: ${{ github.event_name == 'pull_request_target'}}
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
