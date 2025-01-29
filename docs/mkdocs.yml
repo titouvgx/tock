@@ -36,12 +36,12 @@ hooks:
    - hooks/Rellinkadd.py
 
 plugins:
-  - tags
-  - git-authors
-  - git-committers:
-      repository: CreditMutuelArkea/tock
-      branch: 1811_mkdocs_documentation_website
-      token: !ENV MKDOCS_GIT_COMMITTERS_APIKEY
+  # - tags
+  # - git-authors
+  # - git-committers:
+  #     repository: CreditMutuelArkea/tock
+  #     branch: 1811_mkdocs_documentation_website
+  #     token: !ENV MKDOCS_GIT_COMMITTERS_APIKEY
 
   - search
   - i18n:
@@ -59,8 +59,8 @@ plugins:
           name: Français
           build: true
           site_name: "Tock Documentation"
-  - git-revision-date-localized:
-      enable_creation_date: true
+  # - git-revision-date-localized:
+  #     enable_creation_date: true
 
 extra_css:
   - assets/css/style.css
