@@ -12,12 +12,6 @@ jobs:
       # 1. Vérification du code source
       - uses: actions/checkout@v4
 
-      # 2. Configuration des identifiants Git
-      # - name: Configure Git Credentials
-      #   run: |
-      #     git config user.name github-actions[bot]
-      #     git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-
       # 3. Installation de Python
       - uses: actions/setup-python@v5
         with:
