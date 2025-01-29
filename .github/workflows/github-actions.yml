@@ -105,7 +105,7 @@ jobs:
     permissions:
       pages: write      
       id-token: write
-      issue: write
+      issues: write
     # Use concurrency to ensure only one deploy job runs at a time (queued execution)
     concurrency:
       group: deploy-${{ github.repository }}
