@@ -12,6 +12,9 @@ jobs:
     steps:
       # 1. Vérification du code source
       - uses: actions/checkout@v4
+        with:
+            ref: ${{github.event.pull_request.head.ref}}
+            repository: ${{github.event.pull_request.head.repo.full_name}}
 
       # 3. Installation de Python
       - uses: actions/setup-python@v5
