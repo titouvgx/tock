@@ -56,7 +56,7 @@ jobs:
                   archive_format: 'zip'
                 });
                 require('fs').writeFileSync("github-pages.zip", Buffer.from(response.data));
-                require('child_process').execSync(`unzip -o "github-pages.zip" -d "docs/site/"`);
+                require('child_process').execSync(`unzip -o github-pages.zip -d "/tmp/gh-artifact-extract" && mkdir docs/site && tar xvf /tmp/gh-artifact-extract/artifact.tar -C docs/site/`);
 
                 console.log("Artifact downloaded successfully");
               } else {
