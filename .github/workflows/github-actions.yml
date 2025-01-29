@@ -63,16 +63,16 @@ jobs:
       #           core.setFailed("No artifact found");
       #         }
 
-      - name: DEBUG files
-        run: |
-          echo "git root"
-          ls -lisha
-          cd docs
-          echo "docs"
-          ls -lisha
-          cd site
-          echo "docs/site" 
-          ls -lisha
+      # - name: DEBUG files
+      #   run: |
+      #     echo "git root"
+      #     ls -lisha
+      #     cd docs
+      #     echo "docs"
+      #     ls -lisha
+      #     cd site
+      #     echo "docs/site" 
+      #     ls -lisha
 
             
       # 3. Installation de Python
