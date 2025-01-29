@@ -46,9 +46,8 @@ jobs:
 
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
-      pages: write      # to deploy to Pages
-      id-token: write   # to verify the deployment originates from an appropriate source
-
+      pages: write      
+      id-token: write   
     # Use concurrency to ensure only one deploy job runs at a time (queued execution)
     concurrency:
       group: deploy-${{ github.repository }}
