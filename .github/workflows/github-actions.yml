@@ -135,5 +135,5 @@ jobs:
               issue_number: context.payload.pull_request.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: 'website is published : [https://titouvgx.github.io/tock/'+context.ref_name+'/](https://titouvgx.github.io/tock/'+context.ref_name+'/) '
+              body: 'website is published : [https://titouvgx.github.io/tock/'+context.payload.pull_request.head.ref+'/](https://titouvgx.github.io/tock/'+context.payload.pull_request.head.ref+'/) '
             });
