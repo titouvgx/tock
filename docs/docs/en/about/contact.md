@@ -21,3 +21,5 @@ target="gitter">
 target="issues">
 
 ![logo github](../../img/github.png "github"){style="width:100px;"}
+
+</a>
