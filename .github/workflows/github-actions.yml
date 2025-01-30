@@ -80,32 +80,31 @@ jobs:
           # Extraire le fichier TAR de l'artefact
           tar xvf /tmp/gh-artifact-extract/artifact.tar -C /tmp/gh-artifact-extract/
           
-          # Naviguer dans le dossier "." et récupérer le dossier correspondant à la branche fermée ou mergée
-          if [ -d "/tmp/gh-artifact-extract/./" ]; then
-            echo "Dossier '.' trouvé, récupération du contenu pour la branche ${branch_name}"
+          # Naviguer dans le dossier correspondant à la branche
+          branch_name="${{ github.event.pull_request.head.ref }}"
+          branch_dir="/tmp/gh-artifact-extract/./${branch_name}"
+
+          # Vérifier si le dossier de la branche existe dans l'artefact
+          if [ -d "$branch_dir" ]; then
+            echo "Restauration du contenu pour la branche ${branch_name}"
+
+            # Créer le dossier dans docs/site pour publier le contenu
+            mkdir -p "docs/site"
             
-            # Vérifier si le dossier de la branche existe dans l'artefact
-            branch_dir="/tmp/gh-artifact-extract/./${branch_name}"
-            if [ -d "$branch_dir" ]; then
-              echo "Restauration du contenu pour la branche ${branch_name}"
-              
-              # Créer le dossier pour la branche dans docs/site
-              mkdir -p "docs/site/${branch_name}"
-              
-              # Copier le contenu du dossier de la branche dans docs/site/
-              cp -r "$branch_dir"/* "docs/site/${branch_name}/"
-              echo "Contenu de la branche ${branch_name} restauré dans docs/site/"
-            else
-              echo "Aucun dossier trouvé pour la branche ${branch_name} dans l'artefact."
-            fi
+            # Copier tout le contenu du dossier de la branche dans docs/site/
+            cp -r "$branch_dir"/* "docs/site/"
+            echo "Contenu de la branche ${branch_name} restauré dans docs/site/"
           else
-            echo "Aucun dossier '.' trouvé dans l'artefact."
+            echo "Aucun dossier trouvé pour la branche ${branch_name} dans l'artefact."
           fi
 
       - name: Commit and push changes
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git add docs/site/
+          
+          # Ajouter le dossier docs/site/ même s'il est ignoré par .gitignore
+          git add -f docs/site/
+
           git commit -m "Cleanup and republish site for closed PR"
           git push https://x-access-token:${{ secrets.ACTIONS_ARTIFACT_TOKEN }}@github.com/${{ github.repository }}.git
