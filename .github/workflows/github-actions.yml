@@ -120,11 +120,8 @@ jobs:
       - name: Override page_url
         id: change-page-url
         run: |
-          if [[ "${GITHUB_REF}" == "refs/heads/1811_testpr" ]]; then
-            echo "new_page_url=https://titouvgx.github.io/tock/1811_testpr/" >> $GITHUB_OUTPUT
-          elif [[ "${GITHUB_REF}" == "refs/heads/1811_mkdocs_documentation_website" ]]; then
-            echo "new_page_url=https://titouvgx.github.io/tock/1811_mkdocs_documentation_website/" >> $GITHUB_OUTPUT
-          fi
+            echo "new_page_url=https://titouvgx.github.io/tock/${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}/" >> $GITHUB_OUTPUT
+          
 
       - uses: actions/github-script@v7
         name: Post comment
