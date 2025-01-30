@@ -1,48 +1,35 @@
-name: Deploy MkDocs
+name: Cleanup and Republish Artifacts
 
 on:
   pull_request_target:
-    types: [closed]  # Écoute les PR fermées
-  push:
-    branches:
-      - 1811_testpr
-      - 1811_mkdocs_documentation_website
+    types: [closed]
 
 permissions:
   contents: write
 
-concurrency:
-  group: deploy-${{ github.repository }}
-  cancel-in-progress: false
-
 jobs:
-  build:
+  cleanup:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.pull_request.head.ref }}
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Get artifact ID from the latest successful run
+      - name: Get latest successful artifact
         id: get_artifact
         uses: actions/github-script@v6
         with:
           script: |
             const { owner, repo } = context.repo;
-            const workflow_id = 'github-actions.yml'; 
-            
             console.log('Récupération des derniers artefacts');
             const runs = await github.rest.actions.listWorkflowRuns({
               owner,
               repo,
-              workflow_id: workflow_id,
               status: "success",
               per_page: 1
             });
 
-            if (runs.data.total_count === 0) { 
-              console.log("Aucun artefact trouvé. On continue quand même.");
+            if (runs.data.total_count === 0) {
+              console.log("Aucun artefact trouvé. Arrêt du processus.");
               return;
             }
 
@@ -62,93 +49,16 @@ jobs:
                 archive_format: 'zip'
               });
               require('fs').writeFileSync("github-pages.zip", Buffer.from(response.data));
-              require('child_process').execSync(`unzip -o github-pages.zip -d "/tmp/gh-artifact-extract" && mkdir -p docs/site && tar xvf /tmp/gh-artifact-extract/artifact.tar -C docs/site/`);
-              console.log("Artefact téléchargé et extrait");
             } else {
               console.log("Aucun artefact trouvé.");
             }
 
-      - uses: actions/setup-python@v5
-        with:
-          python-version: 3.13.0
-
-      - name: Install dependencies
+      - name: Delete old artifact and folder
         run: |
-          echo "Installation des dépendances"
-          pip install -r docs/requirements.txt
-
-      - name: Build MkDocs site
-        run: |
-          echo "Compilation du site MkDocs"
-          cd docs
-          mkdocs build --site-dir site/${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}
-
-      - name: Upload static files as artifact
-        id: deployment
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: docs/site
-
-  deploy:
-    needs: build
-    permissions:
-      pages: write      
-      id-token: write
-      issues: write
-      pull-requests: write
-
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}  # L'URL qui sera affichée dans l'environnement
-
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-
-      - name: Override page_url
-        id: change-page-url
-        run: |
-          echo "Mise à jour de l'URL de déploiement"
-          if [[ "${GITHUB_REF}" == "refs/heads/1811_testpr" ]]; then
-            echo "new_page_url=https://titouvgx.github.io/tock/1811_testpr/" >> $GITHUB_OUTPUT
-          elif [[ "${GITHUB_REF}" == "refs/heads/1811_mkdocs_documentation_website" ]]; then
-            echo "new_page_url=https://titouvgx.github.io/tock/1811_mkdocs_documentation_website/" >> $GITHUB_OUTPUT
-          fi
-
-      - uses: actions/github-script@v7
-        name: Post comment
-        if: ${{ github.event_name == 'pull_request_target'}}
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            console.log('Commentaire sur la PR :');
-            github.rest.issues.createComment({
-              issue_number: context.payload.pull_request.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: 'Website is published: [${{ steps.change-page-url.outputs.new_page_url }}](${{ steps.change-page-url.outputs.new_page_url }})'
-            });
-
-  cleanup:
-    if: ${{ github.event.pull_request.state == 'closed' }}  # Exécuter lorsque la PR est fermée
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        run: |
-          echo "Clonage du dépôt pour pouvoir effectuer les commandes Git"
-          git clone https://github.com/${{ github.repository }} repo
-          cd repo
-          git checkout ${{ github.event.pull_request.head.ref }}
-        
-      - name: Delete artifact and associated folder
-        run: |
-          echo "Suppression de l'artefact et du dossier associé à la PR fermée ou supprimée"
+          echo "Suppression du dossier associé à la PR fermée ou supprimée"
           branch_name="${{ github.event.pull_request.head.ref }}"
           folder_path="docs/site/${branch_name}"
 
-          # Supprimer le dossier associé à la PR fermée ou supprimée
           if [ -d "$folder_path" ]; then
             echo "Suppression du dossier pour la branche ${branch_name}"
             rm -rf "$folder_path"
@@ -156,19 +66,18 @@ jobs:
             echo "Aucun dossier à supprimer pour la branche ${branch_name}"
           fi
 
-          # Republier l'artefact si nécessaire
-          echo "Republier l'artefact pour la branche ${branch_name}"
-          git fetch --all
-          git checkout $branch_name
-          mkdocs build --site-dir docs/site/$branch_name
-          echo "Déploiement de l'artefact pour ${branch_name}"
-        
-      - name: Post cleanup comment
+      - name: Republish artifact
         run: |
-          echo "Commentaire après nettoyage"
-          github.rest.issues.createComment({
-            issue_number: context.payload.pull_request.number,
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            body: 'Cleanup completed for PR and associated branch: [${{ github.event.pull_request.head.ref }}]'
-          });
+          echo "Décompression et republication de l'artefact"
+          unzip github-pages.zip -d "/tmp/gh-artifact-extract"
+          mkdir -p docs/site/
+          tar xvf /tmp/gh-artifact-extract/artifact.tar -C docs/site/
+          echo "Artefact restauré dans docs/site/"
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add docs/site/
+          git commit -m "Cleanup and republish site for closed PR"
+          git push
