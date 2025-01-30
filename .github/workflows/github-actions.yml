@@ -3,6 +3,7 @@ on:
   pull_request_target:
   push:
     branches:
+      - 1811_testpr
       - 1811_mkdocs_documentation_website
 
 permissions:
@@ -16,13 +17,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # 1. Vérification du code source
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.ref }}
           repository: ${{ github.event.pull_request.head.repo.full_name }}
 
-      # 2. Récupération du dernier artefact de build (s'il existe)
       - name: Get artifact ID from the latest successful run
         id: get_artifact
         uses: actions/github-script@v6
@@ -65,7 +64,6 @@ jobs:
               console.log("Aucun artefact trouvé.");
             }
 
-      # 3. Debug pour voir les fichiers disponibles
       - name: DEBUG files
         run: |
           echo "Contenu du repo :"
@@ -75,27 +73,30 @@ jobs:
           echo "Contenu de docs/site :"
           ls -lA docs/site || echo "Pas de dossier site"
 
-      # 4. Installation de Python
       - uses: actions/setup-python@v5
         with:
           python-version: 3.13.0
 
-      # 5. Installation des dépendances MkDocs
       - name: Install dependencies
         run: |
           pip install -r docs/requirements.txt
 
-      # 6. Build du site
       - name: Build MkDocs site
         run: |
           cd docs
           mkdocs build --site-dir site/${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}
 
-      # 7. Upload des fichiers statiques
       - name: Upload static files as artifact
         id: deployment
         uses: actions/upload-pages-artifact@v3
         with:
+          path: docs/site
+
+      - name: Upload artifact for download
+        id: upload-artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: github-pages
           path: docs/site
 
   deploy:
@@ -116,6 +117,15 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
+      - name: Override page_url
+        id: change-page-url
+        run: |
+          if [[ "${GITHUB_REF}" == "refs/heads/1811_testpr" ]]; then
+            echo "new_page_url=https://titouvgx.github.io/tock/1811_testpr/" >> $GITHUB_OUTPUT
+          elif [[ "${GITHUB_REF}" == "refs/heads/1811_mkdocs_documentation_website" ]]; then
+            echo "new_page_url=https://titouvgx.github.io/tock/1811_mkdocs_documentation_website/" >> $GITHUB_OUTPUT
+          fi
+
       - uses: actions/github-script@v7
         name: Post comment
         if: ${{ github.event_name == 'pull_request_target'}}
@@ -127,5 +137,5 @@ jobs:
               issue_number: context.payload.pull_request.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: 'Website is published: [${{ steps.deployment.outputs.page_url }}](${{ steps.deployment.outputs.page_url }})'
+              body: 'Website is published: [${{ steps.change-page-url.outputs.new_page_url }}](${{ steps.change-page-url.outputs.new_page_url }})'
             });
