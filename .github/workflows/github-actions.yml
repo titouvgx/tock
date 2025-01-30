@@ -132,44 +132,43 @@ jobs:
             });
 
   cleanup:
-  if: ${{ github.event.pull_request.state == 'closed' }}  # Exécuter lorsque la PR est fermée
-  runs-on: ubuntu-latest
-  steps:
-    - name: Checkout repository
-      run: |
-        echo "Clonage du dépôt pour pouvoir effectuer les commandes Git"
-        git clone https://github.com/${{ github.repository }} repo
-        cd repo
-        git checkout ${{ github.event.pull_request.head.ref }}
-      
-    - name: Delete artifact and associated folder
-      run: |
-        echo "Suppression de l'artefact et du dossier associé à la PR fermée ou supprimée"
-        branch_name="${{ github.event.pull_request.head.ref }}"
-        folder_path="docs/site/${branch_name}"
-
-        # Supprimer le dossier associé à la PR fermée ou supprimée
-        if [ -d "$folder_path" ]; then
-          echo "Suppression du dossier pour la branche ${branch_name}"
-          rm -rf "$folder_path"
-        else
-          echo "Aucun dossier à supprimer pour la branche ${branch_name}"
-        fi
-
-        # Republier l'artefact si nécessaire
-        echo "Republier l'artefact pour la branche ${branch_name}"
-        git fetch --all
-        git checkout $branch_name
-        mkdocs build --site-dir docs/site/$branch_name
-        echo "Déploiement de l'artefact pour ${branch_name}"
+    if: ${{ github.event.pull_request.state == 'closed' }}  # Exécuter lorsque la PR est fermée
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        run: |
+          echo "Clonage du dépôt pour pouvoir effectuer les commandes Git"
+          git clone https://github.com/${{ github.repository }} repo
+          cd repo
+          git checkout ${{ github.event.pull_request.head.ref }}
         
-    - name: Post cleanup comment
-      run: |
-        echo "Commentaire après nettoyage"
-        github.rest.issues.createComment({
-          issue_number: context.payload.pull_request.number,
-          owner: context.repo.owner,
-          repo: context.repo.repo,
-          body: 'Cleanup completed for PR and associated branch: [${{ github.event.pull_request.head.ref }}]'
-        });
+      - name: Delete artifact and associated folder
+        run: |
+          echo "Suppression de l'artefact et du dossier associé à la PR fermée ou supprimée"
+          branch_name="${{ github.event.pull_request.head.ref }}"
+          folder_path="docs/site/${branch_name}"
 
+          # Supprimer le dossier associé à la PR fermée ou supprimée
+          if [ -d "$folder_path" ]; then
+            echo "Suppression du dossier pour la branche ${branch_name}"
+            rm -rf "$folder_path"
+          else
+            echo "Aucun dossier à supprimer pour la branche ${branch_name}"
+          fi
+
+          # Republier l'artefact si nécessaire
+          echo "Republier l'artefact pour la branche ${branch_name}"
+          git fetch --all
+          git checkout $branch_name
+          mkdocs build --site-dir docs/site/$branch_name
+          echo "Déploiement de l'artefact pour ${branch_name}"
+        
+      - name: Post cleanup comment
+        run: |
+          echo "Commentaire après nettoyage"
+          github.rest.issues.createComment({
+            issue_number: context.payload.pull_request.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: 'Cleanup completed for PR and associated branch: [${{ github.event.pull_request.head.ref }}]'
+          });
