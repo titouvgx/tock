@@ -64,15 +64,6 @@ jobs:
               console.log("Aucun artefact trouvé.");
             }
 
-      - name: DEBUG files
-        run: |
-          echo "Contenu du repo :"
-          ls -lA
-          echo "Contenu de docs :"
-          ls -lA docs || echo "Pas de dossier docs"
-          echo "Contenu de docs/site :"
-          ls -lA docs/site || echo "Pas de dossier site"
-
       - uses: actions/setup-python@v5
         with:
           python-version: 3.13.0
@@ -108,14 +99,7 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
-
-      - name: Override page_url
-        id: change-page-url
-        run: |
-            echo "new_page_url=https://titouvgx.github.io/tock/${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}/"
-            echo "new_page_url=https://titouvgx.github.io/tock/${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}/" >> $GITHUB_OUTPUT
-          
+        uses: actions/deploy-pages@v4          
 
       - uses: actions/github-script@v7
         name: Post comment
