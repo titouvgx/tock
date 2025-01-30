@@ -1,77 +1,83 @@
-name: Deploy MkDocs
-on:
-  pull_request:
-    types: [closed]
-    branches:
-      - 1811_mkdocs_documentation_website
+# name: Deploy MkDocs on PR Close
 
-permissions:
-  contents: write
+# on:
+#   pull_request:
+#     types: [closed]
 
-jobs:
-  concurrency:
-    group: deploy-${{ github.repository }}
-    cancel-in-progress: false
+# permissions:
+#   contents: write
 
-  close_job:
-  merge_job:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Get artifact ID from the latest successful run
-        id: get_artifact
-        uses: actions/github-script@v6
-        with:
-          script: |
-            const { owner, repo } = context.repo;
-            
-            // Définition du workflow source
-            const workflow_id = 'github-actions.yml'; 
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v4
 
-            const runs = await github.rest.actions.listWorkflowRuns({
-              owner,
-              repo,
-              workflow_id: workflow_id,
-              status: "success",
-              per_page: 1
-            });
+#       - name: Get latest successful artifact
+#         id: get_artifact
+#         uses: actions/github-script@v6
+#         with:
+#           script: |
+#             const { owner, repo } = context.repo;
+#             const workflow_id = 'github-actions.yml'; // Nom du workflow à surveiller
 
-            if (runs.data.total_count === 0) { 
-              core.setFailed("No successful runs found");
-              return;
-            }
+#             const runs = await github.rest.actions.listWorkflowRuns({
+#               owner,
+#               repo,
+#               workflow_id: workflow_id,
+#               status: "success",
+#               per_page: 1
+#             });
 
-            const artifacts = await github.rest.actions.listWorkflowRunArtifacts({
-              owner,
-              repo,
-              run_id: runs.data.workflow_runs[0].id
-            });
+#             if (!runs.data.workflow_runs.length) {
+#               core.setFailed("Aucun run réussi trouvé.");
+#               return;
+#             }
 
-            const artifact = artifacts.data.artifacts.find(a => a.name === "github-pages");
+#             const run_id = runs.data.workflow_runs[0].id;
 
-            if (artifact) {
-              console.log("Found artifact ID:", artifact.id);
+#             const artifacts = await github.rest.actions.listWorkflowRunArtifacts({
+#               owner,
+#               repo,
+#               run_id: run_id
+#             });
 
-              // Télécharger l'artifact
-              const response = await github.rest.actions.downloadArtifact({
-                owner,
-                repo,
-                artifact_id: artifact.id,
-                archive_format: 'zip'
-              });
+#             const artifact = artifacts.data.artifacts.find(a => a.name === "github-pages");
 
-              require('fs').writeFileSync("github-pages.zip", Buffer.from(response.data));
-              require('child_process').execSync(`unzip -o github-pages.zip -d "/tmp/gh-artifact-extract" && mkdir -p docs/site && tar xvf /tmp/gh-artifact-extract/artifact.tar -C docs/site/`);
+#             if (artifact) {
+#               console.log(`✅ Artifact trouvé: ID ${artifact.id}`);
+#               core.setOutput("artifact_id", artifact.id);
+#             } else {
+#               core.setFailed("❌ Aucun artifact 'github-pages' trouvé.");
+#             }
 
-              console.log("Artifact downloaded successfully");
+#       - name: Download and extract artifact
+#         if: success()
+#         env:
+#           ARTIFACT_ID: ${{ steps.get_artifact.outputs.artifact_id }}
+#         run: |
+#           mkdir -p /tmp/gh-artifact-extract
+#           curl -L -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+#             -H "Accept: application/vnd.github+json" \
+#             "https://api.github.com/repos/${{ github.repository }}/actions/artifacts/$ARTIFACT_ID/zip" \
+#             -o artifact.zip
 
-              // Supprimer l'ancien artifact après utilisation
-              await github.rest.actions.deleteArtifact({
-                owner,
-                repo,
-                artifact_id: artifact.id
-              });
+#           unzip artifact.zip -d /tmp/gh-artifact-extract
+#           mkdir -p docs/site
+#           tar -xvf /tmp/gh-artifact-extract/artifact.tar -C docs/site/
 
-              console.log(`Artifact ID ${artifact.id} deleted successfully.`);
-            } else {
-              core.setFailed("No artifact found");
-            }
+#       - name: Remove PR branch directory
+#         run: |
+#           BRANCH_NAME="${{ github.event.pull_request.head.ref }}"
+#           rm -rf "docs/site/$BRANCH_NAME"
+#           echo "🗑️ Dossier supprimé: docs/site/$BRANCH_NAME"
+
+#       - name: Deploy artifact
+#         run: |
+#           echo "🚀 Déploiement du site MkDocs"
+#           git config --global user.name "github-actions[bot]"
+#           git config --global user.email "github-actions@github.com"
+#           git add docs/site
+#           git commit -m "🛠️ Mise à jour du site après la fermeture de la PR #${{ github.event.pull_request.number }}"
+#           git push

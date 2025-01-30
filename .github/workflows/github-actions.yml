@@ -4,116 +4,108 @@ on:
   push:
     branches:
       - 1811_mkdocs_documentation_website
+
 permissions:
   contents: write
+
+concurrency:
+  group: deploy-${{ github.repository }}
+  cancel-in-progress: false
+
 jobs:
- concurrency:
-    group: deploy-${{ github.repository }}
-    cancel-in-progress: false
   build:
     runs-on: ubuntu-latest
     steps:
       # 1. Vérification du code source
       - uses: actions/checkout@v4
         with:
-            ref: ${{github.event.pull_request.head.ref}}
-            repository: ${{github.event.pull_request.head.repo.full_name}}
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
 
+      # 2. Récupération du dernier artefact de build (s'il existe)
       - name: Get artifact ID from the latest successful run
         id: get_artifact
         uses: actions/github-script@v6
         with:
           script: |
-              const { owner, repo } = context.repo;
-              
-              // Change this to the workflow file name (or numerical ID) 
-              // of the workflow you want to pull artifacts from.
-              const workflow_id = 'github-actions.yml'; 
-              
-              const runs = await github.rest.actions.listWorkflowRuns({
+            const { owner, repo } = context.repo;
+            const workflow_id = 'github-actions.yml'; 
+            
+            const runs = await github.rest.actions.listWorkflowRuns({
+              owner,
+              repo,
+              workflow_id: workflow_id,
+              status: "success",
+              per_page: 1
+            });
+
+            if (runs.data.total_count === 0) { 
+              console.log("Aucun artefact trouvé. On continue quand même.");
+              return;
+            }
+
+            const artifacts = await github.rest.actions.listWorkflowRunArtifacts({
+              owner,
+              repo,
+              run_id: runs.data.workflow_runs[0].id
+            });
+
+            const artifact = artifacts.data.artifacts.find(a => a.name === "github-pages");
+            if (artifact) {
+              console.log("Artifact trouvé avec ID :", artifact.id);
+              const response = await github.rest.actions.downloadArtifact({
                 owner,
                 repo,
-                workflow_id: workflow_id,
-                status: "success",
-                per_page: 1
+                artifact_id: artifact.id,
+                archive_format: 'zip'
               });
+              require('fs').writeFileSync("github-pages.zip", Buffer.from(response.data));
+              require('child_process').execSync(`unzip -o github-pages.zip -d "/tmp/gh-artifact-extract" && mkdir -p docs/site && tar xvf /tmp/gh-artifact-extract/artifact.tar -C docs/site/`);
+            } else {
+              console.log("Aucun artefact trouvé.");
+            }
 
-                if (runs.data.total_count === 0) { //TODO continuer le job si pas d'artefact
-                core.setFailed("No runs found");
-                return;
-              }
-
-                const artifacts = await github.rest.actions.listWorkflowRunArtifacts({
-                owner,
-                repo,
-                run_id: runs.data.workflow_runs[0].id
-              });
-
-                const artifact = artifacts.data.artifacts.find(artifact => artifact.name === "github-pages");
-              if (artifact) {
-                console.log("Artifact ID :", artifact.id);
-                const response = await github.rest.actions.downloadArtifact({
-                  owner,
-                  repo,
-                  artifact_id: artifact.id,
-                  archive_format: 'zip'
-                });
-                require('fs').writeFileSync("github-pages.zip", Buffer.from(response.data));
-                require('child_process').execSync(`unzip -o github-pages.zip -d "/tmp/gh-artifact-extract" && mkdir docs/site && tar xvf /tmp/gh-artifact-extract/artifact.tar -C docs/site/`);
-
-                console.log("Artifact downloaded successfully");
-              } else {
-                core.setFailed("No artifact found");
-              }
-
+      # 3. Debug pour voir les fichiers disponibles
       - name: DEBUG files
         run: |
-          echo "git root"
-          ls -lisha
-          cd docs
-          echo "docs"
-          ls -lisha
-          cd site
-          echo "docs/site" 
-          ls -lisha
+          echo "Contenu du repo :"
+          ls -lA
+          echo "Contenu de docs :"
+          ls -lA docs || echo "Pas de dossier docs"
+          echo "Contenu de docs/site :"
+          ls -lA docs/site || echo "Pas de dossier site"
 
-            
-      # 3. Installation de Python
+      # 4. Installation de Python
       - uses: actions/setup-python@v5
         with:
           python-version: 3.13.0
 
-      # 4. Installation des dépendances MkDocs
+      # 5. Installation des dépendances MkDocs
       - name: Install dependencies
         run: |
           pip install -r docs/requirements.txt
 
+      # 6. Build du site
       - name: Build MkDocs site
         run: |
           cd docs
           mkdocs build --site-dir site/${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}
 
+      # 7. Upload des fichiers statiques
       - name: Upload static files as artifact
         id: deployment
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs/site
 
-
   deploy:
-    # Add a dependency to the build job
     needs: build
-
-    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
       pages: write      
       id-token: write
       issues: write
       pull-requests: write
-    # Use concurrency to ensure only one deploy job runs at a time (queued execution)
-   
 
-    # Deploy to the GitHub Pages environment
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -123,18 +115,17 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        
-            
+
       - uses: actions/github-script@v7
-        name: post comment
+        name: Post comment
         if: ${{ github.event_name == 'pull_request_target'}}
         with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             console.log(context.payload);
             github.rest.issues.createComment({
               issue_number: context.payload.pull_request.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: 'website is published : [https://titouvgx.github.io/tock/'+context.payload.pull_request.head.ref+'/](https://titouvgx.github.io/tock/'+context.payload.pull_request.head.ref+'/) '
+              body: 'Website is published: [${{ steps.deployment.outputs.page_url }}](${{ steps.deployment.outputs.page_url }})'
             });
