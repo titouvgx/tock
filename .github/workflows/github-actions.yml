@@ -1,38 +1,45 @@
-name: Cleanup and Republish Artifacts
-
+name: Deploy MkDocs
 on:
-  pull_request:
-    types: [closed]  # Déclenché lorsqu'une PR est fermée ou mergée
+  pull_request_target:
+  push:
+    branches:
+      - 1811_testpr
+      - 1811_mkdocs_documentation_website
 
 permissions:
-  actions: read
   contents: write
 
+concurrency:
+  group: deploy-${{ github.repository }}
+  cancel-in-progress: false
+
 jobs:
-  cleanup:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
 
-      - name: Get latest successful artifact
+      - name: Get artifact ID from the latest successful run
         id: get_artifact
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.ACTIONS_ARTIFACT_TOKEN }}  # Utilisation du token personnel (PAT)
           script: |
             const { owner, repo } = context.repo;
-            console.log('Récupération des derniers artefacts');
+            const workflow_id = 'github-actions.yml'; 
+            
             const runs = await github.rest.actions.listWorkflowRuns({
               owner,
               repo,
-              workflow_id: "github-actions.yml", 
+              workflow_id: workflow_id,
               status: "success",
               per_page: 1
             });
 
-            if (runs.data.total_count === 0) {
-              console.log("Aucun artefact trouvé. Arrêt du processus.");
+            if (runs.data.total_count === 0) { 
+              console.log("Aucun artefact trouvé. On continue quand même.");
               return;
             }
 
@@ -52,59 +59,288 @@ jobs:
                 archive_format: 'zip'
               });
               require('fs').writeFileSync("github-pages.zip", Buffer.from(response.data));
+              require('child_process').execSync(`unzip -o github-pages.zip -d "/tmp/gh-artifact-extract" && mkdir -p docs/site && tar xvf /tmp/gh-artifact-extract/artifact.tar -C docs/site/`);
             } else {
               console.log("Aucun artefact trouvé.");
             }
 
-      - name: Delete old artifact and folder
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.13.0
+
+      - name: Install dependencies
         run: |
-          echo "Suppression du dossier associé à la PR fermée ou supprimée"
-          branch_name="${{ github.event.pull_request.head.ref }}"
-          folder_path="docs/site/${branch_name}"
+          pip install -r docs/requirements.txt
 
-          # Supprimer le dossier de la branche si il existe
-          if [ -d "$folder_path" ]; then
-            echo "Suppression du dossier pour la branche ${branch_name}"
-            rm -rf "$folder_path"
-          else
-            echo "Aucun dossier à supprimer pour la branche ${branch_name}"
-          fi
-
-      - name: Republish artifact
+      - name: Build MkDocs site
         run: |
-          echo "Décompression et republication de l'artefact"
-          
-          # Décompression du fichier ZIP
-          unzip github-pages.zip -d "/tmp/gh-artifact-extract"
-          
-          # Extraire le fichier TAR de l'artefact
-          tar xvf /tmp/gh-artifact-extract/artifact.tar -C /tmp/gh-artifact-extract/
-          
-          # Naviguer dans le dossier correspondant à la branche
-          branch_name="${{ github.event.pull_request.head.ref }}"
-          branch_dir="/tmp/gh-artifact-extract/./${branch_name}"
+          cd docs
+          mkdocs build --site-dir site/${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}
 
-          # Vérifier si le dossier de la branche existe dans l'artefact
-          if [ -d "$branch_dir" ]; then
-            echo "Restauration du contenu pour la branche ${branch_name}"
+      - name: Upload static files as artifact
+        id: deployment
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/site
 
-            # Créer le dossier dans docs/site pour publier le contenu
-            mkdir -p "docs/site"
+  deploy:
+    needs: build
+    permissions:
+      pages: write      
+      id-token: write
+      issues: write
+      pull-requests: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4          
+
+      - uses: actions/github-script@v7
+        name: Post comment
+        if: ${{ github.event_name == 'pull_request_target'}}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            console.log(context.payload);
+            github.rest.issues.createComment({
+              issue_number: context.payload.pull_request.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: 'Website is published: [${{ steps.change-page-url.outputs.new_page_url }}](${{ steps.change-page-url.outputs.new_page_url }})'
+            });name: Deploy MkDocs
+on:
+  pull_request_target:
+  push:
+    branches:
+      - 1811_testpr
+      - 1811_mkdocs_documentation_website
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deploy-${{ github.repository }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+
+      - name: Get artifact ID from the latest successful run
+        id: get_artifact
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const workflow_id = 'github-actions.yml'; 
             
-            # Copier tout le contenu du dossier de la branche dans docs/site/
-            cp -r "$branch_dir"/* "docs/site/"
-            echo "Contenu de la branche ${branch_name} restauré dans docs/site/"
-          else
-            echo "Aucun dossier trouvé pour la branche ${branch_name} dans l'artefact."
-          fi
+            const runs = await github.rest.actions.listWorkflowRuns({
+              owner,
+              repo,
+              workflow_id: workflow_id,
+              status: "success",
+              per_page: 1
+            });
 
-      - name: Commit and push changes
+            if (runs.data.total_count === 0) { 
+              console.log("Aucun artefact trouvé. On continue quand même.");
+              return;
+            }
+
+            const artifacts = await github.rest.actions.listWorkflowRunArtifacts({
+              owner,
+              repo,
+              run_id: runs.data.workflow_runs[0].id
+            });
+
+            const artifact = artifacts.data.artifacts.find(a => a.name === "github-pages");
+            if (artifact) {
+              console.log("Artifact trouvé avec ID :", artifact.id);
+              const response = await github.rest.actions.downloadArtifact({
+                owner,
+                repo,
+                artifact_id: artifact.id,
+                archive_format: 'zip'
+              });
+              require('fs').writeFileSync("github-pages.zip", Buffer.from(response.data));
+              require('child_process').execSync(`unzip -o github-pages.zip -d "/tmp/gh-artifact-extract" && mkdir -p docs/site && tar xvf /tmp/gh-artifact-extract/artifact.tar -C docs/site/`);
+            } else {
+              console.log("Aucun artefact trouvé.");
+            }
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.13.0
+
+      - name: Install dependencies
         run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-          
-          # Ajouter le dossier docs/site/ même s'il est ignoré par .gitignore
-          git add -f docs/site/
+          pip install -r docs/requirements.txt
 
-          git commit -m "Cleanup and republish site for closed PR"
-          git push https://x-access-token:${{ secrets.ACTIONS_ARTIFACT_TOKEN }}@github.com/${{ github.repository }}.git
+      - name: Build MkDocs site
+        run: |
+          cd docs
+          mkdocs build --site-dir site/${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}
+
+      - name: Upload static files as artifact
+        id: deployment
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/site
+
+  deploy:
+    needs: build
+    permissions:
+      pages: write      
+      id-token: write
+      issues: write
+      pull-requests: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4          
+
+      - uses: actions/github-script@v7
+        name: Post comment
+        if: ${{ github.event_name == 'pull_request_target'}}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            console.log(context.payload);
+            github.rest.issues.createComment({
+              issue_number: context.payload.pull_request.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: 'Website is published: [${{ steps.change-page-url.outputs.new_page_url }}](${{ steps.change-page-url.outputs.new_page_url }})'
+            });name: Deploy MkDocs
+on:
+  pull_request_target:
+  push:
+    branches:
+      - 1811_testpr
+      - 1811_mkdocs_documentation_website
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deploy-${{ github.repository }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+
+      - name: Get artifact ID from the latest successful run
+        id: get_artifact
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const workflow_id = 'github-actions.yml'; 
+            
+            const runs = await github.rest.actions.listWorkflowRuns({
+              owner,
+              repo,
+              workflow_id: workflow_id,
+              status: "success",
+              per_page: 1
+            });
+
+            if (runs.data.total_count === 0) { 
+              console.log("Aucun artefact trouvé. On continue quand même.");
+              return;
+            }
+
+            const artifacts = await github.rest.actions.listWorkflowRunArtifacts({
+              owner,
+              repo,
+              run_id: runs.data.workflow_runs[0].id
+            });
+
+            const artifact = artifacts.data.artifacts.find(a => a.name === "github-pages");
+            if (artifact) {
+              console.log("Artifact trouvé avec ID :", artifact.id);
+              const response = await github.rest.actions.downloadArtifact({
+                owner,
+                repo,
+                artifact_id: artifact.id,
+                archive_format: 'zip'
+              });
+              require('fs').writeFileSync("github-pages.zip", Buffer.from(response.data));
+              require('child_process').execSync(`unzip -o github-pages.zip -d "/tmp/gh-artifact-extract" && mkdir -p docs/site && tar xvf /tmp/gh-artifact-extract/artifact.tar -C docs/site/`);
+            } else {
+              console.log("Aucun artefact trouvé.");
+            }
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.13.0
+
+      - name: Install dependencies
+        run: |
+          pip install -r docs/requirements.txt
+
+      - name: Build MkDocs site
+        run: |
+          cd docs
+          mkdocs build --site-dir site/${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}
+
+      - name: Upload static files as artifact
+        id: deployment
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/site
+
+  deploy:
+    needs: build
+    permissions:
+      pages: write      
+      id-token: write
+      issues: write
+      pull-requests: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4          
+
+      - uses: actions/github-script@v7
+        name: Post comment
+        if: ${{ github.event_name == 'pull_request_target'}}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            console.log(context.payload);
+            github.rest.issues.createComment({
+              issue_number: context.payload.pull_request.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: 'Website is published: [${{ steps.change-page-url.outputs.new_page_url }}](${{ steps.change-page-url.outputs.new_page_url }})'
+            });
