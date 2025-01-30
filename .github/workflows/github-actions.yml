@@ -149,8 +149,8 @@ jobs:
             echo "Aucun dossier à supprimer pour la branche ${branch_name}"
           fi
 
-          # Publier l'artefact (recharger depuis l'artefact téléchargé)
-          echo "Republier l'artefact"
+          # Republier l'artefact si nécessaire
+          echo "Republier l'artefact pour la branche ${branch_name}"
           git fetch --all
           git checkout $branch_name
           mkdocs build --site-dir docs/site/$branch_name
