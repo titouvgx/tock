@@ -1,3 +1,13 @@
+name: Cleanup and Republish Artifacts
+
+on:
+  pull_request:
+    types: [closed]  # Déclenché lorsqu'une PR est fermée ou mergée
+
+permissions:
+  actions: read
+  contents: write
+
 jobs:
   cleanup:
     runs-on: ubuntu-latest
@@ -9,7 +19,7 @@ jobs:
         id: get_artifact
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.ACTIONS_ARTIFACT_TOKEN }}  # Utilisation du PAT
+          github-token: ${{ secrets.ACTIONS_ARTIFACT_TOKEN }}  # Utilisation du token personnel (PAT)
           script: |
             const { owner, repo } = context.repo;
             console.log('Récupération des derniers artefacts');
