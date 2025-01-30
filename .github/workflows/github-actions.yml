@@ -88,13 +88,13 @@ jobs:
 
       - name: Upload static files as artifact
         id: deployment
-        uses: actions/upload-pages-artifact@v4.6.0  # Revenir à la v3
+        uses: actions/upload-pages-artifact@v4.5.0  # Revenir à la v3
         with:
           path: docs/site
 
       - name: Upload artifact for download
         id: upload-artifact
-        uses: actions/upload-artifact@v4.6.0  # Revenir à la v3
+        uses: actions/upload-artifact@v4.5.0  # Revenir à la v3
         with:
           name: github-pages
           path: docs/site
