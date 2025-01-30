@@ -1,13 +1,3 @@
-name: Cleanup and Republish Artifacts
-
-on:
-  pull_request_target:
-    types: [closed]
-
-permissions:
-  actions: read
-  contents: write
-
 jobs:
   cleanup:
     runs-on: ubuntu-latest
@@ -19,6 +9,7 @@ jobs:
         id: get_artifact
         uses: actions/github-script@v6
         with:
+          github-token: ${{ secrets.ACTIONS_ARTIFACT_TOKEN }}  # Utilisation du PAT
           script: |
             const { owner, repo } = context.repo;
             console.log('Récupération des derniers artefacts');
@@ -81,4 +72,4 @@ jobs:
           git config --global user.email "github-actions@github.com"
           git add docs/site/
           git commit -m "Cleanup and republish site for closed PR"
-          git push
+          git push https://x-access-token:${{ secrets.ACTIONS_ARTIFACT_TOKEN }}@github.com/${{ github.repository }}.git
