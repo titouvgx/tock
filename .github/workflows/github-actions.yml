@@ -26,9 +26,11 @@ jobs:
             const runs = await github.rest.actions.listWorkflowRuns({
               owner,
               repo,
+              workflow_id: "github-actions.yml", 
               status: "success",
               per_page: 1
             });
+
 
             if (runs.data.total_count === 0) {
               console.log("Aucun artefact trouvé. Arrêt du processus.");
