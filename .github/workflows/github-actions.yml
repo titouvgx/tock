@@ -106,12 +106,12 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          
+
           # Supprimer entièrement le dossier docs/site avant d'ajouter les nouveaux fichiers
           rm -rf docs/site/*
           
-          # Ajouter les fichiers mis à jour
-          git add docs/site/
+          # Forcer l'ajout même si les fichiers sont dans .gitignore
+          git add -f docs/site/
           
           # Commit (avec un contrôle pour éviter une erreur si aucun changement)
           git commit -m "Cleanup and republish site for closed PR" || echo "No changes to commit"
@@ -121,5 +121,6 @@ jobs:
           
           # Push final
           git push https://x-access-token:${{ secrets.ACTIONS_ARTIFACT_TOKEN }}@github.com/${{ github.repository }}.git
+
 
 
