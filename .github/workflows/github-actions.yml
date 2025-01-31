@@ -142,11 +142,19 @@ jobs:
         
       - name: Delete artifact and associated folder
         run: |
+          echo "Clonage du dépôt pour pouvoir effectuer les commandes Git"
+          git clone https://github.com/${{ github.repository }} repo
+          cd repo
+          git checkout ${{ github.event.pull_request.head.ref }}
+          
           echo "Suppression de l'artefact et du dossier associé à la PR fermée ou supprimée"
           branch_name="${{ github.event.pull_request.head.ref }}"
+          
+          # Affichage du chemin avant suppression
           folder_path="docs/site/${branch_name}"
-
-          # Supprimer le dossier associé à la PR fermée ou supprimée
+          echo "Chemin du dossier à supprimer: $folder_path"
+          
+          # Vérifier si le dossier existe et le supprimer
           if [ -d "$folder_path" ]; then
             echo "Suppression du dossier pour la branche ${branch_name}"
             rm -rf "$folder_path"
@@ -154,13 +162,11 @@ jobs:
             echo "Aucun dossier à supprimer pour la branche ${branch_name}"
           fi
 
-          # Republier l'artefact si nécessaire
-          echo "Republier l'artefact pour la branche ${branch_name}"
-          git fetch --all
-          git checkout $branch_name
-          mkdocs build --site-dir docs/site/$branch_name
-          echo "Déploiement de l'artefact pour ${branch_name}"
-        
+      - name: Lister les fichiers extraits
+        run: |
+          echo "Contenu de l'artefact extrait:"
+          ls -R /tmp/gh-artifact-extract
+
       - name: Post cleanup comment
         run: |
           echo "Commentaire après nettoyage"
