@@ -23,38 +23,63 @@ jobs:
           script: |
             const { owner, repo } = context.repo;
             console.log('Récupération des derniers artefacts');
+            
+            // Affichage des informations sur le propriétaire et le dépôt
+            console.log("Propriétaire du dépôt:", owner);
+            console.log("Nom du dépôt:", repo);
+
             const runs = await github.rest.actions.listWorkflowRuns({
               owner,
               repo,
-              workflow_id: "github-actions.yml", 
+              workflow_id: "github-actions.yml",
               status: "success",
               per_page: 1
             });
+
+            // Afficher le nombre d'exécutions récupérées
+            console.log("Nombre d'exécutions réussies trouvées:", runs.data.total_count);
 
             if (runs.data.total_count === 0) {
               console.log("Aucun artefact trouvé. Arrêt du processus.");
               return;
             }
 
+            // Affichage des détails de la première exécution réussie
+            const firstRun = runs.data.workflow_runs[0];
+            console.log("Détails de la première exécution réussie:");
+            console.log("ID de l'exécution:", firstRun.id);
+            console.log("Nom de l'exécution:", firstRun.name);
+
             const artifacts = await github.rest.actions.listWorkflowRunArtifacts({
               owner,
               repo,
-              run_id: runs.data.workflow_runs[0].id
+              run_id: firstRun.id
             });
 
+            // Afficher le nombre d'artefacts trouvés
+            console.log("Nombre d'artefacts trouvés:", artifacts.data.artifacts.length);
+
+            // Recherche de l'artefact spécifique par son nom
             const artifact = artifacts.data.artifacts.find(a => a.name === "github-pages");
+
             if (artifact) {
               console.log("Artifact trouvé avec ID :", artifact.id);
+              
               const response = await github.rest.actions.downloadArtifact({
                 owner,
                 repo,
                 artifact_id: artifact.id,
                 archive_format: 'zip'
               });
+
+              // Affichage du contenu de l'artefact téléchargé
+              console.log("Téléchargement de l'artefact...");
               require('fs').writeFileSync("github-pages.zip", Buffer.from(response.data));
+              console.log("Artefact téléchargé et sauvegardé sous github-pages.zip");
             } else {
-              console.log("Aucun artefact trouvé.");
+              console.log("Aucun artefact trouvé avec le nom 'github-pages'.");
             }
+
 
       - name: Delete old artifact and folder
         run: |
