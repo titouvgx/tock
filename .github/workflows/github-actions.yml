@@ -106,7 +106,20 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git add -f docs/site/
-          git commit -m "Cleanup and republish site for closed PR"
+          
+          # Supprimer entièrement le dossier docs/site avant d'ajouter les nouveaux fichiers
+          rm -rf docs/site/*
+          
+          # Ajouter les fichiers mis à jour
+          git add docs/site/
+          
+          # Commit (avec un contrôle pour éviter une erreur si aucun changement)
+          git commit -m "Cleanup and republish site for closed PR" || echo "No changes to commit"
+          
+          # Pull les derniers changements avant de push pour éviter les conflits
+          git pull --rebase origin $(git rev-parse --abbrev-ref HEAD)
+          
+          # Push final
           git push https://x-access-token:${{ secrets.ACTIONS_ARTIFACT_TOKEN }}@github.com/${{ github.repository }}.git
+
 
