@@ -136,9 +136,10 @@ jobs:
       - name: Checkout repository
         run: |
           echo "Clonage du dépôt pour pouvoir effectuer les commandes Git"
-          git clone https://github.com/${{ github.repository }} repo
+          git clone https://github.com/titouvgx/tock.git repo
           cd repo
           git checkout ${{ github.event.pull_request.head.ref }}
+
         
       - name: Delete artifact and associated folder
         run: |
