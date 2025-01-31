@@ -106,6 +106,7 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git add docs/site/
+          git add -f docs/site/
           git commit -m "Cleanup and republish site for closed PR"
           git push https://x-access-token:${{ secrets.ACTIONS_ARTIFACT_TOKEN }}@github.com/${{ github.repository }}.git
+
