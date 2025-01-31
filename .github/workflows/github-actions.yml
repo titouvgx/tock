@@ -1,77 +1,111 @@
-name: Deploy MkDocs
+name: Cleanup and Republish Artifacts
+
 on:
-  pull_request_target:
-    types: [closed]  # Se déclenche uniquement quand une PR est fermée ou fusionnée
+  pull_request:
+    types: [closed]  # Déclenché lorsqu'une PR est fermée ou mergée
 
 permissions:
+  actions: read
   contents: write
-  pages: write
-  id-token: write
-
-concurrency:
-  group: deploy-${{ github.repository }}
-  cancel-in-progress: false
 
 jobs:
-  build:
+  cleanup:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Get latest successful artifact
         id: get_artifact
         uses: actions/github-script@v6
         with:
+          github-token: ${{ secrets.ACTIONS_ARTIFACT_TOKEN }}  # Utilisation du token personnel (PAT)
           script: |
             const { owner, repo } = context.repo;
+            console.log('Récupération des derniers artefacts');
             const runs = await github.rest.actions.listWorkflowRuns({
               owner,
               repo,
-              workflow_id: 'github-actions.yml',
+              workflow_id: "github-actions.yml", 
               status: "success",
               per_page: 1
             });
 
             if (runs.data.total_count === 0) {
-              console.log("Aucun artefact trouvé.");
+              console.log("Aucun artefact trouvé. Arrêt du processus.");
               return;
             }
 
-            const run_id = runs.data.workflow_runs[0].id;
             const artifacts = await github.rest.actions.listWorkflowRunArtifacts({
               owner,
               repo,
-              run_id
+              run_id: runs.data.workflow_runs[0].id
             });
 
             const artifact = artifacts.data.artifacts.find(a => a.name === "github-pages");
             if (artifact) {
-              console.log("Artifact ID:", artifact.id);
-              core.setOutput("artifact_id", artifact.id);
+              console.log("Artifact trouvé avec ID :", artifact.id);
+              const response = await github.rest.actions.downloadArtifact({
+                owner,
+                repo,
+                artifact_id: artifact.id,
+                archive_format: 'zip'
+              });
+              require('fs').writeFileSync("github-pages.zip", Buffer.from(response.data));
             } else {
-              console.log("Aucun artefact 'github-pages' trouvé.");
+              console.log("Aucun artefact trouvé.");
             }
 
-      - name: Download and extract artifact
-        if: steps.get_artifact.outputs.artifact_id
+      - name: Delete old artifact and folder
         run: |
-          mkdir -p docs/site
-          gh run download --repo "${{ github.repository }}" --run-id "${{ steps.get_artifact.outputs.artifact_id }}" --name github-pages --dir docs/site
+          echo "Suppression du dossier associé à la PR fermée ou supprimée"
+          branch_name="${{ github.event.pull_request.head.ref }}"
+          folder_path="docs/site/${branch_name}"
 
-      - name: Upload static files as artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: docs/site
+          # Supprimer le dossier de la branche si il existe
+          if [ -d "$folder_path" ]; then
+            echo "Suppression du dossier pour la branche ${branch_name}"
+            rm -rf "$folder_path"
+          else
+            echo "Aucun dossier à supprimer pour la branche ${branch_name}"
+          fi
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Remove directory of closed PR branch
+      - name: Republish artifact
         run: |
-          BRANCH_NAME=${{ github.event.pull_request.head.ref }}
-          rm -rf docs/site/$BRANCH_NAME
-          echo "Dossier supprimé pour la branche fermée : $BRANCH_NAME"
+          echo "Décompression et republication de l'artefact"
+          
+          # Décompression du fichier ZIP
+          unzip github-pages.zip -d "/tmp/gh-artifact-extract"
+          
+          # Extraire le fichier TAR de l'artefact
+          tar xvf /tmp/gh-artifact-extract/artifact.tar -C /tmp/gh-artifact-extract/
+          
+          # Naviguer dans le dossier "." et récupérer le dossier correspondant à la branche fermée ou mergée
+          if [ -d "/tmp/gh-artifact-extract/./" ]; then
+            echo "Dossier '.' trouvé, récupération du contenu pour la branche ${branch_name}"
+            
+            # Vérifier si le dossier de la branche existe dans l'artefact
+            branch_dir="/tmp/gh-artifact-extract/./${branch_name}"
+            if [ -d "$branch_dir" ]; then
+              echo "Restauration du contenu pour la branche ${branch_name}"
+              
+              # Créer le dossier pour la branche dans docs/site
+              mkdir -p "docs/site/${branch_name}"
+              
+              # Copier le contenu du dossier de la branche dans docs/site/
+              cp -r "$branch_dir"/* "docs/site/${branch_name}/"
+              echo "Contenu de la branche ${branch_name} restauré dans docs/site/"
+            else
+              echo "Aucun dossier trouvé pour la branche ${branch_name} dans l'artefact."
+            fi
+          else
+            echo "Aucun dossier '.' trouvé dans l'artefact."
+          fi
 
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add docs/site/
+          git commit -m "Cleanup and republish site for closed PR"
+          git push https://x-access-token:${{ secrets.ACTIONS_ARTIFACT_TOKEN }}@github.com/${{ github.repository }}.git
