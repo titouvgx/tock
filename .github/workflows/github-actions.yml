@@ -72,13 +72,20 @@ jobs:
                 archive_format: 'zip'
               });
 
-              // Affichage du contenu de l'artefact téléchargé
+              // Sauvegarde du fichier ZIP
               console.log("Téléchargement de l'artefact...");
-              require('fs').writeFileSync("github-pages.zip", Buffer.from(response.data));
+              const fs = require('fs');
+              const path = './github-pages.zip'; // chemin où le fichier sera sauvegardé
+              fs.writeFileSync(path, Buffer.from(response.data));
+
               console.log("Artefact téléchargé et sauvegardé sous github-pages.zip");
+              
+              // Créer un lien de téléchargement pour l'artefact
+              console.log(`L'artefact est sauvegardé ici : ${path}`);
             } else {
               console.log("Aucun artefact trouvé avec le nom 'github-pages'.");
             }
+
 
 
       - name: Delete old artifact and folder
