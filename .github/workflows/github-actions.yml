@@ -179,11 +179,12 @@ jobs:
           # Ajout du dossier des binaires Python au PATH
           export PATH=$HOME/.local/bin:$PATH
           
-          mkdir -p docs/site/${branch_name}
+          # Compilation du site MkDocs pour la branche fermée
+          echo "🔄 Compilation du site MkDocs pour ${branch_name}"
           cd docs
-          mkdocs build --site-dir site/${branch_name}
+          mkdocs build --site-dir site/${branch_name}  # Utilisation de site/${branch_name}
 
-          echo "✅ Artéfact reconstruit et publié avec succès pour ${branch_name}."
+          echo "✅ Artéfact reconstruit et publié avec succès pour la branche ${branch_name}."
 
       - name: Supprimer le dossier associé à la PR fermée
         run: |
