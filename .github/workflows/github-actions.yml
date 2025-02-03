@@ -56,9 +56,8 @@ jobs:
         run: |
           echo "📂 Type de fichier téléchargé :"
           file github-pages.zip
-
-      - name: Extraire l'archive et supprimer le dossier de la branche
-        run: |
+          
+          # Affichage du résultat pour mieux comprendre le type de l'archive
           if file github-pages.zip | grep -q "Zip archive data"; then
             echo "✅ L'archive est un fichier ZIP."
             unzip -q github-pages.zip -d temp_dir
@@ -67,10 +66,12 @@ jobs:
             mkdir temp_dir
             tar -xzf github-pages.zip -C temp_dir
           else
-            echo "❌ Format d'archive inconnu !"
+            echo "❌ Format d'archive inconnu ou invalide !"
             exit 1
           fi
 
+      - name: Extraire l'archive et supprimer le dossier de la branche
+        run: |
           # Supprimer le dossier de la branche de la PR fermée
           rm -rf "temp_dir/${{ env.BRANCH_NAME }}"
           zip -r github-pages.zip temp_dir/*
