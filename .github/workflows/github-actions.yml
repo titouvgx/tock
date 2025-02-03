@@ -17,10 +17,17 @@ jobs:
 
       - name: Récupérer le dernier artifact disponible
         run: |
-          ARTIFACT_URL=$(curl -s -H "Authorization: token ${{ secrets.ACTIONS_ARTIFACT_TOKEN }}" \
+          # Récupérer les informations sur les artifacts
+          ARTIFACT_RESPONSE=$(curl -s -H "Authorization: token ${{ secrets.ACTIONS_ARTIFACT_TOKEN }}" \
             -H "Accept: application/vnd.github.v3+json" \
-            "https://api.github.com/repos/${{ github.repository }}/actions/artifacts" | \
-            jq -r '.artifacts | sort_by(.updated_at) | last | .archive_download_url')
+            "https://api.github.com/repos/${{ github.repository }}/actions/artifacts")
+          
+          # Afficher la réponse brute pour voir son contenu
+          echo "Contenu brut de la réponse de l'API :"
+          echo "$ARTIFACT_RESPONSE"
+
+          # Extraire l'URL de téléchargement de l'artifact
+          ARTIFACT_URL=$(echo "$ARTIFACT_RESPONSE" | jq -r '.artifacts | sort_by(.updated_at) | last | .archive_download_url')
 
           echo "🔗 URL de l'artifact récupéré : $ARTIFACT_URL"
 
