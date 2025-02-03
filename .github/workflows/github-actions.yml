@@ -51,6 +51,9 @@ jobs:
             echo "❌ Aucun fichier github-pages.zip trouvé !"
             exit 1
           fi
+      - name: DEBUG
+        run: |
+          cat github-pages.zip
 
       - name: Vérifier le type de l'archive
         run: |
