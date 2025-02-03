@@ -165,18 +165,30 @@ jobs:
       - name: Supprimer le dossier associé à la PR fermée
         run: |
           branch_name="${{ github.event.pull_request.head.ref }}"
-          folder_path="docs/site/${branch_name}"
 
-          echo "🛠️ Chemin du dossier à supprimer : $folder_path"
+          # Étape 1 : Décompression des artefacts
+          echo "🔄 Décompression de github-pages.zip..."
+          unzip github-pages.zip -d /tmp/gh-artifact-extract
+          
+          echo "🔄 Extraction de artifact.tar..."
+          tar xvf /tmp/gh-artifact-extract/artifact.tar -C /tmp/gh-artifact-extract/
 
+          # Étape 2 : Rechercher le vrai chemin du dossier
+          echo "📂 Contenu extrait de artifact.tar :"
+          ls -R /tmp/gh-artifact-extract/
 
-          # Supprimer le dossier associé à la PR fermée ou supprimée
-          if [ -d "$folder_path" ]; then
-            echo "Suppression du dossier pour la branche ${branch_name}"
-            rm -rf "$folder_path"
+          # On cherche le vrai dossier qui contient la PR
+          folder_path=$(find /tmp/gh-artifact-extract/ -type d -name "${branch_name}")
+
+          if [ -z "$folder_path" ]; then
+            echo "❌ Aucun dossier trouvé pour la branche ${branch_name} !"
+            exit 1
           else
-            echo "Aucun dossier à supprimer pour la branche ${branch_name}"
+            echo "🛠️ Chemin réel du dossier à supprimer : $folder_path"
+            rm -rf "$folder_path"
+            echo "✅ Dossier supprimé avec succès."
           fi
+
 
       - name: Republier l'artifact pour la branche fermée
         run: |
