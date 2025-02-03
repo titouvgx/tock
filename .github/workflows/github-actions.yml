@@ -141,10 +141,28 @@ jobs:
           git clone https://github.com/${{ github.repository }} repo
           cd repo
           git checkout ${{ github.event.pull_request.head.ref }}
-        
-      - name: Delete artifact and associated folder
+
+      - name: Récupérer le dernier artifact
+        id: get_latest_artifact
         run: |
-          echo "Suppression de l'artefact et du dossier associé à la PR fermée ou supprimée"
+          # Récupérer l'ID du dernier artifact valide
+          ARTIFACT_RESPONSE=$(curl -s -H "Authorization: token ${{ secrets.ACTIONS_ARTIFACT_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/artifacts")
+
+          # Trouver l'URL de téléchargement du dernier artifact valide
+          ARTIFACT_URL=$(echo "$ARTIFACT_RESPONSE" | jq -r '.artifacts[] | select(.expired == false) | .archive_download_url' | head -n 1)
+
+          if [ -z "$ARTIFACT_URL" ]; then
+            echo "❌ Aucun artifact valide trouvé."
+            exit 1
+          else
+            echo "✅ Artifact valide trouvé. Téléchargement..."
+            curl -L -o github-pages.zip -H "Authorization: token ${{ secrets.ACTIONS_ARTIFACT_TOKEN }}" "$ARTIFACT_URL"
+          fi
+
+      - name: Supprimer le dossier associé à la PR fermée
+        run: |
           branch_name="${{ github.event.pull_request.head.ref }}"
           folder_path="docs/site/${branch_name}"
 
@@ -156,13 +174,16 @@ jobs:
             echo "Aucun dossier à supprimer pour la branche ${branch_name}"
           fi
 
-          # Republier l'artefact si nécessaire
-          echo "Republier l'artefact pour la branche ${branch_name}"
-          git fetch --all
-          git checkout $branch_name
-          mkdocs build --site-dir docs/site/$branch_name
-          echo "Déploiement de l'artefact pour ${branch_name}"
-        
+      - name: Republier l'artifact pour la branche fermée
+        run: |
+          echo "Reconstruction et republication de l'artifact pour la branche ${branch_name}"
+          mkdir -p docs/site/${branch_name}
+          cd docs
+          mkdocs build --site-dir site/${branch_name}
+
+          # Republier l'artifact (facultatif)
+          echo "Artéfact publié pour la branche ${branch_name}"
+
       - name: Post cleanup comment
         run: |
           echo "Commentaire après nettoyage"
