@@ -77,6 +77,11 @@ jobs:
           echo "Installation des dépendances"
           pip install -r docs/requirements.txt
 
+      - name: Copy mkdocs.yml
+        run: |
+          echo "Copie du fichier mkdocs.yml"
+          cp ../mkdocs.yml docs/
+
       - name: Build MkDocs site
         run: |
           echo "Compilation du site MkDocs"
