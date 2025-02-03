@@ -41,7 +41,7 @@ jobs:
           rm -rf temp_dir
 
       - name: Publier la nouvelle version de l'artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: github-pages
           path: github-pages.zip
