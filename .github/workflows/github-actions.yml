@@ -162,6 +162,29 @@ jobs:
             curl -L -o github-pages.zip -H "Authorization: token ${{ secrets.ACTIONS_ARTIFACT_TOKEN }}" "$ARTIFACT_URL"
           fi
 
+
+      - name: Installer MkDocs
+        run: |
+          echo "🔄 Installation de MkDocs"
+          pip install mkdocs
+
+      - name: Reconstruction et republication de l'artifact pour la branche fermée
+        run: |
+          branch_name="${{ github.event.pull_request.head.ref }}"
+          echo "Reconstruction et republication de l'artifact pour la branche ${branch_name}"
+          
+          # Vérification de la présence de mkdocs
+          which mkdocs || { echo "❌ MkDocs introuvable"; exit 1; }
+
+          # Ajout du dossier des binaires Python au PATH
+          export PATH=$HOME/.local/bin:$PATH
+          
+          mkdir -p docs/site/${branch_name}
+          cd docs
+          mkdocs build --site-dir site/${branch_name}
+
+          echo "✅ Artéfact reconstruit et publié avec succès pour ${branch_name}."
+
       - name: Supprimer le dossier associé à la PR fermée
         run: |
           branch_name="${{ github.event.pull_request.head.ref }}"
