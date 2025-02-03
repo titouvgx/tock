@@ -1,37 +1,33 @@
-name: Cleanup & Re-Publish Artifacts
+name: Download Latest Valid Artifact
 
 on:
-  pull_request:
-    types:
-      - closed  # Déclenche l'action quand la PR est fermée ou supprimée
+  push:
+    branches:
+      - 1811_testpr
+      - 1811_mkdocs_documentation_website
 
 jobs:
-  cleanup_and_republish:
+  download_artifact:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Définir les variables
-        run: |
-          echo "BRANCH_NAME=${{ github.head_ref || github.ref_name }}" >> $GITHUB_ENV
-          echo "ARTIFACT_NAME=github-pages.zip" >> $GITHUB_ENV
-
-      - name: Récupérer tous les artifacts disponibles
+      - name: Récupérer les artifacts disponibles
         run: |
           # Récupérer les informations sur les artifacts
           ARTIFACT_RESPONSE=$(curl -s -H "Authorization: token ${{ secrets.ACTIONS_ARTIFACT_TOKEN }}" \
             -H "Accept: application/vnd.github.v3+json" \
             "https://api.github.com/repos/${{ github.repository }}/actions/artifacts")
-
+          
           # Afficher la réponse brute pour analyser son contenu
           echo "Contenu brut de la réponse de l'API :"
           echo "$ARTIFACT_RESPONSE"
 
-          # Trouver l'artifact valide (en excluant les expirés)
+          # Trouver le dernier artifact valide (non expiré)
           ARTIFACT_URL=$(echo "$ARTIFACT_RESPONSE" | jq -r '.artifacts[] | select(.expired == false) | .archive_download_url' | head -n 1)
 
           if [ -z "$ARTIFACT_URL" ]; then
-            echo "❌ Aucun artifact valide trouvé, création d'un nouveau..."
-            exit 1  # Sortir pour recréer l'artifact
+            echo "❌ Aucun artifact valide trouvé."
+            exit 1
           else
             echo "✅ Artifact valide trouvé ! Téléchargement de l'artifact..."
             curl -L -o github-pages.zip -H "Authorization: token ${{ secrets.ACTIONS_ARTIFACT_TOKEN }}" "$ARTIFACT_URL"
@@ -47,57 +43,6 @@ jobs:
             exit 1
           fi
 
-      - name: DEBUG
+      - name: Afficher le contenu de l'archive
         run: |
-          cat github-pages.zip
-
-      - name: Vérifier le type de l'archive
-        run: |
-          echo "📂 Type de fichier téléchargé :"
-          file github-pages.zip
-          
-          # Affichage du résultat pour mieux comprendre le type de l'archive
-          if file github-pages.zip | grep -q "Zip archive data"; then
-            echo "✅ L'archive est un fichier ZIP."
-            unzip -q github-pages.zip -d temp_dir
-          elif file github-pages.zip | grep -q "gzip compressed data"; then
-            echo "✅ L'archive est un fichier GZIP (tar)."
-            mkdir temp_dir
-            tar -xzf github-pages.zip -C temp_dir
-          else
-            echo "❌ Format d'archive inconnu ou invalide !"
-            exit 1
-          fi
-
-      - name: Extraire l'archive et supprimer le dossier de la branche
-        run: |
-          # Supprimer le dossier de la branche de la PR fermée
-          rm -rf "temp_dir/${{ env.BRANCH_NAME }}"
-          zip -r github-pages.zip temp_dir/*
-          rm -rf temp_dir
-
-      - name: Publier la nouvelle version de l'artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: github-pages
-          path: github-pages.zip
-          retention-days: 7  # Optionnel : durée de conservation de l'artifact
-
-      - name: Supprimer l'ancien artifact
-        run: |
-          ARTIFACT_ID=$(curl -s -H "Authorization: token ${{ secrets.ACTIONS_ARTIFACT_TOKEN }}" \
-            -H "Accept: application/vnd.github.v3+json" \
-            "https://api.github.com/repos/${{ github.repository }}/actions/artifacts" | \
-            jq -r '.artifacts[] | select(.name == "github-pages") | .id')
-
-          if [ -z "$ARTIFACT_ID" ]; then
-            echo "❌ Aucun ancien artifact trouvé à supprimer."
-          else
-            echo "✅ Suppression de l'artifact ID: $ARTIFACT_ID"
-            curl -X DELETE -s -H "Authorization: token ${{ secrets.ACTIONS_ARTIFACT_TOKEN }}" \
-              -H "Accept: application/vnd.github.v3+json" \
-              "https://api.github.com/repos/${{ github.repository }}/actions/artifacts/$ARTIFACT_ID"
-          fi
-
-        env:
-          GITHUB_TOKEN: ${{ secrets.ACTIONS_ARTIFACT_TOKEN }}
+          unzip -l github-pages.zip  # Liste le contenu du fichier ZIP sans l'extraire
