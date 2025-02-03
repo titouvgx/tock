@@ -26,13 +26,13 @@ jobs:
           echo "Contenu brut de la réponse de l'API :"
           echo "$ARTIFACT_RESPONSE"
 
-          # Extraire l'URL de téléchargement de l'artifact
-          ARTIFACT_URL=$(echo "$ARTIFACT_RESPONSE" | jq -r '.artifacts | sort_by(.updated_at) | last | .archive_download_url')
+          # Filtrer les artifacts qui ne sont pas expirés et récupérer l'URL du dernier artifact valide
+          ARTIFACT_URL=$(echo "$ARTIFACT_RESPONSE" | jq -r '.artifacts | select(.expired == false) | sort_by(.updated_at) | last | .archive_download_url')
 
           echo "🔗 URL de l'artifact récupéré : $ARTIFACT_URL"
 
           if [ -z "$ARTIFACT_URL" ] || [ "$ARTIFACT_URL" == "null" ]; then
-            echo "❌ Aucun artifact trouvé."
+            echo "❌ Aucun artifact valide trouvé."
             exit 1
           else
             echo "✅ Téléchargement de l'artifact..."
@@ -51,6 +51,7 @@ jobs:
             echo "❌ Aucun fichier github-pages.zip trouvé !"
             exit 1
           fi
+
       - name: DEBUG
         run: |
           cat github-pages.zip
