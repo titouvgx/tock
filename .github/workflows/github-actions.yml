@@ -1,174 +1,103 @@
-name: Deploy MkDocs
+name: Cleanup & Re-Publish Artifacts
 
 on:
-  pull_request_target:
-    types: [closed]  # Écoute les PR fermées
-  push:
-    branches:
-      - 1811_testpr
-      - 1811_mkdocs_documentation_website
-
-permissions:
-  contents: write
-
-concurrency:
-  group: deploy-${{ github.repository }}
-  cancel-in-progress: false
+  pull_request:
+    types:
+      - closed  # Déclenche l'action quand la PR est fermée ou supprimée
 
 jobs:
-  build:
+  cleanup_and_republish:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.pull_request.head.ref }}
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
-
-      - name: Get artifact ID from the latest successful run
-        id: get_artifact
-        uses: actions/github-script@v6
-        with:
-          script: |
-            const { owner, repo } = context.repo;
-            const workflow_id = 'github-actions.yml'; 
-            
-            console.log('Récupération des derniers artefacts');
-            const runs = await github.rest.actions.listWorkflowRuns({
-              owner,
-              repo,
-              workflow_id: workflow_id,
-              status: "success",
-              per_page: 1
-            });
-
-            if (runs.data.total_count === 0) { 
-              console.log("Aucun artefact trouvé. On continue quand même.");
-              return;
-            }
-
-            const artifacts = await github.rest.actions.listWorkflowRunArtifacts({
-              owner,
-              repo,
-              run_id: runs.data.workflow_runs[0].id
-            });
-
-            const artifact = artifacts.data.artifacts.find(a => a.name === "github-pages");
-            if (artifact) {
-              console.log("Artifact trouvé avec ID :", artifact.id);
-              const response = await github.rest.actions.downloadArtifact({
-                owner,
-                repo,
-                artifact_id: artifact.id,
-                archive_format: 'zip'
-              });
-              require('fs').writeFileSync("github-pages.zip", Buffer.from(response.data));
-              require('child_process').execSync(`unzip -o github-pages.zip -d "/tmp/gh-artifact-extract" && mkdir -p docs/site && tar xvf /tmp/gh-artifact-extract/artifact.tar -C docs/site/`);
-              console.log("Artefact téléchargé et extrait");
-            } else {
-              console.log("Aucun artefact trouvé.");
-            }
-
-      - uses: actions/setup-python@v5
-        with:
-          python-version: 3.13.0
-
-      - name: Install dependencies
+      - name: Définir les variables
         run: |
-          echo "Installation des dépendances"
-          pip install -r docs/requirements.txt
+          echo "BRANCH_NAME=${{ github.head_ref || github.ref_name }}" >> $GITHUB_ENV
+          echo "ARTIFACT_NAME=github-pages.zip" >> $GITHUB_ENV
 
-      - name: Build MkDocs site
+      - name: Récupérer tous les artifacts disponibles
         run: |
-          echo "Compilation du site MkDocs"
-          cd docs
-          mkdocs build --site-dir site/${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}
+          # Récupérer les informations sur les artifacts
+          ARTIFACT_RESPONSE=$(curl -s -H "Authorization: token ${{ secrets.ACTIONS_ARTIFACT_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/artifacts")
 
-      - name: Upload static files as artifact
-        id: deployment
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: docs/site
+          # Afficher la réponse brute pour analyser son contenu
+          echo "Contenu brut de la réponse de l'API :"
+          echo "$ARTIFACT_RESPONSE"
 
-  deploy:
-    needs: build
-    permissions:
-      pages: write      
-      id-token: write
-      issues: write
-      pull-requests: write
+          # Trouver l'artifact valide (en excluant les expirés)
+          ARTIFACT_URL=$(echo "$ARTIFACT_RESPONSE" | jq -r '.artifacts[] | select(.expired == false) | .archive_download_url' | head -n 1)
 
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}  # L'URL qui sera affichée dans l'environnement
-
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-
-      - name: Override page_url
-        id: change-page-url
-        run: |
-          echo "Mise à jour de l'URL de déploiement"
-          if [[ "${GITHUB_REF}" == "refs/heads/1811_testpr" ]]; then
-            echo "new_page_url=https://titouvgx.github.io/tock/1811_testpr/" >> $GITHUB_OUTPUT
-          elif [[ "${GITHUB_REF}" == "refs/heads/1811_mkdocs_documentation_website" ]]; then
-            echo "new_page_url=https://titouvgx.github.io/tock/1811_mkdocs_documentation_website/" >> $GITHUB_OUTPUT
-          fi
-
-      - uses: actions/github-script@v7
-        name: Post comment
-        if: ${{ github.event_name == 'pull_request_target'}}
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            console.log('Commentaire sur la PR :');
-            github.rest.issues.createComment({
-              issue_number: context.payload.pull_request.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: 'Website is published: [${{ steps.change-page-url.outputs.new_page_url }}](${{ steps.change-page-url.outputs.new_page_url }})'
-            });
-
-  cleanup:
-    if: ${{ github.event.pull_request.state == 'closed' }}  # Exécuter lorsque la PR est fermée
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        run: |
-          echo "Clonage du dépôt pour pouvoir effectuer les commandes Git"
-          git clone https://github.com/${{ github.repository }} repo
-          cd repo
-          git checkout ${{ github.event.pull_request.head.ref }}
-        
-      - name: Delete artifact and associated folder
-        run: |
-          echo "Suppression de l'artefact et du dossier associé à la PR fermée ou supprimée"
-          branch_name="${{ github.event.pull_request.head.ref }}"
-          folder_path="docs/site/${branch_name}"
-
-          # Supprimer le dossier associé à la PR fermée ou supprimée
-          if [ -d "$folder_path" ]; then
-            echo "Suppression du dossier pour la branche ${branch_name}"
-            rm -rf "$folder_path"
+          if [ -z "$ARTIFACT_URL" ]; then
+            echo "❌ Aucun artifact valide trouvé, création d'un nouveau..."
+            exit 1  # Sortir pour recréer l'artifact
           else
-            echo "Aucun dossier à supprimer pour la branche ${branch_name}"
+            echo "✅ Artifact valide trouvé ! Téléchargement de l'artifact..."
+            curl -L -o github-pages.zip -H "Authorization: token ${{ secrets.ACTIONS_ARTIFACT_TOKEN }}" "$ARTIFACT_URL"
           fi
 
-          # Republier l'artefact si nécessaire
-          echo "Republier l'artefact pour la branche ${branch_name}"
-          git fetch --all
-          git checkout $branch_name
-          mkdocs build --site-dir docs/site/$branch_name
-          echo "Déploiement de l'artefact pour ${branch_name}"
-        
-      - name: Post cleanup comment
+      - name: Vérifier si le fichier ZIP a été téléchargé
         run: |
-          echo "Commentaire après nettoyage"
-          github.rest.issues.createComment({
-            issue_number: context.payload.pull_request.number,
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            body: 'Cleanup completed for PR and associated branch: [${{ github.event.pull_request.head.ref }}]'
-          });
+          if [ -f "github-pages.zip" ]; then
+            echo "✅ Le fichier github-pages.zip a bien été téléchargé."
+            ls -lh github-pages.zip
+          else
+            echo "❌ Aucun fichier github-pages.zip trouvé !"
+            exit 1
+          fi
+
+      - name: DEBUG
+        run: |
+          cat github-pages.zip
+
+      - name: Vérifier le type de l'archive
+        run: |
+          echo "📂 Type de fichier téléchargé :"
+          file github-pages.zip
+          
+          # Affichage du résultat pour mieux comprendre le type de l'archive
+          if file github-pages.zip | grep -q "Zip archive data"; then
+            echo "✅ L'archive est un fichier ZIP."
+            unzip -q github-pages.zip -d temp_dir
+          elif file github-pages.zip | grep -q "gzip compressed data"; then
+            echo "✅ L'archive est un fichier GZIP (tar)."
+            mkdir temp_dir
+            tar -xzf github-pages.zip -C temp_dir
+          else
+            echo "❌ Format d'archive inconnu ou invalide !"
+            exit 1
+          fi
+
+      - name: Extraire l'archive et supprimer le dossier de la branche
+        run: |
+          # Supprimer le dossier de la branche de la PR fermée
+          rm -rf "temp_dir/${{ env.BRANCH_NAME }}"
+          zip -r github-pages.zip temp_dir/*
+          rm -rf temp_dir
+
+      - name: Publier la nouvelle version de l'artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: github-pages
+          path: github-pages.zip
+          retention-days: 7  # Optionnel : durée de conservation de l'artifact
+
+      - name: Supprimer l'ancien artifact
+        run: |
+          ARTIFACT_ID=$(curl -s -H "Authorization: token ${{ secrets.ACTIONS_ARTIFACT_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/artifacts" | \
+            jq -r '.artifacts[] | select(.name == "github-pages") | .id')
+
+          if [ -z "$ARTIFACT_ID" ]; then
+            echo "❌ Aucun ancien artifact trouvé à supprimer."
+          else
+            echo "✅ Suppression de l'artifact ID: $ARTIFACT_ID"
+            curl -X DELETE -s -H "Authorization: token ${{ secrets.ACTIONS_ARTIFACT_TOKEN }}" \
+              -H "Accept: application/vnd.github.v3+json" \
+              "https://api.github.com/repos/${{ github.repository }}/actions/artifacts/$ARTIFACT_ID"
+          fi
+
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACTIONS_ARTIFACT_TOKEN }}
