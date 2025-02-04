@@ -132,6 +132,13 @@ jobs:
             });
 
   cleanup:
+    needs: build
+    permissions:
+      pages: write      
+      id-token: write
+      issues: write
+      pull-requests: write
+
     runs-on: ubuntu-latest
     steps:
       - name: Get artifact ID from the latest successful run
@@ -200,11 +207,11 @@ jobs:
 
           ls -R docs/site/
 
-      - name: Upload static files as artifact
-        id: deployment
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: docs/site
+        - name: Upload static files as artifact
+          id: deployment
+          uses: actions/upload-pages-artifact@v3
+          with:
+            path: docs/site
 
       - name: Post cleanup comment
         run: |
