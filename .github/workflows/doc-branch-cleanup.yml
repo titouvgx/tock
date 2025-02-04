@@ -2,8 +2,13 @@ name: Cleanup branch
 
 on:
   pull_request_target:
-    types: [closed]  # Écoute les PR fermées
+    types: [closed]  
   workflow_dispatch:
+    inputs:
+      cleanup_branch:
+        description: "Nom de la branche à nettoyer"
+        required: true
+        type: string
 
 permissions:
   contents: write

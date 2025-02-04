@@ -1,8 +1,6 @@
 name: Deploy MkDocs
 
 on:
-  pull_request_target:
-    types: [closed]  # Écoute les PR fermées
   push:
     branches:
       - 1811_testpr
