@@ -31,7 +31,7 @@ jobs:
           script: |
             const { owner, repo } = context.repo;
             const workflow_id = 'github-actions.yml'; 
-            
+
             console.log('Récupération des derniers artefacts');
             const runs = await github.rest.actions.listWorkflowRuns({
               owner,
@@ -119,7 +119,7 @@ jobs:
 
       - uses: actions/github-script@v7
         name: Post comment
-        if: ${{ github.event_name == 'pull_request_target'}}
+        if: ${{ github.event_name == 'pull_request_target' }}
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
@@ -142,82 +142,53 @@ jobs:
           cd repo
           git checkout ${{ github.event.pull_request.head.ref }}
 
-      - name: Récupérer le dernier artifact
-        id: get_latest_artifact
-        run: |
-          # Récupérer l'ID du dernier artifact valide
-          ARTIFACT_RESPONSE=$(curl -s -H "Authorization: token ${{ secrets.ACTIONS_ARTIFACT_TOKEN }}" \
-            -H "Accept: application/vnd.github.v3+json" \
-            "https://api.github.com/repos/${{ github.repository }}/actions/artifacts")
-
-          # Trouver l'URL de téléchargement du dernier artifact valide
-          ARTIFACT_URL=$(echo "$ARTIFACT_RESPONSE" | jq -r '.artifacts[] | select(.expired == false) | .archive_download_url' | head -n 1)
-
-          if [ -z "$ARTIFACT_URL" ]; then
-            echo "❌ Aucun artifact valide trouvé."
-            exit 1
-          else
-            echo "✅ Artifact valide trouvé. Téléchargement..."
-            echo "✅ ID de l'artefact utilisé : $(echo "$ARTIFACT_RESPONSE" | jq -r '.artifacts[] | select(.expired == false) | .id' | head -n 1)"
-            curl -L -o github-pages.zip -H "Authorization: token ${{ secrets.ACTIONS_ARTIFACT_TOKEN }}" "$ARTIFACT_URL"
-          fi
-
-
       - name: Installer MkDocs
         run: |
           echo "🔄 Installation de MkDocs"
           pip install mkdocs
 
-          - name: Reconstruction et republication de l'artifact pour la branche fermée
-          run: |
-            branch_name="${{ github.event.pull_request.head.ref }}"
-            echo "🔄 Reconstruction et republication de l'artifact pour la branche ${branch_name}"
-        
-            # Ajout du dossier des binaires Python au PATH
-            export PATH=$HOME/.local/bin:$PATH
-        
-            # Vérification et installation de MkDocs si nécessaire
-            if ! command -v mkdocs &> /dev/null; then
-              echo "⚠️ MkDocs non trouvé. Installation..."
-              pip install mkdocs
-            fi
-        
-            echo "✅ MkDocs est disponible"
-        
-            # Vérification de l'existence du dossier docs
-            if [ ! -d "docs" ]; then
-              echo "❌ Dossier 'docs' introuvable ! Création..."
-              mkdir -p docs
-            fi
-        
-            # Compilation du site MkDocs pour la branche fermée
-            echo "📦 Compilation du site MkDocs pour ${branch_name}"
-            mkdocs build --config-file docs/mkdocs.yml --site-dir docs/site/${branch_name}
-        
-            if [ $? -eq 0 ]; then
-              echo "✅ Artéfact reconstruit et publié avec succès pour la branche ${branch_name}."
-            else
-              echo "❌ Erreur lors de la compilation MkDocs."
-              exit 1
-            fi
-        
+      - name: Reconstruction et republication de l'artifact pour la branche fermée
+        run: |
+          branch_name="${{ github.event.pull_request.head.ref }}"
+          echo "🔄 Reconstruction et republication de l'artifact pour la branche ${branch_name}"
+
+          export PATH=$HOME/.local/bin:$PATH
+
+          if ! command -v mkdocs &> /dev/null; then
+            echo "⚠️ MkDocs non trouvé. Installation..."
+            pip install mkdocs
+          fi
+
+          echo "✅ MkDocs est disponible"
+
+          if [ ! -d "docs" ]; then
+            echo "❌ Dossier 'docs' introuvable ! Création..."
+            mkdir -p docs
+          fi
+
+          echo "📦 Compilation du site MkDocs pour ${branch_name}"
+          mkdocs build --config-file docs/mkdocs.yml --site-dir docs/site/${branch_name}
+
+          if [ $? -eq 0 ]; then
+            echo "✅ Artéfact reconstruit et publié avec succès pour la branche ${branch_name}."
+          else
+            echo "❌ Erreur lors de la compilation MkDocs."
+            exit 1
+          fi
 
       - name: Supprimer le dossier associé à la PR fermée
         run: |
           branch_name="${{ github.event.pull_request.head.ref }}"
 
-          # Étape 1 : Décompression des artefacts
           echo "🔄 Décompression de github-pages.zip..."
           unzip github-pages.zip -d /tmp/gh-artifact-extract
           
           echo "🔄 Extraction de artifact.tar..."
           tar xvf /tmp/gh-artifact-extract/artifact.tar -C /tmp/gh-artifact-extract/
 
-          # Étape 2 : Rechercher le vrai chemin du dossier
           echo "📂 Contenu extrait de artifact.tar :"
           ls -R /tmp/gh-artifact-extract/
 
-          # On cherche le vrai dossier qui contient la PR
           folder_path=$(find /tmp/gh-artifact-extract/ -type d -name "${branch_name}")
 
           if [ -z "$folder_path" ]; then
@@ -229,16 +200,13 @@ jobs:
             echo "✅ Dossier supprimé avec succès."
           fi
 
-
       - name: Republier l'artifact pour la branche fermée
         run: |
+          branch_name="${{ github.event.pull_request.head.ref }}"
           echo "Reconstruction et republication de l'artifact pour la branche ${branch_name}"
           mkdir -p docs/site/${branch_name}
           cd docs
           mkdocs build --site-dir site/${branch_name}
-
-          # Republier l'artifact (facultatif)
-          echo "Artéfact publié pour la branche ${branch_name}"
 
       - name: Post cleanup comment
         run: |
