@@ -168,23 +168,39 @@ jobs:
           echo "🔄 Installation de MkDocs"
           pip install mkdocs
 
-      - name: Reconstruction et republication de l'artifact pour la branche fermée
-        run: |
-          branch_name="${{ github.event.pull_request.head.ref }}"
-          echo "Reconstruction et republication de l'artifact pour la branche ${branch_name}"
-          
-          # Vérification de la présence de mkdocs
-          which mkdocs || { echo "❌ MkDocs introuvable"; exit 1; }
-
-          # Ajout du dossier des binaires Python au PATH
-          export PATH=$HOME/.local/bin:$PATH
-          
-          # Compilation du site MkDocs pour la branche fermée
-          echo "🔄 Compilation du site MkDocs pour ${branch_name}"
-          cd docs
-          mkdocs build --site-dir site/${branch_name}  # Utilisation de site/${branch_name}
-
-          echo "✅ Artéfact reconstruit et publié avec succès pour la branche ${branch_name}."
+          - name: Reconstruction et republication de l'artifact pour la branche fermée
+          run: |
+            branch_name="${{ github.event.pull_request.head.ref }}"
+            echo "🔄 Reconstruction et republication de l'artifact pour la branche ${branch_name}"
+        
+            # Ajout du dossier des binaires Python au PATH
+            export PATH=$HOME/.local/bin:$PATH
+        
+            # Vérification et installation de MkDocs si nécessaire
+            if ! command -v mkdocs &> /dev/null; then
+              echo "⚠️ MkDocs non trouvé. Installation..."
+              pip install mkdocs
+            fi
+        
+            echo "✅ MkDocs est disponible"
+        
+            # Vérification de l'existence du dossier docs
+            if [ ! -d "docs" ]; then
+              echo "❌ Dossier 'docs' introuvable ! Création..."
+              mkdir -p docs
+            fi
+        
+            # Compilation du site MkDocs pour la branche fermée
+            echo "📦 Compilation du site MkDocs pour ${branch_name}"
+            mkdocs build --config-file docs/mkdocs.yml --site-dir docs/site/${branch_name}
+        
+            if [ $? -eq 0 ]; then
+              echo "✅ Artéfact reconstruit et publié avec succès pour la branche ${branch_name}."
+            else
+              echo "❌ Erreur lors de la compilation MkDocs."
+              exit 1
+            fi
+        
 
       - name: Supprimer le dossier associé à la PR fermée
         run: |
