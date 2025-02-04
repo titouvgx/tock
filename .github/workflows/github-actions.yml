@@ -132,7 +132,7 @@ jobs:
             });
 
   cleanup:
-    needs: build
+    needs: deploy
     permissions:
       pages: write      
       id-token: write
