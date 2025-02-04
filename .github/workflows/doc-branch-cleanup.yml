@@ -69,6 +69,11 @@ jobs:
               console.log("Aucun artefact trouvé.");
             }
 
+      - name: Lister les fichiers de l'artefact
+        run: |
+          echo "📂 Contenu de l'artefact après extraction :"
+          ls -R /tmp/gh-artifact-extract/
+
       - name: Supprimer le dossier associé à la PR fermée
         run: |
           branch_name="${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}"
