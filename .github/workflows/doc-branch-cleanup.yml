@@ -13,8 +13,8 @@ concurrency:
   cancel-in-progress: false
 
 
-
-cleanup:
+jobs:
+  cleanup:
     needs: deploy
     permissions:
       pages: write      
