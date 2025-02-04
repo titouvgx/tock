@@ -132,64 +132,62 @@ jobs:
             });
 
   cleanup:
-    if: ${{ github.event.pull_request.state == 'closed' }}  # Exécuter lorsque la PR est fermée
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        run: |
-          echo "Clonage du dépôt pour pouvoir effectuer les commandes Git"
-          git clone https://github.com/${{ github.repository }} repo
-          cd repo
-          git checkout ${{ github.event.pull_request.head.ref }}
+      - name: Get artifact ID from the latest successful run
+        id: get_artifact
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const workflow_id = 'github-actions.yml'; 
 
-      - name: Installer MkDocs
-        run: |
-          echo "🔄 Installation de MkDocs"
-          pip install mkdocs
+            console.log('Récupération des derniers artefacts');
+            const runs = await github.rest.actions.listWorkflowRuns({
+              owner,
+              repo,
+              workflow_id: workflow_id,
+              status: "success",
+              per_page: 1
+            });
 
-      - name: Reconstruction et republication de l'artifact pour la branche fermée
-        run: |
-          branch_name="${{ github.event.pull_request.head.ref }}"
-          echo "🔄 Reconstruction et republication de l'artifact pour la branche ${branch_name}"
+            if (runs.data.total_count === 0) { 
+              console.log("Aucun artefact trouvé. On continue quand même.");
+              return;
+            }
 
-          export PATH=$HOME/.local/bin:$PATH
+            const artifacts = await github.rest.actions.listWorkflowRunArtifacts({
+              owner,
+              repo,
+              run_id: runs.data.workflow_runs[0].id
+            });
 
-          if ! command -v mkdocs &> /dev/null; then
-            echo "⚠️ MkDocs non trouvé. Installation..."
-            pip install mkdocs
-          fi
-
-          echo "✅ MkDocs est disponible"
-
-          if [ ! -d "docs" ]; then
-            echo "❌ Dossier 'docs' introuvable ! Création..."
-            mkdir -p docs
-          fi
-
-          echo "📦 Compilation du site MkDocs pour ${branch_name}"
-          mkdocs build --config-file docs/mkdocs.yml --site-dir docs/site/${branch_name}
-
-          if [ $? -eq 0 ]; then
-            echo "✅ Artéfact reconstruit et publié avec succès pour la branche ${branch_name}."
-          else
-            echo "❌ Erreur lors de la compilation MkDocs."
-            exit 1
-          fi
+            const artifact = artifacts.data.artifacts.find(a => a.name === "github-pages");
+            if (artifact) {
+              console.log("Artifact trouvé avec ID :", artifact.id);
+              const response = await github.rest.actions.downloadArtifact({
+                owner,
+                repo,
+                artifact_id: artifact.id,
+                archive_format: 'zip'
+              });
+              require('fs').writeFileSync("github-pages.zip", Buffer.from(response.data));
+              require('child_process').execSync(`unzip -o github-pages.zip -d "/tmp/gh-artifact-extract" && mkdir -p docs/site && tar xvf /tmp/gh-artifact-extract/artifact.tar -C docs/site/`);
+              console.log("Artefact téléchargé et extrait");
+            } else {
+              console.log("Aucun artefact trouvé.");
+            }
 
       - name: Supprimer le dossier associé à la PR fermée
         run: |
-          branch_name="${{ github.event.pull_request.head.ref }}"
-
-          echo "🔄 Décompression de github-pages.zip..."
-          unzip github-pages.zip -d /tmp/gh-artifact-extract
-          
-          echo "🔄 Extraction de artifact.tar..."
-          tar xvf /tmp/gh-artifact-extract/artifact.tar -C /tmp/gh-artifact-extract/
+          branch_name="${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}"
+          echo "branch_name: $branch_name"
 
           echo "📂 Contenu extrait de artifact.tar :"
-          ls -R /tmp/gh-artifact-extract/
+          ls -R docs/site/
 
-          folder_path=$(find /tmp/gh-artifact-extract/ -type d -name "${branch_name}")
+          folder_path="docs/site/${branch_name}"
+          echo "folder_path: $folder_path"
 
           if [ -z "$folder_path" ]; then
             echo "❌ Aucun dossier trouvé pour la branche ${branch_name} !"
@@ -200,13 +198,13 @@ jobs:
             echo "✅ Dossier supprimé avec succès."
           fi
 
-      - name: Republier l'artifact pour la branche fermée
-        run: |
-          branch_name="${{ github.event.pull_request.head.ref }}"
-          echo "Reconstruction et republication de l'artifact pour la branche ${branch_name}"
-          mkdir -p docs/site/${branch_name}
-          cd docs
-          mkdocs build --site-dir site/${branch_name}
+          ls -R docs/site/
+
+      - name: Upload static files as artifact
+        id: deployment
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/site
 
       - name: Post cleanup comment
         run: |
