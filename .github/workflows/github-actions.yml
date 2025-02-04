@@ -207,11 +207,11 @@ jobs:
 
           ls -R docs/site/
 
-        - name: Upload static files as artifact
-          id: deployment
-          uses: actions/upload-pages-artifact@v3
-          with:
-            path: docs/site
+      - name: Upload static files as artifact
+        id: deployment
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/site
 
       - name: Post cleanup comment
         run: |
