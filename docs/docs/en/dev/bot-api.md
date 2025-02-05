@@ -49,7 +49,7 @@ For example in a [Maven](https://maven.apache.org/) project:
         <dependency>
             <groupId>ai.tock</groupId>
             <artifactId>tock-bot-api-websocket</artifactId>
-            <version>24.9.4</version>
+            <version>24.9.6</version>
         </dependency>
 ```
 
@@ -69,7 +69,7 @@ For example in a [Maven](https://maven.apache.org/) project:
         <dependency>
             <groupId>ai.tock</groupId>
             <artifactId>tock-bot-api-webhook</artifactId>
-            <version>24.9.4</version>
+            <version>24.9.6</version>
         </dependency>
 ```
 

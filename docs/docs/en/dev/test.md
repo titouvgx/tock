@@ -14,7 +14,7 @@ With Maven:
         <dependency>
             <groupId>ai.tock</groupId>
             <artifactId>bot-test</artifactId>
-            <version>24.9.4</version>
+            <version>24.9.6</version>
             <scope>test</scope>
         </dependency>
 ```

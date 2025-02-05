@@ -43,7 +43,7 @@ Par exemple dans un projet [Maven](https://maven.apache.org/) :
         <dependency>
             <groupId>ai.tock</groupId>
             <artifactId>bot-toolkit</artifactId>
-            <version>24.9.4</version>
+            <version>24.9.6</version>
         </dependency>
 ```
 
