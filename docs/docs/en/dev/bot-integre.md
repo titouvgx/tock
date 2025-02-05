@@ -50,7 +50,7 @@ For example in a [Maven](https://maven.apache.org/) project:
 Or in a [Gradle](https://gradle.org/) project:
 
 ```groovy
-      compile 'ai.tock:bot-toolkit:24.9.4'
+      compile 'ai.tock:bot-toolkit:24.9.6'
 ```
 
 ### A bot is a set of stories

@@ -50,7 +50,7 @@ Par exemple dans un projet [Maven](https://maven.apache.org/) :
 Ou dans un projet [Gradle](https://gradle.org/) :
 
 ```groovy
-      compile 'ai.tock:bot-toolkit:24.9.4'
+      compile 'ai.tock:bot-toolkit:24.9.6'
 ```
 
 ### Un bot est un ensemble de parcours (stories)

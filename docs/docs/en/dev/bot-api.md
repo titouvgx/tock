@@ -56,7 +56,7 @@ For example in a [Maven](https://maven.apache.org/) project:
 Or in a [Gradle](https://gradle.org/) project:
 
 ```groovy
-compile 'ai.tock:tock-bot-api-websocket:24.9.4'
+compile 'ai.tock:tock-bot-api-websocket:24.9.6'
 ```
 
 ### Enable WebHook mode
@@ -76,7 +76,7 @@ For example in a [Maven](https://maven.apache.org/) project:
 Or in a [Gradle](https://gradle.org/) project:
 
 ```groovy
-compile 'ai.tock:tock-bot-api-webhook:24.9.4'
+compile 'ai.tock:tock-bot-api-webhook:24.9.6'
 ```
 
 In this case, unlike in _WebSocket_ mode, the application/bot started must be reachable by the

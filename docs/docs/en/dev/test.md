@@ -22,7 +22,7 @@ With Maven:
 Or gradle :
 
 ```groovy
-      testCompile 'ai.tock:bot-test:24.9.4'
+      testCompile 'ai.tock:bot-test:24.9.6'
 ``` 
 
 This entire framework is documented in KDoc format [here](https://doc.tock.ai/tock/dokka/tock/ai.tock.bot.test).

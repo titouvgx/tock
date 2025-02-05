@@ -61,7 +61,7 @@ Par exemple dans un projet [Maven](https://maven.apache.org/) :
 Ou dans un projet [Gradle](https://gradle.org/) :
 
 ```groovy
-      compile 'ai.tock:tock-bot-api-websocket:24.9.4'
+      compile 'ai.tock:tock-bot-api-websocket:24.9.6'
 ```
 
 ### Activer le mode WebHook
@@ -81,7 +81,7 @@ Par exemple dans un projet [Maven](https://maven.apache.org/) :
 Ou dans un projet [Gradle](https://gradle.org/) :
 
 ```groovy
-      compile 'ai.tock:tock-bot-api-webhook:24.9.4'
+      compile 'ai.tock:tock-bot-api-webhook:24.9.6'
 ```
 
 Dans ce cas, contrairement au mode _WebSocket_, il faut que l'application/bot démarrée soit joignable par la 
