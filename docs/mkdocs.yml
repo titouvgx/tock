@@ -31,9 +31,9 @@ theme:
     - navigation.top
 
 hooks:
-   - material/overrides/hooks/shortcodes.py
-   - hooks/copyapiswagger.py
-   - hooks/Rellinkadd.py
+  - material/overrides/hooks/shortcodes.py
+  - hooks/copyapiswagger.py
+  - hooks/Rellinkadd.py
 
 plugins:
   - tags
