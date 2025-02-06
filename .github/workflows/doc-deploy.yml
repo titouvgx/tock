@@ -125,18 +125,14 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-      - name: Generate URL from PR name
-        id: generate-url
+      - name: Override page_url using PR branch name
+        id: change-page-url
         run: |
-          # On vérifie si on est sur une PR ou si c'est un push direct sur une branche
-          if [[ "${GITHUB_REF}" == refs/heads/* ]]; then
-            PR_NAME="${GITHUB_REF#refs/heads/}"
-          else
-            PR_NAME=$(echo "${{ github.event.pull_request.title }}" | tr ' ' '_' | tr '[:upper:]' '[:lower:]' | tr -cd '[:alnum:]_')
-          fi
-          
-          # Générer l'URL complète
-          echo "new_page_url=https://titouvgx.github.io/tock/${PR_NAME}/" >> $GITHUB_OUTPUT
+          echo "Mise à jour de l'URL de déploiement"
+          PR_BRANCH="${{ github.event.pull_request.head.ref }}"
+          BASE_URL="https://titouvgx.github.io/tock/"
+          NEW_URL="${BASE_URL}${PR_BRANCH}/"
+          echo "new_page_url=$NEW_URL" >> $GITHUB_OUTPUT
 
       - uses: actions/github-script@v7
         name: Post comment
@@ -150,7 +146,7 @@ jobs:
               issue_number: context.payload.pull_request.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: `Website is published: [${{ steps.generate-url.outputs.new_page_url }}](${{ steps.generate-url.outputs.new_page_url }})`
+              body: `Website is published: [${{ steps.change-page-url.outputs.new_page_url }}](${{ steps.change-page-url.outputs.new_page_url }})`
             });
 
   cleanup:
