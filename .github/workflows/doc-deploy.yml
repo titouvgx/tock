@@ -9,7 +9,7 @@ on:
     branches:
       - master
       - 1811_mkdocs_documentation_website
-      - pr0010
+      - pr0015
     paths:
       - docs/**
   workflow_dispatch:
@@ -141,13 +141,14 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             console.log('Commentaire sur la PR :');
-            console.log(context.payload);
+            console.log(context.payload.head.ref);
+            const website_url = `https://doc.tock.ai/tock/${context.payload.head.ref}/`;
             console.log(context.payload.pull_request)
             github.rest.issues.createComment({
               issue_number: context.payload.pull_request.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: `Website is published: [${{ steps.change-page-url.outputs.new_page_url }}](${{ steps.change-page-url.outputs.new_page_url }})`
+              body: `Website is published: [${context.payload.head.ref}](${{ steps.change-page-url.outputs.new_page_url }})`
             });
 
   cleanup:
