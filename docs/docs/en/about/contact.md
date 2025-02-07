@@ -2,8 +2,7 @@
 title: Contact us 
 ---
 
-# Contact
-
+# PR0205
 Developers, users and curious people are more than welcome to share about Tock with both its creators and the community.
 
 * Don't hesitate to join us on ***Gitter*** (the instant messaging service for GitHub):<br />
