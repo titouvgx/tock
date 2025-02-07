@@ -5,8 +5,7 @@ permalink: /en/
 ---
 
 
-
-# Welcome to Tock - open conversational platform
+# pr0015
 
 
 ![NLU interface example - qualifying a sentence](../img/favicon.png "NLU interface example - qualifying a sentence")
