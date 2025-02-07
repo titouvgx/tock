@@ -120,10 +120,9 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
+    steps: - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4: actions/deploy-pages@v4
 
       - name: Override page_url using PR branch name
         id: change-page-url
@@ -250,7 +249,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs/site
-          
+
 
       - name: Deploy to GitHub Pages
         id: deployment

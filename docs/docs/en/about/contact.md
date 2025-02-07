@@ -2,7 +2,7 @@
 title: Contact us 
 ---
 
-# Contact us
+# Contact
 
 Developers, users and curious people are more than welcome to share about Tock with both its creators and the community.
 
